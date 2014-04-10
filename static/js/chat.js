@@ -1,4 +1,4 @@
-$(window).load(chat());
+$(window).load(chat);
 
 function chat() {
 	alert('Chat loaded');
