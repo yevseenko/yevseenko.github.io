@@ -1,3 +1,3 @@
-$(window).ready(function() {
+$( document ).ready(function() {
 	alert('Документ загружен');
-})
+});
