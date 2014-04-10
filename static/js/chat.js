@@ -7,5 +7,10 @@ function init_chat() {
 	$sendBtn = $('#send_btn');
 	$privateBtn = $('#private_btn');
 
-	$chatFrame.innerHTML = 'Здравствуйте, я Ваша тётя';
+	$sendBtn.onclick = send;
+}
+
+function send() {
+	alert('Получилась какая-то хрень');
+	$chatFrame.innerHTML = '<b>Вот сюда мы что-то отправили</b>';
 }
