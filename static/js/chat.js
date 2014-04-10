@@ -6,4 +6,6 @@ function init_chat() {
 	$privateFrame = $('#private_frame');
 	$sendBtn = $('#send_btn');
 	$privateBtn = $('#private_btn');
+
+	$chatFrame.innerHTML = 'Здравствуйте, я Ваша тётя';
 }
