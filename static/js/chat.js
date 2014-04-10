@@ -7,7 +7,7 @@ function init_chat() {
 	$sendBtn = $('#send_btn');
 	$privateBtn = $('#private_btn');
 
-	$sendBtn.on("click", send());
+	$sendBtn.onclick = send;
 }
 
 function send() {
