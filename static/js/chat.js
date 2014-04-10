@@ -1,3 +1,5 @@
-$(window).load(function() {
-	alert('Документ загружен');
-});
+$(window).load(chat());
+
+function chat() {
+	alert('Chat loaded');
+}
