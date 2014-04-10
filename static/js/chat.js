@@ -11,5 +11,5 @@ function init_chat() {
 }
 
 function send() {
-	alert('Получилась какая-то хрень');
+	$privateFrame.innerHTML = 'Привет';
 }
