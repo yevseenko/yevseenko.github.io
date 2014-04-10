@@ -12,5 +12,4 @@ function init_chat() {
 
 function send() {
 	alert('Получилась какая-то хрень');
-	$chatFrame.innerHTML = '<b>Вот сюда мы что-то отправили</b>';
 }
