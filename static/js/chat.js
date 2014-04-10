@@ -11,5 +11,5 @@ function init_chat() {
 }
 
 function send() {
-	$privateFrame.innerHTML = 'Привет';
+	$privateFrame.value = 'Привет';
 }
