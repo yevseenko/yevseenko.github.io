@@ -4,7 +4,7 @@ function init_chat() {
 	$chatFrame = $('#chat_frame');
 	$contactsFrame = $('#contacts_frame');
 	$privateFrame = $('#private_frame');
-	$sendBtn = $('#send_btn');
+	$sendBtn = document.getElementById('send_btn');
 	$privateBtn = $('#private_btn');
 
 	$sendBtn.onClick = send;
