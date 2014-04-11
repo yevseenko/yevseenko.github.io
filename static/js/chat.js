@@ -13,5 +13,5 @@ function init_chat() {
 }
 
 function send() {
-	$chatFrame.html($nickInput + ':' + $textInput);
+	$chatFrame.html($nickInput.value + ':' + $textInput.value);
 }
