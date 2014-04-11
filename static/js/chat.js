@@ -6,10 +6,14 @@ function init_chat() {
 	$privateFrame = $('#private_frame');
 	$sendBtn = $('#send_btn');
 	$privateBtn = $('#private_btn');
+	$nickInput = $('#nick_input');
+	$textInput = $('#text_input');
 
 	$sendBtn.on('click', send);
 }
 
 function send() {
-	$privateFrame.html('Привет');
+	$chatFrame.html(function() {
+		return($nickInput + ':' + $textInput);
+	});
 }
