@@ -91,6 +91,18 @@
       } else {
           alert('The File APIs are not fully supported in this browser.');
       }
+
+      var reader = new FileReader();
+      reader.onload = function(event) {
+      var contents = event.target.result;
+      console.log("Содержимое файла: " + contents);
+      };
+ 
+      reader.onerror = function(event) {
+      console.error("Файл не может быть прочитан! код " + event.target.error.code);
+      };
+ 
+      reader.readAsText(file.txt);
     </script>
 
     <!-- Bootstrap core JavaScript
