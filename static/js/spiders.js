@@ -16,6 +16,7 @@ var $td = "<td></td>";
 
 var $spiders = new Array();
 
+add('Вид','Пол','Яд','Линька','Дата последней линьки','Период между линьками');
 add('Brachypelma Albopilosum','Female','Yes','13','19.05.2014','3');
 add('Murinus','Male','Yes','8','28.06.2014','5');
 
