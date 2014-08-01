@@ -25,7 +25,10 @@ function add(kind, gender, venom, moult, lastMoult, period) {
 	$spiders[j].moult = moult;
 	$spiders[j].lastMoult = lastMoult;
 	$spiders[j].period = period;
-	if ($spiders[j].lastMoult || $spiders[j].period === undefined) {
-		this = "no data";
+	if (!$spiders[j].lastMoult) {
+		$spiders[j].lastMoult = 'noData';
+	};
+	if (!$spiders[j].period) {
+		$spiders[j].period = 'noData';
 	}
 };
