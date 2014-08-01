@@ -12,7 +12,7 @@ var $td = "<td></td>";
 
 
 
-var $spiders = new Array();
+var $spiders = [];
 add('Brachypelma Albopilosum','Female','Yes','13','19.05.2014','3');
 
 
