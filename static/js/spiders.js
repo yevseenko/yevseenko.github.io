@@ -25,6 +25,11 @@ add('Brachypelma Albopilosum','Female','Yes','13','19.05.2014','3');
 
 function add(kind, gender, venom, moult, lastMoult, period) {
 	var j = $spiders.length;
+	if (j === undefined) {
+		j = 0;
+	} else {
+		j = $spiders.length
+	}
 	$spiders[j].kind = kind;
 	$spiders[j].gender = gender;
 	$spiders[j].venom = venom;
