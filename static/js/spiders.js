@@ -4,7 +4,7 @@ $(document).ready(function() {
 		$('<tr><td>'+i+'</td><td>'+$spiders[i].kind+'</td><td>'+$spiders[i].gender+'</td><td>'+$spiders[i].venom+'</td><td>'+$spiders[i].moult+'</td><td>'+$spiders[i].lastMoult+'</td><td>'+$spiders[i].period+'</td></tr>').appendTo('table#spiders');
 	};
 	$('td:contains(Есть, очень опасен)').addClass('danger');
-	$('td:contains(Есть, опасен)'),addClass('warning');
+	$('td:contains(Есть, опасен)').addClass('warning');
 	$('td:contains(Есть, не опасен)').addClass('info');
 });
 
