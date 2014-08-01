@@ -6,6 +6,7 @@ $(document).ready(function() {
 	$('tr:contains(Есть, очень опасен)').addClass('danger');
 	$('tr:contains(Есть, опасен)').addClass('warning');
 	$('tr:contains(Есть, не опасен)').addClass('success');
+	$('tr').sortable();
 });
 
 var $spiders = new Array();
