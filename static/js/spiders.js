@@ -2,7 +2,10 @@ $(document).ready(function() {
 	$('#spiders').addClass('table table-bordered').width('90%');
 	for(var i = 0; i < $spiders.length; i++) {
 		$('<tr><td>'+i+'</td><td>'+$spiders[i].kind+'</td><td>'+$spiders[i].gender+'</td><td>'+$spiders[i].venom+'</td><td>'+$spiders[i].moult+'</td><td>'+$spiders[i].lastMoult+'</td><td>'+$spiders[i].period+'</td></tr>').appendTo('table#spiders');
-	}
+	};
+	if($('td').val() === 'Есть, очень опасен') {
+		$('td').addClass('danger');
+	};
 });
 
 var $spiders = new Array();
