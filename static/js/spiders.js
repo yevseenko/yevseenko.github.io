@@ -13,4 +13,4 @@ function spider(kind, gender, venom, moult, lastMoult, period) {
 	this.period = period;
 };
 
-var $alba = new alba('Brachypelma Albopilosum','Female','Yes','13','19.05.2014','3');
+var $alba = new spider('Brachypelma Albopilosum','Female','Yes','13','19.05.2014','3');
