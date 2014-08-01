@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$('#spiders').addClass('table table-bordered').width('95%');
-	$('<tr><td>' + $spider[0].kind + '</td></tr>').appendTo('table#spiders');
+	$('<tr><td>' + $spiders[0].kind + '</td></tr>').appendTo('table#spiders');
 });
 
 var $tr = "<tr></tr>";
@@ -13,7 +13,7 @@ var $td = "<td></td>";
 
 
 var $spiders = new Array();
-$spiders[0] = new spider('Brachypelma Albopilosum','Female','Yes','13','19.05.2014','3');
+add('Brachypelma Albopilosum','Female','Yes','13','19.05.2014','3');
 
 
 
@@ -23,11 +23,12 @@ $spiders[0] = new spider('Brachypelma Albopilosum','Female','Yes','13','19.05.20
 
 
 
-function spider(kind, gender, venom, moult, lastMoult, period) {
-	this.kind = kind;
-	this.gender = gender;
-	this.venom = venom;
-	this.moult = moult;
-	this.lastMoult = lastMoult;
-	this.period = period;
+function add(kind, gender, venom, moult, lastMoult, period) {
+	var j = $spiders.length;
+	$spiders[j].kind = kind;
+	$spiders[j].gender = gender;
+	$spiders[j].venom = venom;
+	$spiders[j].moult = moult;
+	$spiders[j].lastMoult = lastMoult;
+	$spiders[j].period = period;
 };
