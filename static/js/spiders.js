@@ -3,9 +3,9 @@ $(document).ready(function() {
 	for(var i = 0; i < $spiders.length; i++) {
 		$('<tr><td>'+i+'</td><td>'+$spiders[i].kind+'</td><td>'+$spiders[i].gender+'</td><td>'+$spiders[i].venom+'</td><td>'+$spiders[i].moult+'</td><td>'+$spiders[i].lastMoult+'</td><td>'+$spiders[i].period+'</td></tr>').appendTo('table#spiders');
 	};
-	$('td:contains(Есть, очень опасен)').addClass('danger');
-	$('td:contains(Есть, опасен)').addClass('warning');
-	$('td:contains(Есть, не опасен)').addClass('info');
+	$('tr:contains(Есть, очень опасен)').addClass('danger');
+	$('tr:contains(Есть, опасен)').addClass('warning');
+	$('tr:contains(Есть, не опасен)').addClass('info');
 });
 
 var $spiders = new Array();
