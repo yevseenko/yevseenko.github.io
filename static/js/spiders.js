@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	$('#spiders').after('<h1>Hello</h1>');
 	$('<tr><td>' + $alba.kind + '</td></tr>').appendTo('table#spiders');
 	$('#spiders').addClass('table table-bordered');
+	$('#spiders').width('95%');
 });
 
 function spider(kind, gender, venom, moult, lastMoult, period) {
