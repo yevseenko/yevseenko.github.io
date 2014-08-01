@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$('#spiders').after('<h1>Hello</h1>');
-	$($alba).appendTo('table#spiders');
+	$('<tr><td>' + $alba.kind + '</td></tr>').appendTo('table#spiders');
 	$('#spiders').addClass('table table-bordered');
 });
 
