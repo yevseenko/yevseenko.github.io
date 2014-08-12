@@ -9,7 +9,7 @@ $(document).ready(function() {
 	$('#submit').click(function() {
 		$('tr').show('fast');
 	});
-	$('#key').on('input', function() {
+	$('#key').on('change', function() {
 		var $key = $(this).val();
 		$('tr:not(:contains('+ $key +'))').hide('fast');
 	});
