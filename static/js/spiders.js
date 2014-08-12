@@ -6,9 +6,6 @@ $(document).ready(function() {
 	$('tr:contains(Есть, очень опасен)').addClass('danger');
 	$('tr:contains(Есть, опасен)').addClass('warning');
 	$('tr:contains(Есть, не опасен)').addClass('success');
-	$('#submit').click(function() {
-		$('tr').show('fast');
-	});
 	$('#key').on('input', function() {
 		var $key = $(this).val();
 		$('tr:not(:contains('+ $key +'))').hide('fast');
