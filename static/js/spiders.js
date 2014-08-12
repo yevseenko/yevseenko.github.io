@@ -11,10 +11,6 @@ $(document).ready(function() {
 		$('tr:not(:contains('+ $key +'))').hide('slow');
 		$('tr:contains('+ $key +')').show('slow');
 	});
-	$('tr:contains(RCF)').on('dblclick', function() {
-		$('tr:contains(RCF)').removeClass();
-		$('tr:contains(RCF)').toggleClass('success');
-	})
 });
 
 var $spiders = new Array();
