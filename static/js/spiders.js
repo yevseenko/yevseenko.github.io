@@ -11,8 +11,8 @@ $(document).ready(function() {
 		$('#submit').addClass('btn btn-info');
 	});
 	$('#key').on('change', function() {
-		var $key = $('#key').val();
-		$('tr:contains($key)').hide('fast');
+		var $key = $(this).val();
+		$('tr:contains('$key')').hide('fast');
 	});
 });
 
