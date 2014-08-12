@@ -7,8 +7,6 @@ $(document).ready(function() {
 	$('tr:contains(Есть, опасен)').addClass('warning');
 	$('tr:contains(Есть, не опасен)').addClass('success');
 	$('#submit').click(function() {
-		$('#submit').removeClass();
-		$('#submit').addClass('btn btn-info');
 		$('tr').show('fast');
 	});
 	$('#key').on('input', function() {
