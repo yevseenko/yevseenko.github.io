@@ -13,7 +13,7 @@ $(document).ready(function() {
 	});
 	$('tr:contains(RCF)').on('dblclick', function() {
 		$('tr:contains(RCF)').removeClass();
-		$('tr:contains(RCF)').addClass('danger');
+		$('tr:contains(RCF)').addClass('success');
 	})
 });
 
