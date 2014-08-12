@@ -13,7 +13,8 @@ $(document).ready(function() {
 	});
 	$('#key').on('input', function() {
 		var $key = $(this).val();
-		$('tr:contains('+ $key +')').show('fast');
+		$('tr').hide('slow');
+		$('tr:contains('+ $key +')').show('slow');
 	});
 });
 
