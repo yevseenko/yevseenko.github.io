@@ -12,7 +12,19 @@ $(document).ready(function() {
 		$('tr:contains('+ $key +')').show('slow');
 	});
 	$('tr:contains(Brachypelma Albopilosum)').on('click', function() {
-		$('#myModal').modal();
+		$('#brachypelma_albopilosum').modal();
+	});
+	$('tr:contains(Poecilotheria Ornata)').on('click', function() {
+		$('#poecilotheria_ornata').modal();
+	});
+	$('tr:contains(Pterinochilus Murinus RCF)').on('click', function() {
+		$('pterinochilus_murinus_rcf').modal();
+	});
+	$('tr:contains(Nhandu Coloratovillosus)').on('click', function() {
+		$('nhandu_coloratovilosus').modal();
+	});
+	$('tr:contains(Poecilotheria Miranda)').on('click', function() {
+		$('').modal();
 	});
 });
 
@@ -23,8 +35,8 @@ add('Brachypelma Albopilosum', 'Female', 'Есть, не опасен', 'L12 -> 
 add('Poecilotheria Ornata', 'Male', 'Есть, очень опасен', 'L7 -> L8');
 add('Pterinochilus Murinus RCF', 'Female', 'Есть, очень опасен', 'L7 -> L8', '8.08.2014', '2 мес.');
 add('Pterinochilus Murinus RCF', 'Не определен', 'Есть, очень опасен', 'L7 -> L8', '19.07.2014', '3 мес.');
-add('Nhandu Coloratovilosus', 'Female', 'Есть, не опасен', 'L7 -> L8', '30.07.2014', '4 мес.');
-add('Nhandu Coloratovilosus', 'Male', 'Есть, не опасен', 'L5 -> L6');
+add('Nhandu Coloratovillosus', 'Female', 'Есть, не опасен', 'L7 -> L8', '30.07.2014', '4 мес.');
+add('Nhandu Coloratovillosus', 'Male', 'Есть, не опасен', 'L5 -> L6');
 add('Poecilotheria Miranda', 'Не определен', 'Есть, опасен', 'L2 -> L3');
 
 function add(kind, gender, venom, moult, lastMoult, period) {
