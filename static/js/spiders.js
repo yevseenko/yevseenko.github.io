@@ -3,6 +3,10 @@ $(document).ready(function() {
 	for(var i = 0; i < $spiders.length; i++) {
 		$('<tr><td>'+i+'</td><td>'+$spiders[i].kind+'</td><td>'+$spiders[i].gender+'</td><td>'+$spiders[i].venom+'</td><td>'+$spiders[i].moult+'</td><td>'+$spiders[i].lastMoult+'</td><td>'+$spiders[i].period+'</td></tr>').appendTo('table#spiders');
 	};
+	$('submit').onclick(function() {
+		$('submit').removeClass();
+		$('submit').addClass('btn btn-info');
+	});
 	$('tr:contains(Есть, очень опасен)').addClass('danger');
 	$('tr:contains(Есть, опасен)').addClass('warning');
 	$('tr:contains(Есть, не опасен)').addClass('success');
