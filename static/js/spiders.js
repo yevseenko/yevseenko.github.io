@@ -9,9 +9,10 @@ $(document).ready(function() {
 	$('#submit').click(function() {
 		$('tr').show('fast');
 	});
-	$('#key').on('change', function() {
+	$('#key').on('input', function() {
 		var $key = $(this).val();
 		$('tr:not(:contains('+ $key +'))').hide('fast');
+		$('tr:contains('+ $key +')').show('fast');
 	});
 });
 
