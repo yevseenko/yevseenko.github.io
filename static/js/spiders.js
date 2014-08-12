@@ -10,6 +10,10 @@ $(document).ready(function() {
 		$('#submit').removeClass();
 		$('#submit').addClass('btn btn-info');
 	});
+	$('#key').change(function() {
+		var $key = $('#key').val();
+		$('tr:contains($key)').hide('fast');
+	});
 });
 
 var $spiders = new Array();
