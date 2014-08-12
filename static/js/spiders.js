@@ -13,7 +13,7 @@ var $spiders = new Array();
 add('Вид','Пол','Яд','Линька','Дата последней линьки','Период между линьками');
 add('Brachypelma Albopilosum', 'Female', 'Есть, не опасен', 'L12 -> L13', '28.05.2014', '1 год.');
 add('Poecilotheria Ornata', 'Male', 'Есть, очень опасен', 'L7 -> L8');
-add('Pterinochilus Murinus RCF', 'Female', 'Есть, очень опасен', 'L6 -> L7');
+add('Pterinochilus Murinus RCF', 'Female', 'Есть, очень опасен', 'L7 -> L8', '8.08.2014', '2 мес.');
 add('Pterinochilus Murinus RCF', 'Не определен', 'Есть, очень опасен', 'L7 -> L8', '19.07.2014', '3 мес.');
 add('Nhandu Coloratovilosus', 'Female', 'Есть, не опасен', 'L7 -> L8', '30.07.2014', '4 мес.');
 add('Nhandu Coloratovilosus', 'Male', 'Есть, не опасен', 'L5 -> L6');
