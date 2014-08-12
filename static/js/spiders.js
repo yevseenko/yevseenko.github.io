@@ -9,13 +9,11 @@ $(document).ready(function() {
 	$('#submit').click(function() {
 		$('#submit').removeClass();
 		$('#submit').addClass('btn btn-info');
-		var $key = $('#key').val();
-		alert($key);
-		$('tr:contains('+ $key +')').hide('fast');
+		$('tr').show('fast');
 	});
 	$('#key').on('change', function() {
 		var $key = $(this).val();
-		$('tr:contains("$key")').hide('fast');
+		$('tr:contains('+ $key +')').hide('fast');
 	});
 });
 
