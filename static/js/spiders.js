@@ -11,7 +11,7 @@ $(document).ready(function() {
 		$('#submit').addClass('btn btn-info');
 		$('tr').show('fast');
 	});
-	$('#key').on('change', function() {
+	$('#key').on('input', function() {
 		var $key = $(this).val();
 		$('tr:contains('+ $key +')').hide('fast');
 	});
