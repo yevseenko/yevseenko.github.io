@@ -21,7 +21,7 @@ $(document).ready(function() {
 		$('#pterinochilus_murinus_rcf').modal();
 	});
 	$('tr:contains("Nhandu Coloratovillosus")').on('click', function() {
-		$('#nhandu_coloratovilosus').modal();
+		$('#nhandu_coloratovillosus').modal();
 	});
 	$('tr:contains("Poecilotheria Miranda")').on('click', function() {
 		$('#poecilotheria_miranda').modal();
