@@ -12,7 +12,7 @@ $(document).ready(function() {
 	});
 	$('#key').on('change', function() {
 		var $key = $(this).val();
-		$('tr:contains('$key')').hide('fast');
+		$('tr:contains("$key")').hide('fast');
 	});
 });
 
