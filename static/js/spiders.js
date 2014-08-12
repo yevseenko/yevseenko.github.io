@@ -8,8 +8,8 @@ $(document).ready(function() {
 	$('tr:contains(Есть, не опасен)').addClass('success');
 	$('#key').on('input', function() {
 		var $key = $(this).val();
-		$('tr:not(:contains('+ $key +'))').hide('fast');
-		$('tr:contains('+ $key +')').show('fast');
+		$('tr:not(:contains('+ $key +'))').hide('slow');
+		$('tr:contains('+ $key +')').show('slow');
 	});
 });
 
