@@ -9,6 +9,8 @@ $(document).ready(function() {
 	$('#submit').click(function() {
 		$('#submit').removeClass();
 		$('#submit').addClass('btn btn-info');
+		var $key = $('#key').val();
+		$('tr:contains("$key")').hide('fast');
 	});
 	$('#key').on('change', function() {
 		var $key = $(this).val();
