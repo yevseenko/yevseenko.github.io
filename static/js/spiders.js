@@ -11,6 +11,9 @@ $(document).ready(function() {
 		$('tr:not(:contains('+ $key +'))').hide('slow');
 		$('tr:contains('+ $key +')').show('slow');
 	});
+	$('tr:contains('Brachypelma Albopilosum')').on('click', function() {
+		$('#myModal').modal();
+	});
 });
 
 var $spiders = new Array();
