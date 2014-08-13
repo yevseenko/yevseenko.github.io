@@ -31,14 +31,14 @@ $(document).ready(function() {
 var $spiders = new Array();
 
 add('Вид','Тип','Характер','Пол','Яд','Max. размер','Линька','Дата L ->','Период L');
-add('Brachypelma Albopilosum', 'Наземный', 'Спокойный', 'Female', 'Есть, не опасен', 'До 17см.', 'L12 -> L13', '28.05.2014', '1 год.');
+add('Brachypelma Albopilosum', 'Наземный', 'Спокойный', 'Female', 'Есть, не опасен', 'До 16см.', 'L12 -> L13', '28.05.2014', '1 год.');
 add('Poecilotheria Ornata', 'Древесный', 'Агрессивный', 'Male', 'Есть, очень опасен', 'До 24см.', 'L7 -> L8');
 add('Pterinochilus Murinus RCF', 'Древесный', 'Агрессивный', 'Female', 'Есть, очень опасен', 'До 18см.', 'L7 -> L8', '8.08.2014', '2 мес.');
 add('Pterinochilus Murinus RCF', 'Древесный', 'Агрессивный', 'Не определен', 'Есть, очень опасен','До 18см.', 'L7 -> L8', '19.07.2014', '3 мес.');
 add('Nhandu Coloratovillosus', 'Наземный', 'Нервный', 'Female', 'Есть, не опасен', 'До 20см.', 'L7 -> L8', '30.07.2014', '4 мес.');
 add('Nhandu Coloratovillosus', 'Наземный', 'Нервный', 'Male', 'Есть, не опасен', 'До 20см.', 'L5 -> L6');
 add('Poecilotheria Miranda', 'Древесный', 'Спокойный', 'Не определен', 'Есть, опасен', 'До 21см.', 'L2 -> L3');
-add('','','','','','','','','');
+add('','Древесный','Спокойный','Не определен','','','','','');
 
 function add(kind, types, character, gender, venom, sizes, moult, lastMoult, period) {
 	var j = $spiders.length;
