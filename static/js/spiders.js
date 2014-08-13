@@ -26,6 +26,45 @@ $(document).ready(function() {
 	$('tr:contains("Poecilotheria Miranda")').on('click', function() {
 		$('#poecilotheria_miranda').modal();
 	});
+	$('a:contains("Brachypelma")').on('click', function() {
+		$('tr:not(:contains("Brachypelma"))').hide('slow');
+	});
+	$('a:contains("")').on('click', function() {
+
+	});
+	$('a:contains("")').on('click', function() {
+
+	});
+	$('a:contains("")').on('click', function() {
+
+	});
+	$('a:contains("")').on('click', function() {
+
+	});
+	$('a:contains("")').on('click', function() {
+
+	});
+	$('a:contains("")').on('click', function() {
+
+	});
+	$('a:contains("")').on('click', function() {
+
+	});
+	$('a:contains("")').on('click', function() {
+
+	});
+	$('a:contains("")').on('click', function() {
+
+	});
+	$('a:contains("")').on('click', function() {
+
+	});
+	$('a:contains("")').on('click', function() {
+
+	});
+	$('a:contains("")').on('click', function() {
+
+	});
 });
 
 var $spiders = new Array();
@@ -79,8 +118,4 @@ function add(kind, types, character, gender, venom, sizes, moult, lastMoult, per
 	if (!$spiders[j].period) {
 		$spiders[j].period = '-';
 	};
-};
-
-function onlyBra() {
-	$('tr:not(:contains("Brachypelma"))').hide('slow');
 };
