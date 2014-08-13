@@ -80,3 +80,7 @@ function add(kind, types, character, gender, venom, sizes, moult, lastMoult, per
 		$spiders[j].period = '-';
 	};
 };
+
+function onlyBra() {
+	$('tr:not(:contains("Brachypelma"))').hide('slow');
+};
