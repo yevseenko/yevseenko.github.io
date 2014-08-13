@@ -38,22 +38,44 @@ add('Pterinochilus Murinus RCF', 'Древесный', 'Агрессивный',
 add('Nhandu Coloratovillosus', 'Наземный', 'Нервный', 'Female', 'Есть, не опасен', 'До 20см.', 'L7 -> L8', '30.07.2014', '4 мес.');
 add('Nhandu Coloratovillosus', 'Наземный', 'Нервный', 'Male', 'Есть, не опасен', 'До 20см.', 'L5 -> L6');
 add('Poecilotheria Miranda', 'Древесный', 'Не агрессивный', 'Не определен', 'Есть, опасен', 'До 21см.', 'L2 -> L3');
+add(,,,,,,,,);
 
 function add(kind, types, character, gender, venom, sizes, moult, lastMoult, period) {
 	var j = $spiders.length;
 	$spiders[j] = new Object();
 	$spiders[j].kind = kind;
+	if (!$spiders[j].kind) {
+		$spiders[j].kind = '-';
+	};
 	$spiders[j].types = types;
+	if (!$spiders[j].types) {
+		$spiders[j].types = '-';
+	};
 	$spiders[j].character = character;
+	if (!$spiders[j].character) {
+		$spiders[j].character = '-';
+	};
 	$spiders[j].gender = gender;
+	if (!$spiders[j].gender) {
+		$spiders[j].gender = '-';
+	};
 	$spiders[j].venom = venom;
+	if (!$spiders[j].venom) {
+		$spiders[j].venom = '-';
+	};
 	$spiders[j].sizes = sizes;
+	if (!$spiders[j].sizes) {
+		$spiders[j].sizes = '-';
+	};
 	$spiders[j].moult = moult;
+	if (!$spiders[j].moult) {
+		$spiders[j].moult = '-';
+	};
 	$spiders[j].lastMoult = lastMoult;
-	$spiders[j].period = period;
 	if (!$spiders[j].lastMoult) {
 		$spiders[j].lastMoult = '-';
 	};
+	$spiders[j].period = period;
 	if (!$spiders[j].period) {
 		$spiders[j].period = '-';
 	};
