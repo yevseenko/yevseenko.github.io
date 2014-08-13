@@ -30,14 +30,14 @@ $(document).ready(function() {
 
 var $spiders = new Array();
 
-add('Вид','Тип','Характер','Пол','Яд','Линька','Дата L ->','Период L');
-add('Brachypelma Albopilosum', 'Наземный', 'Спокойный', 'Female', 'Есть, не опасен', 'L12 -> L13', '28.05.2014', '1 год.');
-add('Poecilotheria Ornata', 'Древесный', 'Агрессивный', 'Male', 'Есть, очень опасен', 'L7 -> L8');
-add('Pterinochilus Murinus RCF', 'Древесный', 'Агрессивный', 'Female', 'Есть, очень опасен', 'L7 -> L8', '8.08.2014', '2 мес.');
-add('Pterinochilus Murinus RCF', 'Древесный', 'Агрессивный', 'Не определен', 'Есть, очень опасен', 'L7 -> L8', '19.07.2014', '3 мес.');
-add('Nhandu Coloratovillosus', 'Наземный', 'Нервный', 'Female', 'Есть, не опасен', 'L7 -> L8', '30.07.2014', '4 мес.');
-add('Nhandu Coloratovillosus', 'Наземный', 'Нервный', 'Male', 'Есть, не опасен', 'L5 -> L6');
-add('Poecilotheria Miranda', 'Древесный', 'Агрессивный', 'Не определен', 'Есть, опасен', 'L2 -> L3');
+add('Вид','Тип','Характер','Пол','Яд','Max. размер','Линька','Дата L ->','Период L');
+add('Brachypelma Albopilosum', 'Наземный', 'Спокойный', 'Female', 'Есть, не опасен','До 20см.', 'L12 -> L13', '28.05.2014', '1 год.');
+add('Poecilotheria Ornata', 'Древесный', 'Агрессивный', 'Male', 'Есть, очень опасен','До 20см.', 'L7 -> L8');
+add('Pterinochilus Murinus RCF', 'Древесный', 'Агрессивный', 'Female', 'Есть, очень опасен','До 20см.', 'L7 -> L8', '8.08.2014', '2 мес.');
+add('Pterinochilus Murinus RCF', 'Древесный', 'Агрессивный', 'Не определен', 'Есть, очень опасен','До 20см.', 'L7 -> L8', '19.07.2014', '3 мес.');
+add('Nhandu Coloratovillosus', 'Наземный', 'Нервный', 'Female', 'Есть, не опасен','До 20см.', 'L7 -> L8', '30.07.2014', '4 мес.');
+add('Nhandu Coloratovillosus', 'Наземный', 'Нервный', 'Male', 'Есть, не опасен','До 20см.', 'L5 -> L6');
+add('Poecilotheria Miranda', 'Древесный', 'Агрессивный', 'Не определен', 'Есть, опасен','До 20см.', 'L2 -> L3');
 
 function add(kind, types, character, gender, venom, moult, lastMoult, period) {
 	var j = $spiders.length;
@@ -47,6 +47,7 @@ function add(kind, types, character, gender, venom, moult, lastMoult, period) {
 	$spiders[j].character = character;
 	$spiders[j].gender = gender;
 	$spiders[j].venom = venom;
+	$spiders[j].sizes = sizes;
 	$spiders[j].moult = moult;
 	$spiders[j].lastMoult = lastMoult;
 	$spiders[j].period = period;
