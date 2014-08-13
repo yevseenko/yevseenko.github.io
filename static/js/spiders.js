@@ -7,9 +7,8 @@ $(document).ready(function() {
 	$('tr:contains("Опасен")').addClass('warning');
 	$('tr:contains("Не опасен")').addClass('success');
 	$('#key').on('input', function() {
-		var $key = $(this).val();
-		$('tr:not(:contains('+ $key +'))').hide('slow');
-		$('tr:contains('+ $key +')').show('slow');
+		$('tr:not(:contains('+ $(this).val() +'))').hide('slow');
+		$('tr:contains('+ $(this).val() +')').show('slow');
 	});
 	$('tr:contains("Brachypelma Albopilosum")').on('click', function() {
 		$('#brachypelma_albopilosum').modal();
