@@ -30,6 +30,9 @@ $(document).ready(function() {
 		var $keyz = $(this).text();
 		$('tr:not(:contains('+ $keyz +'))').hide('slow');
 	});
+	$('#showAll').on('click', function() {
+		$('tr').show('slow');
+	});
 });
 
 var $spiders = new Array();
