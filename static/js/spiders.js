@@ -29,41 +29,48 @@ $(document).ready(function() {
 	$('a:contains("Brachypelma")').on('click', function() {
 		$('tr:not(:contains("Brachypelma"))').hide('slow');
 	});
-	$('a:contains("")').on('click', function() {
-
+	$('a:contains("Poecilotheria")').on('click', function() {
+		$('tr:not(:contains(""))').hide('slow');
 	});
 	$('a:contains("")').on('click', function() {
-
+		$('tr:not(:contains(""))').hide('slow');
 	});
 	$('a:contains("")').on('click', function() {
-
+		$('tr:not(:contains(""))').hide('slow');
 	});
 	$('a:contains("")').on('click', function() {
-
+		$('tr:not(:contains(""))').hide('slow');
 	});
 	$('a:contains("")').on('click', function() {
-
+		$('tr:not(:contains(""))').hide('slow');
 	});
 	$('a:contains("")').on('click', function() {
-
+		$('tr:not(:contains(""))').hide('slow');
 	});
 	$('a:contains("")').on('click', function() {
-
+		$('tr:not(:contains(""))').hide('slow');
 	});
 	$('a:contains("")').on('click', function() {
-
+		$('tr:not(:contains(""))').hide('slow');
 	});
 	$('a:contains("")').on('click', function() {
-
+		$('tr:not(:contains(""))').hide('slow');
 	});
 	$('a:contains("")').on('click', function() {
-
+		$('tr:not(:contains(""))').hide('slow');
 	});
 	$('a:contains("")').on('click', function() {
-
+		$('tr:not(:contains(""))').hide('slow');
 	});
 	$('a:contains("")').on('click', function() {
-
+		$('tr:not(:contains(""))').hide('slow');
+	});
+	$('#showAll').on('click', function() {
+		$('tr').show('slow');
+	});
+	$('#key~div ul li a').on('click', function() {
+		var $keyz = $(this).text();
+		$('tr:not(:contains('+ $keyz +'))').hide('slow');
 	});
 });
 
