@@ -20,7 +20,7 @@ $(document).ready(function() {
 		$('<div class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="modal_window"><div class="modal-dialog modal-md"><div class="modal-content"><img src="'+$(this).prop("src")+'" class="img-rounded"></img></div></div></div>').appendTo('body');
 		$('#modal_window').modal();
 		$('#modal_window').on('hidden.bs.modal', function() {
-			$('#modal_window').modal('destroy');
+			$('#modal_window').remove();
 		});
 	});
 });
