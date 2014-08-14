@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	for(var i = 0; i < $spiders.length; i++) {
-		$('<tr><td>'+i+'</td><td class="col-xs-3"><img src="../static/img/poecilotheria_miranda.jpg" height="8%" width="8%"></img> '+$spiders[i].kind+'</td><td>'+$spiders[i].types+'</td><td>'+$spiders[i].character+'</td><td>'+$spiders[i].gender+'</td><td>'+$spiders[i].venom+'</td><td>'+$spiders[i].sizes+'</td><td>'+$spiders[i].moult+'</td><td>'+$spiders[i].lastMoult+'</td><td>'+$spiders[i].period+'</td></tr>').appendTo('table#spiders');
+		$('<tr><td>'+i+'</td><td class="col-xs-3"><img src="'+$spiders[i].img+'" height="8%" width="8%"></img> '+$spiders[i].kind+'</td><td>'+$spiders[i].types+'</td><td>'+$spiders[i].character+'</td><td>'+$spiders[i].gender+'</td><td>'+$spiders[i].venom+'</td><td>'+$spiders[i].sizes+'</td><td>'+$spiders[i].moult+'</td><td>'+$spiders[i].lastMoult+'</td><td>'+$spiders[i].period+'</td></tr>').appendTo('table#spiders');
 	};
 	$('tr:contains("Очень опасен")').addClass('danger');
 	$('tr:contains("Опасен")').addClass('warning');
@@ -41,11 +41,11 @@ add('Poecilotheria Ornata','Древесный','Агрессивный','Male',
 add('Pterinochilus Murinus RCF','Древесный','Агрессивный','Female','Очень опасен','До 18см.','L7 -> L8','8.08.2014','2 мес.');
 add('Pterinochilus Murinus RCF','Древесный','Агрессивный','Не определен','Очень опасен','До 18см.','L7 -> L8','19.07.2014','3 мес.');
 add('Nhandu Coloratovillosus','Наземный','Нервный','Female','Не опасен','До 20см.','L7 -> L8','30.07.2014','4 мес.');
-add('Nhandu Coloratovillosus','Наземный','Нервный','Male','Не опасен','До 20см.','L5 -> L6');
+add('Nhandu Coloratovillosus','Наземный','Нервный','Male','Не опасен','До 20см.','L5 -> L6','../static/img/poecilotheria_miranda.jpg');
 add('Poecilotheria Miranda','Древесный','Спокойный','Не определен','Опасен','До 21см.','L2 -> L3');
 add('','Древесный','Спокойный','Не определен','Не опасен','','','','');
 
-function add(kind, types, character, gender, venom, sizes, moult, lastMoult, period) {
+function add(kind, types, character, gender, venom, sizes, moult, lastMoult, period, img) {
 	var j = $spiders.length;
 	$spiders[j] = new Object();
 	$spiders[j].kind = kind;
@@ -83,5 +83,9 @@ function add(kind, types, character, gender, venom, sizes, moult, lastMoult, per
 	$spiders[j].period = period;
 	if (!$spiders[j].period) {
 		$spiders[j].period = '-';
+	};
+	$spiders[j].img = img;
+	if (!$spiders[j].img) {
+		$spiders[j].img = '';
 	};
 };
