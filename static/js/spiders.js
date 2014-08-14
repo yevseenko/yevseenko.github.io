@@ -16,6 +16,9 @@ $(document).ready(function() {
 	$('#showAll').on('click', function() {
 		$('tr').show('slow');
 	});
+	$('img').on('click', function() {
+		alert('You have been clicked'+$(this));
+	});
 });
 
 var $spiders = new Array();
