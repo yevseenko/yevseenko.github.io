@@ -35,7 +35,7 @@ add('Pterinochilus Murinus RCF','Древесный','Агрессивный','�
 add('Nhandu Coloratovillosus','Наземный','Нервный','Female','Не опасен','До 20см.','L7 -> L8','30.07.2014','4 мес.','../static/img/nhandu_coloratovillosus.jpg');
 add('Nhandu Coloratovillosus','Наземный','Нервный','Male','Не опасен','До 20см.','L5 -> L6','','','../static/img/nhandu_coloratovillosus.jpg');
 add('Poecilotheria Miranda','Древесный','Спокойный','Не определен','Опасен','До 21см.','L2 -> L3','','','../static/img/poecilotheria_miranda.jpg');
-add('','Древесный','Спокойный','Не определен','Не опасен','','','','../static/img/tarantulas.jpg');
+add('','Древесный','Спокойный','Не определен','Не опасен','','','','','../static/img/tarantulas.jpg');
 
 function add(kind, types, character, gender, venom, sizes, moult, lastMoult, period, img) {
 	var j = $spiders.length;
