@@ -13,6 +13,7 @@ $(document).ready(function() {
 	$('#key~div ul li a').on('click', function() {
 		$('tr').hide();
         $('tr:contains('+ $(this).text() +')').show('slow');
+        $('#info').text($(this).text());
     });
 	$('#showAll').on('click', function() {
 		$('tr').show('slow');
