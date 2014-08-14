@@ -9,21 +9,6 @@ $(document).ready(function() {
 		$('tr:not(:contains('+ $(this).val() +'))').hide('slow');
 		$('tr:contains('+ $(this).val() +')').show('slow');
 	});
-	$('td:contains("Brachypelma Albopilosum")').on('click', function() {
-		$('#brachypelma_albopilosum').modal();
-	});
-	$('td:contains("Poecilotheria Ornata")').on('click', function() {
-		$('#poecilotheria_ornata').modal();
-	});
-	$('td:contains("Pterinochilus Murinus RCF")').on('click', function() {
-		$('#pterinochilus_murinus_rcf').modal();
-	});
-	$('td:contains("Nhandu Coloratovillosus")').on('click', function() {
-		$('#nhandu_coloratovillosus').modal();
-	});
-	$('td:contains("Poecilotheria Miranda")').on('click', function() {
-		$('#poecilotheria_miranda').modal();
-	});
 	$('#key~div ul li a').on('click', function() {
 		$('tr').hide();
         $('tr:contains('+ $(this).text() +')').show('slow');
