@@ -17,7 +17,7 @@ $(document).ready(function() {
 		$('tr').show('slow');
 	});
 	$('img').on('click', function() {
-		alert('You have been clicked'+$(this));
+		console.log($(this));
 	});
 });
 
