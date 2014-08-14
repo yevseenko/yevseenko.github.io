@@ -23,9 +23,6 @@ $(document).ready(function() {
 			$('#modal_window').remove();
 		});
 	});
-	$('img').on('hover', function() {
-		$('img').toggleClass('active');
-	});
 });
 
 var $spiders = new Array();
