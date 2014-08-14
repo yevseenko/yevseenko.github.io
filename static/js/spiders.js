@@ -26,7 +26,7 @@ $(document).ready(function() {
 	});
 	$('#key~div ul li a').on('click', function() {
 		$('tr').hide();
-        $('tr:contains('+ $(this).text() +')').show();
+        $('tr:contains('+ $(this).text() +')').show('slow');
     });
 	$('#showAll').on('click', function() {
 		$('tr').show('slow');
