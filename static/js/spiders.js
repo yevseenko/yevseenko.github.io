@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	for(var i = 0; i < $spiders.length; i++) {
-		$('<tr><td>'+i+'</td><td class="col-xs-3"><img src="../static/img/poecilotheria_miranda.jpg" height="7%" width="7%"></img> '+$spiders[i].kind+'</td><td>'+$spiders[i].types+'</td><td>'+$spiders[i].character+'</td><td>'+$spiders[i].gender+'</td><td>'+$spiders[i].venom+'</td><td>'+$spiders[i].sizes+'</td><td>'+$spiders[i].moult+'</td><td>'+$spiders[i].lastMoult+'</td><td>'+$spiders[i].period+'</td></tr>').appendTo('table#spiders');
+		$('<tr><td>'+i+'</td><td class="col-xs-3"><img src="../static/img/poecilotheria_miranda.jpg" height="8%" width="8%"></img> '+$spiders[i].kind+'</td><td>'+$spiders[i].types+'</td><td>'+$spiders[i].character+'</td><td>'+$spiders[i].gender+'</td><td>'+$spiders[i].venom+'</td><td>'+$spiders[i].sizes+'</td><td>'+$spiders[i].moult+'</td><td>'+$spiders[i].lastMoult+'</td><td>'+$spiders[i].period+'</td></tr>').appendTo('table#spiders');
 	};
 	$('tr:contains("Очень опасен")').addClass('danger');
 	$('tr:contains("Опасен")').addClass('warning');
