@@ -25,9 +25,7 @@ $(document).ready(function() {
 	});
 	$('img').hover(function() {
 		$(this).animate({
-			'cursor':'pointer',
-			'height':'17px',
-			'width':'23px'
+			'cursor':'pointer'
 		});
 	});
 });
