@@ -24,7 +24,11 @@ $(document).ready(function() {
 		});
 	});
 	$('img').hover(function() {
-		$(this).effect('highlight');
+		$(this).animate({
+			'cursor':'hand',
+			'height':'17px',
+			'width':'23px'
+		});
 	});
 });
 
