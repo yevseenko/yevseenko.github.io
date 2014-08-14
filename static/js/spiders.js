@@ -30,7 +30,7 @@ $(document).ready(function() {
 		'trigger':'hover',
 		'container':'body',
 		'placement':'top',
-		'title';'View image'
+		'title':'View image'
 	});
 	$('img').hover(function() {
 		$(this).css({
