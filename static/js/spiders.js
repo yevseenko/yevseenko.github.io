@@ -41,8 +41,8 @@ add('Poecilotheria Ornata','Древесный','Агрессивный','Male',
 add('Pterinochilus Murinus RCF','Древесный','Агрессивный','Female','Очень опасен','До 18см.','L7 -> L8','8.08.2014','2 мес.');
 add('Pterinochilus Murinus RCF','Древесный','Агрессивный','Не определен','Очень опасен','До 18см.','L7 -> L8','19.07.2014','3 мес.');
 add('Nhandu Coloratovillosus','Наземный','Нервный','Female','Не опасен','До 20см.','L7 -> L8','30.07.2014','4 мес.');
-add('Nhandu Coloratovillosus','Наземный','Нервный','Male','Не опасен','До 20см.','L5 -> L6','../static/img/poecilotheria_miranda.jpg');
-add('Poecilotheria Miranda','Древесный','Спокойный','Не определен','Опасен','До 21см.','L2 -> L3');
+add('Nhandu Coloratovillosus','Наземный','Нервный','Male','Не опасен','До 20см.','L5 -> L6','');
+add('Poecilotheria Miranda','Древесный','Спокойный','Не определен','Опасен','До 21см.','L2 -> L3','','','../static/img/poecilotheria_miranda.jpg');
 add('','Древесный','Спокойный','Не определен','Не опасен','','','','');
 
 function add(kind, types, character, gender, venom, sizes, moult, lastMoult, period, img) {
