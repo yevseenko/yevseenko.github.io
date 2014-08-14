@@ -27,8 +27,8 @@ $(document).ready(function() {
 		$(this).css({
 			'cursor':'pointer',
 			'border-radius':'5px',
-			'height':'20px',
-			'width':'27px'
+			'height':'19px',
+			'width':'25px'
 			});
 		}, function() {
 		$(this).removeAttr('style');
