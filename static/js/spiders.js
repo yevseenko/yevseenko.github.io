@@ -24,7 +24,10 @@ $(document).ready(function() {
 		});
 	});
 	$('img').hover(function() {
-		cursor: hand;
+		$(this).animate({
+			height: '30px';
+			width: '20px';
+		});
 	});
 });
 
