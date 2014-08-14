@@ -24,9 +24,8 @@ $(document).ready(function() {
 		});
 	});
 	$('img').on('mouseover', function() {
-		$(this).prop("height","10");
-		$(this).prop("width","10");
-		$(this).prop("class","alert alert-warning");
+		$(this).prop("height","20");
+		$(this).prop("width","28");
 	});
 });
 
