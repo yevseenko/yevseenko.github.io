@@ -29,6 +29,7 @@ $(document).ready(function() {
 			'border-width':'1px',
 			'border-style':'solid',
 			'border-color':'blue',
+			'border-radius':'5px',
 			'height':'20px',
 			'width':'27px'
 			});
