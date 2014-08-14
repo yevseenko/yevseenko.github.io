@@ -23,10 +23,10 @@ $(document).ready(function() {
 			$('#modal_window').remove();
 		});
 	});
-	$('img').hover(function() {
+	$('img').on('hover', function() {
 		$(this).animate({
-			height: '30px';
-			width: '20px';
+			height: '30px',
+			width: '20px'
 		});
 	});
 });
