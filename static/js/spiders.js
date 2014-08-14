@@ -6,8 +6,9 @@ $(document).ready(function() {
 	$('tr:contains("Опасен")').addClass('warning');
 	$('tr:contains("Не опасен")').addClass('success');
 	$('#key').on('input', function() {
-		$('tr:not(:contains('+ $(this).val() +'))').hide('slow');
+		$('tr:not(:contains('+ $(this).val() +'))').hide();
 		$('tr:contains('+ $(this).val() +')').show('slow');
+		$('#info').text('Отфильтровано по:'+$(this).val());
 	});
 	$('#key~div ul li a').on('click', function() {
 		$('tr').hide();
