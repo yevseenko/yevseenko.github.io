@@ -25,8 +25,8 @@ $(document).ready(function() {
 	});
 	$('img').on('mouseenter', function() {
 		$(this).animate({
-			height: '30px',
-			width: '20px'
+			'height':'30px',
+			'width':'20px'
 		});
 	});
 });
