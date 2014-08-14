@@ -19,7 +19,7 @@ $(document).ready(function() {
 	$('img').on('click', function() {
 		var src = $(this).prop("src");
 		$('<div class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="modal_window"><div class="modal-dialog modal-md"><div class="modal-content"><img src="'+src+'" class="img-rounded"></img></div></div></div>').appendTo('div#modal');
-		$(this).modal();
+		$('#modal_window').modal();
 	});
 });
 
