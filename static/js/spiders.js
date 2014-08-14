@@ -29,13 +29,13 @@ $(document).ready(function() {
 			'border-width':'1px',
 			'border-style':'solid',
 			'border-color':'blue'
-		}, function () {
+			});
+		}, function() {
 		$(this).removeAttr('style');
 		$(this).css({
 			'height':'16px',
 			'width':'21px'
 			});
-		});
 	});
 });
 
