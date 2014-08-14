@@ -24,10 +24,7 @@ $(document).ready(function() {
 		});
 	});
 	$('img').hover(function() {
-		$(this).animate({
-			'height':'30px',
-			'width':'20px'
-		});
+		$(this).effect('highlight');
 	});
 });
 
