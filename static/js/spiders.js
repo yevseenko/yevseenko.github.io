@@ -24,7 +24,7 @@ $(document).ready(function() {
 		});
 	});
 	$('img').hover(function() {
-		$(this).css("cursor","pointer");
+		$(this).css("cursor","pointer","border","1 px solid green");
 	});
 });
 
