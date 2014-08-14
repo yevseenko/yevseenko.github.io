@@ -23,7 +23,7 @@ $(document).ready(function() {
 			$('#modal_window').remove();
 		});
 	});
-	$('img').on('mouseenter', function() {
+	$('img').on('hover', function() {
 		$(this).animate({
 			'height':'30px',
 			'width':'20px'
