@@ -19,13 +19,13 @@ $(document).ready(function() {
 	$('img').on('click', function() {
 		$('<div class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="modal_window"><div class="modal-dialog modal-md"><div class="modal-content"><img src="'+$(this).prop("src")+'" class="img-rounded"></img></div></div></div>').appendTo('body');
 		$('#modal_window').modal();
+		$('#modal_window').on('mousedown', function() {
+			$('modal_window').modal('hide');
+		});
 		$('#modal_window').on('hidden.bs.modal', function() {
 			$('#modal_window').remove();
 		});
 	});
-	$('#modal_window').on('click', function() {
-			$('modal_window').modal('hide');
-		});
 	$('img').hover(function() {
 		$(this).css({
 			'cursor':'pointer',
