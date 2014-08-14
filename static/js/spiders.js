@@ -26,10 +26,15 @@ $(document).ready(function() {
 	$('img').hover(function() {
 		$(this).css({
 			'cursor':'pointer',
-			'border-radius':'2px',
 			'border-width':'1px',
 			'border-style':'solid',
-			'border-color':'red'
+			'border-color':'blue'
+		}, function () {
+		$(this).removeProp();
+		$(this).css({
+			'height':'16px';
+			'width':'21px';
+			});
 		});
 	});
 });
