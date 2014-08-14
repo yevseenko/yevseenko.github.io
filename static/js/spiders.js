@@ -28,7 +28,9 @@ $(document).ready(function() {
 			'cursor':'pointer',
 			'border-width':'1px',
 			'border-style':'solid',
-			'border-color':'blue'
+			'border-color':'blue',
+			'height':'20px',
+			'width':'27px'
 			});
 		}, function() {
 		$(this).removeAttr('style');
