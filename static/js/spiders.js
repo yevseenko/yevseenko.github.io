@@ -25,7 +25,7 @@ $(document).ready(function() {
 	});
 	$('img').hover(function() {
 		$(this).animate({
-			'cursor':'hand',
+			'cursor':'pointer',
 			'height':'17px',
 			'width':'23px'
 		});
