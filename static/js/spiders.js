@@ -30,7 +30,7 @@ $(document).ready(function() {
 			'border-style':'solid',
 			'border-color':'blue'
 		}, function () {
-		$(this).removeProp();
+		$(this).removeAttr('style');
 		$(this).css({
 			'height':'16px',
 			'width':'21px'
