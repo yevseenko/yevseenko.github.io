@@ -8,7 +8,7 @@ $(document).ready(function() {
 	$('#key').on('input', function() {
 		$('tr:not(:contains('+ $(this).val() +'))').hide();
 		$('tr:contains('+ $(this).val() +')').show('slow');
-		$('#info').text('Отфильтровано по:'+$(this).val());
+		$('#info').text($(this).val());
 	});
 	$('#key~div ul li a').on('click', function() {
 		$('tr').hide();
