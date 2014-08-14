@@ -23,6 +23,9 @@ $(document).ready(function() {
 			$('#modal_window').remove();
 		});
 	});
+	$('img').on('mouseover', function() {
+		$(this).prop("class","img-rounded");
+	});
 });
 
 var $spiders = new Array();
