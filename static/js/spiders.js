@@ -26,8 +26,13 @@ $(document).ready(function() {
 			$('#modal_window').remove();
 		});
 	});
+	$('img').tooltip({
+		'trigger':'hover',
+		'container':'body',
+		'placement':'top',
+		'title';'View image'
+	});
 	$('img').hover(function() {
-		$(this).tooltip('show');
 		$(this).css({
 			'cursor':'pointer',
 			'border-radius':'5px',
@@ -35,7 +40,6 @@ $(document).ready(function() {
 			'width':'25px'
 			});
 		}, function() {
-		$(this).tooltip('destroy');
 		$(this).removeAttr('style');
 		$(this).css({
 			'height':'16px',
