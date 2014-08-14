@@ -24,7 +24,13 @@ $(document).ready(function() {
 		});
 	});
 	$('img').hover(function() {
-		$(this).css({"cursor":"pointer", "border-radius":"5px"});
+		$(this).css({
+			'cursor':'pointer',
+			'border-radius':'2px',
+			'border-width':'thick',
+			'border-style':'solid',
+			'border-color':'red'
+		});
 	});
 });
 
