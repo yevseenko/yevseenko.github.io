@@ -32,8 +32,8 @@ $(document).ready(function() {
 		}, function () {
 		$(this).removeProp();
 		$(this).css({
-			'height':'16px';
-			'width':'21px';
+			'height':'16px',
+			'width':'21px'
 			});
 		});
 	});
