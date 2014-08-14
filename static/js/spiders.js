@@ -23,9 +23,8 @@ $(document).ready(function() {
 			$('#modal_window').remove();
 		});
 	});
-	$('img').on('mouseover', function() {
-		$(this).prop("height","20");
-		$(this).prop("width","28");
+	$('img').hover(function() {
+		cursor: hand;
 	});
 });
 
