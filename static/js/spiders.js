@@ -18,6 +18,8 @@ $(document).ready(function() {
 	});
 	$('img').on('click', function() {
 		console.log($(this).prop('src'));
+		$('<div class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="modal_window"><div class="modal-dialog modal-md"><div class="modal-content"><img src="'+$(this).prop('src')+'" class="img-rounded"></img></div></div></div>').appendTo('body');
+		$(this).modal();
 	});
 });
 
