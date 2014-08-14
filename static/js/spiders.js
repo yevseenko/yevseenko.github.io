@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	for(var i = 0; i < $spiders.length; i++) {
-		$('<tr><td>'+i+'</td><td class="col-xs-3"><img src="'+$spiders[i].img+'" height="16px" width="21px"> '+$spiders[i].kind+'</td><td>'+$spiders[i].types+'</td><td>'+$spiders[i].character+'</td><td>'+$spiders[i].gender+'</td><td>'+$spiders[i].venom+'</td><td>'+$spiders[i].sizes+'</td><td>'+$spiders[i].moult+'</td><td>'+$spiders[i].lastMoult+'</td><td>'+$spiders[i].period+'</td></tr>').appendTo('table#spiders');
+		$('<tr><td>'+i+'</td><td class="col-xs-3"><img style="cursor: pointer" src="'+$spiders[i].img+'" height="16px" width="21px"> '+$spiders[i].kind+'</td><td>'+$spiders[i].types+'</td><td>'+$spiders[i].character+'</td><td>'+$spiders[i].gender+'</td><td>'+$spiders[i].venom+'</td><td>'+$spiders[i].sizes+'</td><td>'+$spiders[i].moult+'</td><td>'+$spiders[i].lastMoult+'</td><td>'+$spiders[i].period+'</td></tr>').appendTo('table#spiders');
 	};
 	$('tr:contains("Очень опасен")').addClass('danger');
 	$('tr:contains("Опасен")').addClass('warning');
