@@ -26,9 +26,6 @@ $(document).ready(function() {
 	$('img').hover(function() {
 		$(this).css({
 			'cursor':'pointer',
-			'border-width':'1px',
-			'border-style':'solid',
-			'border-color':'blue',
 			'border-radius':'5px',
 			'height':'20px',
 			'width':'27px'
