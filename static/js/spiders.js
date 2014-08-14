@@ -25,7 +25,6 @@ $(document).ready(function() {
 		$('#poecilotheria_miranda').modal();
 	});
 	$('#key~div ul li a').on('click', function() {
-		$('tr').show();
 		$('tr:not(:contains('+ $(this).text() +'))').hide();
 	});
 	$('#showAll').on('click', function() {
