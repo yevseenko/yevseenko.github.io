@@ -27,7 +27,7 @@ $(document).ready(function() {
 		$(this).css({
 			'cursor':'pointer',
 			'border-radius':'2px',
-			'border-width':'thick',
+			'border-width':'1px',
 			'border-style':'solid',
 			'border-color':'red'
 		});
