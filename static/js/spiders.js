@@ -33,7 +33,7 @@ $(document).ready(function() {
 		'trigger':'hover',
 		'container':'body',
 		'placement':'top',
-		'title':'Увеличить изображение'
+		'title':'Показать изображение'
 	});
 });
 
