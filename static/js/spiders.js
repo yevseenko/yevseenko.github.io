@@ -41,13 +41,13 @@ var $spiders = new Array();
 
 add('Вид','Тип','Характер','Пол','Яд','Max. размер','Линька','Дата L ->','Период L','../static/img/tarantulas.jpg');
 add('Brachypelma Albopilosum','Наземный','Спокойный','Female','Не опасен','До 16см.','L12 -> L13','28.05.2014','1 год.','../static/img/brachypelma_albopilosum.jpg');
-add('Poecilotheria Ornata','Древесный','Агрессивный','Male','Очень опасен','До 24см.','L7 -> L8','','','../static/img/poecilotheria_ornata.jpg');
+add('Poecilotheria Ornata','Древесный','Агрессивный','Male','Очень опасен','До 24см.','L8 -> L9','15.08.2014','4 мес.','../static/img/poecilotheria_ornata.jpg');
 add('Pterinochilus Murinus RCF','Древесный','Агрессивный','Female','Очень опасен','До 18см.','L7 -> L8','8.08.2014','2 мес.','../static/img/pterinochilus_murinus_rcf.jpg');
 add('Pterinochilus Murinus RCF','Древесный','Агрессивный','Не определен','Очень опасен','До 18см.','L7 -> L8','19.07.2014','3 мес.','../static/img/pterinochilus_murinus_rcf.jpg');
 add('Nhandu Coloratovillosus','Наземный','Нервный','Female','Не опасен','До 20см.','L7 -> L8','30.07.2014','4 мес.','../static/img/nhandu_coloratovillosus.jpg');
 add('Nhandu Coloratovillosus','Наземный','Нервный','Male','Не опасен','До 20см.','L5 -> L6','','','../static/img/nhandu_coloratovillosus.jpg');
 add('Poecilotheria Miranda','Древесный','Спокойный','Не определен','Опасен','До 21см.','L2 -> L3','','','../static/img/poecilotheria_miranda.jpg');
-add('','Древесный','Спокойный','Не определен','Не опасен','','','','','');
+add('Davus Fasciatus','Норной','Нервный','Не определен','Не опасен','До 12см.','L1','','','../static/img/davus_fasciatus.jpg');
 
 function add(kind, types, character, gender, venom, sizes, moult, lastMoult, period, img) {
 	var j = $spiders.length;
