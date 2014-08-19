@@ -35,6 +35,9 @@ $(document).ready(function() {
 		'placement':'top',
 		'title':'Показать изображение'
 	});
+	$('img').mouseout(function() {
+		$(this).tooltip('destroy');
+	});
 });
 
 var $spiders = new Array();
