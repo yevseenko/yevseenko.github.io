@@ -1,35 +1,45 @@
 $(document).ready(function() {
+	
+	var $info = $('#info');
+	var $key = $('#key');
+	var $keya = $('#key~div ul li a');
+	var $modal = $('#modal_window');
+
 	for(var i = 0; i < $spiders.length; i++) {
 		$('<tr><td>'+i+'</td><td class="col-xs-3"><img style="cursor: pointer" src="'+$spiders[i].img+'" height="16px" width="21px"> '+$spiders[i].kind+'</td><td>'+$spiders[i].types+'</td><td>'+$spiders[i].character+'</td><td>'+$spiders[i].gender+'</td><td>'+$spiders[i].venom+'</td><td>'+$spiders[i].sizes+'</td><td>'+$spiders[i].moult+'</td><td>'+$spiders[i].lastMoult+'</td><td>'+$spiders[i].period+'</td></tr>').appendTo('table#spiders');
 	};
+
+	var $tr = $('tr');
+	var $img = $('img');
+
 	$('tr:contains("Очень опасен")').addClass('danger');
 	$('tr:contains("Опасен")').addClass('warning');
 	$('tr:contains("Не опасен")').addClass('success');
-	$('#key').on('input', function() {
+	$key.on('input', function() {
 		$('tr:not(:contains('+ $(this).val() +'))').hide();
 		$('tr:contains('+ $(this).val() +')').show('slow');
-		$('#info').text($(this).val());
+		$info.text($(this).val());
 	});
-	$('#key~div ul li a').on('click', function() {
-		$('tr').hide();
+	$keya.on('click', function() {
+		$tr.hide();
         $('tr:contains('+ $(this).text() +')').show('slow');
-        $('#info').text($(this).text());
+        $info.text($(this).text());
     });
 	$('#showAll').on('click', function() {
-		$('tr').show('slow');
-		$('#info').text('пусто');
+		$tr.show('slow');
+		$info.text('пусто');
 	});
-	$('img').on('click', function() {
+	$img.on('click', function() {
 		$('<div class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" id="modal_window"><div class="modal-dialog modal-md"><div class="modal-content"><img src="'+$(this).prop("src")+'" class="img-rounded"></img></div></div></div>').appendTo('body');
-		$('#modal_window').modal();
-		$('#modal_window').on('click', function() {
-			$('#modal_window').modal('hide');
+		$modal.modal();
+		$modal.on('click', function() {
+			$modal.modal('hide');
 		});
-		$('#modal_window').on('hidden.bs.modal', function() {
-			$('#modal_window').remove();
+		$modal.on('hidden.bs.modal', function() {
+			$modal.remove();
 		});
 	});
-	$('img').tooltip({
+	$img.tooltip({
 		'trigger':'hover',
 		'container':'body',
 		'placement':'top',
