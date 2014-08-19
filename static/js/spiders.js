@@ -32,6 +32,8 @@ $(document).ready(function() {
 	});
 	$tableImg.on('mousedown', function() {
 		$modalImg.attr('src', $(this).prop('src'));
+	});
+	$tableImg.on('click', function() {
 		$modal.modal();
 		$modal.on('click', function() {
 			$modal.modal('hide');
