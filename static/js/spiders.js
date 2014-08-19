@@ -2,7 +2,7 @@ $(document).ready(function() {
 	
 	var $info = $('#info');
 	var $key = $('#key');
-	var $keya = $('#key~div ul li a');
+	var $filter = $('#key~div ul li a');
 	var $modal = $('#modal_window');
 
 	for(var i = 0; i < $spiders.length; i++) {
@@ -20,7 +20,7 @@ $(document).ready(function() {
 		$('tr:contains('+ $(this).val() +')').show('slow');
 		$info.text($(this).val());
 	});
-	$keya.on('click', function() {
+	$filter.on('click', function() {
 		$tr.hide();
         $('tr:contains('+ $(this).text() +')').show('slow');
         $info.text($(this).text());
@@ -30,13 +30,13 @@ $(document).ready(function() {
 		$info.text('пусто');
 	});
 	$img.on('click', function() {
-		$('<img src="'+$(this).prop("src")+'" class="img-rounded">').appendTo('div.modal-content');
+		$img.prop("src", $(this).prop("src"));
 		$modal.modal();
 		$modal.on('click', function() {
 			$modal.modal('hide');
 		});
 		$modal.on('hidden.bs.modal', function() {
-			$modal.remove();
+			$modal.removeProp("src");
 		});
 	});
 	$img.tooltip({
