@@ -30,7 +30,7 @@ $(document).ready(function() {
 		$info.text('пусто');
 	});
 	$img.on('click', function() {
-		$(this).prop("src", $(this).prop("src"));
+		$img.prop("src", $(this).prop("src"));
 		$modal.modal();
 		$modal.on('click', function() {
 			$modal.modal('hide');
