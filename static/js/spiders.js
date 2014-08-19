@@ -29,11 +29,13 @@ $(document).ready(function() {
 			$('#modal_window').remove();
 		});
 	});
-	$('img').tooltip({
+	$('img').mouseover(function() {
+		$(this).tooltip({
 		'trigger':'hover',
 		'container':'body',
 		'placement':'top',
 		'title':'Показать изображение'
+		});
 	});
 	$('img').mouseout(function() {
 		$(this).tooltip('destroy');
