@@ -34,7 +34,6 @@ $(document).ready(function() {
 		'container':'body',
 		'placement':'top',
 		'title':'Показать изображение'
-		});
 	});
 });
 
