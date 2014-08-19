@@ -31,13 +31,11 @@ $(document).ready(function() {
 	});
 	$('img').mouseover(function() {
 		$(this).tooltip({
-		'trigger':'hover',
 		'container':'body',
 		'placement':'top',
 		'title':'Показать изображение'
 		});
-	});
-	$('img').mouseout(function() {
+	}).mouseout(function() {
 		$(this).tooltip('destroy');
 	});
 });
