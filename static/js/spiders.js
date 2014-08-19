@@ -38,9 +38,6 @@ $(document).ready(function() {
 		$modal.on('click', function() {
 			$modal.modal('hide');
 		});
-		$modal.on('hidden.bs.modal', function() {
-			$modalImg.removeAttr('src');
-		});
 	});
 	$tableImg.tooltip({
 		'trigger':'hover',
