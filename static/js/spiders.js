@@ -4,6 +4,7 @@ $(document).ready(function() {
 	var $key = $('#key');
 	var $filter = $('#key~div ul li a');
 	var $modal = $('#modal_window');
+	var $modalImg = $('div.modal-content img');
 
 	for(var i = 0; i < $spiders.length; i++) {
 		$('<tr><td>'+i+'</td><td class="col-xs-3"><img style="cursor: pointer" src="'+$spiders[i].img+'" height="16px" width="21px"> '+$spiders[i].kind+'</td><td>'+$spiders[i].types+'</td><td>'+$spiders[i].character+'</td><td>'+$spiders[i].gender+'</td><td>'+$spiders[i].venom+'</td><td>'+$spiders[i].sizes+'</td><td>'+$spiders[i].moult+'</td><td>'+$spiders[i].lastMoult+'</td><td>'+$spiders[i].period+'</td></tr>').appendTo('table#spiders');
@@ -30,13 +31,13 @@ $(document).ready(function() {
 		$info.text('пусто');
 	});
 	$img.on('click', function() {
-		$('img.img-rounded').attr('src', $(this).prop('src'));
+		$modalImg.attr('src', $(this).prop('src'));
 		$modal.modal();
 		$modal.on('click', function() {
 			$modal.modal('hide');
 		});
 		$modal.on('hidden.bs.modal', function() {
-			$('img.img-rounded').removeAttr('src');
+			$modalImg.removeAttr('src');
 		});
 	});
 	$img.tooltip({
