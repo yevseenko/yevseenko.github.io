@@ -31,6 +31,7 @@ $(document).ready(function() {
 	});
 	$('img').mouseover(function() {
 		$(this).tooltip({
+		'trigger':'mouseover',
 		'container':'body',
 		'placement':'top',
 		'title':'Показать изображение'
