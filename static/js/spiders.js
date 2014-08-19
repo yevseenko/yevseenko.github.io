@@ -30,7 +30,7 @@ $(document).ready(function() {
 		$tr.show('slow');
 		$info.text('пусто');
 	});
-	$tableImg.on('mousedown', function() {
+	$tableImg.on('mouseover', function() {
 		$modalImg.attr('src', $(this).prop('src'));
 	});
 	$tableImg.on('click', function() {
