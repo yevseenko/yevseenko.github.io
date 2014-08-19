@@ -36,7 +36,7 @@ $(document).ready(function() {
 			$modal.modal('hide');
 		});
 		$modal.on('hidden.bs.modal', function() {
-			$modal.removeProp("src");
+			$('img.img-rounded').removeProp("src");
 		});
 	});
 	$img.tooltip({
