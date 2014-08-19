@@ -32,6 +32,7 @@ $(document).ready(function() {
 	});
 	$img.on('click', function() {
 		$modalImg.attr('src', $(this).prop('src'));
+		$modalImg.tooltip('destroy');
 		$modal.modal();
 		$modal.on('click', function() {
 			$modal.modal('hide');
