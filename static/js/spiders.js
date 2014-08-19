@@ -2,7 +2,7 @@ $(document).ready(function() {
 	
 	var $info = $('#info');
 	var $key = $('#key');
-	var $filter = $('#key~div ul li a');
+	var $filter = $('#key~div a');
 	var $modal = $('#modal_window');
 	var $modalImg = $('div.modal-content img');
 
@@ -11,7 +11,7 @@ $(document).ready(function() {
 	};
 
 	var $tr = $('tr');
-	var $img = $('img');
+	var $tableImg = $('#spiders img');
 
 	$('tr:contains("Очень опасен")').addClass('danger');
 	$('tr:contains("Опасен")').addClass('warning');
@@ -30,9 +30,8 @@ $(document).ready(function() {
 		$tr.show('slow');
 		$info.text('пусто');
 	});
-	$img.on('click', function() {
+	$tableImg.on('click', function() {
 		$modalImg.attr('src', $(this).prop('src'));
-		$modalImg.tooltip('destroy');
 		$modal.modal();
 		$modal.on('click', function() {
 			$modal.modal('hide');
@@ -41,7 +40,7 @@ $(document).ready(function() {
 			$modalImg.removeAttr('src');
 		});
 	});
-	$img.tooltip({
+	$tableImg.tooltip({
 		'trigger':'hover',
 		'container':'body',
 		'placement':'top',
