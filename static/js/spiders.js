@@ -29,15 +29,12 @@ $(document).ready(function() {
 			$('#modal_window').remove();
 		});
 	});
-	$('img').mouseover(function() {
-		$(this).tooltip({
-		'trigger':'mouseover',
+	$('img').tooltip({
+		'trigger':'hover',
 		'container':'body',
 		'placement':'top',
 		'title':'Показать изображение'
 		});
-	}).mouseout(function() {
-		$(this).tooltip('destroy');
 	});
 });
 
