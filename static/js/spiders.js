@@ -28,7 +28,7 @@ $(document).ready(function() {
     });
 	$('#showAll').on('click', function() {
 		$tr.show('slow');
-		$info.text('пусто');
+		$info.text('не используется');
 	});
 	$tableImg.on('mouseover', function() {
 		$modalImg.attr('src', $(this).prop('src'));
