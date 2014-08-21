@@ -33,7 +33,7 @@ $(document).ready(function() {
 	$tableImg.on('mouseover', function() {
 		$modalImg.attr('src', $(this).prop('src'));
 	});
-	$tableImg.on('click', function() {
+	$tableImg.on('mousedown', function() {
 		$modal.modal();
 		$modal.on('click', function() {
 			$modal.modal('hide');
