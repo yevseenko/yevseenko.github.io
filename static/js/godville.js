@@ -2,6 +2,7 @@ $(document).ready(function() {
 
 	var $martial_glases = $('#martial_glases');
 
+	$martial_glases.html(martial_glases[martial_rand()]);
 	$martial_glases.on('click', function() {
 		$martial_glases.html(martial_glases[martial_rand()]);
 	});
