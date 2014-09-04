@@ -8,7 +8,7 @@ $(document).ready(function() {
 	});
 	$martial_glases.zclip({
 		path:"ZeroClipboard.swf",
-		copy:$martial_glases.text();
+		copy:$martial_glases.text()
 	});
 });
 
