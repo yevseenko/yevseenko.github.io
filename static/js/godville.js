@@ -1,4 +1,4 @@
-$document.ready(function() {
+$(document).ready(function() {
 	$(martial_glases[rand]).appendTo('#glases');
 });
 
