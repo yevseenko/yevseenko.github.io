@@ -5,10 +5,10 @@ $(document).ready(function() {
 	$martial_glases.text(martial_glases[martial_rand()]);
 	$martial_glases.on('click', function() {
 		$martial_glases.text(martial_glases[martial_rand()]);
-	});
-	$martial_glases.zclip({
+		$martial_glases.zclip({
 		path:"ZeroClipboard.swf",
 		copy:$martial_glases.text()
+		});
 	});
 });
 
