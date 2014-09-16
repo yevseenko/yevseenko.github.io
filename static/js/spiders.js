@@ -60,7 +60,7 @@ add('Lampropelma sp. Borneo Black','Норной','Агрессивный','Fema
 add('Poecilotheria Miranda','Древесный','Спокойный','Не определен','Опасен','До 21см.','L2 -> L3','','','../static/img/poecilotheria_miranda.jpg');
 add('Davus Fasciatus','Норной','Нервный','Не определен','Не опасен','До 12см.','L1','','','../static/img/davus_fasciatus.jpg');
 add('Lampropelma sp. Borneo Black','Норной','Агрессивный','Не определен','Очень опасен','До 18см.','L1','','','../static/img/lampropelma_sp_borneo_black.jpg');
-add('Heteroscodra Maculata','Древесный','Агрессивный','Не определен','Очень опасен','До 15см.','L1','','','../static/img/heteroscodra_maculata.jpg');
+add('Heteroscodra Maculata','Древесный','Агрессивный','Не определен','Опасен','До 15см.','L1','','','../static/img/heteroscodra_maculata.jpg');
 
 function add(kind, types, character, gender, venom, sizes, moult, lastMoult, period, img) {
 	var j = $spiders.length;
