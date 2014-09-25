@@ -57,7 +57,7 @@ add('Pterinochilus Murinus RCF','Древесный','Агрессивный','�
 add('Nhandu Coloratovillosus','Наземный','Нервный','Female','Не опасен','До 20см.','L7 -> L8','30.07.2014','4 мес.','../static/img/nhandu_coloratovillosus.jpg');
 add('Nhandu Coloratovillosus','Наземный','Нервный','Male','Не опасен','До 20см.','L5 -> L6','','','../static/img/nhandu_coloratovillosus.jpg');
 add('Lampropelma sp. Borneo Black','Норной','Агрессивный','Female','Очень опасен','До 18см.','L5','','','../static/img/lampropelma_sp_borneo_black.jpg');
-add('Poecilotheria Miranda','Древесный','Спокойный','Не определен','Опасен','До 21см.','L2 -> L3','','','../static/img/poecilotheria_miranda.jpg');
+add('Poecilotheria Miranda','Древесный','Спокойный','Не определен','Опасен','До 21см.','L3 -> L4','24.09.2014','3 мес.','../static/img/poecilotheria_miranda.jpg');
 add('Davus Fasciatus','Норной','Нервный','Не определен','Не опасен','До 12см.','L1','','','../static/img/davus_fasciatus.jpg');
 add('Lampropelma sp. Borneo Black','Норной','Агрессивный','Не определен','Очень опасен','До 18см.','L1','','','../static/img/lampropelma_sp_borneo_black.jpg');
 add('Heteroscodra Maculata','Древесный','Агрессивный','Не определен','Опасен','До 15см.','L1','','','../static/img/heteroscodra_maculata.jpg');
