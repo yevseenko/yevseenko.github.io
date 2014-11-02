@@ -58,7 +58,7 @@ add('Nhandu Coloratovillosus','Наземный','Нервный','Female','Не
 add('Lampropelma sp. Borneo Black','Норной','Агрессивный','Female','Очень опасен','До 18см.','L5 -> L6','22.10.2014','2 мес.','../static/img/lampropelma_sp_borneo_black.jpg');
 add('Poecilotheria Miranda','Древесный','Спокойный','Не определен','Опасен','До 21см.','L3 -> L4','24.09.2014','3 мес.','../static/img/poecilotheria_miranda.jpg');
 add('Davus Fasciatus','Норной','Нервный','Не определен','Не опасен','До 12см.','L1','','','../static/img/davus_fasciatus.jpg');
-add('Lampropelma sp. Borneo Black','Норной','Агрессивный','Не определен','Очень опасен','До 18см.','L1','','','../static/img/lampropelma_sp_borneo_black.jpg');
+add('Lampropelma sp. Borneo Black','Норной','Агрессивный','Не определен','Очень опасен','До 18см.','L1 -> L2','1.11.2014','1 мес.','../static/img/lampropelma_sp_borneo_black.jpg');
 add('Heteroscodra Maculata','Древесный','Агрессивный','Не определен','Опасен','До 15см.','L1 -> L2','11.10.2014','','../static/img/heteroscodra_maculata.jpg');
 
 function add(kind, types, character, gender, venom, sizes, moult, lastMoult, period, img) {
