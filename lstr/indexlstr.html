@@ -138,7 +138,7 @@
 
       <footer>
         <p class="pull-right"><a href="#">На главную</a></p>
-        <p>&copy; 2015 L-Clinic, г.Днепропетровск</p>
+        <p>&copy; 2015 L-Cab, г.Днепропетровск</p>
       </footer>
 
     </div><!-- /.container -->
@@ -148,5 +148,19 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
+    <script language="text/javascript">
+      function findSolution(target) {
+  function find(start, history) {
+    if (start == target)
+      return history;
+    else if (start > target)
+      return null;
+    else
+      return find(start + 5, "(" + history + " + 5)") ||
+             find(start * 3, "(" + history + " * 3)");
+  }
+  return find(1, "1");
+}
+</script>
   </body>
 </html>
