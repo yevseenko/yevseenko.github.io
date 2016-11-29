@@ -1,12 +1,12 @@
 function sequence(start,step){
   var result = null;
+  if (start === undefined) {
+    start = 0;
+  };
+  if (step === undefined) {
+    step = 1;
+  };
   return function() {
-    if (start === undefined) {
-      start = 0;
-    };
-    if (step === undefined) {
-      step = 1;
-    };
     return result = (result === null) ? start : (result + step);
   };
 };
@@ -14,7 +14,7 @@ function sequence(start,step){
 function take(gen,x){
   var arr = [];
   for (var i = 0; i < x; i++) {
-    arr.push(gen);
+    arr.push(gen());
   }
   return arr;
 }
