@@ -1,3 +1,4 @@
+//*функция, возвращает функцию генератор
 function sequence(start,step){
   var result = null;
   if (start === undefined) {
@@ -11,7 +12,7 @@ function sequence(start,step){
   };
 };
 
-
+//берет в качестве аргументов - функцию, выполняет её х раз и возвращает массив значений
 function take(gen,x){
   var arr = [];
   for (var i = 0; i < x; i++) {
@@ -20,7 +21,7 @@ function take(gen,x){
   return arr;
 };
 
-
+//берет в качестве аргументов функцию и массив, выполняет функцию для каждого элемента массива и возвращает массив значений
 function map(fn,arr) {
   var newArr = [];
   for (var i = 0; i < arr.length; i++){
@@ -28,10 +29,12 @@ function map(fn,arr) {
   }
   return newArr + " " + arr;
 }
+//возведение в квадрат
 function square(x){
   return x * x;
 }
 
+// принимает на вход 2 функции, a и gen, где gen — функция-генератор вроде той, что была в первом задании. fmap возвращает новую функцию-генератор, которая при каждом вызове берет следующее значение из gen и пропускает его через функцию a
 function fmap(a,gen) {
   
 }
