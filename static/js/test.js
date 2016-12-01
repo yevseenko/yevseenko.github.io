@@ -6,23 +6,23 @@ window.onload = function init() {
     $next = document.getElementById('nextCountBtn');
     $set = document.getElementById('setCountBtn');
 
-    $box.innerHTML = counter();
+    
     $next.onclick = (function() {$box.innerHTML = counter();})
-    $reset.onclick = (function() {$box.innerHTML = counter.reset();})
+    $reset.onclick = (function() {$box.innerHTML = counter.reset()})
     $set.onclick = (function() {$box.innerHTML = counter.set(10);})
   }
 
 //счетчик
 function makeCounter(){
-  var currentCount = 1;
+  var currentCount = 0;
   function counter() {
-    return currentCount++;
+    return ++currentCount;
   }
   counter.set = function(value){
-    currentCount = value;
+    return currentCount = value;
   }
   counter.reset = function() {
-    currentCount = 1;
+    return currentCount = 0;
   }
   return counter;
 }
