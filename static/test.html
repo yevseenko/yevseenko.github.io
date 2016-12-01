@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <link rel="icon" href="../../favicon.ico">
@@ -14,10 +14,11 @@
   <body>
     <div class="container">
       <nav class="navbar navbar-inverse" id="st_menu"></nav>
-      <div id="box"></div>
+      <div id="box" class="text-info"></div>
       <button id="nextCountBtn">Next</button>
-      <button id="resetCountBtn">Reset</button>
-      <button id="setCountBtn">Set</button>
+      <button id="resetCountBtn">Reset</button><br /><br />
+      <button id="setCountBtn">Set</button> <input class="input-mini" type="text" id="setCount">
+      <div id="field"></div>
     </div><!-- /.container -->
 
     <!-- Bootstrap core JavaScript
@@ -26,6 +27,5 @@
     <script src="../static/js/test.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="../static/js/bootstrap.min.js"></script>
-    
   </body>
 </html>
