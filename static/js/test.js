@@ -8,10 +8,10 @@ window.onload = function init() {
     $field = document.getElementById('field');
     $setCount = document.getElementById('setCount');
 
-    $box.innerHTML = counter();
-    $next.onclick = (function() {$box.innerHTML = counter();})
-    $reset.onclick = (function() {$box.innerHTML = counter.reset()})
-    $set.onclick = (function() {$box.innerHTML = counter.set($setCount.value);})
+    $box.innerHTML = "Counter: " + counter();
+    $next.onclick = (function() {$box.innerHTML = "Counter: " + counter();})
+    $reset.onclick = (function() {$box.innerHTML = "Counter: " + counter.reset()})
+    $set.onclick = (function() {$box.innerHTML = "Counter: " + counter.set($setCount.value);})
     $field.innerHTML = (phi(tableFor("peanuts teeth", journal)));
   }
 
@@ -22,7 +22,11 @@ function makeCounter(){
     return currentCount++;
   }
   counter.set = function(value){
-    return currentCount = value;
+    if (!value) {
+      return currentCount = "значение не задано";
+    } else {
+      return currentCount = value;
+    }
   }
   counter.reset = function() {
     return currentCount = 1;
