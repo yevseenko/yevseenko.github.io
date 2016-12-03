@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 function digitalClock() {
 	var date = new Date(),
-   	currentDate = date.toUTCString();
+   	currentDate = date.toLocaleString();
     $dclock.innerHTML = currentDate;
     setTimeout("digitalClock()", 1000);
 }
