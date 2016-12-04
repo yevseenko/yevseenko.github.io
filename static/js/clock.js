@@ -5,7 +5,21 @@ $(document).ready(function() {
 
 function digitalClock() {
 	var date = new Date(),
-   	currentDate = date.toLocaleString();
-    $dclock.innerHTML = currentDate;
+   	seconds = date.getSeconds(),
+   	minutes = date.getMinutes(),
+   	hours = date.getHours(),
+   	day = date.getDate(),
+   	nDay = date.getDay(),
+   	nMonth = date.getMonth(),
+   	year = date.getFullYear(),
+   	dayOfWeek = ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],
+   	month = ["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
+
+   	if (hours < 10) hours = "0" + hours;
+    if (minutes < 10) minutes = "0" + minutes;
+    if (seconds < 10) seconds = "0" + seconds;
+
+   	$dclock.innerHTML = "СЕГОДНЯ: " + dayOfWeek[nDay] + ", " + day + " " + month[nMonth] + ", " + year + " " + hours + ":" + minutes + ":" + seconds;  	
+
     setTimeout("digitalClock()", 1000);
 }
