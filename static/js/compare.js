@@ -21,7 +21,7 @@ window.onload = function init() {
 
 	function calculate() {
 		if (!$slsTextArea.value.length || !$onecTextArea.value.length) {
-			alert('Одно из полей - пустое');
+			alert('Одно из полей - <b>пустое</b>');
 			return;
 		}
 			

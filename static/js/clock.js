@@ -19,7 +19,7 @@ function digitalClock() {
     if (minutes < 10) minutes = "0" + minutes;
     if (seconds < 10) seconds = "0" + seconds;
 
-   	$dclock.innerHTML = "СЕГОДНЯ: " + dayOfWeek[nDay] + ", " + day + " " + month[nMonth] + ", " + year + " " + hours + ":" + minutes + ":" + seconds;  	
+   	$dclock.innerHTML = dayOfWeek[nDay] + ", " + day + " " + month[nMonth] + ", " + year + "<b> " + hours + ":" + minutes + ":" + seconds + "</b>";  	
 
     setTimeout("digitalClock()", 1000);
 }
