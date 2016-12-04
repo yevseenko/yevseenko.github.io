@@ -16,17 +16,19 @@ function digitalClock() {
    	nMonth = date.getMonth(),
    	year = date.getFullYear();
 
-   	var formatedString = function() { return dayOfWeek[nDay] + ', ' + day + ' ' + month[nMonth] + ', ' + year + '<b> ' + addZero(hours) + ':' + addZero(minutes) + ':' + addZero(seconds) + '</b>'};
+	function formatedString() {
+		return dayOfWeek[nDay] + ', ' + day + ' ' + month[nMonth] + ', ' + year + '<b> ' + addZero(hours) + ':' + addZero(minutes) + ':' + addZero(seconds) + '</b>';
+	}
 
    	$dclock.innerHTML = formatedString();
-}
+
+   	setTimeout(digitalClock, 1000);
+};
 
 function addZero(n) {
 	if (n < 10) {
 		return n = "0" + n;
 	} else {
 		return n;
-	};
+	}
 };
-
-setTimeout(digitalClock, 1000);
