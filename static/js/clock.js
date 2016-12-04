@@ -3,6 +3,9 @@ $(document).ready(function() {
 	digitalClock();
 });
 
+var dayOfWeek = ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],
+month = ["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
+
 function digitalClock() {
 	var date = new Date(),
    	seconds = date.getSeconds(),
@@ -11,15 +14,19 @@ function digitalClock() {
    	day = date.getDate(),
    	nDay = date.getDay(),
    	nMonth = date.getMonth(),
-   	year = date.getFullYear(),
-   	dayOfWeek = ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],
-   	month = ["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
+   	year = date.getFullYear();
 
-   	if (hours < 10) hours = "0" + hours;
-    if (minutes < 10) minutes = "0" + minutes;
-    if (seconds < 10) seconds = "0" + seconds;
+   	var formatedString = function() { return dayOfWeek[nDay] + ', ' + day + ' ' + month[nMonth] + ', ' + year + '<b> ' + addZero(hours) + ':' + addZero(minutes) + ':' + addZero(seconds) + '</b>'};
 
-   	$dclock.innerHTML = dayOfWeek[nDay] + ", " + day + " " + month[nMonth] + ", " + year + "<b> " + hours + ":" + minutes + ":" + seconds + "</b>";  	
-
-    setTimeout("digitalClock()", 1000);
+   	$dclock.innerHTML = formatedString();
 }
+
+function addZero(n) {
+	if (n < 10) {
+		return n = "0" + n;
+	} else {
+		return n;
+	};
+};
+
+setTimeout(digitalClock, 1000);
