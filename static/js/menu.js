@@ -2,7 +2,6 @@ window.onload = function() {
 	$stMenu = document.getElementById('st_menu');
 	$dclock = document.getElementById('dclock');
 
-	digitalClock();
 	$stMenu.innerHTML = initMenu();
 }
 
