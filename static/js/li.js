@@ -26,6 +26,7 @@ function parseString(elem) {
 	elem.value = elem.value.replace(/^\s+|\s+$/g, '');
 	if (elem.value.length > 2) {
 		$result.innerHTML = 'О числе <b>' + elem.value + '</b> даже думать не хорошо. <b>Report</b>!';
+		return;
 	} else {
 		return elem.value;
 	};
