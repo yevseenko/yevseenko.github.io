@@ -1,4 +1,4 @@
-$(document).ready(function init() {
+$(document).ready(function() {
 		$clearBtn = document.getElementById('clearBtn');
 		$calcBtn = document.getElementById('calcBtn');
 		$slsTextArea = document.getElementById('sls');

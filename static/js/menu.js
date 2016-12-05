@@ -36,5 +36,5 @@ function formatedString() {
    	nMonth = date.getMonth(),
    	year = date.getFullYear();
 	
-	return dayOfWeek[nDay] + ', ' + day + ' ' + month[nMonth] + ', ' + year + '<b> ' + addZero(hours) + ':' + addZero(minutes) + ':' + addZero(seconds) + '</b>';
+	return dayOfWeek[nDay] + ', ' + day + ' ' + month[nMonth] + ', ' + year + '<b> ' + addZero(hours) + ':' + addZero(minutes) + ':' + addZero(seconds) + ' <_</b>';
 };
