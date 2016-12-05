@@ -1,10 +1,9 @@
 $(document).ready(function() {
-
-	var $martial_glases = $('#martial_glases');
-	var $offline_glases = $('#offline_glases');
-	var $prana_glases = $('#prana_glases');
-	var $surprise_glases = $('#surprise_glases');
-	var $back_glases = $('#back_glases');
+	var $martial_glases = $('#martial_glases'),
+	$offline_glases = $('#offline_glases'),
+	$prana_glases = $('#prana_glases'),
+	$surprise_glases = $('#surprise_glases'),
+	$back_glases = $('#back_glases');
 
 	$martial_glases.text(martial_glases[martial_rand()]);
 	$martial_glases.on('click', function() {

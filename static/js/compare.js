@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 	function calculate() {
 		if (!$slsTextArea.value.length || !$onecTextArea.value.length) {
-			alert('Одно из полей - <b>пустое</b>');
+			alert('Одно из полей - пустое');
 			return;
 		}
 			
