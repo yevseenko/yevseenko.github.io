@@ -2,8 +2,8 @@ window.onload = function() {
 	$stMenu = document.getElementById('st_menu');
 	$dclock = document.getElementById('dclock');
 
-	$stMenu.innerHTML = initMenu();
 	digitalClock();
+	$stMenu.innerHTML = initMenu();
 }
 
 var dayOfWeek = ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"],
