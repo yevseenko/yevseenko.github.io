@@ -16,7 +16,7 @@ function liResult() {
 
 	var n = parseString($setCountLi) - 1;
 	if (n >= arr.length) {
-		$result.innerHTML = '<span class="glyphicon glyphicon-bold" aria-hidden="true"> - Banana тебе, а не ' + parseString($setCountLi) + ' инсайтов';
+		$result.innerHTML = '<b>B</b> - Banana тебе, а не ' + parseString($setCountLi) + ' инсайтов';
 	} else {
 		$result.innerHTML = arr[n];
 	};
