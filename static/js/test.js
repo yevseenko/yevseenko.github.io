@@ -4,11 +4,7 @@ $(document).ready(function() {
     $next = document.getElementById('nextCountBtn');
     $set = document.getElementById('setCountBtn');
     $setCount = document.getElementById('setCount');
-    $timerBox = document.getElementById('timerBox');
-    $timerStart = document.getElementById('timerStartBtn');
-    $timerStop = document.getElementById('timerStopBtn');
-
-    $timerBox.innerHTML = "Требует доработки";
+    
     $box.innerHTML = "Counter: " + counter();
     $next.onclick = (function() {$box.innerHTML = "Counter: " + counter();})
     $reset.onclick = (function() {$box.innerHTML = "Counter: " + counter.reset()})
