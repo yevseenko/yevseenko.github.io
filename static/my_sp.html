@@ -1,83 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel="icon" href="../favicon.ico">
     <title>Пауки-птицееды</title>
-
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
     <link href="../static/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="../static/css/navbar.css" rel="stylesheet">
+</head>
 
-  </head>
-
-  <body>
-
-    <div class="modal" role="dialog" aria-hidden="true" id="modal_window"><div class="modal-dialog modal-md"><div class="modal-content"><img class="img-rounded" alt="No image"></div></div></div>
-
-    <div class="container">
-
-      <p class="text-right" id="dclock" style="font-family: Verdana"></p>
-      <nav class="navbar navbar-inverse" id="st_menu"></nav>
-
-      <div class="form-inline" style="padding-top: 10px">
-        <div class="form-group well well-sm">
-          <label class="control-label" for="key">Сортировать по:</label>
-          <input type="text" id="key" class="form-control" />
-          <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-            Вид
-            <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Brachypelma</a></li>
-              <li><a href="#">Davus</a></li>
-              <li><a href="#">Nhandu</a></li>
-              <li><a href="#">Poecilotheria</a></li>
-              <li><a href="#">Pterinochilus</a></li>
-            </ul>
-          </div>
-          <div class="btn-group">
-            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-            Тип
-            <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Наземный</a></li>
-              <li><a href="#">Древесный</a></li>
-              <li><a href="#">Норной</a></li>
-            </ul>
-          </div>
-          <div class="btn-group">
-            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
-            Характер
-            <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Спокойный</a></li>
-              <li><a href="#">Нервный</a></li>
-              <li><a href="#">Агрессивный</a></li>
-            </ul>
-          </div>
-          <div class="btn-group">
-            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-            Опасность
-            <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Очень опасен</a></li>
-              <li><a href="#">Опасен</a></li>
-              <li><a href="#">Не опасен</a></li>
-            </ul>
-          </div>
-          <button type="button" class="btn btn-primary" id="showAll">Отобразить всех</button>
+<body>
+    <div class="modal" role="dialog" aria-hidden="true" id="modal_window">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content"><img class="img-rounded" alt="No image"></div>
         </div>
-      </div><br />
-      <table class="table table-bordered" id="spiders"></table>
-      <p class="well well-sm">Фильтр: <strong id ="info"></strong></p>
     </div>
-
+    <div class="container">
+        <p class="text-right" id="dclock" style="font-family: Verdana"></p>
+        <nav class="navbar navbar-inverse" id="st_menu"></nav>
+        <div class="form-inline" style="padding-top: 10px">
+            <div class="form-group well well-sm">
+                <label class="control-label" for="key">Сортировать по:</label>
+                <input type="text" id="key" class="form-control" />
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        Вид
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Brachypelma</a></li>
+                        <li><a href="#">Davus</a></li>
+                        <li><a href="#">Nhandu</a></li>
+                        <li><a href="#">Poecilotheria</a></li>
+                        <li><a href="#">Pterinochilus</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                        Тип
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Наземный</a></li>
+                        <li><a href="#">Древесный</a></li>
+                        <li><a href="#">Норной</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                        Характер
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Спокойный</a></li>
+                        <li><a href="#">Нервный</a></li>
+                        <li><a href="#">Агрессивный</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                        Опасность
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Очень опасен</a></li>
+                        <li><a href="#">Опасен</a></li>
+                        <li><a href="#">Не опасен</a></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-primary" id="showAll">Отобразить всех</button>
+            </div>
+        </div>
+        <br />
+        <table class="table table-bordered" id="spiders"></table>
+        <p class="well well-sm">Фильтр: <strong id="info"></strong></p>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -85,5 +84,6 @@
     <script src="../static/js/bootstrap.min.js"></script>
     <script src="../static/js/menu.js"></script>
     <script src="../static/js/spiders.js"></script>
-  </body>
+</body>
+
 </html>

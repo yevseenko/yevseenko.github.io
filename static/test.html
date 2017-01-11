@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel="icon" href="../favicon.ico">
     <title>Тестовая страница</title>
-
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
     <link href="../static/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="../static/css/navbar.css" rel="stylesheet">   
-  </head>
-  
-  <body>
+    <link href="../static/css/navbar.css" rel="stylesheet">
+</head>
+
+<body>
     <div class="container">
-      <p class="text-right" id="dclock" style="font-family: Verdana"></p>
-      <nav class="navbar navbar-inverse" id="st_menu"></nav>
-      <div class="container-fluid">
-        <div class="form-inline">
-          <div class="h2" id="box"></div>
-          <button id="nextCountBtn" class="btn">Next</button>
-          <button id="resetCountBtn" class="btn">Reset</button>
-          <button id="setCountBtn" class="btn">Set</button>
-          <input class="form-control" type="text" id="setCount" />
+        <p class="text-right" id="dclock" style="font-family: Verdana"></p>
+        <nav class="navbar navbar-inverse" id="st_menu"></nav>
+        <div class="container-fluid">
+            <div class="form-inline">
+                <div class="h2" id="box"></div>
+                <button id="nextCountBtn" class="btn">Next</button>
+                <button id="resetCountBtn" class="btn">Reset</button>
+                <button id="setCountBtn" class="btn">Set</button>
+                <input class="form-control" type="text" id="setCount" />
+            </div>
+            <form class="form-inline">
+                <div id="timerBox" class="h2"></div>
+                <button id="timerStopBtn" class="btn">Stop</button>
+            </form>
         </div>
-
-        <form class="form-inline">
-          <div id="timerBox" class="h2"></div>
-          <button id="timerStopBtn" class="btn">Stop</button>
-        </form>
-
-      </div>
-    </div><!-- /.container -->
-
+    </div>
+    <!-- /.container -->
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -39,5 +37,6 @@
     <script src="../static/js/bootstrap.min.js"></script>
     <script src="../static/js/menu.js"></script>
     <script src="../static/js/test.js"></script>
-  </body>
+</body>
+
 </html>

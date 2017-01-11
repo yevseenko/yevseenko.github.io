@@ -1,86 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Сравнение расходников</title>
-
     <!-- Bootstrap core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
     <link href="../static/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="../static/css/navbar.css" rel="stylesheet">    
-  
+    <link href="../static/css/navbar.css" rel="stylesheet">
     <style>
-        textarea {
-          width: 90%;
-          height: 150px;
-        }
-        th {
-          text-align: center;
-        }
-    </style>
+    textarea {
+        width: 90%;
+        height: 150px;
+    }
     
-  </head>
-  
-  <body>
-    <div class="container">
-      <p class="text-right" id="dclock" style="font-family: Verdana"></p>
-      <nav class="navbar navbar-inverse" id="st_menu"></nav>
-      <div class="container-fluid" style="padding-top: 10" id="first"><br/>
-        <table class="table">
-          <tr>
-            <th width="50%">
-              SLS
-            </th>
-            <th width="50%">
-              1C
-            </th>
-          </tr>
-          <tr>
-            <td>
-              <textarea id="sls" class="form-control has-error" rows="5" placeholder="р/н 253276  120"></textarea>
-            </td>
-            <td>
-              <textarea id="onec" class="form-control" rows="5" placeholder="Расходный ордер на товары ТО-00254496 от 23.01.2013 13:29:07 16"></textarea>
-            </td>
-          </tr>
-          <tr>
-            <td width="50%" colspan="2" align="center">
-            <button id="calcBtn" class="btn">Сравнить</button>
-            <button id="clearBtn" class="btn">Очистить формы</button>
-            </td>
-          </tr>
-        </table>
-        <table class="table table-stripped">
-          <tr>
-            <th width="33%">
-              Есть только в SLS
-            </th>
-            <th width="33%">
-              Есть только в 1C
-            </th>
-            <th width="33%">
-              Отличается количество
-            </th>
-          </tr>
-          <tr>
-            <td id="sls_only">
-            </td>
-            <td id="onec_only">
-            </td>
-            <td id="number_diff">
-            </td>
-          </tr>
-        </table>
-    </div>
+    th {
+        text-align: center;
+    }
+    </style>
+</head>
 
-    <!-- Bootstrap core JavaScript
+<body>
+    <div class="container">
+        <p class="text-right" id="dclock" style="font-family: Verdana"></p>
+        <nav class="navbar navbar-inverse" id="st_menu"></nav>
+        <div class="container-fluid" style="padding-top: 10" id="first">
+            <br/>
+            <table class="table">
+                <tr>
+                    <th width="50%">
+                        SLS
+                    </th>
+                    <th width="50%">
+                        1C
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea id="sls" class="form-control has-error" rows="5" placeholder="р/н 253276  120"></textarea>
+                    </td>
+                    <td>
+                        <textarea id="onec" class="form-control" rows="5" placeholder="Расходный ордер на товары ТО-00254496 от 23.01.2013 13:29:07 16"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%" colspan="2" align="center">
+                        <button id="calcBtn" class="btn">Сравнить</button>
+                        <button id="clearBtn" class="btn">Очистить формы</button>
+                    </td>
+                </tr>
+            </table>
+            <table class="table table-stripped">
+                <tr>
+                    <th width="33%">
+                        Есть только в SLS
+                    </th>
+                    <th width="33%">
+                        Есть только в 1C
+                    </th>
+                    <th width="33%">
+                        Отличается количество
+                    </th>
+                </tr>
+                <tr>
+                    <td id="sls_only">
+                    </td>
+                    <td id="onec_only">
+                    </td>
+                    <td id="number_diff">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
-    <script src="../static/js/menu.js"></script>
-    <script src="../static/js/compare.js"></script>
-    <script src="../static/js/underscore-min.js"></script>
-  </body>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="../static/js/bootstrap.min.js"></script>
+        <script src="../static/js/menu.js"></script>
+        <script src="../static/js/compare.js"></script>
+        <script src="../static/js/underscore-min.js"></script>
+</body>
 
 </html>
