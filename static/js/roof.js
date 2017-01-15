@@ -1,5 +1,5 @@
 $(document).ready(function() {
 		var $div = $('.item');
-	});
 
-$div.innerHTML = '123123';
+        $div[0].innerHTML = '123123';
+	});
