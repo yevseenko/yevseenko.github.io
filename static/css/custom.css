@@ -21,13 +21,13 @@ div.col-md-1 {
   justify-content: center;
 }
 
-@media all and (min-width: 500px) {
+@media all and (max-width: 500px) {
     .item {
       width: 30%;
   }
 }
 
-@media all and (min-width: 800px) {
+@media all and (max-width: 800px) {
     .item {
       width: 20%;
   }
