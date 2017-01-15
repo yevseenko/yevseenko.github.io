@@ -26,3 +26,9 @@ div.col-md-1 {
   margin-bottom: 5px;
   width: 118px;
 }
+
+@media all and (max-width: 500px) {
+  .container .item {
+    width: 30%;
+  }
+}
