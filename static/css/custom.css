@@ -30,6 +30,10 @@ div.col-md-1 {
 @media (min-width: 400px) {
     .item {
       width: 30%;
+    }
+    .container {
+      width: 100%;
+    }
   }
 }
 
