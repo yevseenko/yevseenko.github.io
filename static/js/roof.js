@@ -1,5 +1,5 @@
 $(document).ready(function() {
 		var $div = $('.item');
-});
 
-$div[0].innerHTML = '123123';
+        alert($div[23].value);
+});
