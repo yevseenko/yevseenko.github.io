@@ -24,11 +24,12 @@ div.col-md-1 {
 .container .item {
   margin-left: 5px;
   margin-bottom: 5px;
-  width: 118px;
+  width: 12%;
+  font-size: 12px;
 }
 
 @media all and (max-width: 500px) {
-  .container .item {
-    width: 30%;
+    .item {
+      width: 30%;
   }
 }
