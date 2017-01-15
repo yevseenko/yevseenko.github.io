@@ -22,6 +22,7 @@ div.col-md-1 {
 }
 
 .container .item {
-  flex-grow: 1;
-  margin-left: auto;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  width: 120px;
 }
