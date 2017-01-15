@@ -1,5 +1,5 @@
 $(document).ready(function() {
 		var $div = $('.item');
 
-        alert($div[23].innerHTML);
+        console.log($div[23].innerHTML);
 });
