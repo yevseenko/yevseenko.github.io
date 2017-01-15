@@ -21,21 +21,26 @@ div.col-md-1 {
   justify-content: center;
 }
 
+.container-floor .item {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
 @media (min-width: 500px) {
     .item {
       width: 30%;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
     .item {
       width: 20%;
   }
 }
 
-.item {
-  margin-left: 5px;
-  margin-bottom: 5px;
-  font-size: 13px;
-  width: 12%;
+@media (min-width: 900px) {
+  .item {
+    width: 12%;
+  }
 }
