@@ -22,7 +22,6 @@ div.col-md-1 {
 }
 
 .container .item {
-  float: left;
-  margin-left: 5px;
-  margin-bottom: 5px;
+  flex-grow: 1;
+  margin-left: auto;
 }
