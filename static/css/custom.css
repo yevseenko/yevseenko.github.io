@@ -24,7 +24,7 @@ div.col-md-1 {
 .container .item {
   margin-left: 5px;
   margin-bottom: 5px;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 @media all and (min-width: 500px) {
