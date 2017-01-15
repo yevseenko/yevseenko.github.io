@@ -1,3 +1,7 @@
 .kill {
-  background: red;
+  background: #f00000;
+}
+
+.good {
+  background: green;
 }
