@@ -27,12 +27,12 @@ div.col-md-1 {
     font-size: 13px;
 }
 
-@media (min-width: 400px) and (max-width: 599px)  {
+@media (min-width: 400px)  {
     .item {
       width: 30%;
     }
     .container {
-      width: 100%;
+      width: 600px;
     }
   }
 }
