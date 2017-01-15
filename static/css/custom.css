@@ -25,6 +25,10 @@ div.col-md-1 {
     margin: 2px;
 }
 
+.container-floor .item:hover {
+    background: greenyellow;
+}
+
 h2 a {
   font-size: 24px;
 }
