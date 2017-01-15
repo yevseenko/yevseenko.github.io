@@ -21,13 +21,6 @@ div.col-md-1 {
   justify-content: center;
 }
 
-.container .item {
-  margin-left: 5px;
-  margin-bottom: 5px;
-  font-size: 13px;
-  width: 12%;
-}
-
 @media all and (min-width: 500px) {
     .item {
       width: 30%;
@@ -38,4 +31,11 @@ div.col-md-1 {
     .item {
       width: 20%;
   }
+}
+
+.item {
+  margin-left: 5px;
+  margin-bottom: 5px;
+  font-size: 13px;
+  width: 12%;
 }
