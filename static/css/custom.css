@@ -29,14 +29,14 @@ div.col-md-1 {
 @media (min-width: 400px)  {
     .item {
       width: 30%;
-      font-size: 16px;
+      font-size: 20px;
     }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
     .item {
       width: 30%;
-      font-size: 16px;
+      font-size: 18px;
   }
 }
 
