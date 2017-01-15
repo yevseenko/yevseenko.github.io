@@ -6,9 +6,9 @@ $(document).ready(function() {
     $setCount = document.getElementById('setCount');
     
     $box.innerHTML = "Counter: " + counter();
-    $next.onclick = (function() {$box.innerHTML = "Counter: " + counter();})
-    $reset.onclick = (function() {$box.innerHTML = "Counter: " + counter.reset()})
-    $set.onclick = (function() {$box.innerHTML = "Counter: " + counter.set($setCount.value);})
+    $next.onclick = (function() {$box.innerHTML = "Counter: " + counter()});
+    $reset.onclick = (function() {$box.innerHTML = "Counter: " + counter.reset()});
+    $set.onclick = (function() {$box.innerHTML = "Counter: " + counter.set($setCount.value)});
   });
 
 //примитивный счетчик
