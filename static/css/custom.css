@@ -10,3 +10,8 @@ div.col-md-1 {
   margin-left: 10px;
   margin-bottom: 10px;
 }
+
+td.well {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
