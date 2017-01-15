@@ -27,7 +27,7 @@ div.col-md-1 {
     font-size: 13px;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 400px) and (max-width: 599px)  {
     .item {
       width: 30%;
     }
