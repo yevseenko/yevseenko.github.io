@@ -26,6 +26,10 @@ div.col-md-1 {
     margin-bottom: 5px;
 }
 
+h2 a {
+  font-size: 24px;
+}
+
 @media (min-width: 400px)  {
     .item {
       width: 30%;
