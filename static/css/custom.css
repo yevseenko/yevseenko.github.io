@@ -24,7 +24,6 @@ div.col-md-1 {
 .container-floor .item {
     margin-left: 5px;
     margin-bottom: 5px;
-    font-size: 13px;
 }
 
 @media (min-width: 400px)  {
@@ -44,11 +43,13 @@ div.col-md-1 {
 @media (min-width: 768px) and (max-width: 900px) {
     .item {
       width: 20%;
+      font-size: 14px;
   }
 }
 
 @media (min-width: 1170px) {
   .item {
     width: 12%;
+    font-size: 13px;
   }
 }
