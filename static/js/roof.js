@@ -3,6 +3,6 @@ $(document).ready(function() {
 
         var tmpArr = $div[23].innerHTML;
         tmpArr = tmpArr.split('ть: ');
-        tmpArr = tmpArr.split(' ');
+        tmpArr = tmpArr[1].split(' ');
         console.log(tmpArr[0]);
 });
