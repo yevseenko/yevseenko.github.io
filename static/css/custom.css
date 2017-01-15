@@ -22,8 +22,7 @@ div.col-md-1 {
 }
 
 .container-floor .item {
-    margin-left: 5px;
-    margin-bottom: 5px;
+    margin: 2px;
 }
 
 h2 a {
