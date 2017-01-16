@@ -9,6 +9,6 @@ function total(arr) {
 		var tmpArr = arr[i].innerHTML;
 		tmpArr = tmpArr.split('ть: ');
 		tmpArr = tmpArr[1].split(' ');
-		return tmpArr[0];
-	}
+		
+	} return tmpArr[0];
 }
