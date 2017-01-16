@@ -2,7 +2,7 @@ $(document).ready(function() {
     var $div = $('.item');
 
     for (var i = 0; i < $div.length; i++) {
-    	getArr($div);
+    	getArr($div[i]);
     }
     console.log(sumArr);
 });
