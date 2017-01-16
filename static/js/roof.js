@@ -1,13 +1,17 @@
 $(document).ready(function() {
     var $div = $('.item');
 
-    var totalSum = $div.map(function(arr) {
-    	return arr.innerHTML;
-	});
-    console.log(totalSum);
+    for (var i = 0; i < $div.length; i++) {
+    	getArr($div);
+    }
+    console.log(sumArr);
 });
 
-//		var tmpArr = arr.innerHTML;
-//		tmpArr = tmpArr.split('ть: ');
-//		tmpArr = tmpArr[1].split(' ');
-//		return tmpArr[0];
+var sumArr = [];
+
+function getArr(elem) {
+	var tmpArr = elem.innerHTML;
+	tmpArr = tmpArr.split('ть: ');
+	tmpArr = tmpArr[1].split(' ');
+	sumArr.push(tmpArr[0]);
+}
