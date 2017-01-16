@@ -2,7 +2,7 @@ $(document).ready(function() {
     var $div = $('.item');
 
     for (var i = 0; i < $div.length; i++ ) {
-    	console.log(total($div[i]));
+    	console.log(total($div[i]) + 'Element number:' + i);
     }
 });
 
