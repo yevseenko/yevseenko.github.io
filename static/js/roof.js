@@ -19,6 +19,9 @@ function getArr(elem) {
 	var tmpArr = elem.innerHTML;
 	tmpArr = tmpArr.split('ть: ');
 	tmpArr = tmpArr[1].split(' ');
+	if (parseInt(tmpArr[0]) == 1500) {
+		elem.addClass('kill');
+	}
 	totalArr.push(parseInt(tmpArr[0]));
 }
 
@@ -26,5 +29,11 @@ function getArrSum(elem) {
 	var tmpArr = elem.innerHTML;
 	tmpArr = tmpArr.split('но: ');
 	tmpArr = tmpArr[1].split(' ');
+
 	sumArr.push(parseInt(tmpArr[0]));
+}
+
+function changeClass(elem) {
+	if ()
+	$('div.item')
 }
