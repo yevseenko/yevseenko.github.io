@@ -8,8 +8,8 @@ $(document).ready(function() {
     	getArrSum($div[i]);
     }
 
-    $totalSum[0].innerHTML = 'Уже сдано: ' + totalArr.reduce(function(sum, current){ return sum + current }, 0) + '₴ (гривен)';
-    $totalNeed[0].innerHTML = 'Еще необходимо сдать: ' + totalArr.reduce(function(sum, current){ return sum + current }, 0) + '₴ (гривен)';
+    $totalSum[0].innerHTML = 'Уже сдано: ' + sumArr.reduce(function(sum, current){ return sum + current }, 0) + ' ₴ (гривен)';
+    $totalNeed[0].innerHTML = 'Еще необходимо сдать: ' + totalArr.reduce(function(sum, current){ return sum + current }, 0) + ' ₴ (гривен)';
 });
 
 var totalArr = [];
