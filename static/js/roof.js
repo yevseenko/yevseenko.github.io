@@ -4,14 +4,13 @@ $(document).ready(function() {
     for (var i = 0; i < $div.length; i++) {
     	getArr($div[i]);
     }
+    var result = sumArr.reduce(function(sum, current) {
+  		return sum + current;
+		}, 0);
     console.log(result);
 });
 
 var sumArr = [];
-
-var result = sumArr.reduce(function(sum, current) {
-  return sum + current;
-}, 0)
 
 function getArr(elem) {
 	var tmpArr = elem.innerHTML;
