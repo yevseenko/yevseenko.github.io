@@ -16,5 +16,5 @@ function getArr(elem) {
 	var tmpArr = elem.innerHTML;
 	tmpArr = tmpArr.split('ть: ');
 	tmpArr = tmpArr[1].split(' ');
-	sumArr.push(tmpArr[0]);
+	sumArr.push(parseInt(tmpArr[0]));
 }
