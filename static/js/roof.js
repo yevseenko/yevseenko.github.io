@@ -29,6 +29,9 @@ function getArrSum(elem) {
 	var tmpArr = elem.innerHTML;
 	tmpArr = tmpArr.split('но: ');
 	tmpArr = tmpArr[1].split(' ');
-
+	if (parseInt(tmpArr[0]) > 0) {
+		$(elem).removeClass('kill');
+		$(elem).addClass('proc');
+	}
 	sumArr.push(parseInt(tmpArr[0]));
 }
