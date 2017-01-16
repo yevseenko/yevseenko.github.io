@@ -20,7 +20,7 @@ function getArr(elem) {
 	tmpArr = tmpArr.split('ть: ');
 	tmpArr = tmpArr[1].split(' ');
 	if (parseInt(tmpArr[0]) == 1500) {
-		$(this).addClass('kill');
+		$(elem).addClass('kill');
 	}
 	totalArr.push(parseInt(tmpArr[0]));
 }
