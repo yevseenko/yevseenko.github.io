@@ -2,7 +2,7 @@ $(document).ready(function() {
     var $div = $('.item');
 
     var totalSum = $div.map(function(arr) {
-    	return arr.length;
+    	return arr.innerHTML;
 	});
     console.log(totalSum);
 });
