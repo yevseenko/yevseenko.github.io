@@ -17,6 +17,8 @@ div.col-md-1 {
 
 .container-floor {
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
   display: -webkit-flex;
   flex-wrap: wrap;
   justify-content: center;
