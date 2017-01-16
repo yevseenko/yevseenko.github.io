@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    var $div = $('.item'),
-    	$totalNeed = $('#totalNeed');
+    var $div = $('.item');
+    var	$totalNeed = $('#totalNeed');
 
     for (var i = 0; i < $div.length; i++) {
     	getArr($div[i]);
     }
-    
+
     $totalNeed.innerHTML = 'Еще необходимо сдать: ' + sumArr.reduce(function(sum, current){ return sum + current }, 0);
 });
 
