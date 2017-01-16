@@ -6,7 +6,7 @@ $(document).ready(function() {
     	getArr($div[i]);
     }
 
-    $totalNeed.innerHTML = 'Еще необходимо сдать: ' + sumArr.reduce(function(sum, current){ return sum + current }, 0);
+    $totalNeed[0].innerHTML = 'Еще необходимо сдать: ' + sumArr.reduce(function(sum, current){ return sum + current }, 0);
 });
 
 var sumArr = [];
