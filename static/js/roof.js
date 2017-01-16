@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var $div = $('.item');
+    var $div = $('div.item');
     var	$totalNeed = $('#totalNeed');
     var	$totalSum = $('#totalSum');
 
@@ -31,9 +31,4 @@ function getArrSum(elem) {
 	tmpArr = tmpArr[1].split(' ');
 
 	sumArr.push(parseInt(tmpArr[0]));
-}
-
-function changeClass(elem) {
-	if ()
-	$('div.item')
 }
