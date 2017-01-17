@@ -1,13 +1,3 @@
-body {
-    /* background:
-    radial-gradient(black 15%, transparent 16%) 0 0,
-    radial-gradient(black 15%, transparent 16%) 8px 8px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-    background-color:#282828;
-    background-size:16px 16px; */
-}
-
 div {
     height: 100%;
     margin-top: 100px;
@@ -27,13 +17,4 @@ h1 {
     background: -webkit-linear-gradient(left, #000, red, #000, red, #000, red, #000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-@media (min-width: 400px and max-width: 600px) {
-    p {
-        font-size: 2em;
-    }
-    h1 {
-        font-size: 5em;
-    }
 }
