@@ -10,11 +10,6 @@
     background: lightgoldenrodyellow;
 }
 
-div.col-md-1 {
-    margin-left: 5px;
-    margin-bottom: 5px;
-}
-
 .container-floor {
     display: flex;
     display: -webkit-box;
@@ -26,6 +21,11 @@ div.col-md-1 {
 
 .container-floor .item {
     margin: 2px;
+    flex-grow: 1;
+}
+
+.double {
+    flex-grow: 2;
 }
 
 .container-floor .item:hover {
