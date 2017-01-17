@@ -60,6 +60,7 @@ h2 a {
 @media (min-width: 1170px) {
     .item {
         width: 118px;
+        font-size: 14px;
     }
     .double {
        width: 240px;
