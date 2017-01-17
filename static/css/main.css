@@ -1,0 +1,19 @@
+div {
+    height: 100%;
+    margin-top: 150px;
+    text-align: center;
+    font-family: 'Frijole', cursive;
+}
+
+p {
+    font-family: 'Frijole', cursive;
+    background: -webkit-linear-gradient(left, red, orange, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1 {
+    background: -webkit-linear-gradient(left, #000, red, #000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
