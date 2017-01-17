@@ -31,3 +31,5 @@ function makeCounter(){
 };
 
 var counter = makeCounter();
+
+/* Странный комментарий для теста */
