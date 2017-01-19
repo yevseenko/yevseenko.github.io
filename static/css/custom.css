@@ -16,6 +16,10 @@
     -webkit-order: 2;
 }
 
+::-webkit-scrollbar { 
+    display: none;
+}
+
 .container-floor {
     display: flex;
     display: -webkit-box;
