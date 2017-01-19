@@ -1,13 +1,16 @@
 .kill {
     background: #ffb9b9;
+    order: 3;
 }
 
 .good {
     background: #beffbe;
+    order: 1;
 }
 
 .proc {
     background: lightgoldenrodyellow;
+    order: 2;
 }
 
 .container-floor {
