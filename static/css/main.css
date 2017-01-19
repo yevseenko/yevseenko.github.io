@@ -6,6 +6,7 @@
 html, body, .wrapper { 
     height: 100%;
     font-family: 'Frijole', cursive;
+    overflow-y: hidden;
     }
 body > .wrapper {
     height: auto;
