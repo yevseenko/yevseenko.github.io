@@ -14,7 +14,7 @@ $(document).ready(function() {
     var $one = $('a[href|="#collapseNine"]');
 
     for (var i = 0; i < $div.length; i++) {
-    	getArr($div[i]);
+    	changeBg($div[i]);
     }
 
     $totalSum[0].innerHTML = 'Уже сдано: ' + current[0].totalCredit + ' ₴ (гривен)';
@@ -31,22 +31,8 @@ $(document).ready(function() {
 	$one[0].innerHTML = current[9].category + ' /// ' + '<b>Всего сдано:</b> ' + current[9].totalCredit + ' грн., <b>Осталось сдать:</b> ' + current[9].totalDebt + 'грн.'; 
 });
 
-function getArr(elem) {
-	var tmpArr = elem.innerHTML;
-	tmpArr = tmpArr.split('ть: ');
-	tmpArr = tmpArr[1].split(' ');
-	var tmpVal = parseInt(tmpArr[0]);
-	if (tmpVal == 1500) {
-		$(elem).addClass('kill');
-	} else if (tmpVal < 1500 && tmpVal != 0) {
-		$(elem).addClass('proc');
-	} else {
-		$(elem).addClass('good');
-	}
-}
-
 var current = [
-	{category: 0, totalDebt: 0, totalCredit: 0},
+	{all: 0, totalDebt: 0, totalCredit: 0},
 	{category: '9-й этаж', totalDebt: 0, totalCredit: 0},
 	{category: '8-й этаж', totalDebt: 0, totalCredit: 0},
 	{category: '7-й этаж', totalDebt: 0, totalCredit: 0},
@@ -100,3 +86,15 @@ function currentCredit(obj) {
 	};
 	return totalCredit;
 };
+
+function changeBg(elem) {
+	var num = JSON.stringify(elem.innerHTML).split('<br>');
+	num = parseInt(num[2].replace(/[^0-9]/g, ''));
+	if (num == 1500) {
+		$(elem).addClass('kill');
+	} else if (num < 1500 && num != 0) {
+		$(elem).addClass('proc');
+	} else {
+		$(elem).addClass('good');
+	}
+}
