@@ -19,14 +19,15 @@ function getArr(elem) {
 	var tmpArr = elem.innerHTML;
 	tmpArr = tmpArr.split('ть: ');
 	tmpArr = tmpArr[1].split(' ');
-	if (parseInt(tmpArr[0]) == 1500) {
+	var tmpVal = parseInt(tmpArr[0]);
+	if (tmpVal == 1500) {
 		$(elem).addClass('kill');
-	} else if (parseInt(tmpArr[0]) < 1500 && parseInt(tmpArr[0]) != 0) {
+	} else if (tmpVal < 1500 && tmpVal != 0) {
 		$(elem).addClass('proc');
 	} else {
 		$(elem).addClass('good');
 	}
-	totalArr.push(parseInt(tmpArr[0]));
+	totalArr.push(tmpVal);
 }
 
 function getArrSum(elem) {
