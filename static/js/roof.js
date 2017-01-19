@@ -2,18 +2,34 @@ $(document).ready(function() {
     var $div = $('div.item');
     var	$totalNeed = $('#totalNeed');
     var	$totalSum = $('#totalSum');
+    
+    var $nine = $('a[href|="#collapseOne"]');
+    var $eight = $('a[href|="#collapseTwo"]');
+    var $seven = $('a[href|="#collapseThree"]');
+    var $six = $('a[href|="#collapseFour"]');
+    var $five = $('a[href|="#collapseFive"]');
+    var $four = $('a[href|="#collapseSix"]');
+    var $three = $('a[href|="#collapseSeven"]');
+    var $two = $('a[href|="#collapseEight"]');
+    var $one = $('a[href|="#collapseNine"]');
 
     for (var i = 0; i < $div.length; i++) {
     	getArr($div[i]);
-    	getArrSum($div[i]);
     }
 
-    $totalSum[0].innerHTML = 'Уже сдано: ' + sumArr.reduce(function(sum, current){ return sum + current }, 0) + ' ₴ (гривен)';
-    $totalNeed[0].innerHTML = 'Еще необходимо сдать: ' + totalArr.reduce(function(sum, current){ return sum + current }, 0) + ' ₴ (гривен)';
-});
+    $totalSum[0].innerHTML = 'Уже сдано: ' + current[0].totalCredit + ' ₴ (гривен)';
+    $totalNeed[0].innerHTML = 'Еще необходимо сдать: ' + current[0].totalDebt + ' ₴ (гривен)';
 
-var totalArr = [];
-var sumArr = [];
+    $nine[0].innerHTML = current[1].category + ' /// ' + '<b>Всего сдано:</b> ' + current[1].totalCredit + ' грн., <b>Осталось сдать:</b> ' + current[1].totalDebt + 'грн.';
+	$eight[0].innerHTML = current[2].category + ' /// ' + '<b>Всего сдано:</b> ' + current[2].totalCredit + ' грн., <b>Осталось сдать:</b> ' + current[2].totalDebt + 'грн.';
+	$seven[0].innerHTML = current[3].category + ' /// ' + '<b>Всего сдано:</b> ' + current[3].totalCredit + ' грн., <b>Осталось сдать:</b> ' + current[3].totalDebt + 'грн.'; 
+	$six[0].innerHTML = current[4].category + ' /// ' + '<b>Всего сдано:</b> ' + current[4].totalCredit + ' грн., <b>Осталось сдать:</b> ' + current[4].totalDebt + 'грн.'; 
+	$five[0].innerHTML = current[5].category + ' /// ' + '<b>Всего сдано:</b> ' + current[5].totalCredit + ' грн., <b>Осталось сдать:</b> ' + current[5].totalDebt + 'грн.'; 
+	$four[0].innerHTML = current[6].category + ' /// ' + '<b>Всего сдано:</b> ' + current[6].totalCredit + ' грн., <b>Осталось сдать:</b> ' + current[6].totalDebt + 'грн.';
+	$three[0].innerHTML = current[7].category + ' /// ' + '<b>Всего сдано:</b> ' + current[7].totalCredit + ' грн., <b>Осталось сдать:</b> ' + current[7].totalDebt + 'грн.';
+	$two[0].innerHTML = current[8].category + ' /// ' + '<b>Всего сдано:</b> ' + current[8].totalCredit + ' грн., <b>Осталось сдать:</b> ' + current[8].totalDebt + 'грн.'; 
+	$one[0].innerHTML = current[9].category + ' /// ' + '<b>Всего сдано:</b> ' + current[9].totalCredit + ' грн., <b>Осталось сдать:</b> ' + current[9].totalDebt + 'грн.'; 
+});
 
 function getArr(elem) {
 	var tmpArr = elem.innerHTML;
@@ -27,35 +43,60 @@ function getArr(elem) {
 	} else {
 		$(elem).addClass('good');
 	}
-	totalArr.push(tmpVal);
 }
 
-function getArrSum(elem) {
-	var tmpArr = elem.innerHTML;
-	tmpArr = tmpArr.split('но: ');
-	tmpArr = tmpArr[1].split(' ');
-	sumArr.push(parseInt(tmpArr[0]));
-}
+var current = [
+	{category: 0, totalDebt: 0, totalCredit: 0},
+	{category: '9-й этаж', totalDebt: 0, totalCredit: 0},
+	{category: '8-й этаж', totalDebt: 0, totalCredit: 0},
+	{category: '7-й этаж', totalDebt: 0, totalCredit: 0},
+	{category: '6-й этаж', totalDebt: 0, totalCredit: 0},
+	{category: '5-й этаж', totalDebt: 0, totalCredit: 0},
+	{category: '4-й этаж', totalDebt: 0, totalCredit: 0},
+	{category: '3-й этаж', totalDebt: 0, totalCredit: 0},
+	{category: '2-й этаж', totalDebt: 0, totalCredit: 0},
+	{category: '1-й этаж', totalDebt: 0, totalCredit: 0}
+	];
 
-var values = [ 
-	{category: 1, val1: 2, val2: 3},
-	{category: 1, val1: 5, val2: 4},
-	{category: 1, val1: 7, val2: 7},
-	{category: 2, val1: 21, val2: 21}, 
-	{category: 2, val1: 42, val2: 23},
-	{category: 3, val1: 2, val2: 3} 
-] 
+current[1].totalCredit = currentCredit($('div#collapseOne > div > div > div'));
+current[2].totalCredit = currentCredit($('div#collapseTwo > div > div > div'));
+current[3].totalCredit = currentCredit($('div#collapseThree > div > div > div'));
+current[4].totalCredit = currentCredit($('div#collapseFour > div > div > div'));
+current[5].totalCredit = currentCredit($('div#collapseFive > div > div > div'));
+current[6].totalCredit = currentCredit($('div#collapseSix > div > div > div'));
+current[7].totalCredit = currentCredit($('div#collapseSeven > div > div > div'));
+current[8].totalCredit = currentCredit($('div#collapseEight > div > div > div'));
+current[9].totalCredit = currentCredit($('div#collapseNine > div > div > div'));
 
-var totalSum = {val1:0, val2:0}; 
-var categoriesSum = {}; 
+current[1].totalDebt = currentDebt($('div#collapseOne > div > div > div'));
+current[2].totalDebt = currentDebt($('div#collapseTwo > div > div > div'));
+current[3].totalDebt = currentDebt($('div#collapseThree > div > div > div'));
+current[4].totalDebt = currentDebt($('div#collapseFour > div > div > div'));
+current[5].totalDebt = currentDebt($('div#collapseFive > div > div > div'));
+current[6].totalDebt = currentDebt($('div#collapseSix > div > div > div'));
+current[7].totalDebt = currentDebt($('div#collapseSeven > div > div > div'));
+current[8].totalDebt = currentDebt($('div#collapseEight > div > div > div'));
+current[9].totalDebt = currentDebt($('div#collapseNine > div > div > div'));
 
-values.forEach(function(v){ 
-	var categorySum = categoriesSum[v.category] || (categoriesSum[v.category] = {val1:0, val2:0}); 
-	categorySum.val1 += v.val1; 
-	categorySum.val2 += v.val2; 
-	totalSum.val1 += v.val1; 
-	totalSum.val2 += v.val2; 
-	}); 
+current[0].totalDebt = current[1].totalDebt + current[2].totalDebt + current[3].totalDebt + current[4].totalDebt + current[5].totalDebt+ current[6].totalDebt + current[7].totalDebt +current[8].totalDebt + current[9].totalDebt;
+current[0].totalCredit = current[1].totalCredit + current[2].totalCredit + current[3].totalCredit + current[4].totalCredit + current[5].totalCredit + current[6].totalCredit + current[7].totalCredit + current[8].totalCredit + current[9].totalCredit;
 
-console.log(totalSum); 
-console.log(categoriesSum);
+function currentDebt(obj) {
+	var totalDebt = 0;
+	for (var i = 0; i < obj.length; i++) {
+		var num = JSON.stringify(obj[i].innerHTML).split('<br>');
+		var debt = parseInt(num[2].replace(/[^0-9]/g, ''));
+		totalDebt += debt;
+	};
+	return totalDebt;
+};
+
+function currentCredit(obj) {
+	var totalCredit = 0;
+	for (var i = 0; i < obj.length; i++) {
+		var num = JSON.stringify(obj[i].innerHTML).split('<br>');
+		var credit = parseInt(num[1].replace(/[^0-9]/g, ''));
+		totalCredit += credit;
+	};
+	return totalCredit;
+};
