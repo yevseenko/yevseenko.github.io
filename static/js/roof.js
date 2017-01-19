@@ -21,6 +21,10 @@ function getArr(elem) {
 	tmpArr = tmpArr[1].split(' ');
 	if (parseInt(tmpArr[0]) == 1500) {
 		$(elem).addClass('kill');
+	} else if (parseInt(tmpArr[0]) < 1500) {
+		$(elem).addClass('proc');
+	} else {
+		$(elem).addClass('good');
 	}
 	totalArr.push(parseInt(tmpArr[0]));
 }
@@ -29,10 +33,6 @@ function getArrSum(elem) {
 	var tmpArr = elem.innerHTML;
 	tmpArr = tmpArr.split('но: ');
 	tmpArr = tmpArr[1].split(' ');
-	if (parseInt(tmpArr[0]) > 0) {
-		$(elem).removeClass('kill');
-		$(elem).addClass('proc');
-	}
 	sumArr.push(parseInt(tmpArr[0]));
 }
 
