@@ -53,6 +53,9 @@ h2 a {
         width: 30%;
         font-size: 20px;
     }
+    .container {
+        width: 90%;
+    }
 }
 
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
