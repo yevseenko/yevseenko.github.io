@@ -59,6 +59,7 @@ h2 a {
     .item {
         width: 30%;
         font-size: 18px;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
