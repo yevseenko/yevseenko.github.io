@@ -1,17 +1,17 @@
 $(document).ready(function() {
-    var $div = $('div.item');
-    var	$totalNeed = $('#totalNeed');
-    var	$totalSum = $('#totalSum');
+    var $div = $('div.item'),
+    	$totalNeed = $('#totalNeed'),
+    	$totalSum = $('#totalSum'),
     
-    var $nine = $('a[href|="#collapseOne"]');
-    var $eight = $('a[href|="#collapseTwo"]');
-    var $seven = $('a[href|="#collapseThree"]');
-    var $six = $('a[href|="#collapseFour"]');
-    var $five = $('a[href|="#collapseFive"]');
-    var $four = $('a[href|="#collapseSix"]');
-    var $three = $('a[href|="#collapseSeven"]');
-    var $two = $('a[href|="#collapseEight"]');
-    var $one = $('a[href|="#collapseNine"]');
+     	$nine = $('a[href|="#collapseOne"]'),
+     	$eight = $('a[href|="#collapseTwo"]'),
+     	$seven = $('a[href|="#collapseThree"]'),
+     	$six = $('a[href|="#collapseFour"]'),
+     	$five = $('a[href|="#collapseFive"]'),
+     	$four = $('a[href|="#collapseSix"]'),
+     	$three = $('a[href|="#collapseSeven"]'),
+     	$two = $('a[href|="#collapseEight"]'),
+    	$one = $('a[href|="#collapseNine"]');
 
     for (var i = 0; i < $div.length; i++) {
     	changeBg($div[i]);
