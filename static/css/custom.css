@@ -53,12 +53,18 @@ h2 a {
         width: 30%;
         font-size: 20px;
     }
+    .container {
+        width: 100%;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 768px) {
     .item {
         width: 30%;
         font-size: 18px;
+    }
+    .container {
+        width: 100%;
     }
 }
 
