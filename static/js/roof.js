@@ -17,8 +17,8 @@ $(document).ready(function() {
     	changeBg($div[i]);
     }
 
-    $totalSum[0].innerHTML = 'Уже сдано: ' + current[0].totalCredit + ' ₴ (гривен)';
-    $totalNeed[0].innerHTML = 'Еще необходимо сдать: ' + current[0].totalDebt + ' ₴ (гривен)';
+    $totalSum[0].innerHTML = 'Уже сдано: ' + current[0].totalCredit + ' ₴ (гривен).';
+    $totalNeed[0].innerHTML = 'Еще необходимо сдать: ' + current[0].totalDebt + ' ₴ (гривен).';
 
     $nine[0].innerHTML = current[1].category + ' /// ' + '<b>Всего сдано:</b> ' + current[1].totalCredit + ' грн., <b>Осталось сдать:</b> ' + current[1].totalDebt + 'грн.';
 	$eight[0].innerHTML = current[2].category + ' /// ' + '<b>Всего сдано:</b> ' + current[2].totalCredit + ' грн., <b>Осталось сдать:</b> ' + current[2].totalDebt + 'грн.';
