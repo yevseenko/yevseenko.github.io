@@ -53,10 +53,6 @@ h2 a {
         width: 30%;
         font-size: 20px;
     }
-    .container {
-        min-width: 100%;
-        padding: 0px;
-    }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
