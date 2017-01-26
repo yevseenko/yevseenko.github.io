@@ -138,3 +138,8 @@ td {
     border: 1px solid;
     border-radius: 4px;
 }
+
+.info {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+}
