@@ -39,11 +39,8 @@ body > .wrapper {
 
 .wrapper {
     text-align: center;
-    box-sizing: border-box;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
+    max-width: 1260px;
+    margin: 0 auto;
     padding-top: 30px;
 }
 
@@ -52,6 +49,7 @@ table {
 }
 
 td {
+    font-family: 'Play', sans-serif;
     border: 1px solid;
     border-radius: 4px;
     width: 65px;
@@ -109,6 +107,7 @@ td {
     position: absolute;
     margin-top: -16px;
     margin-left: 4px;
+    font-family: 'Source Code Pro', monospace;
 }
 
 .bot {
@@ -116,6 +115,7 @@ td {
     position: absolute;
     font-weight: normal;
     width: 65px;
+    font-family: 'Source Code Pro', monospace;
 }
 
 .top--right {
@@ -124,4 +124,5 @@ td {
     font-weight: normal;
     margin-top: -8px;
     margin-left: 26px;
+    font-family: 'Source Code Pro', monospace;
 }
