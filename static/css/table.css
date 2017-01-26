@@ -1,74 +1,127 @@
-* { 
-    margin:0;
-    padding:0;
-    }
+* {
+    margin: 0;
+    padding: 0;
+}
 
-html, body, .wrapper { 
+html,
+body,
+.wrapper {
     height: 100%;
+    background: rgb(255, 214, 168);
     font-family: 'Source Code Pro', monospace;
-    }
-    
+}
+
 body > .wrapper {
     height: auto;
     min-height: 100%;
-    }
+}
 
 .main {
     padding-bottom: 50px;
-    }
+}
 
-.footer { 
+.footer {
     position: relative;
-	margin-top: -50px;
-	height: 50px;
-	clear:both;
+    margin-top: -50px;
+    height: 50px;
+    clear: both;
     text-align: center;
     line-height: 50px;
-    } 
+}
 
 .clearfix:after {
     content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-    }
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
 
 .wrapper {
     text-align: center;
     box-sizing: border-box;
-    margin-left: 80px;
-    margin-right: 80px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 30px;
+}
+
+table {
+    padding-top: 50px;
 }
 
 td {
-    border: 1px solid grey;
+    border: 1px solid;
     border-radius: 4px;
-    width: 56px;
-    height: 56px;
+    width: 65px;
+    height: 65px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 26px;
 }
 
-td.clear {
+.clear {
     border: 0;
 }
 
-td.green {
-    background: rgb(188, 253, 188);
+.alkali {
+    background: #f89600;
 }
 
-td.red {
-    background: rgb(255, 158, 158);
+.alkaline {
+    background: #ffc107;
 }
 
-td.blue {
-    background: rgb(163, 163, 255);
+.other {
+    background: #8bc34a;
 }
 
-td.yellow {
-    background: rgb(253, 253, 176);
+.gases {
+    background: #04aaf5;
+}
+
+.metalloids {
+    background: #4eb7ad;
+}
+
+.halogens {
+    background: #26c6da;
+}
+
+.transition {
+    background: #c68a8a;
+}
+
+.post-transition {
+    background: #91a5af;
+}
+
+.lanthanoids {
+    background: #f79a89;
+}
+
+.actinoids {
+    background: #b39ddb;
+}
+
+.top--left {
+    font-size: 12px;
+    position: absolute;
+    margin-top: -16px;
+    margin-left: 4px;
+}
+
+.bot {
+    font-size: 10px;
+    position: absolute;
+    font-weight: normal;
+    width: 65px;
+}
+
+.top--right {
+    font-size: 10px;
+    position: absolute;
+    font-weight: normal;
+    margin-top: -8px;
+    margin-left: 26px;
 }
