@@ -1,0 +1,40 @@
+* { 
+    margin:0;
+    padding:0;
+    }
+
+html, body, .wrapper { 
+    height: 100%;
+    }
+    
+body > .wrapper {
+    height: auto;
+    min-height: 100%;
+    }
+
+p {
+    padding-top: 50px;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.main {
+    padding-bottom: 50px;
+    margin: 0 auto;
+    }
+
+.footer { 
+    position: relative;
+	margin-top: -50px;
+	height: 50px;
+	clear:both;
+    text-align: center;
+    line-height: 50px;
+    }
+
+.wrapper {
+    text-align: center;
+    margin: 0 auto;
+    min-width: 970px;
+}
