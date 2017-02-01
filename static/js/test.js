@@ -73,7 +73,7 @@ var arrays = [
 
 var ancestry = JSON.parse(ANCESTRY_FILE);
 
-result1 = arrays.reduce((a,b) => a.concat(b));
+result1 = arrays.reduce(function(a,b) { return a.concat(b) });
 
 function average(array) {
   function plus(a, b) { return a + b; }
