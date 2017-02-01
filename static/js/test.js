@@ -90,3 +90,7 @@ function havem(p) { return p.mother != null; }
 function rmother(p) { return byName[p.mother] != undefined; }
 
 result2 = average(ancestry.filter(havem).filter(rmother).map(childborn));
+
+function longest(s1, s2) {
+  return Array.from(new Set(s1 + s2)).sort().join('');
+}
