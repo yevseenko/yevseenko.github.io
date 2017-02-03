@@ -1,3 +1,4 @@
+'use strict';
 window.onload = function() {
 	var $result1 = document.getElementById('result1'),
 		$result2 = document.getElementById('result2'),
@@ -91,7 +92,7 @@ function rmother(p) { return byName[p.mother] != undefined; }
 
 result2 = average(ancestry.filter(havem).filter(rmother).map(childborn));
 
-function revrot(str, sz) {
+/*function revrot(str, sz) {
   if (sz < 1 || sz > str.length) 
     return '';
 
@@ -103,4 +104,4 @@ function revrot(str, sz) {
     .match(new RegExp('.{' + sz + '}', 'g'))
     .map(c => sum_cubes(c) % 2 ? rotate(c) : reverse(c))
     .join('');
-}
+}*/
