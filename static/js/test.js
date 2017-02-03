@@ -106,6 +106,6 @@ result2 = average(ancestry.filter(havem).filter(rmother).map(childborn));
     .join('');
 }*/
 
-function findOutlier(integers){
-  integers.
+function spinWords(){
+  //TODO Have fun :)
 }
