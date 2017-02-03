@@ -106,6 +106,6 @@ result2 = average(ancestry.filter(havem).filter(rmother).map(childborn));
     .join('');
 }*/
 
-function spinWords(){
-  //TODO Have fun :)
+function reverseWords(str) {
+  return str.split(' ').map(function(x){return x.split('').reverse().join('')}).join(' ');
 }
