@@ -105,3 +105,7 @@ result2 = average(ancestry.filter(havem).filter(rmother).map(childborn));
     .map(c => sum_cubes(c) % 2 ? rotate(c) : reverse(c))
     .join('');
 }*/
+
+function findOutlier(integers){
+  integers.
+}
