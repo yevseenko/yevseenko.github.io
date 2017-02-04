@@ -12,13 +12,6 @@ body > .wrapper {
     min-height: 100%;
     }
 
-p {
-    padding-top: 50px;
-    font-family: Verdana;
-    font-weight: bold;
-    font-size: 16px;
-}
-
 .main {
     padding-bottom: 50px;
     margin: 0 auto;
@@ -31,6 +24,8 @@ p {
 	clear:both;
     text-align: center;
     line-height: 50px;
+    font-family: 'Consolas';
+    font-size: 16px;
     }
 
 .wrapper {

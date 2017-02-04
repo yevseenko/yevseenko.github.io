@@ -7,3 +7,15 @@ function fastestIsPalindrome(str) {
       return false;
   return true;
 }
+
+//Decorator
+function logArgs(f){
+  return function(){
+    console.log(arguments);
+    return f.apply(this, arguments);
+  }
+}
+
+function sum(x,y) {
+  return x + y;
+}
