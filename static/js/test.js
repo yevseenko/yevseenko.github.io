@@ -1,9 +1,11 @@
 'use strict';
 
-function bingo(ticket, win){
-  let result = 0;
-  for (var i = 0; i < ticket.length; i++) {
-    if (ticket[i][0].charCodeAt(i) == ticket[i][1]) result += 1;
-  }
-  return result >= win ? 'Winner!' : 'Loooser!';
+function longestConsec(strarr, k) {
+	if (strarr.length == 0 || k > strarr.length || k <= 0) return '';
+    return strarr.sort(function(a,b){return a.length < b.length}).slice(0,k).join('');
 }
+
+
+// longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)
+
+// https://www.codewars.com/kata/consecutive-strings/train/javascript
