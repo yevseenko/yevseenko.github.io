@@ -1,9 +1,16 @@
 'use strict';
 
-function list_squared{
-
+function rotate(str) {
+    var current = str.split('');
+    var arr = [];
+    for (var i = 0; i < str.length; i++) {
+        var shifted = current.shift();
+        current.push(shifted);
+        arr.push(current.join(''));
+    }
+    return arr;
 }
 
-// list_squared(1, 250) --> [[1, 1], [42, 2500], [246, 84100]]
+// countChar("fizzbuzz", "z")
 
-// https://www.codewars.com/kata/integers-recreation-one
+// Math.exp(Math.log(81) / 2).toFixed(5)
