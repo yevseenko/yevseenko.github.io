@@ -1,16 +1,8 @@
 'use strict';
 
-function rotate(str) {
-    var current = str.split('');
-    var arr = [];
-    for (var i = 0; i < str.length; i++) {
-        var shifted = current.shift();
-        current.push(shifted);
-        arr.push(current.join(''));
-    }
-    return arr;
+function digital_root(n) {
+  return (n - 1) % 9 + 1;
 }
-
-// countChar("fizzbuzz", "z")
+// https://www.codewars.com/kata/sum-of-digits-slash-digital-root/train/javascript
 
 // Math.exp(Math.log(81) / 2).toFixed(5)
