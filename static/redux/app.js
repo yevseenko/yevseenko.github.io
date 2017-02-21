@@ -23,8 +23,8 @@ class StateStore {
 
 const stateStore = new StateStore({
 	todos: [],
-	newTodoTitle: '';
-
+	newTodoTitle: '',
+	
 });
 
 stateStore.subscribe(render);
