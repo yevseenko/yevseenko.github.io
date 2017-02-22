@@ -71,10 +71,15 @@ function renderToString(state) {
 
 function renderTodos(todos) {
 	return todos.map( todo => {
-		return `<li class="${todo.done ? '-completed' : ''} todo-item">
-			${todo.title}
-			</li>
-			`
+		return `<li 
+					class="${todo.done ? '-completed' : ''} todo-item"
+					data-id="${todo.id}"
+					>
+				
+				${todo.title}
+
+				</li>
+				`
 	})
 	.join('\n');
 }
@@ -111,6 +116,13 @@ document.body.addEventListener('keypress', e => {
 
 document.body.addEventListener('click', e => {
 	console.log(e.target);
+
+	if (e.target.classList.contains('todo-item')) {
+		stateStore.dispatch({
+			type: 'COMPLETE_TODO',
+			payload: 
+		})
+	}
 });
 
 
