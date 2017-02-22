@@ -72,7 +72,7 @@ function renderToString(state) {
 function renderTodos(todos) {
 	return todos.map( todo => {
 		return `<li 
-					class="${todo.done ? '-completed' : ''} todo-item"
+					class="${todo.done ? '-completed' : ''}todo-item"
 					data-id="${todo.id}"
 					>
 				
