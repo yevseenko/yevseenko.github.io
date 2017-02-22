@@ -1,18 +1,17 @@
 'use strict';
 
-function sequenceSum(begin, end, step) {
-    if (begin > end && step > 0) return 0;
-    if (begin < end && begin < 0 && end < 0 && step < 0) return 0;
-    var result = 0;
-    
-    } else {
-        result = (begin + (end - end%step))/2*((end-end%step-begin)/step + 1);        
-    }
-    return result;
-}
+var list = document.querySelector('#list'),
+	input = document.querySelector('input');
 
-// https://www.codewars.com/kata/sum-of-a-sequence-hard-core-version/train/javascript
+list.addEventListener('click', function(e){
+	if (e.target.classList.contains('todo-item')) {
+		e.target.classList.toggle('completed');
+	}
+});
 
-// sequenceSum(-1, -5, -3), -5)
-
-// Math.exp(Math.log(81) / 2).toFixed(5)
+input.addEventListener('keypress', function(e) {
+	if (e.keyCode === 13 && input.value) {
+		list.innerHTML += '<li class="todo-item">' + input.value + '</li>';
+		input.value = '';
+	}
+});
