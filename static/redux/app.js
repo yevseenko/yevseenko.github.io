@@ -42,7 +42,7 @@ function appReducer(state, action) {
 		case 'COMPLETE_TODO':
 			return Object.assign({}, state, {
 				todos: state.todos.map( todo => {
-					if (action.payload.id === todo.id) {
+					if (action.payload === todo.id) {
 						todo.done = true;						
 					}
 					return todo;
@@ -120,7 +120,7 @@ document.body.addEventListener('click', e => {
 	if (e.target.classList.contains('todo-item')) {
 		stateStore.dispatch({
 			type: 'COMPLETE_TODO',
-			payload: 
+			payload: +e.target.dataset.id
 		})
 	}
 });
