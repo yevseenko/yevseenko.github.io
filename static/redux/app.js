@@ -78,6 +78,11 @@ document.body.addEventListener('keypress', e => {
 		}
 	});
 
+	stateStore.dispatch({
+		type: 'SET_NEW_TODO_TITLE_VALUE',
+		payload: ''
+	});
+
 	return;
 	}
 
@@ -85,4 +90,8 @@ document.body.addEventListener('keypress', e => {
 		type: 'SET_NEW_TODO_TITLE_VALUE',
 		payload: input.value + e.key
 	});
+
+	setTimeout(() => {
+		document.querySelector('input').focus();
+	}, 0);
 });
