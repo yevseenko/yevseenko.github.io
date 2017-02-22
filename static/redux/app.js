@@ -27,6 +27,8 @@ const stateStore = new StateStore({
 
 stateStore.subscribe(render);
 
+let todoId = 0;
+
 function appReducer(state, action) {
 	switch (action.type) {
 		case 'SET_NEW_TODO_TITLE_VALUE':
@@ -35,7 +37,16 @@ function appReducer(state, action) {
 			});
 		case 'ADD_TODO':
 			return Object.assign({}, state, {
-				todos: state.todos.concat([ action.payload ])
+				todos: state.todos.concat([ Object.assign({ id: todoId++ }, action.payload ) ])
+			});
+		case 'COMPLETE_TODO':
+			return Object.assign({}, state, {
+				todos: state.todos.map( todo => {
+					if (action.payload.id === todo.id) {
+						todo.done = true;						
+					}
+					return todo;
+				})
 			});
 	}
 }
@@ -60,7 +71,10 @@ function renderToString(state) {
 
 function renderTodos(todos) {
 	return todos.map( todo => {
-		return `<li>${todo.title}</li>`
+		return `<li class="${todo.done ? '-completed' : ''} todo-item">
+			${todo.title}
+			</li>
+			`
 	})
 	.join('\n');
 }
@@ -74,7 +88,8 @@ document.body.addEventListener('keypress', e => {
 		stateStore.dispatch({
 		type: 'ADD_TODO',
 		payload: {
-			title: input.value
+			title: input.value,
+			done: false
 		}
 	});
 
@@ -91,7 +106,36 @@ document.body.addEventListener('keypress', e => {
 		payload: input.value + e.key
 	});
 
+	makeMyLifeAwesome();
+});
+
+document.body.addEventListener('click', e => {
+	console.log(e.target);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function makeMyLifeAwesome() {
 	setTimeout(() => {
 		document.querySelector('input').focus();
 	}, 0);
-});
+}
