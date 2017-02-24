@@ -40,31 +40,3 @@ body > .wrapper {
     text-decoration: line-through;
     color: red;
 }
-
-input {
-    border: 1px solid black;
-    border-radius: 4px;
-    font-size: 16px;
-    height: 25px;
-    padding-left: 10px;
-    margin: 10px;
-}
-
-ol {
-    padding-left: 40px;
-}
-
-li {
-    cursor: pointer;
-    -webkit-user-select: none;
-}
-
-.todo-list {
-    margin: 0 auto;
-    max-width: 400px;
-    min-height: 400px; 
-    border: 2px solid grey;
-    border-radius: 4px;
-    font-family: Verdana;
-    font-size: 16px;
-}
