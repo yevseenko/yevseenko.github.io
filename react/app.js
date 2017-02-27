@@ -3,7 +3,6 @@ class App extends React.Component {
 		return (
 			<div className='wrapper'>
 				<Menu />
-				<Clock />
 			</div>
 			);
 	}
@@ -16,6 +15,7 @@ class Menu extends React.Component {
 					<a href='#'>First menu item</a>
 					<a href='#'>Second menu item</a>
 					<a href='#'>Third menu item</a>
+					<Clock />
 			</div>
 			);
 	}
@@ -42,8 +42,8 @@ class Clock extends React.Component {
   	}
   	render() {
     	return (
-      		<div>
-        		<p>It is {this.state.date.toLocaleTimeString()}.</p>
+      		<div className='clock'>
+        		{this.state.date.toLocaleTimeString()}
       		</div>
     	);
   	}

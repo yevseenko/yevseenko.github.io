@@ -39,3 +39,7 @@ body {
     width: 100%;
     background: #333;
 }
+
+.clock {
+    float: right;
+}
