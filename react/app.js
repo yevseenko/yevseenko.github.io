@@ -1,38 +1,38 @@
-var ToggleText = React.createClass({
-  getInitialState: function () {
-    return {
-      showDefault: true
-    }
-  },
-  
-  toggle: function (e) {
-    // Prevent following the link.
-    e.preventDefault();
-    
-    // Invert the chosen default.
-    // This will trigger an intelligent re-render of the component.
-    this.setState({ showDefault: !this.state.showDefault })
-  },
-  
+var ProductItem = React.createClass({
   render: function () {
-    // Default to the default message.
-    var message = this.props.default;
-    
-    // If toggled, show the alternate message.
-    if (!this.state.showDefault) {
-      message = this.props.alt;
-    }
-    
     return (
-      <div>
-        <h1>Hello {message}!</h1>
-        <a href="" onClick={this.toggle}>Toggle</a>
-      </div>
+      <tr>
+        <td>{this.props.name}</td>
+        <td>{this.props.price}</td>
+      </tr>
     );
   }
 });
 
-ReactDOM.render(
-	<ToggleText default="World" alt="Mars" />,
-	document.getElementById('root')
-);
+var ProductList = React.createClass({
+  render: function () {
+    var products = this.props.products.map(function (product, index) {
+      return (
+        <ProductItem
+          key={index}
+          name={product.name}
+          price={product.price}
+        />
+      );
+    });
+    
+    return (
+      <table>
+        {products}
+      </table>
+    );
+  }
+});
+
+var products = [
+  { name: 'Toast', price: 1499 },
+  { name: 'Bacon', price: 3245 },
+  { name: 'Coffee', price: 300 }
+];
+
+ReactDOM.render(<ProductList products={products} />, document.getElementById('root'));

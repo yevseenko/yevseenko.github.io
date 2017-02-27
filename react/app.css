@@ -9,6 +9,11 @@ body {
     padding-top: 50px;
 }
 
+a {
+    text-decoration: none;
+    font-family: Verdana;
+}
+
 .completed {
     text-decoration: line-through;
     color: red;
