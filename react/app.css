@@ -3,6 +3,12 @@
     padding:0;
     }
 
+body {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
 .completed {
     text-decoration: line-through;
     color: red;
