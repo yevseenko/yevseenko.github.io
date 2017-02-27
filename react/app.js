@@ -15,6 +15,8 @@ class Menu extends React.Component {
 					<a href='#'>First menu item</a>
 					<a href='#'>Second menu item</a>
 					<a href='#'>Third menu item</a>
+					<a href='#'>Fourth menu item</a>
+					<a href='#'>Fifth menu item</a>
 					<Clock />
 			</div>
 			);
