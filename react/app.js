@@ -1,10 +1,10 @@
-var helloMassage = React.createClass({
+var HelloMessage = React.createClass({
 	render: function(){
-		return <h3>Hello {this.props.massage}</h3>;
+		return <h3>Hello {this.props.message}</h3>;
 	}
 });
  
 ReactDOM.render(
-  <helloMassage massage="World" />,
+  <HelloMessage message='World' />,
   document.getElementById('root')
 );
