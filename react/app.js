@@ -1,8 +1,54 @@
-const elem = React.createClass({
+var HomeListing = React.createClass({
+  render: function() {
+    return (
+      <div className="homeList">
+        <Home
+          key={0}
+          id={0}
+          isSaved={false}
+          photo="assets/images/home.jpg"
+          address="12345 Beverly Dr"
+          numSaves={52}
+        >
+          This is a home in the city
+        </Home>
+      </div>
+    );
+  }
+});
+ 
+var Home = React.createClass({
+  render: function() {
+    return (
+      <div className="home">
+        <span className="homeAddress">
+          {this.props.address}
+        </span>
+        <Photo src={this.props.photo}></Photo>
+        <span className="homeDescription">
+          {this.props.children}
+        </span>
+        <Saves
+          id={this.props.id}
+          isSaved={this.props.isSaved}
+          numSaves={this.props.numSaves}
+        ></Saves>
+      </div>
+    );
+  }
+});
+ 
+var Photo = (props) => {
+  return (<div className="homePhoto">
+    <img src={props.src} />
+  </div>);
+};
+ 
+var Saves = React.createClass({
   getInitialState: function(){
     return {
-      saved: false,
-      numSaves: 0
+      saved: this.props.isSaved,
+      numSaves: this.props.numSaves
     }
   },
   handleSubmit: function(e) {
@@ -40,5 +86,8 @@ const elem = React.createClass({
     );
   }
 });
-
-ReactDOM.render(elem, document.getElementById('root'));
+ 
+ReactDOM.render(
+  <HomeListing />,
+  document.getElementById('root')
+);
