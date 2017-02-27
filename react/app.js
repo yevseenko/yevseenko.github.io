@@ -190,7 +190,7 @@ var Saves = React.createClass({
   }
 });
  
-React.render(
+ReactDOM.render(
   <HomeListing url="homes.json" savesUrl="saves.json" pollInterval={10000} />,
   document.getElementById('root')
 );
