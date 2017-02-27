@@ -3,8 +3,15 @@ var HelloMessage = React.createClass({
 		return <h3>Hello {this.props.message}</h3>;
 	}
 });
+
+var SecondMessage = React.createClass({
+	render: function() {
+		return <h3>The World is {this.props.message}</h3>;
+	}
+});
  
 ReactDOM.render(
   <HelloMessage message='World' />,
+  <SecondMessage message='mine' />,
   document.getElementById('root')
 );
