@@ -12,6 +12,10 @@ var SecondMessage = React.createClass({
  
 ReactDOM.render(
   <HelloMessage message='World' />,
-  <SecondMessage message='mine' />,
   document.getElementById('root')
+);
+
+ReactDOM.render(
+	<SecondMessage message='mine' />,
+	document.getElementById('root')
 );
