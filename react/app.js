@@ -13,11 +13,9 @@ class Menu extends React.Component {
 	render() {
 		return (
 			<div className='nav'>
-				<ul className='menu'>
-					<li>First menu item</li>
-					<li>Second menu item</li>
-					<li>Third menu item</li>
-				</ul>
+					<a href='#'>First menu item</a>
+					<a href='#'>Second menu item</a>
+					<a href='#'>Third menu item</a>
 			</div>
 			);
 	}

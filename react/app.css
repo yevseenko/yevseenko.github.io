@@ -1,6 +1,7 @@
 * { 
     margin:0;
     padding:0;
+    box-sizing: border-box;
     }
 
 body {
@@ -14,7 +15,17 @@ a {
     font-family: Verdana;
 }
 
-.completed {
-    text-decoration: line-through;
-    color: red;
+.wrapper {
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1170px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.nav {
+    border: 1px solid gray;
+    background: #eee;
+    line-height: 24px;
+    width: 100%;
 }
