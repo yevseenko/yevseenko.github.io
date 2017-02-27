@@ -3,6 +3,7 @@ class App extends React.Component {
 		return (
 			<div className='wrapper'>
 				<Menu />
+				<Jumbotron />
 			</div>
 			);
 	}
@@ -18,6 +19,15 @@ class Menu extends React.Component {
 					<a href='#'>Fourth menu item</a>
 					<a href='#'>Fifth menu item</a>
 					<Clock />
+			</div>
+			);
+	}
+}
+
+class Jumbotron extends React.Component {
+	render() {
+		return (
+			<div className='jumbotron'>
 			</div>
 			);
 	}
