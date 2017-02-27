@@ -1,38 +1,37 @@
-var ProductItem = React.createClass({
-  render: function () {
-    return (
-      <tr>
-        <td>{this.props.name}</td>
-        <td>{this.props.price}</td>
-      </tr>
-    );
-  }
-});
+class Clock extends React.Component {
+	constructor(props) {
+    	super(props);
+    	this.state = {date: new Date()};
+  	}
 
-var ProductList = React.createClass({
-  render: function () {
-    var products = this.props.products.map(function (product, index) {
-      return (
-        <ProductItem
-          key={index}
-          name={product.name}
-          price={product.price}
-        />
-      );
-    });
-    
-    return (
-      <table>
-        {products}
-      </table>
-    );
-  }
-});
+  	componentDidMount() {
+  		this.timerID = setInterval(
+      		() => this.tick(),
+      		1000
+    	);
+  	}
 
-var products = [
-  { name: 'Toast', price: 1499 },
-  { name: 'Bacon', price: 3245 },
-  { name: 'Coffee', price: 300 }
-];
+  	tick() {
+    	this.setState({
+      		date: new Date()
+    	});
+  	}
 
-ReactDOM.render(<ProductList products={products} />, document.getElementById('root'));
+  	componentWillUnmount() {
+  		clearInterval(this.timerID);
+  	}
+
+  	render() {
+    	return (
+      		<div>
+        		<h1>Hello, world!</h1>
+        		<h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+      		</div>
+    	);
+  	}
+}
+
+ReactDOM.render(
+  <Clock />,
+  document.getElementById('root')
+);
