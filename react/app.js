@@ -27,7 +27,9 @@ class Menu extends React.Component {
 class Jumbotron extends React.Component {
 	render() {
 		return (
-			<div className='jumbotron'></div>
+			<div className='jumbotron'>
+				<p>Some text must be here</p>
+			</div>
 		);
 	}
 }
