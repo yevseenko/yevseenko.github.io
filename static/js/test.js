@@ -30,3 +30,9 @@
         return n < 10 ? n = "0" + n : n;
     }
 }());
+
+var obj = {
+    method: function hello() {
+        return 'hello';
+    }
+}

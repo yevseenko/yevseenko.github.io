@@ -19,6 +19,17 @@ class Menu extends React.Component {
 				<a href='#'>Fourth menu item</a>
 				<a href='#'>Fifth menu item</a>
 				<Clock />
+				<Search />
+			</div>
+		);
+	}
+}
+
+class Search extends React.Component {
+	render() {
+		return (
+			<div>
+				<input type='text' />
 			</div>
 		);
 	}
