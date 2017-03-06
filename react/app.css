@@ -57,10 +57,9 @@ p {
     width: 100%;
 }
 
-.clock {
+.input-box {
     float: right;
     line-height: 48px;
-    font-size: 16px;
-    color: white;
+    font-size: 20px;
     padding-right: 20px;
 }

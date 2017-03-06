@@ -18,7 +18,6 @@ class Menu extends React.Component {
 				<a href='#'>Third menu item</a>
 				<a href='#'>Fourth menu item</a>
 				<a href='#'>Fifth menu item</a>
-				<Clock />
 				<Search />
 			</div>
 		);
@@ -28,7 +27,7 @@ class Menu extends React.Component {
 class Search extends React.Component {
 	render() {
 		return (
-				<input type='text' />
+				<input type='text' className='input-box'/>
 		);
 	}
 }
@@ -44,7 +43,7 @@ Lorem Ipsum - это текст-"рыба", часто используемый 
 	}
 }
 
-class Clock extends React.Component {
+/* class Clock extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { date: new Date() };
@@ -70,7 +69,7 @@ class Clock extends React.Component {
 			</div>
 		);
 	}
-}
+} */
 
 
 ReactDOM.render(
