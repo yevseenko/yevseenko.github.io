@@ -31,6 +31,7 @@ class Box extends React.Component {
 	render() {
 		return (
 			<div className='box'>
+				<p>Sed laoreet sodales turpis, et ultricies lectus imperdiet feugiat. Fusce vel aliquam massa. Nunc ut fermentum neque, in suscipit dui. Pellentesque leo purus, consectetur bibendum sagittis quis, varius et dolor. Proin aliquam placerat malesuada. Vivamus mattis neque felis, eget pharetra mi mattis et. Curabitur euismod risus quis ultricies ornare. Mauris vel eros dignissim, condimentum turpis sit amet, porta arcu. Maecenas commodo massa dui, in tempor lacus iaculis ac. Fusce hendrerit faucibus dui, ac euismod erat placerat at. Donec vel finibus odio. Aenean porta, eros sit amet facilisis vestibulum, orci leo accumsan libero, eu pulvinar purus lacus aliquet metus. Vivamus vestibulum elit ut consectetur pulvinar. Proin id convallis augue. Proin scelerisque faucibus porta.</p>
 			</div>
 		);
 	}
