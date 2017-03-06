@@ -76,3 +76,12 @@ p {
 .input-box:focus {
     box-shadow: 0px 0px 3px 0px rgb(183, 161, 129);
 }
+
+.box {
+    display: inline-block;
+    height: 200px;
+    border: 1px solid #1B1B1B;
+    background-color: rgba(25, 25, 25, 0.7);
+    box-shadow: 0px 0px 3px 0px #1B1B1B;
+    border-radius: 1px;
+}

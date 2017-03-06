@@ -4,6 +4,9 @@ class App extends React.Component {
 			<div className='wrapper'>
 				<Menu />
 				<Jumbotron />
+				<Box />
+				<Box />
+				<Box />
 			</div>
 		);
 	}
@@ -19,6 +22,15 @@ class Menu extends React.Component {
 				<a href='#'>Fourth menu item</a>
 				<a href='#'>Fifth menu item</a>
 				<Search />
+			</div>
+		);
+	}
+}
+
+class Box extends React.Component {
+	render() {
+		return (
+			<div className='box'>
 			</div>
 		);
 	}
