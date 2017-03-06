@@ -36,8 +36,7 @@ class Jumbotron extends React.Component {
 	render() {
 		return (
 			<div className='jumbotron'>
-				<p>Что такое Lorem Ipsum?
-Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tortor neque, tempor non ex at, facilisis varius sapien. Morbi tristique pulvinar vestibulum. Integer mattis lectus consectetur, semper justo eget, facilisis erat. Phasellus ut risus velit. Aenean lacinia dapibus tincidunt. Nunc vitae finibus justo, et aliquam turpis. Phasellus luctus tortor eget erat interdum, nec accumsan elit mollis. Curabitur tincidunt nibh et orci accumsan lobortis. Quisque finibus dui vitae turpis volutpat, vitae tristique neque tristique. Proin magna erat, rhoncus at congue sit amet, tristique ac odio. Nam sem felis, mollis quis rhoncus vitae, sodales sit amet purus. Nunc a ante quis enim euismod tristique. Maecenas vel rutrum urna.</p>
 			</div>
 		);
 	}
