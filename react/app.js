@@ -28,9 +28,7 @@ class Menu extends React.Component {
 class Search extends React.Component {
 	render() {
 		return (
-			<div>
 				<input type='text' />
-			</div>
 		);
 	}
 }
