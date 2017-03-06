@@ -16,11 +16,11 @@ class Menu extends React.Component {
 	render() {
 		return (
 			<div className='nav'>
-				<a href='#'>First menu item</a>
+				<a href='#'>Home</a>
 				<a href='#'>Second menu item</a>
 				<a href='#'>Third menu item</a>
 				<a href='#'>Fourth menu item</a>
-				<a href='#'>Fifth menu item</a>
+				<a href='#'>About us</a>
 				<Search />
 			</div>
 		);
