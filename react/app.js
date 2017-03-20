@@ -12,15 +12,39 @@ class App extends React.Component {
 	}
 }
 
+function ActionLink() {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+
+  return (
+    <a href="#" onClick={handleClick}>
+      Click me
+    </a>
+  );
+}
+
 class Menu extends React.Component {
+	constructor() {
+		super();
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+	const arr = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
+
+	function handleClick(e) {
+		e.preventDefault();
+		console.log('clicked');
+	}
+
 	render() {
 		return (
 			<div className='nav'>
-				<a href='#'>Home</a>
-				<a href='#'>Second menu item</a>
-				<a href='#'>Third menu item</a>
-				<a href='#'>Fourth menu item</a>
-				<a href='#'>About us</a>
+				{
+					arr.map(item => <a href='#' onClick={this.handleClick}>{item}</a>);
+				}
+				<ActionLink />
 				<Search />
 			</div>
 		);
