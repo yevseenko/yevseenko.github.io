@@ -58,7 +58,7 @@ class Menu extends React.Component {
 			<div className='nav'>
 				<ActionLink />
 				{
-					menuList.map(item => (<a href="#">{item}</a>));
+					menuList.map(item => (<a href="#">{this.item}</a>));
 				}
 				<Toggle />
 				<Search />
