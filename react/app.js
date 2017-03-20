@@ -31,7 +31,7 @@ class Menu extends React.Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	var arr = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
+	const menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
 
 	function handleClick(e) {
 		e.preventDefault();
@@ -42,7 +42,7 @@ class Menu extends React.Component {
 		return (
 			<div className='nav'>
 				{
-					arr.map(item => <a href='#' onClick={this.handleClick}>{item}</a>);
+					menuList.map(item => <a href='#' onClick={this.handleClick}>{item}</a>);
 				}
 				<ActionLink />
 				<Search />
