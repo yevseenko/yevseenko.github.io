@@ -32,7 +32,7 @@ class Menu extends React.Component {
 		return (
 			<div className='nav'>
 				{
-					menuList.map(function(item) { return (<a href='#'>{item}</a>) });
+					menuList.map(function(item) { return (<a href='#'>item</a>) });
 				}
 				<ActionLink />
 				<Search />
