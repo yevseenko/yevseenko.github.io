@@ -30,7 +30,7 @@ function ActionLink() {
 
 const menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
 
-class Seven extends Component {
+class Seven extends React.Component {
     state = {
         todos: [
             { id: 1, name: 'Learn JSX', isComplete: true },
