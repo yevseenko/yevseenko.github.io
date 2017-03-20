@@ -49,12 +49,6 @@ class Toggle extends React.Component {
 }
 
 class Menu extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-			name: ''
-		}
-	}
 	render() {
 		return (
 			<div className='nav'>
