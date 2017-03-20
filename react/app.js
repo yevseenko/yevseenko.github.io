@@ -57,8 +57,8 @@ class Menu extends React.Component {
 		return (
 			<div className='nav'>
 				<ActionLink />
-				<Seven />
 				<Toggle />
+				<Search />
 			</div>
 		);
 	}
