@@ -51,15 +51,17 @@ class Toggle extends React.Component {
   }
 }
 
+function Item() {
+	return (menuList.map((item) => <a href="#"> {item} </a>));
+}
+
 class Menu extends React.Component {
 
 	render() {
 		return (
 			<div className='nav'>
 				<ActionLink />
-				{
-					menuList.map((item) => <a href="#"> {item} </a>);
-				}
+				<Item />
 				<Toggle />
 				<Search />
 			</div>
