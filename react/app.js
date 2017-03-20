@@ -30,23 +30,28 @@ function ActionLink() {
 
 const menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
 
-class Seven extends React.Component {
-    state = {
-        todos: [
-            { id: 1, name: 'Learn JSX', isComplete: true },
-            { id: 2, name: 'Build awesome App', isComplete: false },
-            { id: 3, name: 'Ship It!', isComplete: false }
-        ],
-        currentTodo: ''
-    }
+class Toggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
 
-    handleToggle = (id) => {
-       	console.log('Hello world');
-    }
+    // This binding is necessary to make `this` work in the callback
+    this.handleClick = this.handleClick.bind(this);
+  }
 
-    render() {
-    	return (<a href="#" onClick={handleToggle}>Hello</a>)
-    }
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        {this.state.isToggleOn ? 'ON' : 'OFF'}
+      </button>
+    );
+  }
 }
 
 class Menu extends Component {
@@ -56,7 +61,7 @@ class Menu extends Component {
 			<div className='nav'>
 				<ActionLink />
 				<Seven />
-				<Search />
+				<Toggle />
 			</div>
 		);
 	}
