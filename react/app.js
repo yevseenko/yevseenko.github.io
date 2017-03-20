@@ -33,7 +33,7 @@ class Menu extends React.Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	function handleClick(e) {
+	handleClick(e) {
 		e.preventDefault();
 		console.log('clicked');
 	}
