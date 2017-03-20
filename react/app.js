@@ -28,16 +28,6 @@ function ActionLink() {
 const menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
 
 class Menu extends React.Component {
-	constructor() {
-		super();
-		this.handleClick = this.handleClick.bind(this);
-	}
-
-	handleClick(e) {
-		e.preventDefault();
-		console.log('clicked');
-	}
-
 	render() {
 		return (
 			<div className='nav'>
