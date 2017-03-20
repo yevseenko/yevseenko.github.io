@@ -45,7 +45,7 @@ class Toggle extends React.Component {
   render() {
     return (
       <button onClick={this.handleClick}>
-        {this.state.isToggleOn ? 'ON' : 'OFF'}
+        {this.state.isToggleOn ? 'Click' : 'Setting'}
       </button>
     );
   }
@@ -57,6 +57,9 @@ class Menu extends React.Component {
 		return (
 			<div className='nav'>
 				<ActionLink />
+				{
+					menuList.map(item => <a href="#">{item}</a>);
+				}
 				<Toggle />
 				<Search />
 			</div>
