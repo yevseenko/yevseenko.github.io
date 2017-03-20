@@ -13,7 +13,12 @@ class App extends React.Component {
 }
 
 class ActionLink extends React.Component {
-  function handleClick(e) {
+	constructor() {
+		super();
+		this.handleClick = this.handleClick.bind(this);
+	}
+
+  handleClick(e) {
     e.preventDefault();
     console.log('The link was clicked.');
   }
