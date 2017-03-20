@@ -1,3 +1,6 @@
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
+
 class App extends React.Component {
 	render() {
 		return (
@@ -27,16 +30,13 @@ function ActionLink() {
 
 const menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
 
-class Menu extends React.Component {
-
-	handleMethod() {
-		console.log('Hello!')
-	}
+class Menu extends Component {
 
 	render() {
 		return (
 			<div className='nav'>
 				<ActionLink />
+				<Seven />
 				<Search />
 			</div>
 		);
@@ -99,6 +99,25 @@ class Jumbotron extends React.Component {
 	}
 } */
 
+
+class Seven extends Component {
+    state = {
+        todos: [
+            { id: 1, name: 'Learn JSX', isComplete: true },
+            { id: 2, name: 'Build awesome App', isComplete: false },
+            { id: 3, name: 'Ship It!', isComplete: false }
+        ],
+        currentTodo: ''
+    }
+
+    handleToggle = (id) => {
+       	console.log('Hello world');
+    }
+
+    render() {
+    	return (<a href="#" onClick={handleToggle}>Hello</a)
+    }
+}
 
 ReactDOM.render(
 	<App />,
