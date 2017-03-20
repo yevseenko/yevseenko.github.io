@@ -52,7 +52,9 @@ class Toggle extends React.Component {
 }
 
 function Item() {
-	return (menuList.map((item) => <a href="#"> {item} </a>));
+	return (
+		<a href="#"> {menuList[0]} </a>
+		);
 }
 
 class Menu extends React.Component {
