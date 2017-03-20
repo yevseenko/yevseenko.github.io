@@ -12,8 +12,8 @@ class App extends React.Component {
 	}
 }
 
-function ActionLink() {
-  function handleClick(e) {
+class ActionLink extends React.Component {
+  handleClick = (e) => {
     e.preventDefault();
     console.log('The link was clicked.');
   }
