@@ -31,7 +31,7 @@ class Menu extends React.Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	const menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
+	menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
 
 	function handleClick(e) {
 		e.preventDefault();
