@@ -51,7 +51,7 @@ class Toggle extends React.Component {
   }
 }
 
-class Menu extends Component {
+class Menu extends React.Component {
 
 	render() {
 		return (
