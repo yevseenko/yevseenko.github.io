@@ -25,13 +25,13 @@ function ActionLink() {
   );
 }
 
+const menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
+
 class Menu extends React.Component {
 	constructor() {
 		super();
 		this.handleClick = this.handleClick.bind(this);
 	}
-
-	menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
 
 	function handleClick(e) {
 		e.preventDefault();
