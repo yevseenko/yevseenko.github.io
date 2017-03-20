@@ -36,7 +36,7 @@ class Menu extends React.Component {
 	render() {
 		return (
 			<div className='nav'>
-				<ActionLink onClick={handleMethod}/>
+				<ActionLink />
 				<Search />
 			</div>
 		);
