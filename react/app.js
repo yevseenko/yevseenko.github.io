@@ -22,7 +22,7 @@ function ActionLink() {
   );
 }
 
-const menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
+
 
 class Toggle extends React.Component {
   constructor(props) {
@@ -50,6 +50,7 @@ class Toggle extends React.Component {
 
 class Menu extends React.Component {
 	render() {
+		const menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
 		return (
 			<div className='nav'>
 				{menuList.map((item) => <a href="#">{item}</a>)}
