@@ -12,13 +12,8 @@ class App extends React.Component {
 	}
 }
 
-class ActionLink extends React.Component {
-	constructor() {
-		super();
-		this.handleClick = this.handleClick.bind(this);
-	}
-
-  handleClick(e) {
+function ActionLink() {
+  function handleClick(e) {
     e.preventDefault();
     console.log('The link was clicked.');
   }
@@ -33,10 +28,15 @@ class ActionLink extends React.Component {
 const menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
 
 class Menu extends React.Component {
+
+	handleMethod() {
+		console.log('Hello!')
+	}
+
 	render() {
 		return (
 			<div className='nav'>
-				<ActionLink />
+				<ActionLink onClick={handleMethod}/>
 				<Search />
 			</div>
 		);
