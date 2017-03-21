@@ -17,6 +17,10 @@ p {
     color: rgb(163, 141, 109);
 }
 
+li {
+  list-style-type: none;
+}
+
 .nav > a {
     text-decoration: none;
     font-family: Verdana;
