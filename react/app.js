@@ -65,7 +65,7 @@ class Menu extends React.Component {
 		return (
 			<div className='nav'>
 				{
-					this.state.menu.map((item) => <a href="#">{item.name}</a>)
+					this.state.menu.map((item) => <a id={item.id} href="#">{item.name}</a>)
 				}
 				<Search />
 			</div>
