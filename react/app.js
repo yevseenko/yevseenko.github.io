@@ -18,7 +18,7 @@ class App extends React.Component {
 	handleClick(e) {
 			e.preventDefault();
 			this.setState({
-				this.state.currentArr.push(e.target.text);
+				currentArr: AddItem(currentArr, e.target.text);
 			})
 		}
 
@@ -31,6 +31,8 @@ class App extends React.Component {
 		);
 	}
 }
+
+const AddItem = (list, item) => [...list, item];
 
 const Menu = (props) => {
 		return (
