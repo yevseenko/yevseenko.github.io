@@ -49,12 +49,23 @@ class Toggle extends React.Component {
 }
 
 class Menu extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			menu: [
+				{id: 1, name: 'Home'},
+				{id: 2, name: 'Second menu item'},
+				{id: 3, name: 'Third menu item'},
+				{id: 4, name: 'Fourth menu item'},
+				{id: 5, name: 'About us'}
+			]
+		}
+	}
 	render() {
-		const menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
 		return (
 			<div className='nav'>
 				{
-					menuList.map((item) => <a href="#">{item}</a>)
+					this.state.menu.map((item) => <a href="#">{item.name}</a>)
 				}
 				<Search />
 			</div>
