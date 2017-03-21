@@ -23,7 +23,7 @@ class App extends React.Component {
 		return (
 			<div className='wrapper'>
 				<Menu menu={this.state.menu} handleClick={this.handleClick}/>
-				<Jumbotron />
+				<Jumbotron menu={this.state.menu}/>
 			</div>
 		);
 	}
