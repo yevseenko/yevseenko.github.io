@@ -22,36 +22,31 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className='wrapper'>
-				<Menu />
+				<Menu menu={this.state.menu}/>
 				<Jumbotron />
 			</div>
 		);
 	}
 }
 
-class Menu extends React.Component {
-	render() {
+function Menu() {
 		return (
 			<div className='nav'>
 				{
-					this.state.menu.map((item) => <a key={item.id} href={item.href} onClick={this.handleClick}>{item.name}</a>)
+					menu.map((item) => <a key={item.id} href={item.href}>{item.name}</a>)
 				}
 				<Search />
 			</div>
 		);
 	}
-}
 
-class Jumbotron extends React.Component {
-	render() {
+function Jumbotron() {
 		return (
 			<div className='jumbotron'>
 				<p>Some text here</p>
 			</div>
 		);
 	}
-}
-
 
 ReactDOM.render(
 	<App />,
