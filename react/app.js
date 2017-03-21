@@ -39,10 +39,10 @@ const Menu = (props) => {
 		);
 	}
 
-function Jumbotron() {
+function Jumbotron(props) {
 		return (
 			<div className='jumbotron'>
-				<p>Some text here</p>
+				<p>{props.menu}</p>
 			</div>
 		);
 	}
