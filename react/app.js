@@ -35,7 +35,6 @@ const Menu = (props) => {
 				{
 					props.menu.map((item) => <a key={item.id} href={item.href}>{item.name}</a>)
 				}
-				<Search />
 			</div>
 		);
 	}
