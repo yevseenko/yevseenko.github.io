@@ -39,7 +39,7 @@ const Menu = (props) => {
 		);
 	}
 
-function Jumbotron(props) {
+const Jumbotron = (props) => {
 		return (
 			<div className='jumbotron'>
 				<p>{props.menu}</p>
