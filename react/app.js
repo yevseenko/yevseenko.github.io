@@ -53,7 +53,9 @@ class Menu extends React.Component {
 		const menuList = ['Home', 'Second menu item', 'Third menu item', 'Fourth menu item', 'About us'];
 		return (
 			<div className='nav'>
-				{menuList.map((item) => <a href="#">{item}</a>)}
+				{
+					menuList.map((item) => <a href="#">{item}</a>)
+				}
 				<Search />
 			</div>
 		);
