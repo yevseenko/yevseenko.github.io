@@ -19,8 +19,10 @@ class App extends React.Component {
 			e.preventDefault();
 			const newId = generateId();
 			const newName = e.target.text;
+			const newItem = {id: newId, name: newName}
+			const updatedItem = addItem(this.state.currentSel, newItem);
 			this.setState({
-				currentSel: [{id: newId, name: newName}]
+				currentSel: updatedItem
 			})
 		}
 
@@ -35,6 +37,8 @@ class App extends React.Component {
 }
 
 const generateId = () => Math.floor(Math.random()*100000);
+
+const addItem = (list, item) => [...list, item];
 
 const Menu = (props) => {
 		return (
