@@ -9,7 +9,7 @@ class App extends React.Component {
 				{id: 4, name: 'ТЮА', href: '#'},
 				{id: 5, name: 'САС', href: '#'}
 			],
-			currentArr: []
+			currentArr: ''
 		}
 
 		this.handleClick = this.handleClick.bind(this)
@@ -18,7 +18,7 @@ class App extends React.Component {
 	handleClick(e) {
 			e.preventDefault();
 			this.setState({
-				currentArr: [{e.target.text}]
+				currentArr: 'Link clicked'
 			})
 		}
 
@@ -47,7 +47,7 @@ const Menu = (props) => {
 function Jumbotron(props) {
 		return (
 			<div className='jumbotron'>
-				<ul>{props.currentArr.map((item) => <li>{item}</li>)}</ul>
+				<ul><li>{props.currentArr}</li>)</ul>
 			</div>
 		);
 	}
