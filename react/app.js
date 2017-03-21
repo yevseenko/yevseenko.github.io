@@ -66,7 +66,7 @@ class Menu extends React.Component {
 
 	handleClick(e) {
 			e.preventDefault();
-			console.log('Link clicked!');
+			console.log(e.name);
 		}
 
 	render() {
