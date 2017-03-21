@@ -9,7 +9,7 @@ class App extends React.Component {
 				{id: 4, name: 'ТЮА', href: '#'},
 				{id: 5, name: 'САС', href: '#'}
 			],
-			currentSel: ''
+			currentSel: []
 		}
 
 		this.handleClick = this.handleClick.bind(this)
@@ -17,8 +17,10 @@ class App extends React.Component {
 
 	handleClick(e) {
 			e.preventDefault();
+			const newId = generateId();
+			const newName = e.target.text;
 			this.setState({
-				currentSel: e.target.text
+				currentSel: [{id: newId, name: newName}]
 			})
 		}
 
@@ -32,7 +34,7 @@ class App extends React.Component {
 	}
 }
 
-const generateId = () => Math.floor(Math.random()*100000)
+const generateId = () => Math.floor(Math.random()*100000);
 
 const Menu = (props) => {
 		return (
@@ -47,7 +49,7 @@ const Menu = (props) => {
 function Jumbotron(props) {
 		return (
 			<div className='jumbotron'>
-				<ul><li>{props.currentSel}</li></ul>
+				<ul>{props.currentSel.map((item) => <li>{item.name}</li>)}</ul>
 			</div>
 		);
 	}
