@@ -33,7 +33,7 @@ function Menu() {
 		return (
 			<div className='nav'>
 				{
-					menu.map((item) => <a key={item.id} href={item.href}>{item.name}</a>)
+					props.menu.map((item) => <a key={item.id} href={item.href}>{item.name}</a>)
 				}
 				<Search />
 			</div>
