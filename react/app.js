@@ -18,7 +18,7 @@ class App extends React.Component {
 	handleClick(e) {
 			e.preventDefault();
 			this.setState({
-				currentArr: e.target.text
+				currentArr.push(e.target.text)
 			})
 		}
 
@@ -38,7 +38,7 @@ const Menu = (props) => {
 		return (
 			<div className='nav'>
 				{
-					props.menu.map((item) => <a key={generateId} href={item.href} onClick={props.handleClick}>{item.name}</a>)
+					props.menu.map((item) => <a key={item.id} href={item.href} onClick={props.handleClick}>{item.name}</a>)
 				}
 			</div>
 		);
