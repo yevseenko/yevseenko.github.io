@@ -53,14 +53,21 @@ class Menu extends React.Component {
 		super();
 		this.state = {
 			menu: [
-				{id: 1, name: 'Home', href: '/home'},
+				{id: 1, name: 'Home', href: '#'},
 				{id: 2, name: 'Second menu item', href: '#'},
 				{id: 3, name: 'Third menu item', href: '#'},
 				{id: 4, name: 'Fourth menu item', href: '#'},
-				{id: 5, name: 'About us', href: '/about'}
+				{id: 5, name: 'About us', href: '#'}
 			]
 		}
+
+		this.handleClick = this.handleClick.bind(this)
 	}
+
+	handleClick() {
+			console.log('Link clicked!');
+		}
+
 	render() {
 		return (
 			<div className='nav'>
