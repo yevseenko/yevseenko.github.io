@@ -8,7 +8,8 @@ class App extends React.Component {
 				{id: 3, name: 'СОА', href: '#'},
 				{id: 4, name: 'ТЮА', href: '#'},
 				{id: 5, name: 'САС', href: '#'}
-			]
+			],
+			currentArr: []
 		}
 
 		this.handleClick = this.handleClick.bind(this)
@@ -16,7 +17,9 @@ class App extends React.Component {
 
 	handleClick(e) {
 			e.preventDefault();
-			console.log(e.target.text);
+			this.setState({
+				currentArr.push(e.target.text);
+			})
 		}
 
 	render() {
@@ -42,7 +45,7 @@ const Menu = (props) => {
 function Jumbotron(props) {
 		return (
 			<div className='jumbotron'>
-				<ul>{props.menu.map((item) => <li>{item.name}</li>)}</ul>
+				<ul>{props.currentArr.map((item) => <li>{item}</li>)}</ul>
 			</div>
 		);
 	}
