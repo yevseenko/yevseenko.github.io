@@ -18,7 +18,7 @@ class App extends React.Component {
 	handleClick(e) {
 			e.preventDefault();
 			this.setState({
-				currentArr.push(e.target.text);
+				this.state.currentArr.push(e.target.text);
 			})
 		}
 
