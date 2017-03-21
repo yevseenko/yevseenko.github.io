@@ -42,7 +42,7 @@ const Menu = (props) => {
 const Jumbotron = (props) => {
 		return (
 			<div className='jumbotron'>
-				<p>{props.menu.map((item) => {item.name})}</p>
+				<ul>{props.menu.map((item) => <li>{item.name}</li>)}</ul>
 			</div>
 		);
 	}
