@@ -53,11 +53,11 @@ class Menu extends React.Component {
 		super();
 		this.state = {
 			menu: [
-				{id: 1, name: 'Home'},
-				{id: 2, name: 'Second menu item'},
-				{id: 3, name: 'Third menu item'},
-				{id: 4, name: 'Fourth menu item'},
-				{id: 5, name: 'About us'}
+				{id: 1, name: 'Home', href: '/home'},
+				{id: 2, name: 'Second menu item', href: '#'},
+				{id: 3, name: 'Third menu item', href: '#'},
+				{id: 4, name: 'Fourth menu item', href: '#'},
+				{id: 5, name: 'About us', href: '/about'}
 			]
 		}
 	}
@@ -65,7 +65,7 @@ class Menu extends React.Component {
 		return (
 			<div className='nav'>
 				{
-					this.state.menu.map((item) => <a key={item.id} href="#">{item.name}</a>)
+					this.state.menu.map((item) => <a key={item.id} href={item.href}>{item.name}</a>)
 				}
 				<Search />
 			</div>
