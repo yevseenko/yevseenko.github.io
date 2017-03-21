@@ -22,7 +22,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className='wrapper'>
-				<Menu menu={this.state.menu} onClick={this.handleClick}/>
+				<Menu menu={this.state.menu} handleClick={this.handleClick}/>
 				<Jumbotron />
 			</div>
 		);
@@ -33,7 +33,7 @@ const Menu = (props) => {
 		return (
 			<div className='nav'>
 				{
-					props.menu.map((item) => <a key={item.id} href={item.href} handleClick={props.handleClick}>{item.name}</a>)
+					props.menu.map((item) => <a key={item.id} href={item.href} onClick={props.handleClick}>{item.name}</a>)
 				}
 			</div>
 		);
