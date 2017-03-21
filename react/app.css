@@ -9,7 +9,7 @@ body {
     min-width: 1170px;
     margin: 0 auto;
     padding-top: 20px;
-    background: #000 url(https://www.walldevil.com/wallpapers/w05/headphones-digital-art-skulls.jpg) no-repeat top center;
+    background: rgb(170, 154, 112);
 }
 
 p {
