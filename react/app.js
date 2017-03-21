@@ -9,7 +9,7 @@ class App extends React.Component {
 				{id: 4, name: 'ТЮА', href: '#'},
 				{id: 5, name: 'САС', href: '#'}
 			],
-			currentArr: ''
+			currentArr: []
 		}
 
 		this.handleClick = this.handleClick.bind(this)
@@ -26,7 +26,7 @@ class App extends React.Component {
 		return (
 			<div className='wrapper'>
 				<Menu menu={this.state.menu} handleClick={this.handleClick}/>
-				<Jumbotron menu={this.state.menu}/>
+				<Jumbotron menu={this.state.menu} currentArr={this.state.currentArr}/>
 			</div>
 		);
 	}
