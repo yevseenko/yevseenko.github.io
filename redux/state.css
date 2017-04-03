@@ -1,5 +1,5 @@
 body {
-	padding-top: 20px;
+	padding-top: 10px;
 }
 
 nav {
@@ -11,6 +11,10 @@ nav {
 }
 
 .page {
+	padding: 10px;
 	max-width: 1170px;
-	margin: 0 auto;
+	margin: 10px auto 0;
+	min-height: 300px;
+	border: 1px solid black;
+	border-radius: 4px;
 }
