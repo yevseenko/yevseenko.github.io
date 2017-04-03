@@ -37,7 +37,6 @@ class App extends React.Component {
 }
 
 const generateId = () => Math.floor(Math.random()*100000);
-
 const addItem = (list, item) => [...list, item];
 
 const Menu = (props) => {
