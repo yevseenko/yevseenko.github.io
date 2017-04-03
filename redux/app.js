@@ -33,6 +33,10 @@ function render() {
             Object.assign(state, { currentPage: '<div class="player"><input type="text"/><button>Add</button></div>' });
         }
 
+        if (e.target.text === 'Godville') {
+            Object.assign(state, { currentPage: '<h2>Godville app</h2>' });
+        }
+
         if (e.target.text === 'About us') {
             Object.assign(state, { currentPage: '<h2>About us</h2>' });
         }
