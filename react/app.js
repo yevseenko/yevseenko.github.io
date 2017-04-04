@@ -41,11 +41,11 @@ const addItem = (list, item) => [...list, item];
 
 const Menu = (props) => {
 		return (
-			<div className='nav'>
+			<nav>
 				{
 					props.menu.map((item) => <a key={item.id} href={item.href} onClick={props.handleClick}>{item.name}</a>)
 				}
-			</div>
+			</nav>
 		);
 	}
 
