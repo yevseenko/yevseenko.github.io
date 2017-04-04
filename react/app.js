@@ -62,9 +62,7 @@ class App extends React.Component {
 	}
 
 	handleAction(e) {
-		if (e.target.innerHTML === 'Randomize Player') {
 			console.log('Button RP was clicked');
-		}
 	}
 
 	render() {
@@ -116,7 +114,7 @@ const Control = (props) => {
 		<div className='row'>
 			<div className='col-xs-12'>
 				<span>Control Panel: </span>
-				<button className='btn btn-xs btn-success' onClick={props.handleAction}>Randomize Player</button>
+				<button className='btn btn-xs btn-success' key='rp' onClick={props.handleAction}>Randomize Player</button>
 				<button className='btn btn-xs btn-primary'>Iddqd</button>
 				<button className='btn btn-xs btn-info'>Idkfa</button>
 				<button className='btn btn-xs btn-danger'>Randomize Enemy</button>
