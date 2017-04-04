@@ -16,7 +16,6 @@ class App extends React.Component {
 	}
 
 	handleClick(e) {
-			e.preventDefault();
 			const newId = generateId();
 			const newName = e.target.text;
 			const newItem = {id: newId, name: newName}
