@@ -9,7 +9,20 @@ class App extends React.Component {
 			    { key: 4, name: 'setEnemy', link: '#enemy' },
 			    { key: 5, name: 'About', link: '#about' }
 			],
-			currentSel: ''
+
+			currentSel: <Home />,
+
+			player: {
+				name: 'myPlayer',
+				hitpoints: 150,
+				damage: 50
+			},
+
+			enemy: {
+				name: 'myPlayer',
+				hitpoints: 150,
+				damage: 35
+			}
 		}
 
 		this.handleClick = this.handleClick.bind(this)
@@ -74,13 +87,13 @@ const Game = (props) => {
 
 const Player = (props) => {
 	return (
-			<div>You can setup your player</div>
+			<div>You can setup your player<div>{props.player.name},{props.player.hitpoints},{props.player.damage}</div></div>
 		)
 }
 
 const Enemy = (props) => {
 	return (
-			<div>Now you can setup your enemy</div>
+			<div>Now you can setup your enemy<div>{props.enemy.name},{props.enemy.hitpoints},{props.enemy.damage}</div></div>
 		)
 }
 
@@ -100,7 +113,7 @@ const Menu = (props) => {
 		);
 	}
 
-function Page(props) {
+const Page = (props) => {
 		return (
 			<div className='page'>
 				{props.currentSel}
