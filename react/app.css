@@ -10,3 +10,7 @@ nav > a:nth-child(n+2) {
 #control button:nth-child(n+2) {
     margin-left: 5px;
 }
+
+.page {
+    min-height: 300px;
+}
