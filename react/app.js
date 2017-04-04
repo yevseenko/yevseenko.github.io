@@ -19,7 +19,7 @@ class App extends React.Component {
 			},
 
 			enemy: {
-				name: 'myPlayer',
+				name: 'myEnemy',
 				hitpoints: 150,
 				damage: 35
 			}
@@ -81,19 +81,22 @@ const Home = (props) => {
 
 const Game = (props) => {
 	return (
-			<div>There is awesomeGame</div>
+			<div className='row'>
+				<Player />
+				<Enemy />
+			</div>
 		)
 }
 
 const Player = (props) => {
 	return (
-			<div>You can setup your player<div>{props.player.name},{props.player.hitpoints},{props.player.damage}</div></div>
+			<div className='col-xs-6'>You can setup your player<div>{props.player.name},{props.player.hitpoints},{props.player.damage}</div></div>
 		)
 }
 
 const Enemy = (props) => {
 	return (
-			<div>Now you can setup your enemy<div>{props.enemy.name},{props.enemy.hitpoints},{props.enemy.damage}</div></div>
+			<div className='col-xs-6'>Now you can setup your enemy<div>{props.enemy.name},{props.enemy.hitpoints},{props.enemy.damage}</div></div>
 		)
 }
 
@@ -116,7 +119,7 @@ const Menu = (props) => {
 const Page = (props) => {
 		return (
 			<div className='page'>
-				{props.currentSel}
+					{props.currentSel}
 			</div>
 		);
 	}
