@@ -9,20 +9,16 @@ class App extends React.Component {
 			    { key: 4, name: 'Enemy', link: '#enemy' },
 			    { key: 5, name: 'About us', link: '#about' }
 			],
-			currentSel: {}
+			currentSel: ''
 		}
 
 		this.handleClick = this.handleClick.bind(this)
 	}
 
 	handleClick(e) {
-			const newId = generateId();
-			const newName = e.target.text;
-			const newItem = {id: newId, name: newName}
-			const updatedItem = addItem(this.state.currentSel, newItem);
 			this.setState({
-				currentSel: updatedItem
-			})
+				currentSel: e.target.text
+			});
 		}
 
 	render() {
