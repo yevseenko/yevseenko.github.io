@@ -62,7 +62,7 @@ class App extends React.Component {
 	}
 
 	handleAction(e) {
-		if (e.target.innerHTML === 'Randomize player') {
+		if (e.target.innerHTML === 'Randomize Player') {
 			console.log('Button RP was clicked');
 		}
 	}
