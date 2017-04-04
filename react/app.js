@@ -148,7 +148,7 @@ const Menu = (props) => {
 const Page = (props) => {
 	return (
 		<div className='page'>
-			{props.currentSel}
+			{props.currentSel} 
 		</div>
 	);
 }
