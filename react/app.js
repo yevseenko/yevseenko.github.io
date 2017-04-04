@@ -69,7 +69,7 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div className='wrapper'>
+			<div className='container'>
 				<Menu menu={this.state.menu} handleClick={this.handleClick} />
 				<Page currentSel={this.state.currentSel}/>
 			</div>
