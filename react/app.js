@@ -106,7 +106,12 @@ const Panel = (props) => {
 
 const Control = (props) => {
 	return (
-			<div className='row'><div className='col-xs-12'>Some button's must be here</div></div>
+			<div className='row'>
+				<div className='col-xs-12'>
+					<button className='btn btn-xs btn-success'>Randomize Player</button>
+					<button className='btn btn-xs btn-danger'>Randomize Enemy</button>
+				</div>
+			</div>
 		);
 }
 
