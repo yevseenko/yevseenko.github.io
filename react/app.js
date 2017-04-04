@@ -38,7 +38,7 @@ class App extends React.Component {
 
 		if (e.target.text === 'awesomeGame') {
 			this.setState({
-				currentSel: <Game player={this.state.player} enemy={this.state.enemy} />
+				currentSel: <Game player={this.state.player} enemy={this.state.enemy} handleAction={this.handleAction}/>
 			});
 		}
 
@@ -69,7 +69,7 @@ class App extends React.Component {
 		return (
 			<div className='wrapper'>
 				<Menu menu={this.state.menu} handleClick={this.handleClick} />
-				<Page currentSel={this.state.currentSel} handleAction={this.handleAction} />
+				<Page currentSel={this.state.currentSel}/>
 			</div>
 		);
 	}
