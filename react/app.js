@@ -25,7 +25,7 @@ class App extends React.Component {
 		return (
 			<div className='wrapper'>
 				<Menu menu={this.state.menu} handleClick={this.handleClick}/>
-				<Page />
+				<Page currentSel={this.state.currentSel}/>
 			</div>
 		);
 	}
