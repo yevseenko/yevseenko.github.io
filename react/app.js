@@ -15,12 +15,14 @@ class App extends React.Component {
 			player: {
 				name: 'myPlayer',
 				hitpoints: 150,
+        currentHp: 150,
 				damage: 50
 			},
 
 			enemy: {
 				name: 'myEnemy',
 				hitpoints: 150,
+        currentHp: 150,
 				damage: 35
 			}
 		}
@@ -99,7 +101,11 @@ const Game = (props) => {
 
 const Player = (props) => {
 	return (
-		<div className='col-xs-4'>Player<div>{props.player.name},{props.player.hitpoints},{props.player.damage}</div></div>
+		<div className='col-xs-4'>Player
+      <div>{props.player.name}</div>
+      <div>{props.player.currentHp}/{props.player.hitpoints}</div>
+      <div>{props.player.damage}</div>
+    </div>
 	);
 }
 
@@ -125,7 +131,11 @@ const Control = (props) => {
 
 const Enemy = (props) => {
 	return (
-		<div className='col-xs-4'>Now you can setup your enemy<div>{props.enemy.name},{props.enemy.hitpoints},{props.enemy.damage}</div></div>
+		<div className='col-xs-4'>Enemy
+      <div>{props.enemy.name}</div>
+      <div>{props.enemy.currentHp}/{props.enemy.hitpoints}</div>
+      <div>{props.enemy.damage}</div>
+    </div>
 	);
 }
 
