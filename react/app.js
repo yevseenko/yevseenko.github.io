@@ -42,7 +42,7 @@ const Menu = (props) => {
 		return (
 			<nav>
 				{
-					props.menu.map((item) => <a key={item.id} href={item.href} onClick={props.handleClick}>{item.name} |</a>)
+					props.menu.map((item) => <a key={item.id} href={item.href} onClick={props.handleClick}>{item.name}</a>)
 				}
 			</nav>
 		);

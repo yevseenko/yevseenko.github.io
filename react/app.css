@@ -10,6 +10,10 @@ nav {
     border-radius: 4px;
 }
 
+nav > a:nth-child(n+2) {
+    margin-left: 10px;
+}
+
 .page {
     padding: 10px;
     max-width: 1170px;
