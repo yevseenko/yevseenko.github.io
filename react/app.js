@@ -3,11 +3,11 @@ class App extends React.Component {
 		super(props);
 		this.state = {
 			menu: [
-				{id: 1, name: 'ИКВ', href: '#'},
-				{id: 2, name: 'СЕС', href: '#'},
-				{id: 3, name: 'СОА', href: '#'},
-				{id: 4, name: 'ТЮА', href: '#'},
-				{id: 5, name: 'САС', href: '#'}
+			    { key: 1, name: 'Home', link: '#home' },
+			    { key: 2, name: 'App', link: '#app' },
+			    { key: 3, name: 'Player', link: '#player' },
+			    { key: 4, name: 'Enemy', link: '#enemy' },
+			    { key: 5, name: 'About us', link: '#about' }
 			],
 			currentSel: []
 		}
