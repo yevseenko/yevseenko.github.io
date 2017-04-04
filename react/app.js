@@ -120,7 +120,7 @@ const Control = (props) => {
 		<div className='row'>
 			<div className='col-xs-12'>
         <div className='btn-group btn-group-xs'>
-          <button className='btn'>Control Panel:</button>
+          <button className='btn' disable='disable'><b>Control Panel:</b></button>
 				  <button className='btn btn-success' key='rp' onClick={props.handleAction}>Randomize Player</button>
 				  <button className='btn btn-primary'>Iddqd</button>
 				  <button className='btn btn-info'>Idkfa</button>
