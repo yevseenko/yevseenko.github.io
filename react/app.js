@@ -82,35 +82,42 @@ const Home = (props) => {
 const Game = (props) => {
 	return (
 			<div className='row'>
+				<Control />
 				<Player player={props.player}/>
 				<Panel />
 				<Enemy enemy={props.enemy}/>
 			</div>
-		)
+		);
 }
 
 const Player = (props) => {
 	return (
 			<div className='col-xs-4'>You can setup your player<div>{props.player.name},{props.player.hitpoints},{props.player.damage}</div></div>
-		)
+		);
 }
 
 const Panel = (props) => {
 	return (
 			<div className='col-xs-4'>Panel for us</div>
-		)
+		);
+}
+
+const Control = (props) => {
+	return (
+			<div className='row'><div className='col-xs-12'>Some button's must be here</div></div>
+		);
 }
 
 const Enemy = (props) => {
 	return (
 			<div className='col-xs-4'>Now you can setup your enemy<div>{props.enemy.name},{props.enemy.hitpoints},{props.enemy.damage}</div></div>
-		)
+		);
 }
 
 const About = (props) => {
 	return (
 			<div>About awesomeGame</div>
-		)
+		);
 }
 
 const Menu = (props) => {
