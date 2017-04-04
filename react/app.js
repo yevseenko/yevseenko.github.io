@@ -83,6 +83,7 @@ const Game = (props) => {
 	return (
 			<div className='row'>
 				<Player player={props.player}/>
+				<Panel />
 				<Enemy enemy={props.enemy}/>
 			</div>
 		)
@@ -90,13 +91,19 @@ const Game = (props) => {
 
 const Player = (props) => {
 	return (
-			<div className='col-xs-6'>You can setup your player<div>{props.player.name},{props.player.hitpoints},{props.player.damage}</div></div>
+			<div className='col-xs-4'>You can setup your player<div>{props.player.name},{props.player.hitpoints},{props.player.damage}</div></div>
+		)
+}
+
+const Panel = (props) => {
+	return (
+			<div className='col-xs-4'>Panel for us</div>
 		)
 }
 
 const Enemy = (props) => {
 	return (
-			<div className='col-xs-6'>Now you can setup your enemy<div>{props.enemy.name},{props.enemy.hitpoints},{props.enemy.damage}</div></div>
+			<div className='col-xs-4'>Now you can setup your enemy<div>{props.enemy.name},{props.enemy.hitpoints},{props.enemy.damage}</div></div>
 		)
 }
 
