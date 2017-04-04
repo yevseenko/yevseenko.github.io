@@ -4,10 +4,10 @@ class App extends React.Component {
 		this.state = {
 			menu: [
 			    { key: 1, name: 'Home', link: '#home' },
-			    { key: 2, name: 'App', link: '#app' },
-			    { key: 3, name: 'Player', link: '#player' },
-			    { key: 4, name: 'Enemy', link: '#enemy' },
-			    { key: 5, name: 'About us', link: '#about' }
+			    { key: 2, name: 'awesomeGame', link: '#app' },
+			    { key: 3, name: 'setPlayer', link: '#player' },
+			    { key: 4, name: 'setEnemy', link: '#enemy' },
+			    { key: 5, name: 'About awesomeGame', link: '#about' }
 			],
 			currentSel: ''
 		}
@@ -17,7 +17,7 @@ class App extends React.Component {
 
 	handleClick(e) {
 			this.setState({
-				currentSel: e.target.text
+				currentSel: <Container />
 			});
 		}
 
@@ -33,6 +33,12 @@ class App extends React.Component {
 
 const generateId = () => Math.floor(Math.random()*100000);
 const addItem = (list, item) => [...list, item];
+
+const Container = (props) => {
+	return (
+			<div><h3>Container</h3></div>
+		)
+}
 
 const Menu = (props) => {
 		return (
