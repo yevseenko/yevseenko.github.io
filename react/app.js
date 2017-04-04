@@ -81,12 +81,14 @@ const Home = (props) => {
 
 const Game = (props) => {
 	return (
+		<div>
+			<Control />
 			<div className='row'>
-				<Control />
 				<Player player={props.player}/>
 				<Panel />
 				<Enemy enemy={props.enemy}/>
 			</div>
+		</div>
 		);
 }
 
