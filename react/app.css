@@ -12,6 +12,7 @@ nav {
 
 nav > a:nth-child(n+2) {
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .page {

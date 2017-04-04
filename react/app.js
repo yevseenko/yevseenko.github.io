@@ -29,7 +29,7 @@ class App extends React.Component {
 		return (
 			<div className='wrapper'>
 				<Menu menu={this.state.menu} handleClick={this.handleClick}/>
-				<Jumbotron menu={this.state.menu} currentSel={this.state.currentSel}/>
+				<Page />
 			</div>
 		);
 	}
@@ -48,9 +48,9 @@ const Menu = (props) => {
 		);
 	}
 
-function Jumbotron(props) {
+function Page(props) {
 		return (
-			<div className='jumbotron'>
+			<div className='page'>
 				<ul>{props.currentSel.map((item) => <li>{item.name}</li>)}</ul>
 			</div>
 		);
