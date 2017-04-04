@@ -117,7 +117,7 @@ const Panel = (props) => {
 
 const Control = (props) => {
 	return (
-		<div className='row' id='control'>
+		<div className='row'>
 			<div className='col-xs-12'>
 				<span>Control Panel: </span>
         <div className='btn-group btn-group-xs'>
