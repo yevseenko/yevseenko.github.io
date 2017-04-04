@@ -82,8 +82,8 @@ const Home = (props) => {
 const Game = (props) => {
 	return (
 			<div className='row'>
-				<Player />
-				<Enemy />
+				<Player player={props.player}/>
+				<Enemy enemy={props.enemy}/>
 			</div>
 		)
 }
