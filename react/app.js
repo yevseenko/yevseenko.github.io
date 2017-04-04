@@ -51,7 +51,7 @@ const Menu = (props) => {
 function Page(props) {
 		return (
 			<div className='page'>
-				<ul>{props.currentSel.map((item) => <li>{item.name}</li>)}</ul>
+				<h3>hello</h3>
 			</div>
 		);
 	}
