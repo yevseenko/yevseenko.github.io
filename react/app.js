@@ -75,7 +75,7 @@ const addItem = (list, item) => [...list, item];
 
 const Home = (props) => {
 	return (
-			<div>Home</div>
+			<div>Homepage of awesome game.. =)</div>
 		)
 }
 
