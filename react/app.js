@@ -37,19 +37,19 @@ class App extends React.Component {
 
 			if (e.target.text === 'awesomeGame') {
 				this.setState({
-					currentSel: <Game />
+					currentSel: <Game player={this.state.player} enemy={this.state.enemy}/>
 				});
 			}
 
 			if (e.target.text === 'setPlayer') {
 				this.setState({
-					currentSel: <Player player={this.state.player} enemy={this.state.enemy}/>
+					currentSel: <Player player={this.state.player}/>
 				});
 			}
 
 			if (e.target.text === 'setEnemy') {
 				this.setState({
-					currentSel: <Enemy />
+					currentSel: <Enemy enemy={this.state.enemy}/>
 				});
 			}
 
