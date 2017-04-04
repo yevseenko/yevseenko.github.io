@@ -25,7 +25,8 @@ class App extends React.Component {
 			}
 		}
 
-		this.handleClick = this.handleClick.bind(this)
+		this.handleClick = this.handleClick.bind(this);
+		this.handleAction = this.handleAction.bind(this);
 	}
 
 	handleClick(e) {
@@ -60,11 +61,17 @@ class App extends React.Component {
 			}
 		}
 
+		handleAction(e) {
+			if (e.target.innerHTML === 'Randomize player') {
+				console.log('Button RP was clicked');
+			}
+		}
+
 	render() {
 		return (
 			<div className='wrapper'>
 				<Menu menu={this.state.menu} handleClick={this.handleClick}/>
-				<Page currentSel={this.state.currentSel}/>
+				<Page currentSel={this.state.currentSel} handleAction={this.handleAction}/>
 			</div>
 		);
 	}
@@ -82,7 +89,7 @@ const Home = (props) => {
 const Game = (props) => {
 	return (
 		<div>
-			<Control />
+			<Control handleAction={props.handleAction}/>
 			<div className='row'>
 				<Player player={props.player}/>
 				<Panel />
@@ -94,13 +101,13 @@ const Game = (props) => {
 
 const Player = (props) => {
 	return (
-			<div className='col-xs-4'>You can setup your player<div>{props.player.name},{props.player.hitpoints},{props.player.damage}</div></div>
+			<div className='col-xs-4'>Player<div>{props.player.name},{props.player.hitpoints},{props.player.damage}</div></div>
 		);
 }
 
 const Panel = (props) => {
 	return (
-			<div className='col-xs-4'>Panel for us</div>
+			<div className='col-xs-4'>Panel with action's</div>
 		);
 }
 
@@ -109,7 +116,7 @@ const Control = (props) => {
 			<div className='row'>
 				<div className='col-xs-12'>
 					<span>Control Panel: </span>
-					<button className='btn btn-xs btn-success'>Randomize Player</button>
+					<button className='btn btn-xs btn-success' onClick={props.handleAction}>Randomize Player</button>
 					<button className='btn btn-xs btn-primary'>Iddqd</button>
 					<button className='btn btn-xs btn-info'>Idkfa</button>
 					<button className='btn btn-xs btn-danger'>Randomize Enemy</button>
