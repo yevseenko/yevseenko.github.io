@@ -120,10 +120,12 @@ const Control = (props) => {
 		<div className='row' id='control'>
 			<div className='col-xs-12'>
 				<span>Control Panel: </span>
-				<button className='btn btn-xs btn-success' key='rp' onClick={props.handleAction}>Randomize Player</button>
-				<button className='btn btn-xs btn-primary'>Iddqd</button>
-				<button className='btn btn-xs btn-info'>Idkfa</button>
-				<button className='btn btn-xs btn-danger'>Randomize Enemy</button>
+        <div className='btn-group btn-group-xs'>
+				  <button className='btn btn-success' key='rp' onClick={props.handleAction}>Randomize Player</button>
+				  <button className='btn btn-primary'>Iddqd</button>
+				  <button className='btn btn-info'>Idkfa</button>
+				  <button className='btn btn-danger'>Randomize Enemy</button>
+        </div>
 			</div>
 		</div>
 	);
