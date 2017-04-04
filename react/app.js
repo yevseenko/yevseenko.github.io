@@ -9,7 +9,7 @@ class App extends React.Component {
 			    { key: 4, name: 'Enemy', link: '#enemy' },
 			    { key: 5, name: 'About us', link: '#about' }
 			],
-			currentSel: []
+			currentSel: {}
 		}
 
 		this.handleClick = this.handleClick.bind(this)
@@ -42,7 +42,7 @@ const Menu = (props) => {
 		return (
 			<nav>
 				{
-					props.menu.map((item) => <a key={item.id} href={item.href} onClick={props.handleClick}>{item.name}</a>)
+					props.menu.map((item) => <a key={item.key} href={item.link} onClick={props.handleClick}>{item.name}</a>)
 				}
 			</nav>
 		);
@@ -51,7 +51,7 @@ const Menu = (props) => {
 function Page(props) {
 		return (
 			<div className='page'>
-				<h3>hello</h3>
+				{props.currentSel}
 			</div>
 		);
 	}
