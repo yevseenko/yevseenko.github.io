@@ -43,7 +43,7 @@ class App extends React.Component {
 
 			if (e.target.text === 'setPlayer') {
 				this.setState({
-					currentSel: <Player />
+					currentSel: <Player player={this.state.player} enemy={this.state.enemy}/>
 				});
 			}
 
