@@ -147,7 +147,7 @@ const About = (props) => {
 
 const Menu = (props) => {
 	return (
-		<nav>
+		<nav className='well well-sm'>
 			{
 				props.menu.map((item) => <a key={item.key} href={item.link} onClick={props.handleClick}>{item.name}</a>)
 			}
@@ -157,7 +157,7 @@ const Menu = (props) => {
 
 const Page = (props) => {
 	return (
-		<div className='page'>
+		<div className='well well-sm'>
 			{props.currentSel} 
 		</div>
 	);
