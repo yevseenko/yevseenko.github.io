@@ -10,7 +10,7 @@ class App extends React.Component {
 			    { key: 5, name: 'About', link: '#about' }
 			],
 
-			currentSel: <Home />,
+			currentSel: '',
 
 			player: {
 				name: 'myPlayer',
