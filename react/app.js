@@ -117,7 +117,7 @@ const Panel = (props) => {
 
 const Control = (props) => {
 	return (
-		<div className='row'>
+		<div className='row' id='control'>
 			<div className='col-xs-12'>
 				<span>Control Panel: </span>
 				<button className='btn btn-xs btn-success' key='rp' onClick={props.handleAction}>Randomize Player</button>

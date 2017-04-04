@@ -23,3 +23,7 @@ nav > a:nth-child(n+2) {
     border: 1px solid black;
     border-radius: 4px;
 }
+
+#control button:nth-child(n+2) {
+    margin-left: 5px;
+}
