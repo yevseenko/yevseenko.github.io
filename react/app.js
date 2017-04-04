@@ -102,9 +102,9 @@ const Game = (props) => {
 const Player = (props) => {
 	return (
 		<div className='col-xs-4'>Player
-      <div><b>Name:</b>{props.player.name}</div>
-      <div><b>Hitpoints:</b>{props.player.currentHp}/{props.player.hitpoints}</div>
-      <div><b>Damage:</b>{props.player.damage}</div>
+      <div><b>Name:</b> {props.player.name}</div>
+      <div><b>Hitpoints:</b> {props.player.currentHp}/{props.player.hitpoints}</div>
+      <div><b>Damage:</b> {props.player.damage}</div>
     </div>
 	);
 }
@@ -131,10 +131,10 @@ const Control = (props) => {
 
 const Enemy = (props) => {
 	return (
-		<div className='well well-sm col-xs-4'>Enemy
-      <div><b>Name:</b>{props.enemy.name}</div>
-      <div><b>Hitpoints:</b>{props.enemy.currentHp}/{props.enemy.hitpoints}</div>
-      <div><b>Damage:</b>{props.enemy.damage}</div>
+		<div className='col-xs-4'>Enemy
+      <div><b>Name:</b> {props.enemy.name}</div>
+      <div><b>Hitpoints:</b> {props.enemy.currentHp}/{props.enemy.hitpoints}</div>
+      <div><b>Damage:</b> {props.enemy.damage}</div>
     </div>
 	);
 }
