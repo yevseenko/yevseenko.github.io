@@ -119,8 +119,8 @@ const Control = (props) => {
 	return (
 		<div className='row'>
 			<div className='col-xs-12'>
-				<span>Control Panel: </span>
         <div className='btn-group btn-group-xs'>
+          <button className='btn'>Control Panel:</button>
 				  <button className='btn btn-success' key='rp' onClick={props.handleAction}>Randomize Player</button>
 				  <button className='btn btn-primary'>Iddqd</button>
 				  <button className='btn btn-info'>Idkfa</button>
