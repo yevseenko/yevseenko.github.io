@@ -7,7 +7,7 @@ class App extends React.Component {
 			    { key: 2, name: 'awesomeGame', link: '#app' },
 			    { key: 3, name: 'setPlayer', link: '#player' },
 			    { key: 4, name: 'setEnemy', link: '#enemy' },
-			    { key: 5, name: 'About awesomeGame', link: '#about' }
+			    { key: 5, name: 'About', link: '#about' }
 			],
 			currentSel: ''
 		}
@@ -16,9 +16,35 @@ class App extends React.Component {
 	}
 
 	handleClick(e) {
-			this.setState({
-				currentSel: <Container />
-			});
+			if (e.target.text === 'Home') {
+				this.setState({
+					currentSel: <Home />
+				});
+			}
+
+			if (e.target.text === 'awesomeGame') {
+				this.setState({
+					currentSel: <Game />
+				});
+			}
+
+			if (e.target.text === 'setPlayer') {
+				this.setState({
+					currentSel: <Player />
+				});
+			}
+
+			if (e.target.text === 'setEnemy') {
+				this.setState({
+					currentSel: <Enemy />
+				});
+			}
+
+			if (e.target.text === 'About') {
+				this.setState({
+					currentSel: <About />
+				});
+			}
 		}
 
 	render() {
@@ -34,9 +60,33 @@ class App extends React.Component {
 const generateId = () => Math.floor(Math.random()*100000);
 const addItem = (list, item) => [...list, item];
 
-const Container = (props) => {
+const Home = (props) => {
 	return (
-			<div><h3>Container</h3></div>
+			<div>Home</div>
+		)
+}
+
+const Game = (props) => {
+	return (
+			<div>There is awesomeGame</div>
+		)
+}
+
+const Player = (props) => {
+	return (
+			<div>You can setup your player</div>
+		)
+}
+
+const Enemy = (props) => {
+	return (
+			<div>Now you can setup your enemy</div>
+		)
+}
+
+const About = (props) => {
+	return (
+			<div>About awesomeGame</div>
 		)
 }
 
