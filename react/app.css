@@ -2,24 +2,11 @@ body {
     padding-top: 10px;
 }
 
-nav {
-    padding: 10px;
-    border: 1px solid black;
-    max-width: 1170px;
-    margin: 0 auto;
-    border-radius: 4px;
-}
-
 nav > a:nth-child(n+2) {
     margin-left: 10px;
     cursor: pointer;
 }
 
 .page {
-    padding: 10px;
-    max-width: 1170px;
-    margin: 10px auto 0;
     min-height: 300px;
-    border: 1px solid black;
-    border-radius: 4px;
 }
