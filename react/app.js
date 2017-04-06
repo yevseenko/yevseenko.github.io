@@ -59,7 +59,7 @@ class App extends React.Component {
 	}
 
 	handleAction(evt) {
-			console.log(evt.target);
+			console.log(evt.target.dataset.isUsed);
 	}
 
 	render() {
@@ -127,7 +127,7 @@ const Control = (props) => {
 				  	{
 				  		props.control.map((item) => <button className='btn btn-primary' 
 				  			key={generateId()}
-				  			data-isUsed={props.isUsed} 
+				  			data-isUsed={item.isUsed} 
 				  			onClick={props.handleAction}>
 				  				{item.name}
 				  			</button>)
