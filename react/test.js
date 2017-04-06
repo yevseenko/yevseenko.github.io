@@ -1,6 +1,7 @@
 class App extends React.Component {
-	state = {
-		menu: []
+	constructor(props) {
+		super(props);
+		this.state = {}
 	}
 
 	componentDidMount() {
@@ -12,6 +13,7 @@ class App extends React.Component {
 		return (
 			<div className='container'>
 				<Home />
+				{this.state.menu}
 			</div>
 		);
 	}
