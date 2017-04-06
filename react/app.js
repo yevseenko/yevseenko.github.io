@@ -5,10 +5,14 @@ class App extends React.Component {
 			menu: [
 				{ key: 1, name: 'Home', link: '#home' },
 				{ key: 2, name: 'awesomeGame', link: '#app' },
-				{ key: 3, name: 'setPlayer', link: '#player' },
-				{ key: 4, name: 'setEnemy', link: '#enemy' },
-				{ key: 5, name: 'About', link: '#about' }
+				{ key: 3, name: 'About', link: '#about' }
 			],
+
+			control: [
+				{ isUsed: false, name: 'Damage up' },
+				{ isUsed: false, name: 'Armour up'},
+				{ isUsed: false, name: 'Restore HP'}
+			]
 
 			currentSel: <Home />,
 
@@ -44,18 +48,6 @@ class App extends React.Component {
 			});
 		}
 
-		if (e.target.text === 'setPlayer') {
-			this.setState({
-				currentSel: <Player player={this.state.player} />
-			});
-		}
-
-		if (e.target.text === 'setEnemy') {
-			this.setState({
-				currentSel: <Enemy enemy={this.state.enemy} />
-			});
-		}
-
 		if (e.target.text === 'About') {
 			this.setState({
 				currentSel: <About />
@@ -64,7 +56,7 @@ class App extends React.Component {
 	}
 
 	handleAction(e) {
-			console.log('Button RP was clicked');
+			console.log(e.target.used);
 	}
 
 	render() {
@@ -121,10 +113,9 @@ const Control = (props) => {
 			<div className='col-xs-12'>
         <div className='btn-group btn-group-sm'>
           <button className='btn'><b>Control Panel:</b></button>
-				  <button className='btn btn-success' key='rp' onClick={props.handleAction}>Randomize Player</button>
-				  <button className='btn btn-primary'>Iddqd</button>
-				  <button className='btn btn-info'>Idkfa</button>
-				  <button className='btn btn-danger'>Randomize Enemy</button>
+				  {
+				  	props.control.map((item) => <button className='btn btn-primary' used={props.isUsed} onClick={props.handleAction}>{item.name}</button>)
+				  }
         </div>
 			</div>
 		</div>
