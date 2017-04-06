@@ -44,7 +44,10 @@ class App extends React.Component {
 
 		if (e.target.text === 'awesomeGame') {
 			this.setState({
-				currentSel: <Game player={this.state.player} enemy={this.state.enemy} handleAction={this.handleAction}/>
+				currentSel: <Game player={this.state.player} 
+					enemy={this.state.enemy} 
+					handleAction={this.handleAction} 
+					control={this.state.control}/>
 			});
 		}
 
@@ -114,7 +117,7 @@ const Control = (props) => {
         <div className='btn-group btn-group-sm'>
           <button className='btn'><b>Control Panel:</b></button>
 				  {
-				  	props.control.map((item) => <button className='btn btn-primary' used={props.isUsed} onClick={props.handleAction}>{item.name}</button>)
+				  	props.control.map((item) => <button className='btn btn-primary' used={item.isUsed} onClick={props.handleAction}>{item.name}</button>)
 				  }
         </div>
 			</div>
