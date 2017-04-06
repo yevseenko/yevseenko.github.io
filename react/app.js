@@ -9,9 +9,9 @@ class App extends React.Component {
 			],
 
 			control: [
-				{ name: 'Damage up', isUsed: false },
-				{ name: 'Armour up', isUsed: false},
-				{ name: 'Restore HP', isUsed: false}
+				{ name: 'Damage up', used: false },
+				{ name: 'Armour up', used: false},
+				{ name: 'Restore HP', used: false}
 			],
 
 			currentSel: <Home />,
@@ -59,7 +59,7 @@ class App extends React.Component {
 	}
 
 	handleAction(evt) {
-			console.log(evt.target.dataset.isUsed);
+			console.log(evt.target.dataset.used);
 	}
 
 	render() {
@@ -127,7 +127,7 @@ const Control = (props) => {
 				  	{
 				  		props.control.map((item) => <button className='btn btn-primary' 
 				  			key={generateId()}
-				  			data-isUsed={item.isUsed} 
+				  			data-isUsed={item.used} 
 				  			onClick={props.handleAction}>
 				  				{item.name}
 				  			</button>)
