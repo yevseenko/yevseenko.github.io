@@ -77,7 +77,7 @@ const addItem = (list, item) => [...list, item];
 
 const Home = (props) => {
 	return (
-		<div>Homepage of awesome game.. =)</div>
+		<div className='well well-sm'>Homepage of awesome game.. =)</div>
 	)
 }
 
@@ -149,7 +149,7 @@ const Enemy = (props) => {
 
 const About = (props) => {
 	return (
-		<div>About awesomeGame</div>
+		<div className='well well-sm'>About awesomeGame</div>
 	);
 }
 
