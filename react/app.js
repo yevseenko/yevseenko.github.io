@@ -65,7 +65,7 @@ class App extends React.Component {
 				this.setState({
 					player: updatedPlayer
 				});
-				console.log(this.state);
+				console.log(this.state.player.damage);
 			}
 	}
 
