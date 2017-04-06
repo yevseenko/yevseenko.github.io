@@ -9,9 +9,9 @@ class App extends React.Component {
 			],
 
 			control: [
-				{ name: 'Damage up', used: false },
-				{ name: 'Armour up', used: false},
-				{ name: 'Restore HP', used: false}
+				{ name: 'Damage up', used: false, message: ''},
+				{ name: 'Armour up', used: false, message: ''},
+				{ name: 'Restore HP', used: false, message: ''}
 			],
 
 			currentSel: <Home />,
@@ -59,7 +59,12 @@ class App extends React.Component {
 	}
 
 	handleAction(evt) {
-			console.log(evt.target.dataset.used);
+			if (evt.target.innerHTML === Damage up) {
+				this.setState({
+					player: { damage: 70 }
+				});
+				console.log('Damage updated');
+			}
 	}
 
 	render() {
@@ -73,6 +78,7 @@ class App extends React.Component {
 }
 
 const generateId = () => Math.floor(Math.random() * 100000);
+const toggleControl = (control) => ({ ...control, used: !control.used })
 const addItem = (list, item) => [...list, item];
 
 const Home = (props) => {
