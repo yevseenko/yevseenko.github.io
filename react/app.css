@@ -2,11 +2,6 @@ body {
     padding-top: 10px;
 }
 
-nav > a:nth-child(n+2) {
-    margin-left: 10px;
-    cursor: pointer;
-}
-
 .page {
     min-height: 300px;
 }
