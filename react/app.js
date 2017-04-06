@@ -101,15 +101,15 @@ const Game = (props) => {
 	);
 }
 
-class Player extends React.Component {
+const Player (props) => {
 	render() {
 	return (
 		<div className='col-xs-4'>
 			<div className='well well-sm'>
 				Player
-      	<div><b>Name:</b> {this.props.player.name}</div>
-      	<div><b>Hitpoints:</b> {this.props.player.currentHp}/{this.props.player.hitpoints}</div>
-      	<div><b>Damage:</b> {this.props.player.damage}</div>
+      	<div><b>Name:</b> {props.player.name}</div>
+      	<div><b>Hitpoints:</b> {props.player.currentHp}/{props.player.hitpoints}</div>
+      	<div><b>Damage:</b> {props.player.damage}</div>
       </div>
     </div>
 	);
