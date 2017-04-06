@@ -59,7 +59,7 @@ class App extends React.Component {
 	}
 
 	handleAction(e) {
-			console.log(e.target.used);
+			console.log(e.target.key);
 	}
 
 	render() {
