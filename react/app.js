@@ -143,7 +143,7 @@ const About = (props) => {
 
 const Menu = (props) => {
 	return (
-		<nav className='center-block'>
+		<nav className='menu'>
 			<div className='btn-group btn-group-sm'>
 				{
 					props.menu.map((item) => <a className='btn btn-primary' key={item.key} href={item.link} onClick={props.handleClick}>{item.name}</a>)
