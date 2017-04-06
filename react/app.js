@@ -9,9 +9,9 @@ class App extends React.Component {
 			],
 
 			control: [
-				{ key: 4, name: 'Damage up' },
-				{ key: 5, name: 'Armour up'},
-				{ key: 6, name: 'Restore HP'}
+				{ name: 'Damage up', isUsed: false },
+				{ name: 'Armour up', isUsed: false},
+				{ name: 'Restore HP', isUsed: false}
 			],
 
 			currentSel: <Home />,
@@ -125,7 +125,12 @@ const Control = (props) => {
         	<div className='btn-group btn-group-sm'>
           	<button className='btn'><b>Control Panel:</b></button>
 				  	{
-				  		props.control.map((item) => <button className='btn btn-primary' key={item.key} onClick={props.handleAction}>{item.name}</button>)
+				  		props.control.map((item) => <button className='btn btn-primary' 
+				  			key={generateId()}
+				  			data-isUsed={props.isUsed} 
+				  			onClick={props.handleAction}>
+				  				{item.name}
+				  			</button>)
 				  	}
         	</div>
 				</div>
