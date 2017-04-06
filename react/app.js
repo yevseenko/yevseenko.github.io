@@ -97,7 +97,7 @@ const Game = (props) => {
 	);
 }
 
-const Player (props) => {
+const Player = (props) => {
 	render() {
 	return (
 		<div className='col-xs-4'>
