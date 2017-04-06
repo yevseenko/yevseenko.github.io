@@ -96,17 +96,24 @@ const Game = (props) => {
 
 const Player = (props) => {
 	return (
-		<div className='col-xs-4'>Player
-      <div><b>Name:</b> {props.player.name}</div>
-      <div><b>Hitpoints:</b> {props.player.currentHp}/{props.player.hitpoints}</div>
-      <div><b>Damage:</b> {props.player.damage}</div>
+		<div className='col-xs-4'>
+			<div className='well well-sm'>
+				Player
+      	<div><b>Name:</b> {props.player.name}</div>
+      	<div><b>Hitpoints:</b> {props.player.currentHp}/{props.player.hitpoints}</div>
+      	<div><b>Damage:</b> {props.player.damage}</div>
+      </div>
     </div>
 	);
 }
 
 const Panel = (props) => {
 	return (
-		<div className='col-xs-4'>Panel with action's</div>
+		<div className='col-xs-4'>
+			<div className='well well-sm'>
+				Panel with action's
+			</div>
+		</div>
 	);
 }
 
@@ -127,10 +134,13 @@ const Control = (props) => {
 
 const Enemy = (props) => {
 	return (
-		<div className='col-xs-4'>Enemy
-      <div><b>Name:</b> {props.enemy.name}</div>
-      <div><b>Hitpoints:</b> {props.enemy.currentHp}/{props.enemy.hitpoints}</div>
-      <div><b>Damage:</b> {props.enemy.damage}</div>
+		<div className='col-xs-4'>
+			<div className='well well-sm'>
+				Enemy
+      	<div><b>Name:</b> {props.enemy.name}</div>
+      	<div><b>Hitpoints:</b> {props.enemy.currentHp}/{props.enemy.hitpoints}</div>
+      	<div><b>Damage:</b> {props.enemy.damage}</div>
+      </div>
     </div>
 	);
 }
@@ -144,7 +154,7 @@ const About = (props) => {
 const Menu = (props) => {
 	return (
 		<nav className='menu'>
-			<div className='btn-group btn-group-sm'>
+			<div className='btn-group'>
 				{
 					props.menu.map((item) => <a className='btn btn-primary' key={item.key} href={item.link} onClick={props.handleClick}>{item.name}</a>)
 				}
