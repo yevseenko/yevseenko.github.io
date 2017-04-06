@@ -127,7 +127,7 @@ const Control = (props) => {
 				  	{
 				  		props.control.map((item) => <button className='btn btn-primary' 
 				  			key={generateId()}
-				  			data-isUsed={item.used} 
+				  			data-used={item.used} 
 				  			onClick={props.handleAction}>
 				  				{item.name}
 				  			</button>)
