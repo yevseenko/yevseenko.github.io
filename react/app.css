@@ -10,3 +10,7 @@ nav > a:nth-child(n+2) {
 .page {
     min-height: 300px;
 }
+
+.well {
+    margin-bottom: 10px;
+}
