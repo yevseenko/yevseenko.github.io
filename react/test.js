@@ -6,7 +6,6 @@ class App extends React.Component {
 
 	componentDidMount() {
 		loadState()
-    		.then(menu => this.setState({menu}));
   }
 
 	render() {
