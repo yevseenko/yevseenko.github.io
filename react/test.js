@@ -18,12 +18,12 @@ class App extends React.Component {
 }
 
 const loadState = () => {
-    return {
-			menu: [
+    return { menu: [
 				{ key: 1, name: 'Home', link: '#home' },
 				{ key: 2, name: 'awesomeGame', link: '#app' },
 				{ key: 3, name: 'About', link: '#about' }
-			],
+			]
+		}
 }
 
 const Home = (props) => {
