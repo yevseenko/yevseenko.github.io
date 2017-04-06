@@ -35,6 +35,10 @@ class App extends React.Component {
 		this.handleAction = this.handleAction.bind(this);
 	}
 
+	componentDidMount() {
+    player => this.setState({player});
+  }
+
 	handleClick(e) {
 		if (e.target.text === 'Home') {
 			this.setState({
@@ -60,10 +64,10 @@ class App extends React.Component {
 		evt.preventDefault();
 			if (evt.target.innerHTML === 'Damage up') {
 				this.setState({ player: {
-				name: 'myPlayer',
-				hitpoints: 150,
-        currentHp: 150,
-				damage: 90
+					name: 'myPlayer',
+					hitpoints: 150,
+        	currentHp: 150,
+					damage: 90
 				} });
 				console.log(this.state.player.damage);
 			}
