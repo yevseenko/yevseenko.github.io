@@ -1,11 +1,4 @@
 class App extends React.Component {
-	state = {
-		menu: [],
-		control: [],
-		currentSel: <Home />,
-		player: {},
-		enemy: {}
-	}
 
 	componentDidMount() {
 		loadState()
@@ -14,6 +7,14 @@ class App extends React.Component {
     	.then(player => this.setState({player}))
     	.then(enemy => this.setState({enemy}))
   }
+
+  	state = {
+		menu: [],
+		control: [],
+		currentSel: <Home />,
+		player: {},
+		enemy: {}
+	}
 
 	const handleClick = (e) => {
 		if (e.target.text === 'Home') {
