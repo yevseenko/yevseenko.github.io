@@ -1,4 +1,8 @@
 class App extends React.Component {
+	constructor(props) {
+		super(props);
+		state = {}
+	}
 
 	componentDidMount() {
 		loadState()
@@ -7,7 +11,6 @@ class App extends React.Component {
     	.then(player => this.setState({player}))
     	.then(enemy => this.setState({enemy}))
   }
-
 
 	const handleClick = (e) => {
 		if (e.target.text === 'Home') {
@@ -31,7 +34,6 @@ class App extends React.Component {
 	}
 
 	const handleAction = (evt) => {
-		evt.preventDefault();
 			if (evt.target.innerHTML === 'Damage up') {
 				this.setState({ player: {
 					name: 'myPlayer',
