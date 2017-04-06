@@ -58,8 +58,12 @@ class App extends React.Component {
 
 	handleAction(evt) {
 			if (evt.target.innerHTML === 'Damage up') {
-				const addDmg = (player) => { Object.assign(player, {damage: 80}) };
-				this.setState({ player: addDmg(this.state.player) });
+				this.setState(player: {
+				name: 'myPlayer',
+				hitpoints: 150,
+        currentHp: 150,
+				damage: 90
+				});
 				console.log(this.state.player.damage);
 			}
 	}
