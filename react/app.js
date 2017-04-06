@@ -12,7 +12,7 @@ class App extends React.Component {
 				{ isUsed: false, name: 'Damage up' },
 				{ isUsed: false, name: 'Armour up'},
 				{ isUsed: false, name: 'Restore HP'}
-			]
+			],
 
 			currentSel: <Home />,
 
