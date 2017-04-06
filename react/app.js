@@ -58,7 +58,7 @@ class App extends React.Component {
 		}
 	}
 
-	handleAction = (evt) => {
+	handleAction(evt) {
 		evt.preventDefault();
 			if (evt.target.innerHTML === 'Damage up') {
 				const updatedPlayer = Object.assign(this.state.player, { damage : 70 });
