@@ -61,9 +61,9 @@ class App extends React.Component {
 	handleAction(evt) {
 			if (evt.target.innerHTML === 'Damage up') {
 				this.setState({
-					player: { damage: 70 }
+					player.damage: 70
 				});
-				console.log('Damage updated');
+				console.log(this.state);
 			}
 	}
 
