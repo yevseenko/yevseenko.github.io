@@ -1,7 +1,10 @@
 class App extends React.Component {
 	constructor(props) {
 		super(props);
-		state = {}
+		this.state = {}
+
+		this.handleClick = this.handleClick.bind(this);
+		this.handleAction = this.handleAction.bind(this);
 	}
 
 	componentDidMount() {
@@ -12,7 +15,7 @@ class App extends React.Component {
     	.then(enemy => this.setState({enemy}))
   }
 
-	const handleClick = (e) => {
+	handleClick(e) {
 		if (e.target.text === 'Home') {
 			this.setState({
 				currentSel: <Home />
@@ -33,7 +36,7 @@ class App extends React.Component {
 		}
 	}
 
-	const handleAction = (evt) => {
+	handleAction(evt) {
 			if (evt.target.innerHTML === 'Damage up') {
 				this.setState({ player: {
 					name: 'myPlayer',
