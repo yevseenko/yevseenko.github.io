@@ -58,8 +58,8 @@ class App extends React.Component {
 		}
 	}
 
-	handleAction(e) {
-			console.log(e.target.key);
+	handleAction(evt) {
+			console.log(evt.target);
 	}
 
 	render() {
