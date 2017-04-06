@@ -165,7 +165,7 @@ const Menu = (props) => {
 
 const Page = (props) => {
 	return (
-		<div className='well well-sm page'>
+		<div className='page'>
 			{props.currentSel} 
 		</div>
 	);
