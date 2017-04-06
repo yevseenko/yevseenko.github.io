@@ -57,6 +57,7 @@ class App extends React.Component {
 	}
 
 	handleAction(evt) {
+		evt.preventDefault();
 			if (evt.target.innerHTML === 'Damage up') {
 				this.setState({ player: {
 				name: 'myPlayer',
