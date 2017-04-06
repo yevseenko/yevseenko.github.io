@@ -81,7 +81,7 @@ const Home = (props) => {
 const Game = (props) => {
 	return (
 		<div>
-			<Control handleAction={props.handleAction} />
+			<Control handleAction={props.handleAction} control={props.control}/>
 			<div className='row'>
 				<Player player={props.player} />
 				<Panel />
