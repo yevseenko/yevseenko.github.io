@@ -8,13 +8,6 @@ class App extends React.Component {
     	.then(enemy => this.setState({enemy}))
   }
 
-  	state = {
-		menu: [],
-		control: [],
-		currentSel: <Home />,
-		player: {},
-		enemy: {}
-	}
 
 	const handleClick = (e) => {
 		if (e.target.text === 'Home') {
