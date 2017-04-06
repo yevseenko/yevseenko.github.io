@@ -101,7 +101,8 @@ const Game = (props) => {
 	);
 }
 
-const Player = (props) => {
+class Player extends React.Component {
+	render() {
 	return (
 		<div className='col-xs-4'>
 			<div className='well well-sm'>
@@ -112,6 +113,7 @@ const Player = (props) => {
       </div>
     </div>
 	);
+}
 }
 
 const Panel = (props) => {
