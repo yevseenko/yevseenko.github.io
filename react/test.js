@@ -1,8 +1,11 @@
 class App extends React.Component {
-	state = {
-		menu: []
+	constructor(props) {
+		super(props);
+		this.state = {
+			menu: []
+		}
 	}
-	
+
 	componentDidMount() {
 		loadState()
   }
