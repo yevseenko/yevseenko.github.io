@@ -121,12 +121,14 @@ const Control = (props) => {
 	return (
 		<div className='row'>
 			<div className='col-xs-12'>
-        <div className='btn-group btn-group-sm'>
-          <button className='btn'><b>Control Panel:</b></button>
-				  {
-				  	props.control.map((item) => <button className='btn btn-primary' key={item.key} onClick={props.handleAction}>{item.name}</button>)
-				  }
-        </div>
+				<div className='well well-sm'>
+        	<div className='btn-group btn-group-sm'>
+          	<button className='btn'><b>Control Panel:</b></button>
+				  	{
+				  		props.control.map((item) => <button className='btn btn-primary' key={item.key} onClick={props.handleAction}>{item.name}</button>)
+				  	}
+        	</div>
+				</div>
 			</div>
 		</div>
 	);
