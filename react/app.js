@@ -1,7 +1,69 @@
 class App extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
+	state = {
+		menu: [],
+		control: [],
+		currentSel: <Home />,
+		player: {},
+		enemy: {}
+	}
+
+	componentDidMount() {
+		loadState()
+    	.then(menu => this.setState({menu}))
+    	.then(control => this.setState({control}))
+    	.then(player => this.setState({player}))
+    	.then(enemy => this.setState({enemy}))
+  }
+
+	const handleClick = (e) => {
+		if (e.target.text === 'Home') {
+			this.setState({
+				currentSel: <Home />
+			});
+		}
+
+		if (e.target.text === 'awesomeGame') {
+			this.setState({
+				currentSel: <Game player={this.state.player} 
+					enemy={this.state.enemy} 
+					handleAction={this.handleAction} 
+					control={this.state.control}/>
+			});
+		}
+
+		if (e.target.text === 'About') {
+			this.setState({ currentSel: <About /> });
+		}
+	}
+
+	const handleAction = (evt) => {
+		evt.preventDefault();
+			if (evt.target.innerHTML === 'Damage up') {
+				this.setState({ player: {
+					name: 'myPlayer',
+					hitpoints: 150,
+        	currentHp: 150,
+					damage: 90
+				} });
+				console.log(this.state.player.damage);
+			}
+	}
+
+	render() {
+		return (
+			<div className='container'>
+				<Menu menu={this.state.menu} handleClick={this.handleClick} />
+				<Page currentSel={this.state.currentSel} />
+			</div>
+		);
+	}
+}
+
+const generateId = () => Math.floor(Math.random() * 100000);
+const toggleControl = (control) => ({ ...control, used: !control.used })
+const addItem = (list, item) => [...list, item];
+const loadState = () => {
+    return {
 			menu: [
 				{ key: 1, name: 'Home', link: '#home' },
 				{ key: 2, name: 'awesomeGame', link: '#app' },
@@ -30,62 +92,7 @@ class App extends React.Component {
 				damage: 35
 			}
 		}
-
-		this.handleClick = this.handleClick.bind(this);
-		this.handleAction = this.handleAction.bind(this);
-	}
-
-	componentDidMount() {
-    player => this.setState({player});
-  }
-
-	handleClick(e) {
-		if (e.target.text === 'Home') {
-			this.setState({
-				currentSel: <Home />
-			});
-		}
-
-		if (e.target.text === 'awesomeGame') {
-			this.setState({
-				currentSel: <Game player={this.state.player} 
-					enemy={this.state.enemy} 
-					handleAction={this.handleAction} 
-					control={this.state.control}/>
-			});
-		}
-
-		if (e.target.text === 'About') {
-			this.setState({ currentSel: <About /> });
-		}
-	}
-
-	handleAction(evt) {
-		evt.preventDefault();
-			if (evt.target.innerHTML === 'Damage up') {
-				this.setState({ player: {
-					name: 'myPlayer',
-					hitpoints: 150,
-        	currentHp: 150,
-					damage: 90
-				} });
-				console.log(this.state.player.damage);
-			}
-	}
-
-	render() {
-		return (
-			<div className='container'>
-				<Menu menu={this.state.menu} handleClick={this.handleClick} />
-				<Page currentSel={this.state.currentSel} />
-			</div>
-		);
-	}
 }
-
-const generateId = () => Math.floor(Math.random() * 100000);
-const toggleControl = (control) => ({ ...control, used: !control.used })
-const addItem = (list, item) => [...list, item];
 
 const Home = (props) => {
 	return (
