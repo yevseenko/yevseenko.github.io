@@ -52,18 +52,14 @@ class App extends React.Component {
 		}
 
 		if (e.target.text === 'About') {
-			this.setState({
-				currentSel: <About />
-			});
+			this.setState({ currentSel: <About /> });
 		}
 	}
 
 	handleAction(evt) {
 			if (evt.target.innerHTML === 'Damage up') {
-				const updatedPlayer = Object.assign(this.state.player, { damage : 70 });
-				this.setState({
-					player: updatedPlayer
-				});
+				const updatedPlayer = Object.assign(state.player, { damage : 70 });
+				this.setState({ player: updatedPlayer });
 				console.log(this.state.player.damage);
 			}
 	}
@@ -72,7 +68,7 @@ class App extends React.Component {
 		return (
 			<div className='container'>
 				<Menu menu={this.state.menu} handleClick={this.handleClick} />
-				<Page currentSel={this.state.currentSel}/>
+				<Page currentSel={this.state.currentSel} />
 			</div>
 		);
 	}
