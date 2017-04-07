@@ -5,7 +5,10 @@ class App extends React.Component {
 			control: [
 				{ id: 1, name: 'Damage up', used: false, message: ''},
 				{ id: 2, name: 'Armour up', used: false, message: ''},
-				{ id: 3, name: 'Restore HP', used: false, message: ''}
+				{ id: 3, name: 'Restore HP', used: false, message: ''},
+				{ id: 4, name: 'Awesome skill -50hp', used: false, message: ''},
+				{ id: 5, name: 'Debuff enemy armour', used: false, message: ''},
+				{ id: 6, name: 'Debuff enemy damage', used: false, message: ''}
 			],
 
 			player: {
@@ -37,7 +40,6 @@ class App extends React.Component {
 			}
 			if (evt.target.innerHTML === 'Damage up') {
 				this.setState({ msg: 'Damage is up', player: updatedPlayer });
-				console.log('State updated');
 			}
 	}
 
