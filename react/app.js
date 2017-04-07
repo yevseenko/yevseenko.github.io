@@ -28,7 +28,9 @@ class App extends React.Component {
 				hitpoints: 150,
         currentHp: 150,
 				damage: 35
-			}
+			},
+
+			msg: ''
 		}
 
 		this.handleClick = this.handleClick.bind(this);
@@ -47,7 +49,8 @@ class App extends React.Component {
 				currentSel: <Game player={this.state.player} 
 					enemy={this.state.enemy} 
 					handleAction={this.handleAction} 
-					control={this.state.control}/>
+					control={this.state.control}
+					msg={this.state.msg}/>
 			});
 		}
 
@@ -57,14 +60,8 @@ class App extends React.Component {
 	}
 
 	handleAction(evt) {
-		evt.preventDefault();
 			if (evt.target.innerHTML === 'Damage up') {
-				this.setState({ player: {
-					name: 'myPlayer',
-					hitpoints: 150,
-        	currentHp: 150,
-					damage: 90
-				} });
+				this.setState({ msg: 'Damage is up' });
 				console.log(this.state.player.damage);
 			}
 	}
@@ -95,7 +92,7 @@ const Game = (props) => {
 			<Control handleAction={props.handleAction} control={props.control}/>
 			<div className='row'>
 				<Player player={props.player} />
-				<Panel />
+				<Panel msg={props.msg}/>
 				<Enemy enemy={props.enemy} />
 			</div>
 		</div>
@@ -119,7 +116,7 @@ const Panel = (props) => {
 	return (
 		<div className='col-xs-4'>
 			<div className='well well-sm'>
-				Panel with action's
+				Panel with action's <span>{props.msg}</span>
 			</div>
 		</div>
 	);
