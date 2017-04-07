@@ -9,7 +9,6 @@ class App extends React.Component {
 			],
 
 			player: {
-				id: 4,
 				name: 'myPlayer',
 				hitpoints: 150,
         currentHp: 150,
@@ -17,7 +16,6 @@ class App extends React.Component {
 			},
 
 			enemy: {
-				id: 5,
 				name: 'myEnemy',
 				hitpoints: 150,
         currentHp: 150,
@@ -31,8 +29,14 @@ class App extends React.Component {
 	}
 
 	handleAction(evt) {
+			const updatedPlayer = {
+				name: this.state.player.name,
+				hitpoints: this.state.player.hitpoints,
+				currentHp: this.state.player.currentHp,
+				damage: this.state.player.damage + 20
+			}
 			if (evt.target.innerHTML === 'Damage up') {
-				this.setState({ msg: 'Damage is up' });
+				this.setState({ msg: 'Damage is up', player: updatedPlayer });
 				console.log('State updated');
 			}
 	}
