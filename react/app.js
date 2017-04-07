@@ -81,7 +81,7 @@ const Panel = (props) => {
 	return (
 		<div className='col-xs-4'>
 			<div className='well well-sm'>
-				Panel with action's <span key={itemId}>{props.msg}</span>
+				Panel with action's <span>{props.msg}</span>
 			</div>
 		</div>
 	);
