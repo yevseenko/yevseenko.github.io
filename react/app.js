@@ -41,6 +41,7 @@ class App extends React.Component {
 			if (evt.target.innerHTML === 'Damage up') {
 				this.setState({ msg: 'Damage is up', player: updatedPlayer });
 			}
+			console.log(evt.target.key);
 	}
 
 	render() {
