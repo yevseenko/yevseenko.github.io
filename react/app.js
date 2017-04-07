@@ -2,21 +2,14 @@ class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			menu: [
-				{ key: 1, name: 'Home', link: '#home' },
-				{ key: 2, name: 'awesomeGame', link: '#app' },
-				{ key: 3, name: 'About', link: '#about' }
-			],
-
 			control: [
-				{ name: 'Damage up', used: false, message: ''},
-				{ name: 'Armour up', used: false, message: ''},
-				{ name: 'Restore HP', used: false, message: ''}
+				{ id: 1, name: 'Damage up', used: false, message: ''},
+				{ id: 2, name: 'Armour up', used: false, message: ''},
+				{ id: 3, name: 'Restore HP', used: false, message: ''}
 			],
-
-			currentSel: <Home />,
 
 			player: {
+				id: 4,
 				name: 'myPlayer',
 				hitpoints: 150,
         currentHp: 150,
@@ -24,6 +17,7 @@ class App extends React.Component {
 			},
 
 			enemy: {
+				id: 5,
 				name: 'myEnemy',
 				hitpoints: 150,
         currentHp: 150,
@@ -33,30 +27,7 @@ class App extends React.Component {
 			msg: ''
 		}
 
-		this.handleClick = this.handleClick.bind(this);
 		this.handleAction = this.handleAction.bind(this);
-	}
-
-	handleClick(e) {
-		if (e.target.text === 'Home') {
-			this.setState({
-				currentSel: <Home />
-			});
-		}
-
-		if (e.target.text === 'awesomeGame') {
-			this.setState({
-				currentSel: <Game player={this.state.player} 
-					enemy={this.state.enemy} 
-					handleAction={this.handleAction} 
-					control={this.state.control}
-					msg={this.state.msg}/>
-			});
-		}
-
-		if (e.target.text === 'About') {
-			this.setState({ currentSel: <About /> });
-		}
 	}
 
 	handleAction(evt) {
@@ -69,21 +40,14 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className='container'>
-				<Menu menu={this.state.menu} handleClick={this.handleClick} />
-				<Page currentSel={this.state.currentSel} />
+				<Game player={this.state.player} 
+					enemy={this.state.enemy} 
+					handleAction={this.handleAction} 
+					control={this.state.control}
+					msg={this.state.msg}/>
 			</div>
 		);
 	}
-}
-
-const generateId = () => Math.floor(Math.random() * 100000);
-const toggleControl = (control) => ({ ...control, used: !control.used })
-const addItem = (list, item) => [...list, item];
-
-const Home = (props) => {
-	return (
-		<div className='well well-sm'>Homepage of awesome game.. =)</div>
-	)
 }
 
 const Game = (props) => {
@@ -113,10 +77,11 @@ const Player = (props) => {
 }
 
 const Panel = (props) => {
+	const itemId = generateId();
 	return (
 		<div className='col-xs-4'>
 			<div className='well well-sm'>
-				Panel with action's <span key={generateId()}>{props.msg}</span>
+				Panel with action's <span key={itemId}>{props.msg}</span>
 			</div>
 		</div>
 	);
@@ -131,7 +96,7 @@ const Control = (props) => {
           	<button className='btn'><b>Control Panel:</b></button>
 				  	{
 				  		props.control.map((item) => <button className='btn btn-primary' 
-				  			key={generateId()}
+				  			key={item.id}
 				  			data-used={item.used} 
 				  			onClick={props.handleAction}>
 				  				{item.name}
@@ -157,65 +122,13 @@ const Enemy = (props) => {
 	);
 }
 
-const About = (props) => {
-	return (
-		<div className='well well-sm'>About awesomeGame</div>
-	);
-}
 
-const Menu = (props) => {
-	return (
-		<nav className='menu'>
-			<div className='btn-group'>
-				{
-					props.menu.map((item) => <a className='btn btn-primary' key={item.key} href={item.link} onClick={props.handleClick}>{item.name}</a>)
-				}
-			</div>
-		</nav>
-	);
-}
-
-const Page = (props) => {
-	return (
-		<div className='page'>
-			{props.currentSel} 
-		</div>
-	);
-}
+//Utils func
+const generateId = () => Math.floor(Math.random() * 100000);
+const toggleControl = (control) => ({ ...control, used: !control.used })
+const addItem = (list, item) => [...list, item];
 
 ReactDOM.render(
 	<App />,
 	document.getElementById('root')
 );
-
-if (!Object.assign) {
-  Object.defineProperty(Object, 'assign', {
-    enumerable: false,
-    configurable: true,
-    writable: true,
-    value: function(target, firstSource) {
-      'use strict';
-      if (target === undefined || target === null) {
-        throw new TypeError('Cannot convert first argument to object');
-      }
-
-      var to = Object(target);
-      for (var i = 1; i < arguments.length; i++) {
-        var nextSource = arguments[i];
-        if (nextSource === undefined || nextSource === null) {
-          continue;
-        }
-
-        var keysArray = Object.keys(Object(nextSource));
-        for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
-          var nextKey = keysArray[nextIndex];
-          var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
-          if (desc !== undefined && desc.enumerable) {
-            to[nextKey] = nextSource[nextKey];
-          }
-        }
-      }
-      return to;
-    }
-  });
-}
