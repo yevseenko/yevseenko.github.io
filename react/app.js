@@ -4,8 +4,8 @@ class App extends React.Component {
 		this.state = {
 			control: [
 				{ id: 1, name: 'Damage up', used: false, message: '' },
-				{ id: 2, name: 'Armour up', used: false, message: '' },
-				{ id: 3, name: 'Restore HP', used: true, message: '' },
+				{ id: 2, name: 'Armour up', used: true, message: '' },
+				{ id: 3, name: 'Restore HP', used: false, message: '' },
 				{ id: 4, name: 'Awesome skill -50hp', used: false, message: '' },
 				{ id: 5, name: 'Debuff enemy armour', used: true, message: '' },
 				{ id: 6, name: 'Debuff enemy damage', used: false, message: '' }
