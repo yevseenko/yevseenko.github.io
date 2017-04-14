@@ -29,6 +29,7 @@ class App extends React.Component {
 		}
 
 		this.handleAction = this.handleAction.bind(this);
+		this.handleBattle = this.handleBattle.bind(this);
 	}
 
 	handleAction(evt) {
@@ -53,12 +54,19 @@ class App extends React.Component {
 		}
 	}
 
+	handleBattle(evt) {
+		if (evt.target.innerHTML === 'Go') {
+			console.log('The battle has begun');
+		}
+	}
+
 	render() {
 		return (
 			<div className='container'>
 				<Game player={this.state.player}
 					enemy={this.state.enemy}
 					handleAction={this.handleAction}
+					handleBattle={this.handleBattle}
 					control={this.state.control}
 					msg={this.state.msg} />
 			</div>
@@ -98,6 +106,9 @@ const Panel = (props) => {
 		<div className='col-xs-4'>
 			<div className='well well-sm'>
 				Panel with action's <span>{props.msg}</span>
+				<div>
+					<button className='btn btn-success' key={itemId}>Go</button>
+				</div>
 			</div>
 		</div>
 	);
