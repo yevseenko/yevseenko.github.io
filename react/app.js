@@ -78,7 +78,7 @@ const Game = (props) => {
 			<Control handleAction={props.handleAction} control={props.control} />
 			<div className='row'>
 				<Player player={props.player} />
-				<Panel msg={props.msg} />
+				<Panel msg={props.msg} handleBattle={props.handleBattle} />
 				<Enemy enemy={props.enemy} />
 			</div>
 		</div>
