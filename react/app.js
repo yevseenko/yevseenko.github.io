@@ -36,7 +36,21 @@ class App extends React.Component {
 			const updatedPlayer = Object.assign(this.state.player, { damage: this.state.player.damage + 20 });
 			this.setState({ msg: 'Damage is up', player: updatedPlayer });
 		}
-		console.log(evt.target.id);
+		
+		if (evt.target.innerHTML === 'Restore HP') {
+			const updatedPlayer = Object.assign(this.state.player, { currentHp: this.state.player.currentHp + 50 });
+			this.setState({ msg: 'HP has benn restored', player: updatedPlayer });
+		}
+
+		if (evt.target.innerHTML === 'Awesome skill -50hp') {
+			const updatedEnemy = Object.assign(this.state.enemy, {currentHp: this.state.enemy.currentHp - 50});
+			this.setState({ msg: 'Hello, this my awesome skill -50 enemy HP', enemy: updatedEnemy });
+		}
+
+		if (evt.target.innerHTML === 'Debuff enemy damage') {
+			const updatedEnemy = Object.assign(this.state.enemy, { damage: this.state.enemy.damage - 20 });
+			this.setState({ msg: 'Enemy damage -20', enemy: updatedEnemy });
+		}
 	}
 
 	render() {
