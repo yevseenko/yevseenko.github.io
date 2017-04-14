@@ -55,9 +55,7 @@ class App extends React.Component {
 	}
 
 	handleBattle(evt) {
-		if (evt.target.innerHTML === 'Go') {
-			console.log('The battle has begun');
-		}
+		console.log('The battle has begun');
 	}
 
 	render() {
@@ -107,7 +105,7 @@ const Panel = (props) => {
 			<div className='well well-sm'>
 				Panel with action's <span>{props.msg}</span>
 				<div>
-					<button className='btn btn-success' key={itemId}>Go</button>
+					<button className='btn btn-success' key={itemId} onClick={props.handleBattle}>Go</button>
 				</div>
 			</div>
 		</div>
