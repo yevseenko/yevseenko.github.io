@@ -55,7 +55,12 @@ class App extends React.Component {
 	}
 
 	handleBattle(evt) {
-		console.log('The battle has begun');
+		const updatedEnemy = Object.assign(this.state.enemy, {currentHp: this.state.enemy.currentHp - this.state.player.damage});
+		const updatedPlayer = Object.assign(this.state.player, {currentHp: this.state.player.currentHp - this.state.enemy.damage});
+		if (this.state.enemy.currentHp === 0) {
+			this.setState({ msg: 'Enemy has benn defeated'});
+		}
+		this.setState({ player: updatedPlayer, enemy: updatedEnemy });
 	}
 
 	render() {
