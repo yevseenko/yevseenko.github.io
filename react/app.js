@@ -40,7 +40,7 @@ class App extends React.Component {
 		
 		if (evt.target.innerHTML === 'Restore HP') {
 			const updatedPlayer = Object.assign(this.state.player, { currentHp: this.state.player.currentHp + 50 });
-			this.setState({ msg: 'HP has benn restored', player: updatedPlayer });
+			this.setState({ msg: 'HP has been restored', player: updatedPlayer });
 		}
 
 		if (evt.target.innerHTML === 'Awesome skill -50hp') {
@@ -58,7 +58,7 @@ class App extends React.Component {
 		const updatedEnemy = Object.assign(this.state.enemy, {currentHp: this.state.enemy.currentHp - this.state.player.damage});
 		const updatedPlayer = Object.assign(this.state.player, {currentHp: this.state.player.currentHp - this.state.enemy.damage});
 		if (this.state.enemy.currentHp <= 0) {
-			this.setState({ msg: 'Enemy has benn defeated'});
+			this.setState({ msg: 'Enemy has been defeated'});
 		}
 		this.setState({ player: updatedPlayer, enemy: updatedEnemy });
 	}
