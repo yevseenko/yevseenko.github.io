@@ -34,7 +34,7 @@ class App extends React.Component {
 
 	handleAction(evt) {
 		if (evt.target.innerHTML === 'Damage up') {
-			const updatedPlayer = Object.assign(this.state.player, { damage: this.state.player.damage + 20 });
+			const updatedPlayer = {...this.state.player, damage: this.state.player.damage + 20};
 			this.setState({ msg: 'Damage is up', player: updatedPlayer });
 		}
 		
