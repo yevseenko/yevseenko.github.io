@@ -39,24 +39,24 @@ class App extends React.Component {
 		}
 		
 		if (evt.target.innerHTML === 'Restore HP') {
-			const updatedPlayer = Object.assign(this.state.player, { currentHp: this.state.player.currentHp + 50 });
+			const updatedPlayer = {...this.state.player, currentHp: this.state.player.currentHp + 50};
 			this.setState({ msg: 'HP has been restored', player: updatedPlayer });
 		}
 
 		if (evt.target.innerHTML === 'Awesome skill -50hp') {
-			const updatedEnemy = Object.assign(this.state.enemy, {currentHp: this.state.enemy.currentHp - 50});
+			const updatedEnemy = {...this.state.enemy, currentHp: this.state.enemy.currentHp - 50};
 			this.setState({ msg: 'Hello, this my awesome skill -50 enemy HP', enemy: updatedEnemy });
 		}
 
 		if (evt.target.innerHTML === 'Debuff enemy damage') {
-			const updatedEnemy = Object.assign(this.state.enemy, { damage: this.state.enemy.damage - 20 });
+			const updatedEnemy = {...this.state.enemy, damage: this.state.enemy.damage - 20 };
 			this.setState({ msg: 'Enemy damage -20', enemy: updatedEnemy });
 		}
 	}
 
 	handleBattle(evt) {
-		const updatedEnemy = Object.assign(this.state.enemy, {currentHp: this.state.enemy.currentHp - this.state.player.damage});
-		const updatedPlayer = Object.assign(this.state.player, {currentHp: this.state.player.currentHp - this.state.enemy.damage});
+		const updatedEnemy = {...this.state.enemy, currentHp: this.state.enemy.currentHp - this.state.player.damage};
+		const updatedPlayer = {...this.state.player, currentHp: this.state.player.currentHp - this.state.enemy.damage};
 		if (this.state.enemy.currentHp <= 0) {
 			this.setState({ msg: 'Enemy has been defeated'});
 		}
