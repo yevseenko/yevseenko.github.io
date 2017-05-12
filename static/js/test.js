@@ -1,38 +1,37 @@
 'use strict';
 
-(function() {
-    var list = document.querySelector('ol'),
-        input = document.querySelector('input');
+(function () {
+    var dayOfWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
+    var date = new Date();
 
-    list.addEventListener('click', function(e) {
-        if (e.target.classList.contains('todo-item')) {
-            e.target.classList.toggle('completed');
+    var cDay = date.getDay(),
+        cHours = date.getHours(),
+        cMinutes = date.getMinutes(),
+        cSeconds = date.getSeconds();
+    
+    function addZero(num) {
+        if (num < 10) {
+            return '0' + num;
         }
-    });
-
-    input.addEventListener('keypress', function(e) {
-        if (e.keyCode === 13 && input.value) {
-            list.innerHTML += '<li class="todo-item">' + input.value + ' ' + dateString() + '</li>';
-            input.value = '';
-        }
-    });
-
-    function dateString() {
-        var date = new Date(),
-            seconds = date.getSeconds(),
-            minutes = date.getMinutes(),
-            hours = date.getHours();
-
-        return '[' + addZero(hours) + ':' + addZero(minutes) + ':' + addZero(seconds) + ']';
+        return num;
     }
 
-    function addZero(n) {
-        return n < 10 ? n = "0" + n : n;
-    }
+    document.getElementById('basic-one').innerHTML = 'Сегодня: ' + dayOfWeek[cDay] + ' Текущее время: ' + addZero(cHours) + ':' + addZero(cMinutes) + ':' + addZero(cSeconds);
 }());
 
-var obj = {
-    method: function hello() {
-        return 'hello';
+(function () {
+    var date = new Date();
+
+    var cDate = date.getDate(),
+        cMonth = date.getMonth(),
+        cYear = date.getFullYear();
+    
+    function addZero(num) {
+        if (num < 10) {
+            return '0' + num;
+        }
+        return num;
     }
-}
+
+    document.getElementById('basic-two').innerHTML = addZero(cDate) + '.' + addZero(cMonth) + '.' + cYear;
+}());

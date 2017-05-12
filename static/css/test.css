@@ -5,6 +5,7 @@
 
 html, body, .wrapper { 
     height: 100%;
+    font-family: monospace;
     }
     
 body > .wrapper {
@@ -13,7 +14,7 @@ body > .wrapper {
     }
 
 .main {
-    padding-top: 100px;
+    padding-top: 45px;
     padding-bottom: 50px;
     margin: 0 auto;
     }
@@ -32,8 +33,6 @@ body > .wrapper {
 .wrapper {
     margin: 0 auto;
     max-width: 1170px;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
 }
 
 .completed {
@@ -67,4 +66,32 @@ li {
     border-radius: 4px;
     font-family: Verdana;
     font-size: 16px;
+}
+
+.main > div {
+    margin-top: 5px;
+}
+
+.task {
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.task > div {
+    margin: 5px;
+}
+
+.task > div:nth-child(2)::before {
+    content: 'Result: ';
+    font-weight: bold;
+}
+
+.task > div:nth-child(3)::before {
+    content: '---------------------------------------------------';
+    color: black;
+}
+
+.task > div:nth-child(3) {
+    color: blue;
 }

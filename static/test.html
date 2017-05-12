@@ -11,15 +11,65 @@
 <body>
     <div class="wrapper">
         <div class="main">
-        <div class="todo-list">
-            <input type="text"></input>
+            <div class='task'>
+                <div>1. Write a JavaScript program to display the current day and time in the following format. <br /> Sample
+                    Output : Today is : Friday. Current time is : 14:50:22</div>
+                <div id='basic-one'></div>
+                <div><pre>
+function () {
+    var dayOfWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
+    var date = new Date();
 
-            <ol></ol>
-</div>
+    var cDay = date.getDay(),
+        cHours = date.getHours(),
+        cMinutes = date.getMinutes(),
+        cSeconds = date.getSeconds();
+    
+    function addZero(num) {
+        if (num < 10) {
+            return '0' + num;
+        }
+        return num;
+    }
+    
+    document.getElementById('basic-one').innerHTML = 'Сегодня: ' + dayOfWeek[cDay] + ' Текущее время: ' +
+    addZero(cHours) + ':' + addZero(cMinutes) + ':' + addZero(cSeconds);
+}
+</pre>
+                </div>
+            </div>
+            <div class='task'>
+                <div>2. Write a JavaScript program to get the current date.</div>
+                <div id='basic-two'></div>
+                <div><pre>
+function () {
+    var date = new Date();
+
+    var cDate = date.getDate(),
+        cMonth = date.getMonth(),
+        cYear = date.getFullYear();
+    
+    function addZero(num) {
+        if (num < 10) {
+            return '0' + num;
+        }
+        return num;
+    }
+
+    document.getElementById('basic-two').innerHTML = addZero(cDate) + '.' + addZero(cMonth) + '.' + cYear;
+}
+</pre>
+                </div>
+            </div>
+            <div class='task'>
+                <div>3. Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.</div>
+                <div id='basic-three'></div>
+                <div>function env(num) { return Hello }</div>
+            </div>
         </div>
     </div>
     <div class="footer">
-       All right's re... and bla, bla, bla...
+        All right's re... and bla, bla, bla...
     </div>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="../static/js/test.js"></script>
