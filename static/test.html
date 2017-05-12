@@ -11,11 +11,13 @@
 <body>
     <div class="wrapper">
         <div class="main">
+            <h2>Basic:</h2>
             <div class='task'>
                 <div>1. Write a JavaScript program to display the current day and time in the following format. <br /> Sample
                     Output : Today is : Friday. Current time is : 14:50:22</div>
                 <div id='basic-one'></div>
-                <div><pre>
+                <div>
+                    <pre>
 function () {
     var dayOfWeek = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
     var date = new Date();
@@ -41,7 +43,8 @@ function () {
             <div class='task'>
                 <div>2. Write a JavaScript program to get the current date.</div>
                 <div id='basic-two'></div>
-                <div><pre>
+                <div>
+                    <pre>
 function () {
     var date = new Date();
 
@@ -62,10 +65,55 @@ function () {
                 </div>
             </div>
             <div class='task'>
-                <div>3. Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are 5, 6, 7.</div>
+                <div>3. Write a JavaScript program to find the area of a triangle where lengths of the three of its sides are
+                    5, 6, 7.</div>
                 <div id='basic-three'></div>
-                <div>function env(num) { return Hello }</div>
+                <div>
+                    <pre>
+function () {
+    var a = 5,
+        b = 6,
+        c = 7;
+
+    var p = (a + b + c) / 2;
+
+    var area = Math.sqrt(p*(p-a)*(p-b)*(p-c));
+
+    document.getElementById('basic-three').innerHTML = area;
+}</pre>
+                </div>
             </div>
+
+            <div class='task'>
+                <div>4. Write a JavaScript program to rotate the string 'Hello World' in right direction by periodically removing one letter from the end of the string and attaching it to the front.</div>
+                <div id='basic-four'></div>
+                <div>
+                    <pre>
+function () {
+    var str = 'Hello World ';
+
+    setInterval(function () {
+        var sub = str.slice(-1);
+        str = sub.concat(str.slice(0, str.length - 1));
+
+        document.getElementById('basic-four').innerText = str;
+    }, 300);
+
+}
+</pre>
+                </div>
+            </div>
+
+            <div class='task'>
+                <div>Task 5</div>
+                <div id='basic-five'></div>
+                <div>
+                    <pre>
+
+</pre>
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="footer">
