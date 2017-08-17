@@ -123,7 +123,8 @@ function f(num) {
 
             <h2>http://codewars.com/</h2>
             <div class='task'>
-                <div>Create a Function that takes one parameter and returns its square root correct to 5 decimal places. You are not allowed to use the Math.sqrt() or the Math.pow() methods.</div>
+                <div>Create a Function that takes one parameter and returns its square root correct to 5 decimal places. You are
+                    not allowed to use the Math.sqrt() or the Math.pow() methods.</div>
                 <div id='rec-'></div>
                 <div>
                     <pre>
@@ -135,15 +136,12 @@ function squareRoot(x) {
             </div>
 
             <div class='task'>
-                <div>Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
-
-If you want to know more http://en.wikipedia.org/wiki/DNA
-
-In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". You have function with one side of the DNA (string, except for Haskell); you need to get the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
-
-DNAStrand ("ATTGC") # return "TAACG"
-
-DNAStrand ("GTAT") # return "CATA"</div>
+                <div>Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for
+                    the development and functioning of living organisms. If you want to know more http://en.wikipedia.org/wiki/DNA
+                    In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". You have function
+                    with one side of the DNA (string, except for Haskell); you need to get the other complementary side.
+                    DNA strand is never empty or there is no DNA at all (again, except for Haskell). DNAStrand ("ATTGC")
+                    # return "TAACG" DNAStrand ("GTAT") # return "CATA"</div>
                 <div id='rec-'></div>
                 <div>
                     <pre>
@@ -155,16 +153,14 @@ function DNAStrand(dna){
             </div>
 
             <div class='task'>
-                <div>Time to win the lottery!
-
-Given a lottery ticket (ticket), represented by an array of 2-value arrays, you must find out if you've won the jackpot. Example ticket:
-
-[ [ 'ABC', 65 ], [ 'HGR', 74 ], [ 'BYHT', 74 ] ]
-To do this, you must first count the 'mini-wins' on your ticket. Each sub array has both a string and a number within it. If the character code of any of the characters in the string matches the number, you get a mini win. Note you can only have one mini win per sub array.
-
-Once you have counted all of your mini wins, compare that number to the other input provided (win). If your total is more than or equal to (win), return 'Winner!'. Else return 'Loser!'.
-
-All inputs will be in the correct format. Strings on tickets are not always the same length.</div>
+                <div>Time to win the lottery! Given a lottery ticket (ticket), represented by an array of 2-value arrays, you
+                    must find out if you've won the jackpot. Example ticket: [ [ 'ABC', 65 ], [ 'HGR', 74 ], [ 'BYHT', 74
+                    ] ] To do this, you must first count the 'mini-wins' on your ticket. Each sub array has both a string
+                    and a number within it. If the character code of any of the characters in the string matches the number,
+                    you get a mini win. Note you can only have one mini win per sub array. Once you have counted all of your
+                    mini wins, compare that number to the other input provided (win). If your total is more than or equal
+                    to (win), return 'Winner!'. Else return 'Loser!'. All inputs will be in the correct format. Strings on
+                    tickets are not always the same length.</div>
                 <div id='rec-'></div>
                 <div>
                     <pre>
@@ -182,10 +178,10 @@ function bingo(ticket, win) {
             </div>
 
             <div class='task'>
-                <div>Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted string, the longest possible, containing distinct letters,
-
-each taken only once - coming from s1 or s2. #Examples: ``` a = "xyaabbbccccdefww" b = "xxxxyyyyabklmopq" longest(a, b) -> "abcdefklmopqwxy"
-a = "abcdefghijklmnopqrstuvwxyz" longest(a, a) -> "abcdefghijklmnopqrstuvwxyz" ```</div>
+                <div>Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted string, the longest possible,
+                    containing distinct letters, each taken only once - coming from s1 or s2. #Examples: ``` a = "xyaabbbccccdefww"
+                    b = "xxxxyyyyabklmopq" longest(a, b) -> "abcdefklmopqwxy" a = "abcdefghijklmnopqrstuvwxyz" longest(a,
+                    a) -> "abcdefghijklmnopqrstuvwxyz" ```</div>
                 <div id='rec-'></div>
                 <div>
                     <pre>
@@ -203,11 +199,11 @@ function longest(s1, s2) {
             </div>
 
             <div class='task'>
-                <div>In this kata, you must create a digital root function.
+                <div>In this kata, you must create a digital root function. A digital root is the recursive sum of all the digits
+                    in a number. Given n, take the sum of the digits of n. If that value has two digits, continue reducing
+                    in this way until a single-digit number is produced. This is only applicable to the natural numbers.
 
-A digital root is the recursive sum of all the digits in a number. Given n, take the sum of the digits of n. If that value has two digits, continue reducing in this way until a single-digit number is produced. This is only applicable to the natural numbers.
-
-</div>
+                </div>
                 <div id='rec-'></div>
                 <div>
                     <pre>
@@ -223,18 +219,17 @@ function digital_root(n) {
             </div>
 
             <div class='task'>
-                <div>This Kata is intended as a small challenge for my students
-
-Your family runs a shop and have just brought a Scrolling Text Machine (http://3.imimg.com/data3/RP/IP/MY-2369478/l-e-d-multicolour-text-board-250x250.jpg) to help get some more business.
-
-The scroller works by replacing the current text string with a similar text string, but with the first letter shifted to the end; this simulates movement.
-
-You're father is far too busy with the business to worry about such details, so, naturally, he's making you come up with the text strings.
-
-Create a function named rotate() that accepts a string argument and returns an array of strings with each letter from the input string being rotated to the end.
-
-rotate("Hello") // => ["elloH", "lloHe", "loHel", "oHell", "Hello"]
-Note: The original string should be included in the output array The order matters. Each element of the output array should be the rotated version of the previous element. The output array SHOULD be the same length as the input string The function should return an emptry array with a 0 length string, '', as input</div>
+                <div>This Kata is intended as a small challenge for my students Your family runs a shop and have just brought
+                    a Scrolling Text Machine (http://3.imimg.com/data3/RP/IP/MY-2369478/l-e-d-multicolour-text-board-250x250.jpg)
+                    to help get some more business. The scroller works by replacing the current text string with a similar
+                    text string, but with the first letter shifted to the end; this simulates movement. You're father is
+                    far too busy with the business to worry about such details, so, naturally, he's making you come up with
+                    the text strings. Create a function named rotate() that accepts a string argument and returns an array
+                    of strings with each letter from the input string being rotated to the end. rotate("Hello") // => ["elloH",
+                    "lloHe", "loHel", "oHell", "Hello"] Note: The original string should be included in the output array
+                    The order matters. Each element of the output array should be the rotated version of the previous element.
+                    The output array SHOULD be the same length as the input string The function should return an emptry array
+                    with a 0 length string, '', as input</div>
                 <div id='rec-'></div>
                 <div>
                     <pre>
@@ -253,15 +248,12 @@ function rotate(str){
             </div>
 
             <div class='task'>
-                <div>The goal of this kata is to write a function that takes two inputs: a string and a character. The function will count the number of times that character appears in the string. The count is case insensitive.
+                <div>The goal of this kata is to write a function that takes two inputs: a string and a character. The function
+                    will count the number of times that character appears in the string. The count is case insensitive. For
+                    example: countChar("fizzbuzz","z") => 4 countChar("Fancy fifth fly aloof","f") => 5 The character can
+                    be any alphanumeric character.
 
-For example:
-
-countChar("fizzbuzz","z") => 4
-countChar("Fancy fifth fly aloof","f") => 5
-The character can be any alphanumeric character.
-
-</div>
+                </div>
                 <div id='rec-'></div>
                 <div>
                     <pre>
@@ -273,18 +265,12 @@ function countChar(string, char) {
             </div>
 
             <div class='task'>
-                <div>Count the number of Duplicates
-
-Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphanumeric characters, including digits, uppercase and lowercase alphabets.
-
-Example
-
-"abcde" -> 0 # no characters repeats more than once
-"aabbcde" -> 2 # 'a' and 'b'
-"aabbcdeB" -> 2 # 'a' and 'b'
-"indivisibility" -> 1 # 'i'
-"Indivisibilities" -> 2 # 'i' and 's'
-"aa11" -> 2 # 'a' and '1'</div>
+                <div>Count the number of Duplicates Write a function that will return the count of distinct case-insensitive alphabetic
+                    characters and numeric digits that occur more than once in the input string. The input string can be
+                    assumed to contain only alphanumeric characters, including digits, uppercase and lowercase alphabets.
+                    Example "abcde" -> 0 # no characters repeats more than once "aabbcde" -> 2 # 'a' and 'b' "aabbcdeB" ->
+                    2 # 'a' and 'b' "indivisibility" -> 1 # 'i' "Indivisibilities" -> 2 # 'i' and 's' "aa11" -> 2 # 'a' and
+                    '1'</div>
                 <div id='rec-'></div>
                 <div>
                     <pre>
@@ -304,12 +290,9 @@ function duplicateCount(text){
             </div>
 
             <div class='task'>
-                <div>Complete the solution so that it reverses all of the words within the string passed in.
-
-Example:
-
-reverseWords("The greatest victory is that which requires no battle")
-// should return "battle no requires which that is victory greatest The"</div>
+                <div>Complete the solution so that it reverses all of the words within the string passed in. Example: reverseWords("The
+                    greatest victory is that which requires no battle") // should return "battle no requires which that is
+                    victory greatest The"</div>
                 <div id='rec-'></div>
                 <div>
                     <pre>
@@ -333,21 +316,13 @@ function find_average(array) {
             </div>
 
             <div class='task'>
-                <div>Task
-
-Call two arms equally strong if the heaviest weights they each are able to lift are equal.
-
-Call two people equally strong if their strongest arms are equally strong (the strongest arm can be both the right and the left), and so are their weakest arms.
-
-Given your and your friend's arms' lifting capabilities find out if you two are equally strong.
-
-Example
-
-For yourLeft = 10, yourRight = 15, friendsLeft = 15 and friendsRight = 10, the output should be true;
-
-For yourLeft = 15, yourRight = 10, friendsLeft = 15 and friendsRight = 10, the output should be true;
-
-For yourLeft = 15, yourRight = 10, friendsLeft = 15 and friendsRight = 9, the output should be false.</div>
+                <div>Task Call two arms equally strong if the heaviest weights they each are able to lift are equal. Call two
+                    people equally strong if their strongest arms are equally strong (the strongest arm can be both the right
+                    and the left), and so are their weakest arms. Given your and your friend's arms' lifting capabilities
+                    find out if you two are equally strong. Example For yourLeft = 10, yourRight = 15, friendsLeft = 15 and
+                    friendsRight = 10, the output should be true; For yourLeft = 15, yourRight = 10, friendsLeft = 15 and
+                    friendsRight = 10, the output should be true; For yourLeft = 15, yourRight = 10, friendsLeft = 15 and
+                    friendsRight = 9, the output should be false.</div>
                 <div id='rec-'></div>
                 <div>
                     <pre>
@@ -359,14 +334,14 @@ function areEquallyStrong(yourLeft, yourRight, friendsLeft, friendsRight) {
             </div>
 
             <div class='task'>
-                <div>You are given an array strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.
-
-#Example: longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2) --> "abigailtheta"
-
-n being the length of the string array, if n = 0 or k > n or k <= 0 return "".</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                <div>You are given an array strarr of strings and an integer k. Your task is to return the first longest string
+                    consisting of k consecutive strings taken in the array. #Example: longest_consec(["zone", "abigail",
+                    "theta", "form", "libe", "zas", "theta", "abigail"], 2) --> "abigailtheta" n being the length of the
+                    string array, if n = 0 or k > n or k
+                    <=0 return "".</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
 function longestConsec(strarr, k) {
 	if (strarr.length == 0 || k > strarr.length || k <= 0) return '';
 	var arr = [];
@@ -377,31 +352,20 @@ function longestConsec(strarr, k) {
   return arr[index];
 }
 </pre>
+                        </div>
                 </div>
-            </div>
 
-            <div class='task'>
-                <div>Given an array arr that contains some integers(positive, negative or 0), and a range list such as [[start1,end1],[start2,end2],...], start and end are the index of arr and start always less than end. Your task is to calculate the sum value of each range, and return the maximum sum value.
-
-For example:
-
- Given arr = [1,-2,3,4,-5,-4,3,2,1], 
-       range = [[1,3],[0,4],[6,8]]
- should return 6
-
- calculation process:
- range[1,3] = arr[1]+arr[2]+arr[3] = 5
- range[0,4] = arr[0]+arr[1]+arr[2]+arr[3]+arr[4] = 1
- range[6,8] = arr[6]+arr[7]+arr[8] = 6
- So the maximum sum value is 6
-Note:
-
-arr always has at least 5 elements;
-range always has at least 1 elements;
-All inputs are valid;</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                <div class='task'>
+                    <div>Given an array arr that contains some integers(positive, negative or 0), and a range list such as [[start1,end1],[start2,end2],...],
+                        start and end are the index of arr and start always less than end. Your task is to calculate the
+                        sum value of each range, and return the maximum sum value. For example: Given arr = [1,-2,3,4,-5,-4,3,2,1],
+                        range = [[1,3],[0,4],[6,8]] should return 6 calculation process: range[1,3] = arr[1]+arr[2]+arr[3]
+                        = 5 range[0,4] = arr[0]+arr[1]+arr[2]+arr[3]+arr[4] = 1 range[6,8] = arr[6]+arr[7]+arr[8] = 6 So
+                        the maximum sum value is 6 Note: arr always has at least 5 elements; range always has at least 1
+                        elements; All inputs are valid;</div>
+                    <div id='rec-'></div>
+                    <div>
+                        <pre>
 function maxSum(arr,range){
   return Math.max.apply(null, range.map(function(elem){
   	return arr.slice(elem[0],elem[1]+1).reduce(function(a,b){
@@ -410,35 +374,20 @@ function maxSum(arr,range){
   }));
 }
 </pre>
+                    </div>
                 </div>
-            </div>
 
-            <div class='task'>
-                <div>Write a function convert_temp(temp, from_scale, to_scale) converting temperature from one scale to another. Return converted temp value.
-
-Round converted temp value to an integer(!).
-
-Reading: http://en.wikipedia.org/wiki/Conversion_of_units_of_temperature
-
-possible scale inputs:
-    "C"  for Celsius
-    "F"  for Fahrenheit
-    "K"  for Kelvin
-    "R"  for Rankine
-    "De" for Delisle
-    "N"  for Newton
-    "Re" for Réaumur
-    "Ro" for Rømer
-temp is a number, from_scale and to_scale are strings.
-
-convert_temp(   100, "C",  "F") # => 212
-convert_temp(    40, "Re", "C") # => 50
-convert_temp(    60, "De", "F") # => 140
-convert_temp(373.15, "K",  "N") # => 33
-convert_temp(   666, "K",  "K") # => 666</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                <div class='task'>
+                    <div>Write a function convert_temp(temp, from_scale, to_scale) converting temperature from one scale to another.
+                        Return converted temp value. Round converted temp value to an integer(!). Reading: http://en.wikipedia.org/wiki/Conversion_of_units_of_temperature
+                        possible scale inputs: "C" for Celsius "F" for Fahrenheit "K" for Kelvin "R" for Rankine "De" for
+                        Delisle "N" for Newton "Re" for Réaumur "Ro" for Rømer temp is a number, from_scale and to_scale
+                        are strings. convert_temp( 100, "C", "F") # => 212 convert_temp( 40, "Re", "C") # => 50 convert_temp(
+                        60, "De", "F") # => 140 convert_temp(373.15, "K", "N") # => 33 convert_temp( 666, "K", "K") # =>
+                        666</div>
+                    <div id='rec-'></div>
+                    <div>
+                        <pre>
 function convertTemp(temp, from_scale, to_scale){
 	if (from_scale == to_scale) return temp;
 	if (from_scale == 'C') temp = temp + 273.15;
@@ -461,51 +410,31 @@ function convertTemp(temp, from_scale, to_scale){
 	return Math.round(temp);
 }
 </pre>
+                    </div>
                 </div>
-            </div>
 
-            <div class='task'>
-                <div>Write function toInitials returs initials for a given person name. E.g: "Bill Gates" -> "B. G."</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                <div class='task'>
+                    <div>Write function toInitials returs initials for a given person name. E.g: "Bill Gates" -> "B. G."</div>
+                    <div id='rec-'></div>
+                    <div>
+                        <pre>
 function toInitials(name) {
   return name.split(' ').map(function(elem){return elem[0] + '.'}).join(' ');
 }
 </pre>
+                    </div>
                 </div>
-            </div>
 
-            <div class='task'>
-                <div>Task
-
-Some people are standing in a row in a park. There are trees between them which cannot be moved.
-
-Your task is to rearrange the people by their heights in a non-descending order without moving the trees.
-
-Example
-
-For a = [-1, 150, 190, 170, -1, -1, 160, 180], the output should be
-
-[-1, 150, 160, 170, -1, -1, 180, 190].
-
-Input/Output
-
-[input] integer array a
-
-If a[i] = -1, then the ith position is occupied by a tree. Otherwise a[i] is the height of a person standing in the ith position.
-
-Constraints:
-
-5 ≤ a.length ≤ 30,
-
--1 ≤ a[i] ≤ 200.
-[output] an integer array
-
-Sorted array a with all the trees untouched.</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                <div class='task'>
+                    <div>Task Some people are standing in a row in a park. There are trees between them which cannot be moved.
+                        Your task is to rearrange the people by their heights in a non-descending order without moving the
+                        trees. Example For a = [-1, 150, 190, 170, -1, -1, 160, 180], the output should be [-1, 150, 160,
+                        170, -1, -1, 180, 190]. Input/Output [input] integer array a If a[i] = -1, then the ith position
+                        is occupied by a tree. Otherwise a[i] is the height of a person standing in the ith position. Constraints:
+                        5 ≤ a.length ≤ 30, -1 ≤ a[i] ≤ 200. [output] an integer array Sorted array a with all the trees untouched.</div>
+                    <div id='rec-'></div>
+                    <div>
+                        <pre>
 function sortByHeight(a) {
 	var tmpArr = a.filter(function(elem){return elem>0}).sort(function(a,b){return a-b});
 	console.log(tmpArr);
@@ -515,34 +444,34 @@ function sortByHeight(a) {
 	});	
 }
 </pre>
+                    </div>
                 </div>
-            </div>
 
 
-            <div class='task'>
-                <div>In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                <div class='task'>
+                    <div>In this simple assignment you are given a number and have to make it negative. But maybe the number is
+                        already negative?</div>
+                    <div id='rec-'></div>
+                    <div>
+                        <pre>
 function makeNegative(num) {
   return -Math.abs(num);
 }
 </pre>
+                    </div>
                 </div>
-            </div>
 
-            <div class='task'>
-                <div>In Russia regular bus tickets usually consist of 6 digits. The ticket is called lucky when the sum of the first three digits equals to the sum of the last three digits. Write a function to find out whether the ticket is lucky or not. Return true if so, otherwise return false. Consider that input is always a string. Watch examples below.
-
-isLucky('123321') => 1+2+3 = 3+2+1 => true // The ticket is lucky
-isLucky('12341234') => false // Only six-digit numbers allowed :(
-isLucky('12a21a') => false // Letters are not allowed :(
-isLucky('100200') => false // :(
-isLucky('22') => false // :(
-isLucky('abcdef') => false // :(</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                <div class='task'>
+                    <div>In Russia regular bus tickets usually consist of 6 digits. The ticket is called lucky when the sum of
+                        the first three digits equals to the sum of the last three digits. Write a function to find out whether
+                        the ticket is lucky or not. Return true if so, otherwise return false. Consider that input is always
+                        a string. Watch examples below. isLucky('123321') => 1+2+3 = 3+2+1 => true // The ticket is lucky
+                        isLucky('12341234') => false // Only six-digit numbers allowed :( isLucky('12a21a') => false // Letters
+                        are not allowed :( isLucky('100200') => false // :( isLucky('22') => false // :( isLucky('abcdef')
+                        => false // :(</div>
+                    <div id='rec-'></div>
+                    <div>
+                        <pre>
 function isLucky(ticket) {
   if (ticket.length != 6) return false;
   ticket = ticket.match(/.{3}/g);
@@ -553,34 +482,19 @@ function isLucky(ticket) {
   }
 }
 </pre>
+                    </div>
                 </div>
-            </div>
 
-            <div class='task'>
-                <div>Task
-
-Let's define digit degree of some positive integer as the number of times we need to replace this number with the sum of its digits until we get to a one digit number.
-
-Given an integer n, find its digit degree.
-
-Example
-
-For n = 5, the output should be 0;
-
-For n = 100, the output should be 1;
-
-For n = 91, the output should be 2.
-
-Input/Output
-
-[input] integer n
-
-Constraints: 5 ≤ n ≤ 109.
-[output] an integer
-</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                <div class='task'>
+                    <div>Task Let's define digit degree of some positive integer as the number of times we need to replace this
+                        number with the sum of its digits until we get to a one digit number. Given an integer n, find its
+                        digit degree. Example For n = 5, the output should be 0; For n = 100, the output should be 1; For
+                        n = 91, the output should be 2. Input/Output [input] integer n Constraints: 5 ≤ n ≤ 109. [output]
+                        an integer
+                    </div>
+                    <div id='rec-'></div>
+                    <div>
+                        <pre>
 function digitDegree(n) {
   n = (''+n).split('');
   for (var i = 0; n.length > 1; i++) {
@@ -589,29 +503,16 @@ function digitDegree(n) {
   return i;
 }
 </pre>
+                    </div>
                 </div>
-            </div>
 
-            <div class='task'>
-                <div>Task
-
-Given an integer n, find the maximal number you can obtain by deleting exactly one digit of the given number.
-
-Example
-
-For n = 152, the output should be 52;
-
-For n = 1001, the output should be 101.
-
-Input/Output
-
-[input] integer n
-
-Constraints: 10 ≤ n ≤ 1000000.
-[output] an integer</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                <div class='task'>
+                    <div>Task Given an integer n, find the maximal number you can obtain by deleting exactly one digit of the
+                        given number. Example For n = 152, the output should be 52; For n = 1001, the output should be 101.
+                        Input/Output [input] integer n Constraints: 10 ≤ n ≤ 1000000. [output] an integer</div>
+                    <div id='rec-'></div>
+                    <div>
+                        <pre>
 function deleteDigit(n) {
   let arr = [];
   n = (''+n).split('');
@@ -621,33 +522,20 @@ function deleteDigit(n) {
   return Math.max.apply(null, arr.map( a => parseInt(a)));  
 }
 </pre>
+                    </div>
                 </div>
-            </div>
 
-            <div class='task'>
-                <div>Mr. Scrooge has a sum of money 'P' that wants to invest, and he wants to know how many years 'Y' this sum has to be kept in the bank in order for this sum of money to amount to 'D'.
-
-The sum is kept for 'Y' years in the bank where interest 'I' is paid yearly, and the new sum is re-invested yearly after paying tax 'T'
-
-Note that the principal is not taxed but only the year's accrued interest
-
-Example:
-
-  Let P be the Principal = 1000.00      
-  Let I be the Interest Rate = 0.05      
-  Let T be the Tax Rate = 0.18      
-  Let D be the Desired Sum = 1100.00
-
-
-After 1st Year -->
-  P = 1041.00
-After 2nd Year -->
-  P = 1083.86
-After 3rd Year -->
-  P = 1128.30</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                <div class='task'>
+                    <div>Mr. Scrooge has a sum of money 'P' that wants to invest, and he wants to know how many years 'Y' this
+                        sum has to be kept in the bank in order for this sum of money to amount to 'D'. The sum is kept for
+                        'Y' years in the bank where interest 'I' is paid yearly, and the new sum is re-invested yearly after
+                        paying tax 'T' Note that the principal is not taxed but only the year's accrued interest Example:
+                        Let P be the Principal = 1000.00 Let I be the Interest Rate = 0.05 Let T be the Tax Rate = 0.18 Let
+                        D be the Desired Sum = 1100.00 After 1st Year --> P = 1041.00 After 2nd Year --> P = 1083.86 After
+                        3rd Year --> P = 1128.30</div>
+                    <div id='rec-'></div>
+                    <div>
+                        <pre>
 function calculateYears(principal, interest, tax, desired) {
     if (desired == principal) return 0;
     for (var i = 0; principal <= desired; i++) {
@@ -656,24 +544,18 @@ function calculateYears(principal, interest, tax, desired) {
     return i;
 }
 </pre>
+                    </div>
                 </div>
-            </div>
 
-            <div class='task'>
-                <div>You are given an array (which will have a length of at least 3, but could be very large) containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. Write a method that takes the array as an argument and returns N.
-
-For example:
-
-[2, 4, 0, 100, 4, 11, 2602, 36]
-
-Should return: 11
-
-[160, 3, 1719, 19, 11, 13, -21]
-
-Should return: 160</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                <div class='task'>
+                    <div>You are given an array (which will have a length of at least 3, but could be very large) containing integers.
+                        The array is either entirely comprised of odd integers or entirely comprised of even integers except
+                        for a single integer N. Write a method that takes the array as an argument and returns N. For example:
+                        [2, 4, 0, 100, 4, 11, 2602, 36] Should return: 11 [160, 3, 1719, 19, 11, 13, -21] Should return:
+                        160</div>
+                    <div id='rec-'></div>
+                    <div>
+                        <pre>
 function findOutlier(integers){
   if (integers.filter( a => a%2!=0 ).length > integers.filter( a => a%2==0 ).length) {
     return parseInt(integers.filter(function(a){ if (a%2 == 0) return a+''} ).join(''));
@@ -682,32 +564,28 @@ function findOutlier(integers){
   }
 }
 </pre>
+                    </div>
                 </div>
-            </div>
 
-            <div class='task'>
-                <div>You are going to be given an array of integers. Your job is to take that array and find an index N where the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If there is no index that would make this happen, return -1.
-
-#For example:
-
-Let's say you are given the array {1,2,3,4,3,2,1}:
-Your function will return the index 3, because at the 3rd position of the array, the sum of left side of the index ({1,2,3}) and the sum of the right side of the index ({3,2,1}) both equal 6.
-
-Let's look at another one.
-You are given the array {1,100,50,-51,1,1}:
-Your function will return the index 1, because at the 1st position of the array, the sum of left side of the index ({1}) and the sum of the right side of the index ({50,-51,1,1}) both equal 1.
-
-Note: Please remember that in most programming/scripting languages the index of an array starts at 0.
-
-#Input: An integer array of length 0 < arr < 1000. The numbers in the array can be any integer positive or negative.
-
-#Output: The lowest index N where the side to the left of N is equal to the side to the right of N. If you do not find an index that fits these rules, then you will return -1.
-
-#Note: If you are given an array with multiple answers, return the lowest correct index.
-An empty array should be treated like a 0 in this problem.</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                <div class='task'>
+                    <div>You are going to be given an array of integers. Your job is to take that array and find an index N where
+                        the sum of the integers to the left of N is equal to the sum of the integers to the right of N. If
+                        there is no index that would make this happen, return -1. #For example: Let's say you are given the
+                        array {1,2,3,4,3,2,1}: Your function will return the index 3, because at the 3rd position of the
+                        array, the sum of left side of the index ({1,2,3}) and the sum of the right side of the index ({3,2,1})
+                        both equal 6. Let's look at another one. You are given the array {1,100,50,-51,1,1}: Your function
+                        will return the index 1, because at the 1st position of the array, the sum of left side of the index
+                        ({1}) and the sum of the right side of the index ({50,-51,1,1}) both equal 1. Note: Please remember
+                        that in most programming/scripting languages the index of an array starts at 0. #Input: An integer
+                        array of length 0
+                        < arr < 1000. The numbers in the array can be any integer positive or negative.
+                            #Output: The lowest index N where the side to the left of N is equal to the side to the right of
+                            N. If you do not find an index that fits these rules, then you will return -1. #Note: If you are
+                            given an array with multiple answers, return the lowest correct index. An empty array should be treated
+                            like a 0 in this problem.</div>
+                            <div id='rec-'></div>
+                            <div>
+                                <pre>
 function findEvenIndex(arr){
 	var sum = function(a,b){return a+b;};
 	var result = [];
@@ -723,27 +601,17 @@ function findEvenIndex(arr){
   	if (Math.max.apply(null, result) >= 0) { return Math.max.apply(null, result) } else {return -1};
 }
 </pre>
-                </div>
-            </div>
+                            </div>
+                    </div>
 
-            <div class='task'>
-                <div>Build Tower
-
-Build Tower by the following given argument:
-number of floors (integer and always greater than 0).
-
-Tower block is represented as *
-
-Python: return a list;
-JavaScript: returns an Array;
-C#: returns a string[];
-PHP: returns an array;
-C++: returns a vector<string>;
-Haskell: returns a [String];
-Have fun!</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                    <div class='task'>
+                        <div>Build Tower Build Tower by the following given argument: number of floors (integer and always greater
+                            than 0). Tower block is represented as * Python: return a list; JavaScript: returns an Array;
+                            C#: returns a string[]; PHP: returns an array; C++: returns a vector
+                            <string>; Haskell: returns a [String]; Have fun!</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
 function towerBuilder(nFloors) {
   if (nFloors == 1) {return ['*']};
   var arr = [],
@@ -756,31 +624,23 @@ function towerBuilder(nFloors) {
   return arr;
 }
 </pre>
-                </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div class='task'>
-                <div>The input is a string str of digits. Cut the string into chunks (a chunk here is a substring of the initial string) of size sz (ignore the last chunk if its size is less than sz).
-
-If a chunk represents an integer such as the sum of the cubes of its digits is divisible by 2, reverse that chunk; otherwise rotate it to the left by one position. Put together these modified chunks and return the result as a string.
-
-If
-
-sz is <= 0 or if str is empty return ""
-sz is greater (>) than the length of str it is impossible to take a chunk of size sz hence return "".
-Examples:
-revrot("123456987654", 6) --> "234561876549"
-revrot("123456987653", 6) --> "234561356789"
-revrot("66443875", 4) --> "44668753"
-revrot("66443875", 8) --> "64438756"
-revrot("664438769", 8) --> "67834466"
-revrot("123456779", 8) --> "23456771"
-revrot("", 8) --> ""
-revrot("123456779", 0) --> "" 
-revrot("563000655734469485", 4) --> "0365065073456944"</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                    <div class='task'>
+                        <div>The input is a string str of digits. Cut the string into chunks (a chunk here is a substring of the
+                            initial string) of size sz (ignore the last chunk if its size is less than sz). If a chunk represents
+                            an integer such as the sum of the cubes of its digits is divisible by 2, reverse that chunk;
+                            otherwise rotate it to the left by one position. Put together these modified chunks and return
+                            the result as a string. If sz is
+                            <=0 or if str is empty return "" sz is greater (>) than the length of str it is impossible to take a chunk of size sz hence return "". Examples:
+                                revrot("123456987654", 6) --> "234561876549" revrot("123456987653", 6) --> "234561356789"
+                                revrot("66443875", 4) --> "44668753" revrot("66443875", 8) --> "64438756" revrot("664438769",
+                                8) --> "67834466" revrot("123456779", 8) --> "23456771" revrot("", 8) --> "" revrot("123456779",
+                                0) --> "" revrot("563000655734469485", 4) --> "0365065073456944"</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
 function revrot(str, sz) {
   if (sz <= 0 || str == '') { return '' };
   if (sz > str.length) { return '' };
@@ -799,24 +659,18 @@ function revrot(str, sz) {
 	return splitted.join('');
 }
 </pre>
-                </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div class='task'>
-                <div>The goal of this exercise is to convert a string to a new string where each character in the new string is '(' if that character appears only once in the original string, or ')' if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
-
-Examples:
-
-"din" => "((("
-
-"recede" => "()()()"
-
-"Success" => ")())())"
-
-"(( @" => "))(("</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                    <div class='task'>
+                        <div>The goal of this exercise is to convert a string to a new string where each character in the new
+                            string is '(' if that character appears only once in the original string, or ')' if that character
+                            appears more than once in the original string. Ignore capitalization when determining if a character
+                            is a duplicate. Examples: "din" => "(((" "recede" => "()()()" "Success" => ")())())" "(( @" =>
+                            "))(("</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
 function duplicateEncode(word){
     var tmp = word.toLowerCase();
     var str = [];
@@ -832,25 +686,20 @@ function spec(str) {
     return (str+'').replace(/[.?*+^$[\]\\(){}|-]/g, "\\$&");
 };
 </pre>
-                </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div class='task'>
-                <div>In a small town the population is p0 = 1000 at the beginning of a year. The population regularly increases by 2 percent per year and moreover 50 new inhabitants per year come to live in the town. How many years does the town need to see its population greater or equal to p = 1200 inhabitants?
-
-At the end of the first year there will be: 
-1000 + 1000 * 0.02 + 50 => 1070 inhabitants
-
-At the end of the 2nd year there will be: 
-1070 + 1070 * 0.02 + 50 => 1141 inhabitants (number of inhabitants is an integer)
-
-At the end of the 3rd year there will be:
-1141 + 1141 * 0.02 + 50 => 1213
-
-It will need 3 entire years.</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                    <div class='task'>
+                        <div>In a small town the population is p0 = 1000 at the beginning of a year. The population regularly
+                            increases by 2 percent per year and moreover 50 new inhabitants per year come to live in the
+                            town. How many years does the town need to see its population greater or equal to p = 1200 inhabitants?
+                            At the end of the first year there will be: 1000 + 1000 * 0.02 + 50 => 1070 inhabitants At the
+                            end of the 2nd year there will be: 1070 + 1070 * 0.02 + 50 => 1141 inhabitants (number of inhabitants
+                            is an integer) At the end of the 3rd year there will be: 1141 + 1141 * 0.02 + 50 => 1213 It will
+                            need 3 entire years.</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
 function nbYear(p0, percent, aug, p) {
     var total = p0 + p0*(percent/100) + aug;
 	  for (var i = 1; total < p; i++) {
@@ -859,21 +708,17 @@ function nbYear(p0, percent, aug, p) {
     return i;
 }
 </pre>
-                </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div class='task'>
-                <div>This time no story, no theory. The examples below show you how to write function accum:
-
-Examples:
-
-accum("abcd");    // "A-Bb-Ccc-Dddd"
-accum("RqaEzty"); // "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
-accum("cwAt");    // "C-Ww-Aaa-Tttt"
-The parameter of accum is a string which includes only letters from a..z and A..Z.</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                    <div class='task'>
+                        <div>This time no story, no theory. The examples below show you how to write function accum: Examples:
+                            accum("abcd"); // "A-Bb-Ccc-Dddd" accum("RqaEzty"); // "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy" accum("cwAt");
+                            // "C-Ww-Aaa-Tttt" The parameter of accum is a string which includes only letters from a..z and
+                            A..Z.</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
 function accum(s) {
 	var tmpArr = s.split('');
 	var tmpStr= [];
@@ -888,97 +733,97 @@ function capitalizeFirstLetter(str) {
     return tmpStr.charAt(0).toUpperCase() + tmpStr.slice(1);
 }
 </pre>
-                </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div class='task'>
-                <div>Task</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
-
-</pre>
-                </div>
-            </div>
-
-            <div class='task'>
-                <div>Task</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                    <div class='task'>
+                        <div>Task</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
 
 </pre>
-                </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div class='task'>
-                <div>Task</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
-
-</pre>
-                </div>
-            </div>
-
-            <div class='task'>
-                <div>Task</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                    <div class='task'>
+                        <div>Task</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
 
 </pre>
-                </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div class='task'>
-                <div>Task</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
-
-</pre>
-                </div>
-            </div>
-
-            <div class='task'>
-                <div>Task</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                    <div class='task'>
+                        <div>Task</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
 
 </pre>
-                </div>
-            </div>
+                        </div>
+                    </div>
 
-            <div class='task'>
-                <div>Task</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
-
-</pre>
-                </div>
-            </div>
-
-            <div class='task'>
-                <div>Task</div>
-                <div id='rec-'></div>
-                <div>
-                    <pre>
+                    <div class='task'>
+                        <div>Task</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
 
 </pre>
+                        </div>
+                    </div>
+
+                    <div class='task'>
+                        <div>Task</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
+
+</pre>
+                        </div>
+                    </div>
+
+                    <div class='task'>
+                        <div>Task</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
+
+</pre>
+                        </div>
+                    </div>
+
+                    <div class='task'>
+                        <div>Task</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
+
+</pre>
+                        </div>
+                    </div>
+
+                    <div class='task'>
+                        <div>Task</div>
+                        <div id='rec-'></div>
+                        <div>
+                            <pre>
+
+</pre>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-
-
-        </div>
-    </div>
-    <div class="footer">
-        All right's re... and bla, bla, bla...
-    </div>
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../static/js/test.js"></script>
+            <div class="footer">
+                All right's re... and bla, bla, bla...
+            </div>
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="../static/js/test.js"></script>
 </body>
 
 </html>
