@@ -26,13 +26,13 @@ var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "A
 var config = {
     type: 'line',
     data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: ["0", "~", "~", "~", "~", "~", "~"],
         datasets: [{
             label: "До чипа",
-            backgroundColor: window.chartColors.red,
+            backgroundColor: window.chartColors.orange,
             borderColor: window.chartColors.orange,
             data: [
-                10,
+                0,
                 20,
                 30,
                 40,
@@ -44,10 +44,10 @@ var config = {
         }, {
             label: "После чипа",
             fill: -8,
-            backgroundColor: window.chartColors.blue,
+            backgroundColor: window.chartColors.green,
             borderColor: window.chartColors.green,
             data: [
-                20,
+                9,
                 30,
                 40,
                 50,
@@ -76,14 +76,14 @@ var config = {
                 display: true,
                 scaleLabel: {
                     display: true,
-                    labelString: 'Month'
+                    labelString: 'Время'
                 }
             }],
             yAxes: [{
                 display: true,
                 scaleLabel: {
                     display: true,
-                    labelString: 'Value'
+                    labelString: 'Значение'
                 }
             }]
         }
