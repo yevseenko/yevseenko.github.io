@@ -1,4 +1,3 @@
-console.log('Page loaded');
 
 jQuery(function($) {
   const $auto = $('#auto');
@@ -19,7 +18,8 @@ jQuery(function($) {
     var html = $.map(auma, function(lcn){
         return '<option value="' + lcn + '">' + lcn + '</option>'
     }).join('');
-    $mark.html(html) 
+    $mark.html(html);
   });
 });
 
+console.log('Page loaded');
