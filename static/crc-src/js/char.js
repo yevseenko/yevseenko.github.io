@@ -57,11 +57,11 @@ jQuery(function ($) {
         backgroundColor: window.chartColors.orange,
         borderColor: window.chartColors.orange,
         data: dataOne.map(x => Math.round(x)),
-        fill: -1,
+        fill: false,
       }, {
         label: "После чипа",
-        fill: -8,
-        backgroundColor: window.chartColors.green,
+        fill: "-1",
+        backgroundColor: "rgba(75, 192, 192, .3)",
         borderColor: window.chartColors.green,
         data: dataOne.map(x => Math.round(x + x / 100 * 30)),
       }]
@@ -107,8 +107,8 @@ jQuery(function ($) {
         fill: false,
       }, {
         label: "После чипа",
-        fill: false,
-        backgroundColor: window.chartColors.blue,
+        fill: "-1",
+        backgroundColor: "rgba(54, 162, 235, .3)",
         borderColor: window.chartColors.blue,
         data: dataTwo.map(x => Math.round(x + x / 100 * 30)),
       }]
