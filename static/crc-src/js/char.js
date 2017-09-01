@@ -22,6 +22,11 @@ jQuery(function ($) {
   });
 });
 
+var currentHp = 171;
+var currentTorque = 370;
+var dataOne = [0, currentHp/4, currentHp/3, currentHp/1.5, currentHp, currentHp/1.5, currentHp/3]
+var dataTwo = [0, currentTorque/5, currentTorque/3.5, currentTorque/1.5, currentTorque, currentTorque/1.5, currentTorque/4]
+
 var config = {
   type: 'line',
   data: {
@@ -30,30 +35,14 @@ var config = {
       label: "До чипа",
       backgroundColor: window.chartColors.orange,
       borderColor: window.chartColors.orange,
-      data: [
-        0,
-        20,
-        30,
-        40,
-        65,
-        40,
-        30
-      ],
+      data: dataOne.map(x => Math.round(x)),
       fill: -1,
     }, {
       label: "После чипа",
       fill: -8,
       backgroundColor: window.chartColors.green,
       borderColor: window.chartColors.green,
-      data: [
-        9,
-        30,
-        40,
-        50,
-        85,
-        50,
-        40
-      ],
+      data: dataOne.map( x => Math.round(x + x/100*30) ),
     }]
   },
   options: {
@@ -97,30 +86,14 @@ var configBtx = {
       label: "До чипа",
       backgroundColor: window.chartColors.red,
       borderColor: window.chartColors.red,
-      data: [
-        0,
-        50,
-        70,
-        100,
-        137,
-        110,
-        101
-      ],
+      data: dataTwo.map( x => Math.round(x) ),
       fill: false,
     }, {
       label: "После чипа",
       fill: false,
       backgroundColor: window.chartColors.blue,
       borderColor: window.chartColors.blue,
-      data: [
-        9,
-        70,
-        95,
-        135,
-        162,
-        123,
-        101
-      ],
+      data: dataTwo.map( x => Math.round(x + x/100*30) ),
     }]
   },
   options: {
