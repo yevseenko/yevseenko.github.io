@@ -1,25 +1,28 @@
 
 jQuery(function ($) {
-  const $auto = $('#auto');
-  const $mark = $('#mark');
+  var $auto = $('#auto');
+  var $mark = $('#mark');
 
   var markList = {
-    'BMW': ['Тележка', 'Космический корабль', 'Без колес'],
-    'Mers': ['Тележка', 'Космический корабль', 'Без колес'],
-    'Mars': ['Тележка', 'Космический корабль', 'Без колес'],
-    'Saturn': ['Тележка', 'Космический корабль', 'Без колес'],
-    'Balkon': ['Тележка', 'Космический корабль', 'Без колес']
+    'BMW': [{name: 'X5', hp: 171, torque: 250}, {name: '320x', hp: 250, torque: 350}, {name: 'zxr89', hp: 450, torque: 700}],
+    'Mers': [{name: 'g.546 2.4', hp: 195, torque: 275}, {name: 'JD564 2.8', hp: 320, torque: 400}, {name: '720xxq 4.0', hp: 372, torque: 650}],
   }
 
   $auto.change(function () {
     var autoMark = $(this).val(),
       auma = markList[autoMark] || [];
 
-    var html = $.map(auma, function (lcn) {
-      return '<option value="' + lcn + '">' + lcn + '</option>'
+    var html = '<option></option>' + $.map(auma, function (lcn) {
+      return '<option value="' + lcn.name + '">' + lcn.name + '</option>'
     }).join('');
     $mark.html(html);
   });
+
+  $mark.change(function() {
+    var current = $(this).val();
+    console.log(current);
+  })
+
 });
 
 var currentHp = 171;
@@ -30,7 +33,7 @@ var dataTwo = [0, currentTorque/5, currentTorque/3.5, currentTorque/1.5, current
 var config = {
   type: 'line',
   data: {
-    labels: ["0", "~", "~", "~", "~", "~", "~"],
+    labels: ["", "", "", "", "", "", ""],
     datasets: [{
       label: "До чипа",
       backgroundColor: window.chartColors.orange,
@@ -61,11 +64,7 @@ var config = {
     },
     scales: {
       xAxes: [{
-        display: true,
-        scaleLabel: {
-          display: true,
-          labelString: 'Время'
-        }
+        display: true        
       }],
       yAxes: [{
         display: true,
@@ -81,7 +80,7 @@ var config = {
 var configBtx = {
   type: 'line',
   data: {
-    labels: ["0", "~", "~", "~", "~", "~", "~"],
+    labels: ["", "", "", "", "", "", ""],
     datasets: [{
       label: "До чипа",
       backgroundColor: window.chartColors.red,
@@ -113,10 +112,6 @@ var configBtx = {
     scales: {
       xAxes: [{
         display: true,
-        scaleLabel: {
-          display: true,
-          labelString: 'Время'
-        }
       }],
       yAxes: [{
         display: true,
