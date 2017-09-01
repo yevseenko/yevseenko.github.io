@@ -23,6 +23,9 @@ jQuery(function ($) {
       return thx;
     }).join('');
     $mark.html(html);
+
+    addData(hpLine, []);
+    addData(torqueLine, []);
   });
 
   $mark.change(function () {
