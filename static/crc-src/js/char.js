@@ -3,6 +3,12 @@ jQuery(function ($) {
   var $auto = $('#auto');
   var $mark = $('#mark');
   var $stage = $('#stage');
+  var chartButton = $('#chart-button');
+  var chartForm = $('#chart-form');
+
+  chartButton.click(function() {
+    chartForm.toggleClass('hidden');
+  });
 
   var currentHp, currentTorque;
   var stage = 20;
@@ -149,7 +155,7 @@ jQuery(function ($) {
 
 
   function addData(chart, data) {
-    chart.data.datasets[0].data = data;
+    chart.data.datasets[0].data = data.map( item => Math.round(item));
     chart.data.datasets[1].data = data.map(x => Math.round(x + x / 100 * stage));    
     chart.update();
   }

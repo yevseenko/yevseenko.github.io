@@ -15,36 +15,39 @@
 
 <body>
   <div class="container">
-    <div class="form-inline">
+      <button class="btn btn-danger btn-large" id="chart-button">Прокачай своё авто</button>
+      <br /><br />
+      <div id="chart-form">
+        <div class="form-inline">
 
-      <div class="form-group">
-        <div class="input-group">
+          <div class="form-group">
+            <div class="input-group">
 
-          <div class="input-group-addon">Марка авто:</div>
+              <div class="input-group-addon">Марка авто:</div>
 
-          <select class="form-control" id="auto">
-            <option></option>
-            <option>BMW</option>
-            <option>Mers</option>
-          </select>
+              <select class="form-control" id="auto">
+                <option></option>
+                <option>BMW</option>
+                <option>Mers</option>
+              </select>
 
-        </div>
-
-
-
-        <div class="input-group">
-          <div class="input-group-addon">Модель:</div>
-
-          <select style="width: 200px" class="form-control" id="mark"></select>
-
-        </div>
+            </div>
 
 
 
-        <div class="input-group">
-          <div class="input-group-addon">Чип:</div>
+            <div class="input-group">
+              <div class="input-group-addon">Модель:</div>
 
-          <select class="form-control" id="stage">
+              <select style="width: 200px" class="form-control" id="mark"></select>
+
+            </div>
+
+
+
+            <div class="input-group">
+              <div class="input-group-addon">Чип:</div>
+
+              <select class="form-control" id="stage">
             <option data-stage="20">Stage 1</option>
             <option data-stage="30">Stage 2</option>
             <option data-stage="40">Stage 3</option>
@@ -52,19 +55,21 @@
             <option data-stage="90">Stage 5</option>
           </select>
 
-        </div>
-      </div>
+            </div>
 
-    </div>
+          </div>
+        </div>
+
     <div class="col-sm-6">
       <canvas id="chart-0"></canvas>
     </div>
+
     <div class="col-sm-6">
       <canvas id="chart-1"></canvas>
     </div>
+
+    </div>
   </div>
-
-
 
   <script src="js/char.js"></script>
 </body>
