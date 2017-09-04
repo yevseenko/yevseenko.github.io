@@ -20,3 +20,7 @@ canvas {
 .chart-button {
   width: 100%;
 }
+
+.chart-order-form {
+  padding-top: 20px;
+}

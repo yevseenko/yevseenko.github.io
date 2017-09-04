@@ -5,6 +5,10 @@ jQuery(function ($) {
     $stage = $('#stage'),
     $chartButton = $('#chart-button'),
     $chartButtonOrder = $('#chart-button-order'),
+    $chartModOrder = $('#chart-mod-order'),
+    $chartAutoOrder = $('#chart-auto-order'),
+    $chartStageOrder = $('#chart-stage-order'),
+    $chartModelOrder = $('#chart-model-order'),
     $chartForm = $('#chart-form'),
     $chartInfo = $('#chart-info'),
     $chartOrderForm = $('#chart-order-form');
@@ -27,9 +31,10 @@ jQuery(function ($) {
     model = model[1].split('%20').join(' ');
     var stage = arr[2].split('=');
     stage = stage[1].split('%20').join(' ');
-    var html = '<b>Производитель:</b>' + manufacturer + ' <b>Модель:</b> ' + model + ' <b>Чип:</b> ' + stage;
-
-    $chartOrderForm.html(html);
+    
+    $chartAutoOrder.val(manufacturer);
+    $chartStageOrder.val(stage);
+    $chartModelOrder.val(model);
   })
 
   var currentHp, currentTorque;
