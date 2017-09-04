@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Point to Point</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/custom-chart.css" rel="stylesheet">
   <script src="js/chart-js.js"></script>
   <script src="js/jquery-3.2.1.js"></script>
   <script src="js/utils.js"></script>
@@ -16,15 +16,15 @@
 <body>
   <div class="container chart-auto">
       <button class="btn btn-danger center-block" id="chart-button"> Прокачай своё авто </button>
-      <div id="chart-form" class="chart-form hidden">
+      <form id="chart-form" class="chart-form hidden">
         <div class="form-inline">
 
           <div class="form-group center-block">
             <div class="input-group">
 
-              <div class="input-group-addon">Марка авто:</div>
+              <div class="input-group-addon">Производитель:</div>
 
-              <select class="form-control" id="auto">
+              <select class="form-control" id="auto" name="manufacturer">
                 <option></option>
                 <option>BMW</option>
                 <option>Mers</option>
@@ -37,16 +37,21 @@
             <div class="input-group">
               <div class="input-group-addon">Модель:</div>
 
-              <select style="width: 200px" class="form-control" id="mark"></select>
+              <select style="width: 200px" class="form-control" id="mark" name="model"></select>
 
             </div>
 
+            <div class="input-group">
+              <div class="input-group-addon">Модификация:</div>
 
+              <select style="width: 100px" class="form-control" id="auto-engine"></select>
+
+            </div>
 
             <div class="input-group">
               <div class="input-group-addon">Чип:</div>
 
-              <select class="form-control" id="stage">
+              <select class="form-control" id="stage" name="stage">
             <option data-stage="20">Stage 1</option>
             <option data-stage="30">Stage 2</option>
             <option data-stage="40">Stage 3</option>
@@ -67,10 +72,17 @@
       <canvas id="chart-1"></canvas>
     </div>
     <div id="chart-info" class="chart-info text-success"></div>
+
+    <button class="btn btn-success center-block" id="chart-button-order">Оформить заказ</button>
+
+    <div id="chart-order-form" class="hidden">
+      <h3>Hello world</div>
+      </form>
+
     </div>
   </div>
 
-  <script src="js/char.js"></script>
+  <script src="js/chart.js"></script>
 </body>
 
 </html>

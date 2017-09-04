@@ -1,15 +1,36 @@
 
 jQuery(function ($) {
-  var $auto = $('#auto');
-  var $mark = $('#mark');
-  var $stage = $('#stage');
-  var chartButton = $('#chart-button');
-  var chartForm = $('#chart-form');
-  var chartInfo = $('#chart-info');
+  var $auto = $('#auto'),
+    $mark = $('#mark'),
+    $stage = $('#stage'),
+    $chartButton = $('#chart-button'),
+    $chartButtonOrder = $('#chart-button-order'),
+    $chartForm = $('#chart-form'),
+    $chartInfo = $('#chart-info'),
+    $chartOrderForm = $('#chart-order-form');
 
-  chartButton.click(function () {
-    chartForm.toggleClass('hidden');
+  $chartForm.submit(function() {
+    return false;
+  })
+  
+  $chartButton.click(function () {
+    $chartForm.toggleClass('hidden');
   });
+
+  $chartButtonOrder.click(function() {
+    $chartOrderForm.removeClass('hidden');
+
+    var arr = $chartForm.serialize().split('&');
+    var manufacturer = arr[0].split('=');
+        manufacturer = manufacturer[1];
+    var model = arr[1].split('=');
+        model = model[1].split('%20').join(' ');
+    var stage = arr[2].split('=');
+        stage = stage[1].split('%20').join(' ');
+    var html = '<b>Производитель:</b>' + manufacturer + ' <b>Модель:</b> ' + model + ' <b>Чип:</b> ' + stage;
+    
+    $chartOrderForm.html(html);
+  })
 
   var currentHp, currentTorque;
   var stage = 20;
@@ -52,9 +73,9 @@ jQuery(function ($) {
     stage = $('option:selected', this).attr('data-stage');
 
     if (stage >= 40) {
-      chartInfo.html('<h3>Требуется установка дополнительных модулей</h3>');
+      $chartInfo.html('<h3>Требуется установка дополнительных модулей</h3>');
     } else {
-      chartInfo.html('');
+      $chartInfo.html('');
     }
 
     changeData(hpLine, dataOne);
@@ -165,13 +186,6 @@ jQuery(function ($) {
 
   function changeData(chart, data) {
     chart.data.datasets[1].data = data.map(x => Math.round(x + x / 100 * stage));
-    chart.update();
-  }
-
-  function removeData(chart) {
-    chart.data.datasets.forEach((dataset) => {
-      dataset.data.pop();
-    });
     chart.update();
   }
 });
