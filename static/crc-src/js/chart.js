@@ -9,26 +9,26 @@ jQuery(function ($) {
     $chartInfo = $('#chart-info'),
     $chartOrderForm = $('#chart-order-form');
 
-  $chartForm.submit(function() {
+  $chartForm.submit(function () {
     return false;
   })
-  
+
   $chartButton.click(function () {
     $chartForm.toggleClass('hidden');
   });
 
-  $chartButtonOrder.click(function() {
+  $chartButtonOrder.click(function () {
     $chartOrderForm.removeClass('hidden');
 
     var arr = $chartForm.serialize().split('&');
     var manufacturer = arr[0].split('=');
-        manufacturer = manufacturer[1];
+    manufacturer = manufacturer[1];
     var model = arr[1].split('=');
-        model = model[1].split('%20').join(' ');
+    model = model[1].split('%20').join(' ');
     var stage = arr[2].split('=');
-        stage = stage[1].split('%20').join(' ');
+    stage = stage[1].split('%20').join(' ');
     var html = '<b>Производитель:</b>' + manufacturer + ' <b>Модель:</b> ' + model + ' <b>Чип:</b> ' + stage;
-    
+
     $chartOrderForm.html(html);
   })
 

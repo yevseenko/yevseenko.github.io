@@ -15,72 +15,60 @@
 
 <body>
   <div class="container chart-auto">
-      <button class="btn btn-danger center-block" id="chart-button"> Прокачай своё авто </button>
-      <form id="chart-form" class="chart-form hidden">
-        <div class="form-inline">
+    <button class="btn btn-danger center-block" id="chart-button"> Прокачай своё авто </button>
+    <form id="chart-form" class="chart-form hidden">
+      <div class="form-inline">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">Производитель:</div>
+            <select class="form-control" id="auto" name="manufacturer">
+              <option></option>
+              <option>BMW</option>
+              <option>Mers</option>
+            </select>
+          </div>
 
-          <div class="form-group center-block">
-            <div class="input-group">
+          <div class="input-group">
+            <div class="input-group-addon">Модель:</div>
+            <select style="width: 200px" class="form-control" id="mark" name="model"></select>
+          </div>
 
-              <div class="input-group-addon">Производитель:</div>
+          <div class="input-group">
+            <div class="input-group-addon">Модификация:</div>
+            <select style="width: 100px" class="form-control" id="auto-engine"></select>
+          </div>
 
-              <select class="form-control" id="auto" name="manufacturer">
-                <option></option>
-                <option>BMW</option>
-                <option>Mers</option>
-              </select>
-
-            </div>
-
-
-
-            <div class="input-group">
-              <div class="input-group-addon">Модель:</div>
-
-              <select style="width: 200px" class="form-control" id="mark" name="model"></select>
-
-            </div>
-
-            <div class="input-group">
-              <div class="input-group-addon">Модификация:</div>
-
-              <select style="width: 100px" class="form-control" id="auto-engine"></select>
-
-            </div>
-
-            <div class="input-group">
-              <div class="input-group-addon">Чип:</div>
-
-              <select class="form-control" id="stage" name="stage">
-            <option data-stage="20">Stage 1</option>
-            <option data-stage="30">Stage 2</option>
-            <option data-stage="40">Stage 3</option>
-            <option data-stage="60">Stage 4</option>
-            <option data-stage="90">Stage 5</option>
-          </select>
-
-            </div>
-
+          <div class="input-group">
+            <div class="input-group-addon">Чип:</div>
+            <select class="form-control" id="stage" name="stage">
+              <option data-stage="20">Stage 1</option>
+              <option data-stage="30">Stage 2</option>
+              <option data-stage="40">Stage 3</option>
+              <option data-stage="60">Stage 4</option>
+              <option data-stage="90">Stage 5</option>
+            </select>
           </div>
         </div>
+      </div>
 
-    <div class="col-sm-6">
-      <canvas id="chart-0"></canvas>
-    </div>
+      <div class="col-sm-6">
+        <canvas id="chart-0"></canvas>
+      </div>
 
-    <div class="col-sm-6">
-      <canvas id="chart-1"></canvas>
-    </div>
-    <div id="chart-info" class="chart-info text-success"></div>
+      <div class="col-sm-6">
+        <canvas id="chart-1"></canvas>
+      </div>
 
-    <button class="btn btn-success center-block" id="chart-button-order">Оформить заказ</button>
+      <div id="chart-info" class="chart-info text-success"></div>
 
-    <div id="chart-order-form" class="hidden">
-      <h3>Hello world</div>
-      </form>
+      <button class="btn btn-success center-block" id="chart-button-order">Оформить заказ</button>
 
-    </div>
+      <div id="chart-order-form" class="hidden">
+
+      </div>
+    </form>
   </div>
+
 
   <script src="js/chart.js"></script>
 </body>
