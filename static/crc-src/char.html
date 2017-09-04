@@ -14,13 +14,12 @@
 </head>
 
 <body>
-  <div class="container">
-      <button class="btn btn-danger btn-large" id="chart-button">Прокачай своё авто</button>
-      <br /><br />
-      <div id="chart-form">
+  <div class="container chart-auto">
+      <button class="btn btn-danger center-block" id="chart-button"> Прокачай своё авто </button>
+      <div id="chart-form" class="chart-form hidden">
         <div class="form-inline">
 
-          <div class="form-group">
+          <div class="form-group center-block">
             <div class="input-group">
 
               <div class="input-group-addon">Марка авто:</div>
@@ -67,7 +66,7 @@
     <div class="col-sm-6">
       <canvas id="chart-1"></canvas>
     </div>
-
+    <div id="chart-info" class="chart-info text-success"></div>
     </div>
   </div>
 

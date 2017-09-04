@@ -5,8 +5,9 @@ jQuery(function ($) {
   var $stage = $('#stage');
   var chartButton = $('#chart-button');
   var chartForm = $('#chart-form');
+  var chartInfo = $('#chart-info');
 
-  chartButton.click(function() {
+  chartButton.click(function () {
     chartForm.toggleClass('hidden');
   });
 
@@ -37,7 +38,7 @@ jQuery(function ($) {
   $mark.change(function () {
     var hp = $('option:selected', this).attr('data-hp'),
       torque = $('option:selected', this).attr('data-torque');
-    
+
     currentTorque = Number(torque);
     currentHp = Number(hp);
     dataOne = [0, currentHp / 4, currentHp / 3, currentHp / 1.5, currentHp, currentHp / 1.5, currentHp / 3];
@@ -47,8 +48,14 @@ jQuery(function ($) {
     addData(torqueLine, dataTwo);
   });
 
-  $stage.change(function() {
+  $stage.change(function () {
     stage = $('option:selected', this).attr('data-stage');
+
+    if (stage >= 40) {
+      chartInfo.html('<h3>Требуется установка дополнительных модулей</h3>');
+    } else {
+      chartInfo.html('');
+    }
 
     changeData(hpLine, dataOne);
     changeData(torqueLine, dataTwo);
@@ -62,14 +69,12 @@ jQuery(function ($) {
         label: "До чипа",
         backgroundColor: window.chartColors.orange,
         borderColor: window.chartColors.orange,
-        data: dataOne.map(x => Math.round(x)),
         fill: false,
       }, {
         label: "После чипа",
         fill: "-1",
         backgroundColor: "rgba(75, 192, 192, .3)",
         borderColor: window.chartColors.green,
-        data: dataOne.map(x => Math.round(x + x / 100 * 30)),
       }]
     },
     options: {
@@ -109,14 +114,12 @@ jQuery(function ($) {
         label: "До чипа",
         backgroundColor: window.chartColors.red,
         borderColor: window.chartColors.red,
-        data: dataTwo.map(x => Math.round(x)),
         fill: false,
       }, {
         label: "После чипа",
         fill: "-1",
         backgroundColor: "rgba(54, 162, 235, .3)",
         borderColor: window.chartColors.blue,
-        data: dataTwo.map(x => Math.round(x + x / 100 * 30)),
       }]
     },
     options: {
@@ -148,20 +151,20 @@ jQuery(function ($) {
     }
   };
 
-  var ctx = document.getElementById("chart-0").getContext("2d");
+  var ctx = document.getElementById('chart-0').getContext('2d');
   window.hpLine = new Chart(ctx, config);
-  var btx = document.getElementById("chart-1").getContext("2d");
+  var btx = document.getElementById('chart-1').getContext('2d');
   window.torqueLine = new Chart(btx, configBtx);
 
 
   function addData(chart, data) {
-    chart.data.datasets[0].data = data.map( item => Math.round(item));
-    chart.data.datasets[1].data = data.map(x => Math.round(x + x / 100 * stage));    
+    chart.data.datasets[0].data = data.map(item => Math.round(item));
+    chart.data.datasets[1].data = data.map(x => Math.round(x + x / 100 * stage));
     chart.update();
   }
 
   function changeData(chart, data) {
-    chart.data.datasets[1].data = data.map(x => Math.round(x + x / 100 * stage));    
+    chart.data.datasets[1].data = data.map(x => Math.round(x + x / 100 * stage));
     chart.update();
   }
 

@@ -1,3 +1,22 @@
 body {
   padding-top: 50px;
 }
+
+canvas {
+  padding-top: 20px;
+}
+
+.chart-auto {
+  border: 2px solid rgba(255, 0, 0, 0.51);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.chart-form {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.chart-button {
+  width: 100%;
+}
