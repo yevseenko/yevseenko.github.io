@@ -1,5 +1,6 @@
 body {
   padding-top: 50px;
+  font-family: 'Play', sans-serif;
 }
 
 canvas {
@@ -9,7 +10,7 @@ canvas {
 .chart-auto {
   border: 2px solid rgba(255, 0, 0, 0.51);
   border-radius: 4px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .chart-form {
@@ -23,4 +24,101 @@ canvas {
 
 .chart-order-form {
   padding-top: 20px;
+}
+
+.chart-name {
+  padding-top: 10px;
+}
+
+@keyframes changecolor {
+  0% {
+    border-color: red;
+  }
+  20% {
+    border-color: black;
+  }
+  40% {
+    border-color: green;
+  }
+  60% {
+    border-color: yellow;
+  }
+  80% {
+    border-color: purple;
+  }
+  100% {
+    border-color: white;
+  }
+}
+
+.chart-preview {
+  animation-duration: 1.5s;
+  animation-name: changecolor;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.chart-preview:hover {
+  border-color: green;
+}
+
+.chart-button-class {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  margin: 1em;
+  padding: 1em 2em;
+  box-shadow: inset 0 0 0 2px #f45e61;
+  color: #f45e61;
+  font-size: inherit;
+  font-weight: 700;
+  position: relative;
+  vertical-align: middle;
+  border-radius: 6px;
+}
+
+.chart-button-class::before, .chart-button-class::after {
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.draw {
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+.draw::before, .draw::after {
+  border: 2px solid transparent;
+  border-radius: 6px;
+  width: 0;
+  height: 0;
+}
+.draw::before {
+  top: 0;
+  left: 0;
+}
+.draw::after {
+  bottom: 0;
+  right: 0;
+}
+.draw:hover {
+  color: #60daaa;
+}
+.draw:hover::before, .draw:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.draw:hover::before {
+  border-top-color: #60daaa;
+  border-right-color: #60daaa;
+  -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.draw:hover::after {
+  border-bottom-color: #60daaa;
+  border-left-color: #60daaa;
+  -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }

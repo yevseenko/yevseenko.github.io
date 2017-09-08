@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Point to Point</title>
+  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom-chart.css" rel="stylesheet">
   <script src="js/chart-js.js"></script>
@@ -14,8 +15,26 @@
 </head>
 
 <body>
-  <div class="container chart-auto">
-    <button class="btn btn-danger center-block" id="chart-button"> Прокачай своё авто </button>
+  <div class="container chart-auto chart-preview">
+    <div id="chart-info-preview" class="row">
+      <div class="col-sm-4">
+        <ul>
+          <li>asdasasdasd</li>
+          <li>asdasdasd</li>
+          <li>asdasdasd</li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <ul>
+          <li>asdasasdasd</li>
+          <li>asdasdasd</li>
+          <li>asdasdasd</li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <button class="chart-button-class draw pull-right" id="chart-button">Узнать больше!</button>
+      </div>
+    </div>
     <form id="chart-form" class="chart-form hidden">
       <div class="form-inline">
         <div class="form-group">
@@ -61,7 +80,7 @@
 
       <div id="chart-info" class="chart-info text-success"></div>
 
-      <button class="btn btn-success center-block" id="chart-button-order">Оформить заказ</button>
+      <button class="btn btn-warning center-block" id="chart-button-order">Оформить заказ</button>
 
       <div id="chart-order-form" class="chart-order-form hidden">
         <div class="form-inline">
@@ -70,29 +89,43 @@
               <div class="input-group-addon">Производитель:</div>
               <input type="text" class="form-control" id="chart-auto-order" placeholder="Auto" disabled>
             </div>
-            
+
             <div class="input-group">
               <div class="input-group-addon">Модель:</div>
               <input type="text" class="form-control" id="chart-model-order" placeholder="Mark" disabled>
             </div>
-            
+
             <div class="input-group">
               <div class="input-group-addon">Модификация:</div>
               <input type="text" class="form-control" id="chart-mod-order" placeholder="Mod" disabled>
             </div>
-            
+
             <div class="input-group">
               <div class="input-group-addon">Чип:</div>
               <input type="text" class="form-control" id="chart-stage-order" placeholder="Stage" disabled>
             </div>
-            
+
           </div>
         </div>
-      </div>
-    </form>
-  </div>
 
-  <script src="js/chart.js"></script>
+        <div class="form-inline chart-name" id="chart-name">
+          <div class="form-group has-success col-sm-12">
+            <div class="input-group col-sm-5">
+              <div class="input-group-addon">Имя:</div>
+              <input type="text" class="form-control" id="customer-name" placeholder="Name">
+            </div>
+
+            <div class="input-group col-sm-5">
+              <div class="input-group-addon">Номер телефона:</div>
+              <input type="text" class="form-control" id="customer-phone" placeholder="Phone">
+            </div>
+          </div>
+          <button class="btn btn-success center-block" id="chart-button-order">Отправить форму</button>
+        </div>
+    </form>
+    </div>
+
+    <script src="js/chart.js"></script>
 </body>
 
 </html>

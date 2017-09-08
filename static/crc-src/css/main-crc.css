@@ -1,0 +1,180 @@
+#sp-header, #sp-header .logo { 
+  height: 60px; 
+}
+
+.sp-megamenu-parent > li > a, #offcanvas-toggler { 
+  line-height: 60px; 
+}
+
+#sp-header {
+  border-top: 1px solid #631717;
+  border-bottom: 1px solid #631717;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.aside-menu {
+  	font-size: 14px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+    text-transform: capitalize;
+}
+
+.aside-menu ul>li>a {
+  padding-left: 15px;
+}
+
+.soc-font {
+  font-size: 18px;
+}
+
+.mar-left {
+  margin-left: 5px;
+}
+
+#sp-top2 .sp-column {
+  float: right;
+}
+
+a:hover {
+  color: #e00000;
+}
+p {
+  text-align: justify;
+}
+
+#sp-right {
+  padding-bottom: 20px;
+}
+
+#sp-top2 {
+  padding-right: 30px;
+}
+
+section#sp-bottom {
+  padding: 50px 0;
+}
+
+#services div.col-xs-11, #tuning div.col-xs-11 {
+  padding-bottom: 10px;
+  line-height: 15px;
+}
+
+html {
+  overflow-y: scroll !important;
+}
+
+.modal-open {
+  padding-right: 0 !important;
+}
+
+div.phrases-box {
+  padding-left: 20px;
+}
+
+.dl-horizontal dt {
+  margin: 0;
+}
+
+.btn-primary:active {
+  background-color: #631717;
+}
+
+.btn-primary:focus {
+  background-color: #631717;
+}
+
+.modal {
+  padding-top: 100px;
+}
+
+.img-for-articles {
+  border: 0;
+  vertical-align: middle;
+  border-radius: 4px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  float: left!important;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner {
+    padding: 5px;
+    background: #ececec;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.sp-megamenu-parent .sp-dropdown-sub .sp-dropdown-inner {
+	border-radius: 4px;
+}
+
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item>a {
+	border-radius: 4px;
+}
+
+.logo a {
+	background: -webkit-linear-gradient(left,#000,#f00,#000);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#sp-header.menu-fixed {
+   background: rgba(0,0,0,0.7);
+   border: none;
+}
+
+.menu-fixed #offcanvas-toggler >i {
+  color: #fff;
+}
+
+.menu-fixed .logo a {
+	background: #fff;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;  
+}
+
+.menu-fixed .sp-megamenu-parent>li>a {
+  color: #fff;
+}
+
+.menu-fixed .sp-megamenu-parent>li>a:hover {
+	color: #ff5500;
+	text-shadow: 0 0 0.5px #f00;
+}
+
+.menu-fixed .sp-megamenu-parent>li.active>a {
+	color:  #ff9944;
+}
+
+.menu-fixed .sp-megamenu-parent .sp-dropdown li.sp-menu-item>a {
+	color:  #fff;
+}
+
+.menu-fixed .sp-megamenu-parent .sp-dropdown li.sp-menu-item.active>a {
+	color:  #ff9944;
+}
+
+.menu-fixed .sp-megamenu-parent .sp-dropdown .sp-dropdown-inner {
+	background: rgba(0,0,0,0.7);
+}
+
+.menu-fixed .sp-megamenu-parent .sp-dropdown li.sp-menu-item>a:hover {
+	color: ;
+}
+
+.menu-fixed .sp-megamenu-parent .sp-dropdown li.sp-menu-item>a {
+	border-radius: 4px;
+}
+
+.sp-page-title {
+  background: linear-gradient(to bottom right, #460909, #f55);
+  padding: 10px 5px;
+  border-radius: 4px;
+}
+
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item > a {
+    padding: 5px;
+}
