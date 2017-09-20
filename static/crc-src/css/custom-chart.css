@@ -4,17 +4,16 @@ body {
 }
 
 canvas {
-  padding-top: 20px;
+  padding-top: 1em;
 }
 
 .chart-auto {
-  border: 2px solid rgba(255, 0, 0, 0.51);
-  border-radius: 4px;
-  padding: 10px;
+  border: 2px solid rgba(255, 0, 0, .51);
+  padding: 1em;
 }
 
 .chart-form {
-  padding-top: 20px;
+  padding-top: 1em;
   text-align: center;
 }
 
@@ -23,43 +22,19 @@ canvas {
 }
 
 .chart-order-form {
-  padding-top: 20px;
+  padding-top: 1em;
 }
 
 .chart-name {
-  padding-top: 10px;
+  padding-top: 1em;
 }
 
-@keyframes changecolor {
-  0% {
-    border-color: red;
-  }
-  20% {
-    border-color: black;
-  }
-  40% {
-    border-color: green;
-  }
-  60% {
-    border-color: yellow;
-  }
-  80% {
-    border-color: purple;
-  }
-  100% {
-    border-color: white;
-  }
-}
-
-.chart-preview {
-  animation-duration: 1.5s;
-  animation-name: changecolor;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-.chart-preview:hover {
-  border-color: green;
+.chart-auto::before {
+  content: "";
+  background: black;
+  position: absolute;
+  height: 20%;
+  width: 3px;
 }
 
 .chart-button-class {
