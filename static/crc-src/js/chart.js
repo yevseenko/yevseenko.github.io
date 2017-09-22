@@ -12,6 +12,7 @@ jQuery(function ($) {
     $chartInfo = $('#chart-info'),
     $chartInfoPreview = $('#chart-info-preview'),
     $chartOrderForm = $('#chart-order-form');
+    $btnClose = $('#btn-close');
 
   $chartForm.submit(function () {
     return false;
@@ -22,6 +23,12 @@ jQuery(function ($) {
       $chartForm.slideDown(600, function () {
         $chartForm.show();
       });
+    });
+  });
+
+  $btnClose.click(function() {
+    $chartInfoPreview.fadeToggle('slow', function() {
+      $chartForm.slideUp();
     });
   });
 
