@@ -19,15 +19,15 @@ jQuery(function ($) {
 
   $chartButton.click(function () {
     $chartInfoPreview.fadeToggle('linear', function () {
-      $chartForm.fadeOut(600, function () {
-        $chartForm.removeClass('hidden');
+      $chartForm.slideDown(600, function () {
+        $chartForm.show();
       });
     });
   });
 
   $chartButtonOrder.click(function () {
-    $chartButtonOrder.fadeToggle(400, function() {
-      $chartOrderForm.removeClass('hidden');
+    $(this).fadeOut(function() {
+      $chartOrderForm.fadeIn('slow');
     });    
 
     var arr = $chartForm.serialize().split('&');
@@ -107,8 +107,13 @@ jQuery(function ($) {
   $stage.change(function () {
     stage = $('option:selected', this).attr('data-stage');
 
-    if (stage >= 40) {
+    if (stage == 40) {
       $chartInfo.html('<h3>Требуется установка дополнительных модулей</h3>');
+      $chartInfo.append('<ul id="inner-list"><li>Stage3</li></ul>');
+    } else if (stage == 60) {
+      $('#inner-list').append('<li>Stage4</li>');
+    } else if (stage == 90) {
+      $('#inner-list').append('<li>Stage5</li>');
     } else {
       $chartInfo.html('');
     }

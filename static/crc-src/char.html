@@ -37,7 +37,7 @@
         </div>
       </div>
 
-      <form id="chart-form" class="chart-form hidden">
+      <form id="chart-form" class="chart-form hide-this">
         <div class="form-inline">
           <div class="form-group">
             <div class="input-group">
@@ -84,19 +84,19 @@
 
         <button class="btn btn-warning center-block" id="chart-button-order">Оформить заказ</button>
 
-        <div id="chart-order-form" class="hidden">
-          <div class="form-inline" id="chart-name">
-            <div class="form-group has-success col-sm-12">
-              <div class="input-group col-sm-5">
+        <div id="chart-order-form" class="hide-this">
+          <div class="form-inline">
+            <div class="form-group has-success">
+              <div class="input-group">
                 <div class="input-group-addon">Имя:</div>
                 <input type="text" class="form-control" id="customer-name" placeholder="Name">
               </div>
-              <div class="input-group col-sm-5">
-                <div class="input-group-addon">Номер телефона:</div>
-                <input type="text" class="form-control" id="customer-phone" placeholder="Phone">
+              <div class="input-group">
+                <div class="input-group-addon">Номер телефона: +380</div>
+                <input type="text" class="form-control" id="customer-phone" placeholder="000 000 00 00">
               </div>
             </div>
-            <button class="btn btn-success center-block" id="chart-button-order">Отправить форму</button>
+            <button class="btn btn-success">Отправить форму</button>
           </div>
         </div>
       </form>

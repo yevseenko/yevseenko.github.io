@@ -7,6 +7,10 @@ canvas {
   padding-top: 1em;
 }
 
+.hide-this {
+  display: none;
+}
+
 .chart-wrapper {
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
@@ -16,7 +20,7 @@ canvas {
   padding: 15px;
 }
 
-.chart-info-preview button {
+#chart-button {
   margin-top: 1em;
   padding: 10px;
 }
@@ -26,7 +30,7 @@ canvas {
   text-align: center;
 }
 
-.chart-form button {
+#chart-button-order {
   margin-top: 1em;
 }
 
