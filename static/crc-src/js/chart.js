@@ -26,7 +26,9 @@ jQuery(function ($) {
   });
 
   $chartButtonOrder.click(function () {
-    $chartOrderForm.removeClass('hidden');
+    $chartButtonOrder.fadeToggle(400, function() {
+      $chartOrderForm.removeClass('hidden');
+    });    
 
     var arr = $chartForm.serialize().split('&');
     var manufacturer = arr[0].split('=');
