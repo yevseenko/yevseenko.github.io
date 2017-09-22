@@ -1,4 +1,3 @@
-
 jQuery(function ($) {
   var $auto = $('#auto'),
     $mark = $('#mark'),
@@ -11,6 +10,7 @@ jQuery(function ($) {
     $chartModelOrder = $('#chart-model-order'),
     $chartForm = $('#chart-form'),
     $chartInfo = $('#chart-info'),
+    $chartInfoPreview = $('#chart-info-preview'),
     $chartOrderForm = $('#chart-order-form');
 
   $chartForm.submit(function () {
@@ -18,7 +18,11 @@ jQuery(function ($) {
   })
 
   $chartButton.click(function () {
-    $chartForm.toggleClass('hidden');
+    $chartInfoPreview.fadeToggle('linear', function () {
+      $chartForm.fadeOut(600, function () {
+        $chartForm.removeClass('hidden');
+      });
+    });
   });
 
   $chartButtonOrder.click(function () {
@@ -31,7 +35,7 @@ jQuery(function ($) {
     model = model[1].split('%20').join(' ');
     var stage = arr[2].split('=');
     stage = stage[1].split('%20').join(' ');
-    
+
     $chartAutoOrder.val(manufacturer);
     $chartStageOrder.val(stage);
     $chartModelOrder.val(model);
@@ -43,8 +47,32 @@ jQuery(function ($) {
   var dataTwo = [];
 
   var markList = {
-    'BMW': [{ name: 'X5', hp: 171, torque: 250 }, { name: '320x', hp: 250, torque: 350 }, { name: 'zxr89', hp: 450, torque: 700 }],
-    'Mers': [{ name: 'g.546 2.4', hp: 195, torque: 275 }, { name: 'JD564 2.8', hp: 320, torque: 400 }, { name: '720xxq 4.0', hp: 372, torque: 650 }],
+    'BMW': [{
+      name: 'X5',
+      hp: 171,
+      torque: 250
+    }, {
+      name: '320x',
+      hp: 250,
+      torque: 350
+    }, {
+      name: 'zxr89',
+      hp: 450,
+      torque: 700
+    }],
+    'Mers': [{
+      name: 'g.546 2.4',
+      hp: 195,
+      torque: 275
+    }, {
+      name: 'JD564 2.8',
+      hp: 320,
+      torque: 400
+    }, {
+      name: '720xxq 4.0',
+      hp: 372,
+      torque: 650
+    }],
   }
 
   $auto.change(function () {

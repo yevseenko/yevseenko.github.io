@@ -10,95 +10,97 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom-chart.css" rel="stylesheet">
   <script src="js/chart-js.js"></script>
-  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/utils.js"></script>
 </head>
 
 <body>
-  <div class="container chart-auto chart-preview">
-    <div id="chart-info-preview" class="row">
-      <div class="col-sm-4">
-        <ul>
-          <li>Увеличить мощность</li>
-          <li>Увеличить крутящий момент</li>
-          <li>Снизить расход топлива</li>
-        </ul>
+  <div class="container">
+    <div class="chart-wrapper">
+      <div id="chart-info-preview" class="chart-info-preview row">
+        <div class="col-sm-4">
+          <ul>
+            <li>Увеличить мощность</li>
+            <li>Увеличить крутящий момент</li>
+            <li>Снизить расход топлива</li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <ul>
+            <li>Улучшить эластичность двигателя</li>
+            <li>Убрать провал педали газа</li>
+            <li>Улучшить динамику езды</li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-default" id="chart-button">Узнать больше!</button>
+        </div>
       </div>
-      <div class="col-sm-4">
-        <ul>
-          <li>Улучшить эластичность двигателя</li>
-          <li>Убрать провал педали газа</li>
-          <li>Улучшить динамику езды</li>
-        </ul>
-      </div>
-      <div class="col-sm-4">
-        <button class="chart-button-class draw pull-right" id="chart-button">Узнать больше!</button>
-      </div>
-    </div>
-    
-    <form id="chart-form" class="chart-form hidden">
-      <div class="form-inline">
-        <div class="form-group">
-          <div class="input-group">
-            <div class="input-group-addon">Производитель:</div>
-            <select class="form-control" id="auto" name="manufacturer">
+
+      <form id="chart-form" class="chart-form hidden">
+        <div class="form-inline">
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">Производитель:</div>
+              <select class="form-control" id="auto" name="manufacturer">
               <option></option>
               <option>BMW</option>
               <option>Mers</option>
             </select>
-          </div>
+            </div>
 
-          <div class="input-group">
-            <div class="input-group-addon">Модель:</div>
-            <select style="width: 200px" class="form-control" id="mark" name="model"></select>
-          </div>
+            <div class="input-group">
+              <div class="input-group-addon">Модель:</div>
+              <select class="form-control" id="mark" name="model" style="width: 150px"></select>
+            </div>
 
-          <div class="input-group">
-            <div class="input-group-addon">Модификация:</div>
-            <select style="width: 100px" class="form-control" id="auto-engine" name="modification"></select>
-          </div>
+            <div class="input-group">
+              <div class="input-group-addon">Модификация:</div>
+              <select class="form-control" id="auto-engine" name="modification" style="width: 100px"></select>
+            </div>
 
-          <div class="input-group">
-            <div class="input-group-addon">Чип:</div>
-            <select class="form-control" id="stage" name="stage">
+            <div class="input-group">
+              <div class="input-group-addon">Чип:</div>
+              <select class="form-control" id="stage" name="stage">
               <option data-stage="20">Stage 1</option>
               <option data-stage="30">Stage 2</option>
               <option data-stage="40">Stage 3</option>
               <option data-stage="60">Stage 4</option>
               <option data-stage="90">Stage 5</option>
             </select>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6">
-        <canvas id="chart-0"></canvas>
-      </div>
-
-      <div class="col-sm-6">
-        <canvas id="chart-1"></canvas>
-      </div>
-
-      <div id="chart-info" class="chart-info text-success"></div>
-
-      <button class="btn btn-warning center-block" id="chart-button-order">Оформить заказ</button>
-
-      <div id="chart-order-form" class="chart-order-form hidden">
-        <div class="form-inline chart-name" id="chart-name">
-          <div class="form-group has-success col-sm-12">
-            <div class="input-group col-sm-5">
-              <div class="input-group-addon">Имя:</div>
-              <input type="text" class="form-control" id="customer-name" placeholder="Name">
-            </div>
-            <div class="input-group col-sm-5">
-              <div class="input-group-addon">Номер телефона:</div>
-              <input type="text" class="form-control" id="customer-phone" placeholder="Phone">
             </div>
           </div>
-          <button class="btn btn-success center-block" id="chart-button-order">Отправить форму</button>
         </div>
-      </div>
-    </form>
+
+        <div class="col-sm-6">
+          <canvas id="chart-0"></canvas>
+        </div>
+
+        <div class="col-sm-6">
+          <canvas id="chart-1"></canvas>
+        </div>
+
+        <div id="chart-info" class="text-success"></div>
+
+        <button class="btn btn-warning center-block" id="chart-button-order">Оформить заказ</button>
+
+        <div id="chart-order-form" class="hidden">
+          <div class="form-inline" id="chart-name">
+            <div class="form-group has-success col-sm-12">
+              <div class="input-group col-sm-5">
+                <div class="input-group-addon">Имя:</div>
+                <input type="text" class="form-control" id="customer-name" placeholder="Name">
+              </div>
+              <div class="input-group col-sm-5">
+                <div class="input-group-addon">Номер телефона:</div>
+                <input type="text" class="form-control" id="customer-phone" placeholder="Phone">
+              </div>
+            </div>
+            <button class="btn btn-success center-block" id="chart-button-order">Отправить форму</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 
   <script src="js/chart.js"></script>
