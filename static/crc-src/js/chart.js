@@ -18,6 +18,10 @@ jQuery(function ($) {
     return false;
   })
 
+  $auto.select2();
+  $mark.select2();
+  $stage.select2();
+
   $chartButton.click(function () {
     $chartInfoPreview.fadeToggle('linear', function () {
       $chartForm.slideDown(600, function () {
@@ -88,7 +92,7 @@ jQuery(function ($) {
     var auto = $(this).val(),
       auma = markList[auto] || [];
 
-    var html = '<option></option>' + $.map(auma, function (lcn) {
+    var html = $.map(auma, function (lcn) {
       var thx = '<option value="' + lcn.name + '"' + 'data-hp="' + lcn.hp + '"' + 'data-torque="' + lcn.torque + '">' + lcn.name + '</option>';
       return thx;
     }).join('');
