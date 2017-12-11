@@ -55,7 +55,7 @@ $(document).ready(function() {
 	}	
 
 	function parseStringOneC(elem){
-		var tmpArr = elem.split('-00');
+		var tmpArr = elem.split('-0');
 		if (tmpArr.length!=2) {
 			alert('Error while parse string "'+elem+'"');
 			return []; 
