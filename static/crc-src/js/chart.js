@@ -1,7 +1,8 @@
 jQuery(function ($) {
   var $auto = $('#auto'),
     $mark = $('#mark'),
-    $stage = $('#stage'),
+    $modification
+  $stage = $('#stage'),
     $chartButton = $('#chart-button'),
     $chartButtonOrder = $('#chart-button-order'),
     $chartModOrder = $('#chart-mod-order'),
@@ -12,7 +13,7 @@ jQuery(function ($) {
     $chartInfo = $('#chart-info'),
     $chartInfoPreview = $('#chart-info-preview'),
     $chartOrderForm = $('#chart-order-form');
-    $btnClose = $('#btn-close');
+  $btnClose = $('#btn-close');
 
   $chartForm.submit(function () {
     return false;
@@ -30,16 +31,16 @@ jQuery(function ($) {
     });
   });
 
-  $btnClose.click(function() {
-    $chartInfoPreview.fadeToggle('slow', function() {
+  $btnClose.click(function () {
+    $chartInfoPreview.fadeToggle('slow', function () {
       $chartForm.slideUp();
     });
   });
 
   $chartButtonOrder.click(function () {
-    $(this).fadeOut(function() {
+    $(this).fadeOut(function () {
       $chartOrderForm.fadeIn('slow');
-    });    
+    });
 
     var arr = $chartForm.serialize().split('&');
     var manufacturer = arr[0].split('=');
@@ -235,3 +236,50 @@ jQuery(function ($) {
     chart.update();
   }
 });
+
+var obj = {
+  BMW: {
+    X5: {
+      '2.4L': {
+        hp: 200,
+        torque: 500
+      },
+      '112L': {
+        hp: 300,
+        torque: 600
+      }
+    },
+    X10: {
+      '2.4L': {
+        hp: 200,
+        torque: 500
+      },
+      '112L': {
+        hp: 300,
+        torque: 600
+      }
+    }
+  },
+  MERS: {
+    X2: {
+      '2.4L': {
+        hp: 200,
+        torque: 500
+      },
+      '112L': {
+        hp: 300,
+        torque: 600
+      }
+    },
+    X4: {
+      '2.4L': {
+        hp: 200,
+        torque: 500
+      },
+      '112L': {
+        hp: 300,
+        torque: 600
+      }
+    }
+  }
+}

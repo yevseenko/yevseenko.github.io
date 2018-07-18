@@ -18,7 +18,7 @@
 
 <body>
   <div class="container">
-    <div class="chart-wrapper">
+    <div class="chart-wrapper well well-sm">
       <div id="chart-info-preview" class="chart-info-preview row">
         <div class="col-sm-4">
           <ul>
@@ -38,7 +38,7 @@
           <button class="btn btn-default center-block" id="chart-button">Узнать больше!</button>
         </div>
       </div>
-      
+
       <form id="chart-form" class="chart-form hide-this">
         <button class="close-button" id="btn-close"></button>
         <div class="form-inline">
@@ -46,9 +46,10 @@
             <div class="input-group">
               <div class="input-group-addon">Производитель:</div>
               <select class="form-control" id="auto" name="manufacturer">
-              <option>BMW</option>
-              <option>Mers</option>
-            </select>
+                <option></option>
+                <option>BMW</option>
+                <option>Mers</option>
+              </select>
             </div>
 
             <div class="input-group">
@@ -64,12 +65,12 @@
             <div class="input-group">
               <div class="input-group-addon">Чип:</div>
               <select class="form-control" id="stage" name="stage">
-              <option data-stage="20">Stage 1</option>
-              <option data-stage="30">Stage 2</option>
-              <option data-stage="40">Stage 3</option>
-              <option data-stage="60">Stage 4</option>
-              <option data-stage="90">Stage 5</option>
-            </select>
+                <option data-stage="20">Stage 1</option>
+                <option data-stage="30">Stage 2</option>
+                <option data-stage="40">Stage 3</option>
+                <option data-stage="60">Stage 4</option>
+                <option data-stage="90">Stage 5</option>
+              </select>
             </div>
           </div>
         </div>
