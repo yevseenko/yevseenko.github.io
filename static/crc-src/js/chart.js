@@ -1,8 +1,8 @@
 jQuery(function ($) {
   var $auto = $('#auto'),
     $mark = $('#mark'),
-    $modification
-  $stage = $('#stage'),
+    $stage = $('#stage'),
+    $autoEngine = $('#auto-engine'),
     $chartButton = $('#chart-button'),
     $chartButtonOrder = $('#chart-button-order'),
     $chartModOrder = $('#chart-mod-order'),
@@ -12,16 +12,17 @@ jQuery(function ($) {
     $chartForm = $('#chart-form'),
     $chartInfo = $('#chart-info'),
     $chartInfoPreview = $('#chart-info-preview'),
-    $chartOrderForm = $('#chart-order-form');
-  $btnClose = $('#btn-close');
+    $chartOrderForm = $('#chart-order-form'),
+    $btnClose = $('#btn-close');
 
   $chartForm.submit(function () {
     return false;
-  })
+  });
 
-  $auto.select2();
-  $mark.select2();
-  $stage.select2();
+  //$auto.select2();
+  //$mark.select2();
+  //$autoEngine.select2();
+  //$stage.select2();
 
   $chartButton.click(function () {
     $chartInfoPreview.fadeToggle('linear', function () {
@@ -37,84 +38,53 @@ jQuery(function ($) {
     });
   });
 
-  $chartButtonOrder.click(function () {
-    $(this).fadeOut(function () {
-      $chartOrderForm.fadeIn('slow');
-    });
-
-    var arr = $chartForm.serialize().split('&');
-    var manufacturer = arr[0].split('=');
-    manufacturer = manufacturer[1];
-    var model = arr[1].split('=');
-    model = model[1].split('%20').join(' ');
-    var stage = arr[2].split('=');
-    stage = stage[1].split('%20').join(' ');
-
-    $chartAutoOrder.val(manufacturer);
-    $chartStageOrder.val(stage);
-    $chartModelOrder.val(model);
-  })
-
   var currentHp, currentTorque;
   var stage = 20;
-  var dataOne = [];
-  var dataTwo = [];
 
-  var markList = {
-    'BMW': [{
-      name: 'X5',
-      hp: 171,
-      torque: 250
-    }, {
-      name: '320x',
-      hp: 250,
-      torque: 350
-    }, {
-      name: 'zxr89',
-      hp: 450,
-      torque: 700
-    }],
-    'Mers': [{
-      name: 'g.546 2.4',
-      hp: 195,
-      torque: 275
-    }, {
-      name: 'JD564 2.8',
-      hp: 320,
-      torque: 400
-    }, {
-      name: '720xxq 4.0',
-      hp: 372,
-      torque: 650
-    }],
-  }
+  databaseRef.once('value', function (snap) {
+    var arr = Object.keys(snap.val());
+    $auto.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>').join(''));
+  });
 
   $auto.change(function () {
-    var auto = $(this).val(),
-      auma = markList[auto] || [];
+    $mark.html('');
+    $autoEngine.html('');
 
-    var html = $.map(auma, function (lcn) {
-      var thx = '<option value="' + lcn.name + '"' + 'data-hp="' + lcn.hp + '"' + 'data-torque="' + lcn.torque + '">' + lcn.name + '</option>';
-      return thx;
-    }).join('');
-    $mark.html(html);
+    var manufacturer = $(this).val();
 
-    addData(hpLine, []);
-    addData(torqueLine, []);
+    if (manufacturer) {
+      databaseRef.on('value', function (snap) {
+        var arr = Object.keys(snap.val()[manufacturer]);
+        $mark.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>'));
+      });
+    };
   });
 
   $mark.change(function () {
-    var hp = $('option:selected', this).attr('data-hp'),
-      torque = $('option:selected', this).attr('data-torque');
+    $autoEngine.html('');
 
-    currentTorque = Number(torque);
-    currentHp = Number(hp);
-    dataOne = [0, currentHp / 4, currentHp / 3, currentHp / 1.5, currentHp, currentHp / 1.5, currentHp / 3];
-    dataTwo = [0, currentTorque / 5, currentTorque / 3.5, currentTorque / 1.5, currentTorque, currentTorque / 1.5, currentTorque / 4];
+    var model = $(this).val();
+    var manufacturer = $auto.val();
 
-    addData(hpLine, dataOne);
-    addData(torqueLine, dataTwo);
+    if (model && manufacturer) {
+      databaseRef.once('value', function (snap) {
+        var arr = Object.keys(snap.val()[manufacturer][model]);
+        $autoEngine.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>'));
+      });
+    };
   });
+
+
+  //$mark.change(function () {
+  //  var hp = $('option:selected', this).attr('data-hp'),
+  //    torque = $('option:selected', this).attr('data-torque');
+  //
+  //  currentTorque = Number(torque);
+  //  currentHp = Number(hp);
+  //  dataOne = [0, currentHp / 4, currentHp / 3, currentHp / 1.5, currentHp, currentHp / 1.5, currentHp / 3];
+  //  dataTwo = [0, currentTorque / 5, currentTorque / 3.5, currentTorque / 1.5, currentTorque, currentTorque / 1.5, currentTorque / 4];
+  //
+  //});
 
   $stage.change(function () {
     stage = $('option:selected', this).attr('data-stage');
@@ -125,161 +95,23 @@ jQuery(function ($) {
       $chartInfo.html('');
     }
 
-    changeData(hpLine, dataOne);
-    changeData(torqueLine, dataTwo);
-  })
-
-  var config = {
-    type: 'line',
-    data: {
-      labels: ["", "", "", "", "", "", ""],
-      datasets: [{
-        label: "До чипа",
-        backgroundColor: window.chartColors.orange,
-        borderColor: window.chartColors.orange,
-        fill: false,
-      }, {
-        label: "После чипа",
-        fill: "-1",
-        backgroundColor: "rgba(75, 192, 192, .3)",
-        borderColor: window.chartColors.green,
-      }]
-    },
-    options: {
-      responsive: true,
-      title: {
-        display: true,
-        text: 'Л.С. Автомобиля'
-      },
-      tooltips: {
-        mode: 'index',
-        intersect: false,
-      },
-      hover: {
-        mode: 'nearest',
-        intersect: true
-      },
-      scales: {
-        xAxes: [{
-          display: true
-        }],
-        yAxes: [{
-          display: true,
-          scaleLabel: {
-            display: true,
-            labelString: 'Значение'
-          }
-        }]
-      }
-    }
-  };
-
-  var configBtx = {
-    type: 'line',
-    data: {
-      labels: ["", "", "", "", "", "", ""],
-      datasets: [{
-        label: "До чипа",
-        backgroundColor: window.chartColors.red,
-        borderColor: window.chartColors.red,
-        fill: false,
-      }, {
-        label: "После чипа",
-        fill: "-1",
-        backgroundColor: "rgba(54, 162, 235, .3)",
-        borderColor: window.chartColors.blue,
-      }]
-    },
-    options: {
-      responsive: true,
-      title: {
-        display: true,
-        text: 'К.М. Автомобиля'
-      },
-      tooltips: {
-        mode: 'index',
-        intersect: false,
-      },
-      hover: {
-        mode: 'nearest',
-        intersect: true
-      },
-      scales: {
-        xAxes: [{
-          display: true,
-        }],
-        yAxes: [{
-          display: true,
-          scaleLabel: {
-            display: true,
-            labelString: 'Значение'
-          }
-        }]
-      }
-    }
-  };
-
-  var ctx = document.getElementById('chart-0').getContext('2d');
-  window.hpLine = new Chart(ctx, config);
-  var btx = document.getElementById('chart-1').getContext('2d');
-  window.torqueLine = new Chart(btx, configBtx);
-
-
-  function addData(chart, data) {
-    chart.data.datasets[0].data = data.map(item => Math.round(item));
-    chart.data.datasets[1].data = data.map(x => Math.round(x + x / 100 * stage));
-    chart.update();
-  }
-
-  function changeData(chart, data) {
-    chart.data.datasets[1].data = data.map(x => Math.round(x + x / 100 * stage));
-    chart.update();
-  }
+  });
 });
 
-var obj = {
-  BMW: {
-    X5: {
-      '2.4L': {
-        hp: 200,
-        torque: 500
-      },
-      '112L': {
-        hp: 300,
-        torque: 600
-      }
-    },
-    X10: {
-      '2.4L': {
-        hp: 200,
-        torque: 500
-      },
-      '112L': {
-        hp: 300,
-        torque: 600
-      }
-    }
-  },
-  MERS: {
-    X2: {
-      '2.4L': {
-        hp: 200,
-        torque: 500
-      },
-      '112L': {
-        hp: 300,
-        torque: 600
-      }
-    },
-    X4: {
-      '2.4L': {
-        hp: 200,
-        torque: 500
-      },
-      '112L': {
-        hp: 300,
-        torque: 600
-      }
-    }
-  }
-}
+var config = {
+  apiKey: "AIzaSyDXx4uVtEcU0c-G1oKrcLXs-pESh4goVkU",
+  authDomain: "torque-f5ed4.firebaseapp.com",
+  databaseURL: "https://torque-f5ed4.firebaseio.com",
+  projectId: "torque-f5ed4",
+  storageBucket: "torque-f5ed4.appspot.com",
+  messagingSenderId: "140933235811"
+};
+firebase.initializeApp(config);
+
+var database = firebase.database();
+var databaseRef = database.ref();
+
+databaseRef.on('value', function (snapshot) {
+  var arrAuto = Object.keys(snapshot.val());
+  console.log(arrAuto);
+});
