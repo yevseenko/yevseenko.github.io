@@ -5,15 +5,9 @@ jQuery(function ($) {
     $autoEngine = $('#auto-engine'),
     $pixelInfo = $('#pixel-info'),
     $chartButton = $('#chart-button'),
-    $chartButtonOrder = $('#chart-button-order'),
-    $chartModOrder = $('#chart-mod-order'),
-    $chartAutoOrder = $('#chart-auto-order'),
-    $chartStageOrder = $('#chart-stage-order'),
-    $chartModelOrder = $('#chart-model-order'),
     $chartForm = $('#chart-form'),
     $chartInfo = $('#chart-info'),
     $chartInfoPreview = $('#chart-info-preview'),
-    $chartOrderForm = $('#chart-order-form'),
     $btnClose = $('#btn-close');
 
   $chartForm.submit(function () {
