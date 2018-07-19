@@ -73,9 +73,11 @@ jQuery(function ($) {
         $autoEngine.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>'));
       });
     };
+
+    $pixelInfo.html('<h1>Машина: ' + $auto.val() + ' Модель: ' + $mark.val() + ' Модификация: ' + $autoEngine.val() + ' Чип: ' + $stage.val());
   });
 
-  $pixelInfo.html('<h1>Машина: ' + $auto.val() + ' Модель: ' + $mark.val() + ' Модификация: ' + $autoEngine.val() + ' Чип: ' + $stage.val());
+  
 
 
   //$mark.change(function () {
