@@ -3,6 +3,7 @@ jQuery(function ($) {
     $mark = $('#mark'),
     $stage = $('#stage'),
     $autoEngine = $('#auto-engine'),
+    $pixelInfo = $('#pixel-info'),
     $chartButton = $('#chart-button'),
     $chartButtonOrder = $('#chart-button-order'),
     $chartModOrder = $('#chart-mod-order'),
@@ -73,6 +74,8 @@ jQuery(function ($) {
       });
     };
   });
+
+  $pixelInfo.html('<h1>Машина: ' + $auto.val() + ' Модель: ' + $mark.val() + ' Модификация: ' + $autoEngine.val() + ' Чип: ' + $stage.val());
 
 
   //$mark.change(function () {
