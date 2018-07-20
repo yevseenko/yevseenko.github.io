@@ -14,36 +14,46 @@ jQuery(function ($) {
     return false;
   });
 
-  $chartButton.click(function () {
-    $chartInfoPreview.fadeToggle('linear', function () {
-      $chartForm.slideDown(600, function () {
-        $chartForm.show();
-      });
-    });
+  //=== DataBase Init ===//
+
+  var config = {
+    apiKey: "AIzaSyDXx4uVtEcU0c-G1oKrcLXs-pESh4goVkU",
+    authDomain: "torque-f5ed4.firebaseapp.com",
+    databaseURL: "https://torque-f5ed4.firebaseio.com",
+    projectId: "torque-f5ed4",
+    storageBucket: "torque-f5ed4.appspot.com",
+    messagingSenderId: "140933235811"
+  };
+
+  firebase.initializeApp(config);
+
+  var database = firebase.database().ref();
+  var data = database.once('value');
+
+  var cache = {};
+
+  data.then((snap) => {
+    cache = snap.val();
   });
 
-  $btnClose.click(function () {
-    $chartInfoPreview.fadeToggle('slow', function () {
-      $chartForm.slideUp();
-    });
-  });
-
-  databaseRef.once('value', function (snap) {
+  data.then((snap) => {
     var arr = Object.keys(snap.val());
-    $auto.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>').join(''));
+    $auto.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>').join(''))
   });
+
+  //=== Onchange functions ===//
 
   $auto.change(function () {
     $mark.html('');
     $autoEngine.html('');
 
+    console.log(cache);
+
     var manufacturer = $(this).val();
 
     if (manufacturer) {
-      databaseRef.on('value', function (snap) {
-        var arr = Object.keys(snap.val()[manufacturer]);
-        $mark.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>'));
-      });
+      var arr = Object.keys(cache[manufacturer]);
+      $mark.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>'));
     };
   });
 
@@ -54,10 +64,8 @@ jQuery(function ($) {
     var manufacturer = $auto.val();
 
     if (model && manufacturer) {
-      databaseRef.once('value', function (snap) {
-        var arr = Object.keys(snap.val()[manufacturer][model]);
-        $autoEngine.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>'));
-      });
+      var arr = Object.keys(cache[manufacturer][model]);
+      $autoEngine.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>'));
     };
 
     $pixelInfo.html('<h3>Машина: ' + $auto.val() + ' Модель: ' + $mark.val() + ' Модификация: ' + $autoEngine.val() + ' Чип: ' + $stage.val() + '</h3>');
@@ -84,22 +92,20 @@ jQuery(function ($) {
     }
 
   });
-});
 
-var config = {
-  apiKey: "AIzaSyDXx4uVtEcU0c-G1oKrcLXs-pESh4goVkU",
-  authDomain: "torque-f5ed4.firebaseapp.com",
-  databaseURL: "https://torque-f5ed4.firebaseio.com",
-  projectId: "torque-f5ed4",
-  storageBucket: "torque-f5ed4.appspot.com",
-  messagingSenderId: "140933235811"
-};
-firebase.initializeApp(config);
+  //=== Fade/Toggle/Slowdown ===//
 
-var database = firebase.database();
-var databaseRef = database.ref();
+  $chartButton.click(function () {
+    $chartInfoPreview.fadeToggle('linear', function () {
+      $chartForm.slideDown(600, function () {
+        $chartForm.show();
+      });
+    });
+  });
 
-databaseRef.on('value', function (snapshot) {
-  var arrAuto = Object.keys(snapshot.val());
-  console.log(arrAuto);
+  $btnClose.click(function () {
+    $chartInfoPreview.fadeToggle('slow', function () {
+      $chartForm.slideUp();
+    });
+  });
 });

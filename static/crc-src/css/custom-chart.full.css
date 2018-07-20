@@ -1,0 +1,71 @@
+.chart-wrapper {
+  padding-top: 50px;
+  font-family: 'Play', sans-serif;
+}
+
+.hide-this {
+  display: none;
+}
+
+#chart-button {
+  margin-top: 1em;
+  padding: 10px;
+}
+
+#chart-button-order {
+  margin-top: 1em;
+}
+
+.chart-button {
+  width: 100%;
+}
+
+.chart-order-form {
+  padding-top: 1em;
+}
+
+.chart-name {
+  padding-top: 1em;
+}
+
+.chart-form {
+  text-align: center;
+}
+
+.close-button {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  box-sizing: border-box;
+  line-height: 30px;
+  display: inline-block;
+  right: 10px;
+  top: 20px;
+  border: 0px;
+  background: transparent;
+}
+
+.close-button:before,
+.close-button:after {
+  transform: rotate(-45deg);
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+  margin-left: -25px;
+  display: block;
+  height: 5px;
+  width: 30px;
+  background-color: black;
+  transition: all 0.2s ease-out;
+}
+
+.close-button:after {
+  transform: rotate(45deg);
+}
+
+.close-button:hover:before,
+.close-button:hover:after {
+  transform: rotate(0deg);
+}
