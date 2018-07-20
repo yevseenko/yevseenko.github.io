@@ -11,7 +11,8 @@ jQuery(function ($) {
     $btnClose = $('#btn-close'),
     
     $stock = $('#stock'),
-    $stageOne = $('#stage-one');
+    $stageOne = $('#stage-one'),
+    $stageTwo = $('#stage-two');
 
   $chartForm.submit(function () {
     return false;
@@ -92,16 +93,18 @@ jQuery(function ($) {
     var stage = $stage.val();
 
     $stock.html('<td>' + manufacturer + '</td><td>' + model + '</td><td>' + engine + '</td><td>' + cache[manufacturer][model][engine].hp + '</td><td>' + cache[manufacturer][model][engine].torque + '</td><td>Stock</td><td> ~ </td>');
-    $stageOne.html('<td colspan="3"></td><td>' + (cache[manufacturer][model][engine].hp + cache[manufacturer][model][engine].hp*0.2) + '</td><td>' + (cache[manufacturer][model][engine].torque + cache[manufacturer][model][engine].torque*0.2) + '</td><td>Stage 1</td><td> ~ </td>')
+    $stageOne.html('<td colspan="3"></td><td>' + (cache[manufacturer][model][engine].hp + cache[manufacturer][model][engine].hp*0.2) + '</td><td>' + (cache[manufacturer][model][engine].torque + cache[manufacturer][model][engine].torque*0.2) + '</td><td>Stage 1</td><td> ~ </td>');
+    $stageTwo.html('<td colspan="3"></td><td>' + (cache[manufacturer][model][engine].hp + cache[manufacturer][model][engine].hp*0.29) + '</td><td>' + (cache[manufacturer][model][engine].torque + cache[manufacturer][model][engine].torque*0.27) + '</td><td>Stage 2</td><td> ~ </td>')
+    $chartInfo.html('<td colspan="7" class="text-success">Дальнешие модификации требуют установки дополнительных модулей.</td>')
   });
 
   $stage.change(function () {
     stage = $('option:selected', this).attr('data-stage');
 
     if (stage >= 40) {
-      $chartInfo.html('<h3>Требуется установка дополнительных модулей</h3>');
+      $chartInfo.html('<td colspan="7" class="text-success"></td>');
     } else {
-      $chartInfo.html('');
+      $chartInfo.html('<td colspan="7" class="text-success"></td>');
     }
 
   });
