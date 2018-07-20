@@ -4,12 +4,10 @@ jQuery(function ($) {
     $stage = $('#stage'),
     $autoEngine = $('#auto-engine'),
     $pixelInfo = $('#pixel-info'),
-    $chartButton = $('#chart-button'),
     $chartForm = $('#chart-form'),
     $chartInfo = $('#chart-info'),
-    $chartInfoPreview = $('#chart-info-preview'),
-    $btnClose = $('#btn-close'),
-    
+    $chartVideo = $('#chart-video'),
+
     $stock = $('#stock'),
     $stageOne = $('#stage-one'),
     $stageTwo = $('#stage-two');
@@ -17,6 +15,8 @@ jQuery(function ($) {
   $chartForm.submit(function () {
     return false;
   });
+
+  $pixelInfo.hide();
 
   //=== DataBase Init ===//
 
@@ -87,41 +87,98 @@ jQuery(function ($) {
   //});
 
   $autoEngine.change(function () {
-    var engine = $(this).val();
-    var model = $mark.val();
     var manufacturer = $auto.val();
-    var stage = $stage.val();
+    var model = $mark.val();
+    if ($(this).val()) {
+      var engine = $(this).val();
+      var currentHp = cache[manufacturer][model][engine].hp;
+      var currentTorque = cache[manufacturer][model][engine].torque;
 
-    $stock.html('<td>' + manufacturer + '</td><td>' + model + '</td><td>' + engine + '</td><td>' + cache[manufacturer][model][engine].hp + '</td><td>' + cache[manufacturer][model][engine].torque + '</td><td>Stock</td><td> ~ </td>');
-    $stageOne.html('<td colspan="3"></td><td>' + (cache[manufacturer][model][engine].hp + cache[manufacturer][model][engine].hp*0.2) + '</td><td>' + (cache[manufacturer][model][engine].torque + cache[manufacturer][model][engine].torque*0.2) + '</td><td>Stage 1</td><td> ~ </td>');
-    $stageTwo.html('<td colspan="3"></td><td>' + (cache[manufacturer][model][engine].hp + cache[manufacturer][model][engine].hp*0.29) + '</td><td>' + (cache[manufacturer][model][engine].torque + cache[manufacturer][model][engine].torque*0.27) + '</td><td>Stage 2</td><td> ~ </td>')
-    $chartInfo.html('<td colspan="7" class="text-success">Дальнешие модификации требуют установки дополнительных модулей.</td>')
-  });
 
-  $stage.change(function () {
-    stage = $('option:selected', this).attr('data-stage');
+      if (cache[manufacturer][model][engine].video) {
+        $chartVideo.show();
+        $chartVideo.html('<h3><a href="' + cache[manufacturer][model][engine].video + '">Наш ВИДЕООБЗОР на данную машину.</a></h3>');
+      } else {
+        $chartVideo.hide();
+      }
 
-    if (stage >= 40) {
-      $chartInfo.html('<td colspan="7" class="text-success"></td>');
-    } else {
-      $chartInfo.html('<td colspan="7" class="text-success"></td>');
+      $stock.html('<td>' + manufacturer + '</td><td>' + model + '</td><td>' + engine + '</td><td>' + currentHp + '</td><td>' + currentTorque + '</td><td>Stock</td><td> ~ </td>');
+      $stageOne.html('<td colspan="3"></td><td>' + (currentHp + currentHp * 0.2) + '</td><td>' + (currentTorque + currentTorque * 0.2) + '</td><td>Stage 1</td><td> ~ </td>');
+      $stageTwo.html('<td colspan="3"></td><td>' + (currentHp + currentHp * 0.29) + '</td><td>' + (currentTorque + currentTorque * 0.27) + '</td><td>Stage 2</td><td> ~ </td>');
+      $chartInfo.html('<td colspan="7" class="text-success">Дальнешие модификации требуют установки дополнительных модулей.</td>');
+
+      $stageOne.removeClass('text-up');
+      $stageTwo.removeClass('text-up');
+      $stock.addClass('text-up');
     }
-
   });
+
+  // $stage.change(function () {
+  //   stage = $('option:selected', this).attr('data-stage');
+
+  //   if (stage >= 40) {
+  //     $chartInfo.html('<td colspan="7" class="text-success"></td>');
+  //   } else {
+  //     $chartInfo.html('<td colspan="7" class="text-success"></td>');
+  //   }
+
+  // });
 
   //=== Fade/Toggle/Slowdown ===//
 
-  $chartButton.click(function () {
-    $chartInfoPreview.fadeToggle('linear', function () {
-      $chartForm.slideDown(600, function () {
-        $chartForm.show();
-      });
+  $autoEngine.change(() => {
+    $pixelInfo.slideDown(600, () => {
+      $pixelInfo.show();
     });
+    $stage.prop("selectedIndex", 0);
   });
 
-  $btnClose.click(function () {
-    $chartInfoPreview.fadeToggle('slow', function () {
-      $chartForm.slideUp();
+  $auto.change(() => {
+    $pixelInfo.slideUp(600, () => {
+      $pixelInfo.hide();
     });
+    $stage.prop("selectedIndex", 0);
   });
+
+  $mark.change(() => {
+    $pixelInfo.slideUp(600, () => {
+      $pixelInfo.hide();
+    });
+    $stage.prop("selectedIndex", 0);
+  });
+
+
+  $stage.change(() => {
+    var val = $stage.val();
+    if (val == 'Stock') {
+      $stageOne.removeClass('text-up');
+      $stageTwo.removeClass('text-up');
+      $stock.addClass('text-up')
+    }
+    if (val == 'Stage 1') {
+      $stock.removeClass('text-up');
+      $stageTwo.removeClass('text-up');
+      $stageOne.addClass('text-up')
+    }
+    if (val == 'Stage 2') {
+      $stageOne.removeClass('text-up');
+      $stock.removeClass('text-up');
+      $stageTwo.addClass('text-up');
+    }
+  });
+
+
+  // $chartButton.click(function () {
+  //   $chartInfoPreview.fadeToggle('linear', function () {
+  //     $chartForm.slideDown(600, function () {
+  //       $chartForm.show();
+  //     });
+  //   });
+  // });
+
+  // $btnClose.click(function () {
+  //   $chartInfoPreview.fadeToggle('slow', function () {
+  //     $chartForm.slideUp();
+  // });
+  // });
 });
