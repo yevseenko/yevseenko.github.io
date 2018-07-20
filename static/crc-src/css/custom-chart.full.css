@@ -30,6 +30,13 @@
 
 .chart-form {
   text-align: center;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.chart-table {
+  text-align: left;
+  margin-top: 20px;
 }
 
 .close-button {

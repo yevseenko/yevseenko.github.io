@@ -8,7 +8,10 @@ jQuery(function ($) {
     $chartForm = $('#chart-form'),
     $chartInfo = $('#chart-info'),
     $chartInfoPreview = $('#chart-info-preview'),
-    $btnClose = $('#btn-close');
+    $btnClose = $('#btn-close'),
+    
+    $stock = $('#stock'),
+    $stageOne = $('#stage-one');
 
   $chartForm.submit(function () {
     return false;
@@ -68,7 +71,7 @@ jQuery(function ($) {
       $autoEngine.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>'));
     };
 
-    $pixelInfo.html('<h3>Машина: ' + $auto.val() + ' Модель: ' + $mark.val() + ' Модификация: ' + $autoEngine.val() + ' Чип: ' + $stage.val() + '</h3>');
+    //$pixelInfo.html('<h3>Машина: ' + $auto.val() + ' Модель: ' + $mark.val() + ' Модификация: ' + $autoEngine.val() + ' Чип: ' + $stage.val() + '</h3>');
   });
 
   //$mark.change(function () {
@@ -81,6 +84,16 @@ jQuery(function ($) {
   //  dataTwo = [0, currentTorque / 5, currentTorque / 3.5, currentTorque / 1.5, currentTorque, currentTorque / 1.5, currentTorque / 4];
   //
   //});
+
+  $autoEngine.change(function () {
+    var engine = $(this).val();
+    var model = $mark.val();
+    var manufacturer = $auto.val();
+    var stage = $stage.val();
+
+    $stock.html('<td>' + manufacturer + '</td><td>' + model + '</td><td>' + engine + '</td><td>' + cache[manufacturer][model][engine].hp + '</td><td>' + cache[manufacturer][model][engine].torque + '</td><td>Stock</td><td> ~ </td>');
+    $stageOne.html('<td colspan="3"></td><td>' + (cache[manufacturer][model][engine].hp + cache[manufacturer][model][engine].hp*0.2) + '</td><td>' + (cache[manufacturer][model][engine].torque + cache[manufacturer][model][engine].torque*0.2) + '</td><td>Stage 1</td><td> ~ </td>')
+  });
 
   $stage.change(function () {
     stage = $('option:selected', this).attr('data-stage');
