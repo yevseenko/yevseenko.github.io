@@ -72,11 +72,25 @@
           </div>
         </div>
 
-        <div id="pixel-info"></div>
-
-        <div id="chart-info" class="text-success"></div>
-
-
+        <div id="pixel-info">
+          <table class="table table-condensed">
+            <tr>
+              <th>Производитель</th>
+              <th>Модель</th>
+              <th>Двигатель</th>
+              <th>HP</th>
+              <th>NM</th>
+              <th>Чип</th>
+              <th>Стоимость</th>
+            </tr>
+            <tr id="stock"></tr>
+            <tr id="stage-one"></tr>
+            <tr id="stage-two"></tr>
+            <tr>
+              <td colspan="7" id="chart-info" class="text-success"></td>
+            </tr>
+          </table>
+        </div>
 
         <!-- <div id="chart-order-form" class="hide-this">
           <div class="form-inline">
@@ -94,9 +108,6 @@
           </div>
         </div> -->
       </form>
-
-
-
     </div>
   </div>
   <script src="js/chart.full.js"></script>
