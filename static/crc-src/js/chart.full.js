@@ -97,7 +97,7 @@ jQuery(function ($) {
 
       if (cache[manufacturer][model][engine].video) {
         $chartVideo.show();
-        $chartVideo.html('<td colspan="7"><h4><a href="' + cache[manufacturer][model][engine].video + '">Наш ВИДЕООБЗОР на данную машину.</a></h4></td>');
+        $chartVideo.html('<td colspan="7"><h4><a href="' + cache[manufacturer][model][engine].video + '">Наш обзор с чип тюнингом данного автомобиля.</a></h4></td>');
       } else {
         $chartVideo.hide();
       }
@@ -105,7 +105,7 @@ jQuery(function ($) {
       $stock.html('<td>' + manufacturer + '</td><td>' + model + '</td><td>' + engine + '</td><td>' + currentHp + '</td><td>' + currentTorque + '</td><td>Stock</td><td> ~ </td>');
       $stageOne.html('<td colspan="3"></td><td>' + (currentHp + currentHp * 0.2) + '</td><td>' + (currentTorque + currentTorque * 0.2) + '</td><td>Stage 1</td><td> ~ </td>');
       $stageTwo.html('<td colspan="3"></td><td>' + (currentHp + currentHp * 0.29) + '</td><td>' + (currentTorque + currentTorque * 0.27) + '</td><td>Stage 2</td><td> ~ </td>');
-      $chartInfo.html('<td colspan="7" class="text-success"><h4>Дальнешие модификации требуют установки дополнительных модулей.</h4></td>');
+      $chartInfo.html('<td colspan="7" class="text-success"><h4>Модификации Stage 3 и выше требуют установки дополнительных модулей.</h4></td>');
 
       $stageOne.removeClass('text-up');
       $stageTwo.removeClass('text-up');
