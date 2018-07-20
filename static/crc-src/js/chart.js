@@ -14,11 +14,6 @@ jQuery(function ($) {
     return false;
   });
 
-  //$auto.select2();
-  //$mark.select2();
-  //$autoEngine.select2();
-  //$stage.select2();
-
   $chartButton.click(function () {
     $chartInfoPreview.fadeToggle('linear', function () {
       $chartForm.slideDown(600, function () {
@@ -32,9 +27,6 @@ jQuery(function ($) {
       $chartForm.slideUp();
     });
   });
-
-  var currentHp, currentTorque;
-  var stage = 20;
 
   databaseRef.once('value', function (snap) {
     var arr = Object.keys(snap.val());
@@ -68,11 +60,8 @@ jQuery(function ($) {
       });
     };
 
-    $pixelInfo.html('<h1>Машина: ' + $auto.val() + ' Модель: ' + $mark.val() + ' Модификация: ' + $autoEngine.val() + ' Чип: ' + $stage.val());
+    $pixelInfo.html('<h3>Машина: ' + $auto.val() + ' Модель: ' + $mark.val() + ' Модификация: ' + $autoEngine.val() + ' Чип: ' + $stage.val() + '</h3>');
   });
-
-  
-
 
   //$mark.change(function () {
   //  var hp = $('option:selected', this).attr('data-hp'),
