@@ -97,7 +97,7 @@ jQuery(function ($) {
 
       if (cache[manufacturer][model][engine].video) {
         $chartVideo.show();
-        $chartVideo.html('<h4><a href="' + cache[manufacturer][model][engine].video + '">Наш ВИДЕООБЗОР на данную машину.</a></h4>');
+        $chartVideo.html('<td colspan="7"><h4><a href="' + cache[manufacturer][model][engine].video + '">Наш ВИДЕООБЗОР на данную машину.</a></h4></td>');
       } else {
         $chartVideo.hide();
       }
