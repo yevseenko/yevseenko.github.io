@@ -34,7 +34,7 @@ jQuery(function ($) {
   function getDataFromStorage() {
     if (sessionStorage['sessionDatabase']) {
       var cache = sessionStorage.getItem('sessionDatabase');
-      cache = JSON.parse(cache);
+      cache = JSON.parse("'" + cache + "'");
       loadManufacturerList(cache);
       return cache;
     } else {
@@ -46,6 +46,8 @@ jQuery(function ($) {
       data.then((snap) => {
         var cache = snap.val();
         sessionStorage.setItem('sessionDatabase', JSON.stringify(cache));
+        console.log(sessionStorage.getItem('sessionDatabase') + ' from second part');
+        console.log(cache + ' first load');
         loadManufacturerList(cache);
         return cache;
       });
