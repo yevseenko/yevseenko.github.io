@@ -29,29 +29,39 @@ jQuery(function ($) {
     messagingSenderId: "140933235811"
   };
 
-  firebase.initializeApp(config);
+  var cache = getDataFromStorage();
 
-  var database = firebase.database().ref();
-  var data = database.once('value');
+  function getDataFromStorage() {
+    if (sessionStorage['sessionDatabase']) {
+      var cache = sessionStorage.getItem('sessionDatabase');
+      cache = JSON.parse(cache);
+      loadManufacturerList(cache);
+      return cache;
+    } else {
+      firebase.initializeApp(config);
 
-  var cache = {};
+      var database = firebase.database().ref();
+      var data = database.once('value');
 
-  data.then((snap) => {
-    cache = snap.val();
-  });
+      data.then((snap) => {
+        var cache = snap.val();
+        sessionStorage.setItem('sessionDatabase', JSON.stringify(cache));
+        loadManufacturerList(cache);
+        return cache;
+      });
+    };
+  };
 
-  data.then((snap) => {
-    var arr = Object.keys(snap.val());
-    $auto.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>').join(''))
-  });
+  function loadManufacturerList(obj) {
+    var arr = Object.keys(obj);
+    $auto.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>').join(''));
+  };
 
   //=== Onchange functions ===//
 
   $auto.change(function () {
     $mark.html('');
     $autoEngine.html('');
-
-    console.log(cache);
 
     var manufacturer = $(this).val();
 
@@ -104,12 +114,14 @@ jQuery(function ($) {
 
       $stock.html('<td>' + manufacturer + '</td><td>' + model + '</td><td>' + engine + '</td><td>' + currentHp + '</td><td>' + currentTorque + '</td><td>Stock</td><td> ~ </td>');
       $stageOne.html('<td colspan="3"></td><td>' + (currentHp + currentHp * 0.2) + '</td><td>' + (currentTorque + currentTorque * 0.2) + '</td><td>Stage 1</td><td> ~ </td>');
-      $stageTwo.html('<td colspan="3"></td><td>' + (currentHp + currentHp * 0.29) + '</td><td>' + (currentTorque + currentTorque * 0.27) + '</td><td>Stage 2</td><td> ~ </td>');
+      $stageTwo.html('<td colspan="3"></td><td>' + (currentHp + currentHp * 0.25) + '</td><td>' + (currentTorque + currentTorque * 0.27) + '</td><td>Stage 2</td><td> ~ </td>');
       $chartInfo.html('<td colspan="7" class="text-success"><h4>Модификации Stage 3 и выше требуют установки дополнительных модулей.</h4></td>');
 
       $stageOne.removeClass('text-up');
       $stageTwo.removeClass('text-up');
       $stock.addClass('text-up');
+
+      calculateCarInfo(cache[manufacturer][model][engine]);
     }
   });
 
@@ -123,6 +135,22 @@ jQuery(function ($) {
   //   }
 
   // });
+
+  function calculateCarInfo(obj) {
+    var carInfo = {};
+
+    carInfo.stock = { hp: obj.hp, torque: obj.torque };
+
+    if (obj.turbo) {
+      carInfo.stageOne = { hp: parseInt(obj.hp + obj.hp * 0.2), torque: parseInt(obj.torque + obj.torque * 0.2) }
+      carInfo.stageTwo = { hp: parseInt(obj.hp + obj.hp * 0.25), torque: parseInt(obj.torque + obj.torque * 0.25) }
+    } else {
+      carInfo.stageOne = { hp: parseInt(obj.hp + obj.hp * 0.1), torque: parseInt(obj.torque + obj.torque * 0.1) }
+      carInfo.stageTwo = { hp: parseInt(obj.hp + obj.hp * 0.15), torque: parseInt(obj.torque + obj.torque * 0.15) }
+    }
+
+    console.log(carInfo);
+  }
 
   //=== Fade/Toggle/Slowdown ===//
 
