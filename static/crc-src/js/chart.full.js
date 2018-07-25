@@ -29,14 +29,9 @@ jQuery(function ($) {
     messagingSenderId: "140933235811"
   };
 
-  var cache = getDataFromStorage();
-
-  function getDataFromStorage() {
+  var sessionDatabase = new Promise((resolve, reject) => {
     if (sessionStorage['sessionDatabase']) {
-      var cache = sessionStorage.getItem('sessionDatabase');
-      cache = JSON.parse("'" + cache + "'");
-      loadManufacturerList(cache);
-      return cache;
+      resolve(JSON.parse(sessionStorage.getItem('sessionDatabase')));
     } else {
       firebase.initializeApp(config);
 
@@ -44,18 +39,23 @@ jQuery(function ($) {
       var data = database.once('value');
 
       data.then((snap) => {
-        var cache = snap.val();
-        sessionStorage.setItem('sessionDatabase', JSON.stringify(cache));
-        console.log(sessionStorage.getItem('sessionDatabase') + ' from second part');
-        console.log(cache + ' first load');
-        loadManufacturerList(cache);
-        return cache;
+        sessionStorage.setItem('sessionDatabase', JSON.stringify(snap.val()));
+        resolve(snap.val());
       });
-    };
-  };
+    }
 
-  function loadManufacturerList(obj) {
-    var arr = Object.keys(obj);
+    reject('An error has occured!');
+  });
+
+  var sessionCache = sessionDatabase.then(function(value) {
+    loadManufacturerList(value);
+    return value;
+  });
+
+  console.log(sessionCache);  
+
+  function loadManufacturerList(cache) {
+    var arr = Object.keys(cache);
     $auto.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>').join(''));
   };
 
@@ -141,14 +141,29 @@ jQuery(function ($) {
   function calculateCarInfo(obj) {
     var carInfo = {};
 
-    carInfo.stock = { hp: obj.hp, torque: obj.torque };
+    carInfo.stock = {
+      hp: obj.hp,
+      torque: obj.torque
+    };
 
     if (obj.turbo) {
-      carInfo.stageOne = { hp: parseInt(obj.hp + obj.hp * 0.2), torque: parseInt(obj.torque + obj.torque * 0.2) }
-      carInfo.stageTwo = { hp: parseInt(obj.hp + obj.hp * 0.25), torque: parseInt(obj.torque + obj.torque * 0.25) }
+      carInfo.stageOne = {
+        hp: parseInt(obj.hp + obj.hp * 0.2),
+        torque: parseInt(obj.torque + obj.torque * 0.2)
+      }
+      carInfo.stageTwo = {
+        hp: parseInt(obj.hp + obj.hp * 0.25),
+        torque: parseInt(obj.torque + obj.torque * 0.25)
+      }
     } else {
-      carInfo.stageOne = { hp: parseInt(obj.hp + obj.hp * 0.1), torque: parseInt(obj.torque + obj.torque * 0.1) }
-      carInfo.stageTwo = { hp: parseInt(obj.hp + obj.hp * 0.15), torque: parseInt(obj.torque + obj.torque * 0.15) }
+      carInfo.stageOne = {
+        hp: parseInt(obj.hp + obj.hp * 0.1),
+        torque: parseInt(obj.torque + obj.torque * 0.1)
+      }
+      carInfo.stageTwo = {
+        hp: parseInt(obj.hp + obj.hp * 0.15),
+        torque: parseInt(obj.torque + obj.torque * 0.15)
+      }
     }
 
     console.log(carInfo);
