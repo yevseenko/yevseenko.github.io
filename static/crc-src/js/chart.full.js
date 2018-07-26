@@ -29,33 +29,39 @@ jQuery(function ($) {
     messagingSenderId: "140933235811"
   };
 
+  var cache = {};
+
   var sessionDatabase = new Promise((resolve, reject) => {
-    if (sessionStorage['sessionDatabase']) {
-      resolve(JSON.parse(sessionStorage.getItem('sessionDatabase')));
-    } else {
-      firebase.initializeApp(config);
+    try {
+      if (sessionStorage['sessionDatabase']) {
+        resolve(JSON.parse(sessionStorage.getItem('sessionDatabase')));
+      } else {
+        firebase.initializeApp(config);
 
-      var database = firebase.database().ref();
-      var data = database.once('value');
+        var database = firebase.database().ref();
+        var data = database.once('value');
 
-      data.then((snap) => {
-        sessionStorage.setItem('sessionDatabase', JSON.stringify(snap.val()));
-        resolve(snap.val());
-      });
+        data.then((snap) => {
+          sessionStorage.setItem('sessionDatabase', JSON.stringify(snap.val()));
+        });
+
+        resolve(data.then((snap) => snap.val()));
+      }
+    } catch {
+      reject('An error has occured!');
     }
-
-    reject('An error has occured!');
   });
 
-  var sessionCache = sessionDatabase.then(function(value) {
+  sessionDatabase.then(function (value) {
     loadManufacturerList(value);
-    return value;
   });
 
-  console.log(sessionCache);  
+  sessionDatabase.then(function (value) {
+    cache = value;
+  });
 
-  function loadManufacturerList(cache) {
-    var arr = Object.keys(cache);
+  function loadManufacturerList(obj) {
+    var arr = Object.keys(obj);
     $auto.html('<option></option>' + arr.map(item => '<option value="' + item + '">' + item + '</option>').join(''));
   };
 
