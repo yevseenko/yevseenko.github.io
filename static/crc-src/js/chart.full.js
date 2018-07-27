@@ -32,24 +32,22 @@ jQuery(function ($) {
   var cache = {};
 
   var sessionDatabase = new Promise((resolve, reject) => {
-    try {
-      if (sessionStorage['sessionDatabase']) {
-        resolve(JSON.parse(sessionStorage.getItem('sessionDatabase')));
-      } else {
-        firebase.initializeApp(config);
 
-        var database = firebase.database().ref();
-        var data = database.once('value');
+    if (sessionStorage['sessionDatabase']) {
+      resolve(JSON.parse(sessionStorage.getItem('sessionDatabase')));
+    } else {
+      firebase.initializeApp(config);
 
-        data.then((snap) => {
-          sessionStorage.setItem('sessionDatabase', JSON.stringify(snap.val()));
-        });
+      var database = firebase.database().ref();
+      var data = database.once('value');
 
-        resolve(data.then((snap) => snap.val()));
-      }
-    } catch {
-      reject('An error has occured!');
+      data.then((snap) => {
+        sessionStorage.setItem('sessionDatabase', JSON.stringify(snap.val()));
+      });
+
+      resolve(data.then((snap) => snap.val()));
     }
+    reject('An error has occured!');
   });
 
   sessionDatabase.then(function (value) {
@@ -109,9 +107,7 @@ jQuery(function ($) {
     var model = $mark.val();
     if ($(this).val()) {
       var engine = $(this).val();
-      var currentHp = cache[manufacturer][model][engine].hp;
-      var currentTorque = cache[manufacturer][model][engine].torque;
-
+      var carInfo = calculateCarInfo(cache[manufacturer][model][engine]);
 
       if (cache[manufacturer][model][engine].video) {
         $chartVideo.show();
@@ -120,16 +116,15 @@ jQuery(function ($) {
         $chartVideo.hide();
       }
 
-      $stock.html('<td>' + manufacturer + '</td><td>' + model + '</td><td>' + engine + '</td><td>' + currentHp + '</td><td>' + currentTorque + '</td><td>Stock</td><td> ~ </td>');
-      $stageOne.html('<td colspan="3"></td><td>' + (currentHp + currentHp * 0.2) + '</td><td>' + (currentTorque + currentTorque * 0.2) + '</td><td>Stage 1</td><td> ~ </td>');
-      $stageTwo.html('<td colspan="3"></td><td>' + (currentHp + currentHp * 0.25) + '</td><td>' + (currentTorque + currentTorque * 0.27) + '</td><td>Stage 2</td><td> ~ </td>');
+      $stock.html('<td>' + manufacturer + '</td><td>' + model + '</td><td>' + engine + '</td><td>' + carInfo.stock.hp + '</td><td>' + carInfo.stock.torque + '</td><td>Stock</td><td> ~ </td>');
+      $stageOne.html('<td colspan="3"></td><td>' + carInfo.stageOne.hp + '</td><td>' + carInfo.stageOne.torque + '</td><td>Stage 1</td><td> ~ </td>');
+      $stageTwo.html('<td colspan="3"></td><td>' + carInfo.stageTwo.hp + '</td><td>' + carInfo.stageTwo.torque + '</td><td>Stage 2</td><td> ~ </td>');
       $chartInfo.html('<td colspan="7" class="text-success"><h4>Модификации Stage 3 и выше требуют установки дополнительных модулей.</h4></td>');
 
       $stageOne.removeClass('text-up');
       $stageTwo.removeClass('text-up');
       $stock.addClass('text-up');
 
-      calculateCarInfo(cache[manufacturer][model][engine]);
     }
   });
 
@@ -155,24 +150,24 @@ jQuery(function ($) {
     if (obj.turbo) {
       carInfo.stageOne = {
         hp: parseInt(obj.hp + obj.hp * 0.2),
-        torque: parseInt(obj.torque + obj.torque * 0.2)
+        torque: parseInt(obj.torque + obj.torque * 0.3)
       }
       carInfo.stageTwo = {
         hp: parseInt(obj.hp + obj.hp * 0.25),
-        torque: parseInt(obj.torque + obj.torque * 0.25)
+        torque: parseInt(obj.torque + obj.torque * 0.35)
       }
     } else {
       carInfo.stageOne = {
         hp: parseInt(obj.hp + obj.hp * 0.1),
-        torque: parseInt(obj.torque + obj.torque * 0.1)
+        torque: parseInt(obj.torque + obj.torque * 0.15)
       }
       carInfo.stageTwo = {
         hp: parseInt(obj.hp + obj.hp * 0.15),
-        torque: parseInt(obj.torque + obj.torque * 0.15)
+        torque: parseInt(obj.torque + obj.torque * 0.2)
       }
     }
 
-    console.log(carInfo);
+    return carInfo;
   }
 
   //=== Fade/Toggle/Slowdown ===//
