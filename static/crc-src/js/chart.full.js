@@ -237,22 +237,10 @@ $(document).ready(function () {
     get: 'user',
     userId: '4290208823',
     limit: 6,
-    resolution: 'low_resolution',
+    resolution: 'standard_resolution',
     accessToken: '4290208823.1677ed0.af001e058c844edb9e28547b2f4e7b12',
     sortBy: 'most-recent',
-    template: '<div class="col-md-2 instaimg"><a href="{{link}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
+    template: '<div class="col-md-2 col-xs-2 instaimg"><a href="{{link}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
   });
-
-
   userFeed.run();
-
-
-  // This will create a single gallery from all elements that have class "gallery-item"
-  // $('.gallery').magnificPopup({
-  //   type: 'image',
-  //   delegate: 'a',
-  //   gallery: {
-  //     enabled: true
-  //   }
-  // });
 });
