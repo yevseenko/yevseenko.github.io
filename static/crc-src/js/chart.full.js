@@ -232,7 +232,7 @@ jQuery(function ($) {
 
 //===InstagramFeed===//
 
-$(document).ready(function () {
+jQuery(document).ready(function () {
   var userFeed = new Instafeed({
     get: 'user',
     userId: '4290208823',

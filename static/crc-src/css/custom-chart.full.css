@@ -93,6 +93,10 @@
   overflow: hidden;
 }
 
+.instaimg:hover {
+  z-index: 99;  
+}
+
 @media (max-width: 800px) {
   .img-fluid {
     max-height: 120px;
