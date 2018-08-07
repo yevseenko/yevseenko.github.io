@@ -238,6 +238,13 @@ jQuery(document).ready(function () {
     userId: '4290208823',
     limit: 6,
     resolution: 'standard_resolution',
+    // success: function(obj) {
+    //   if (obj.data.length < 6) {
+    //     var counter = 6 - obj.data.length;
+    //     var defaultStr = '<div class="col-md-2 col-xs-2 instaimg">InGodWeTrust</div>';
+    //     $('#instafeed').append(defaultStr.repeat(counter));
+    //   };
+    // },
     accessToken: '4290208823.1677ed0.af001e058c844edb9e28547b2f4e7b12',
     sortBy: 'most-recent',
     template: '<div class="col-md-2 col-xs-2 instaimg"><a href="{{link}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
