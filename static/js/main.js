@@ -20,14 +20,9 @@ function addZero(n) {
 };
 
 function formatedString() {
-	var date = new Date(),
-   	seconds = date.getSeconds(),
-   	minutes = date.getMinutes(),
-   	hours = date.getHours(),
-   	day = date.getDate(),
-   	nDay = date.getDay(),
-   	nMonth = date.getMonth(),
-   	year = date.getFullYear();
-	
-	return dayOfWeek[nDay] + ', ' + day + ' ' + month[nMonth] + ', ' + year + ' ' + addZero(hours) + ':' + addZero(minutes) + ':' + addZero(seconds);
+	var start = Date.parse("Mar 31, 2015");
+	var date = Date.now();
+	var result = date - start;
+
+	return result;
 };
