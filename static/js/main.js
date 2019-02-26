@@ -1,19 +1,12 @@
 window.onload = function () {
 	$dclock = document.getElementById('dclock');
 	digitalClock();
+	console.log('Clock loaded...');
 }
 
 function digitalClock() {
 	$dclock.innerHTML = formatedString();
 	setTimeout(digitalClock, 1000);
-};
-
-function addZero(n) {
-	if (n < 10) {
-		return n = "0" + n;
-	} else {
-		return n;
-	}
 };
 
 function formatedString() {
@@ -34,3 +27,11 @@ function formatedString() {
 function parse(value) {
 	return Number.parseInt(value);
 }
+
+function addZero(n) {
+	if (n < 10) {
+		return n = "0" + n;
+	} else {
+		return n;
+	}
+};
