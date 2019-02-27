@@ -1,5 +1,6 @@
+"use strict";
 (function () {
-	$dclock = document.getElementById('dclock');
+	var $dclock = document.getElementById('dclock');
 
 	// init
 	digitalClock();
