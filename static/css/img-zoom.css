@@ -1,0 +1,28 @@
+.original-img {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-left: 120px;
+}
+
+.large-img-inner {
+  position: absolute;
+}
+
+.original-img-src {
+  width: 200px;
+  height: 200px;
+}
+
+.large-img {
+  background: #fff;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  float: left;
+  display: none;
+  overflow: hidden;
+  border: 2px solid #fff;
+  margin-left: 20px;
+}
+
