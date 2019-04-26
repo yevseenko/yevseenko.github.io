@@ -27,8 +27,8 @@
     let rely = e.pageY - $originalOffset.top;
 
     $largeImgInner.css({
-      left: relx*2 - relx*4,
-      top: rely*2 - rely*4
+      left: -relx*2.5,
+      top: -rely*2.5
     });
 
     console.log($largeImgInner);
