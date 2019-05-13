@@ -1,12 +1,12 @@
-$(document).ready(function() {
+$(document).ready(function () {
 	var $martial_glases = $('#martial_glases'),
-	$offline_glases = $('#offline_glases'),
-	$prana_glases = $('#prana_glases'),
-	$surprise_glases = $('#surprise_glases'),
-	$back_glases = $('#back_glases');
+		$offline_glases = $('#offline_glases'),
+		$prana_glases = $('#prana_glases'),
+		$surprise_glases = $('#surprise_glases'),
+		$back_glases = $('#back_glases');
 
 	$martial_glases.text(martial_glases[martial_rand()]);
-	$martial_glases.on('click', function() {
+	$martial_glases.on('click', function () {
 		$martial_glases.text(martial_glases[martial_rand()]);
 	});
 });
@@ -18,29 +18,33 @@ var surprise_glases = ['Копай молча, не ленись, найдешь
 var back_glases = ['Возвращайся в город, пока оставшиеся три ноги не поломали...'];
 
 function martial_rand() {
-	var min = 0, max = martial_glases.length;
+	var min = 0,
+		max = martial_glases.length;
 	var rand = min + Math.random() * (max + 1 - min);
-	rand = rand^0;
+	rand = rand ^ 0;
 	return rand;
 };
 
 function prana_rand() {
-	var min = 0, max = prana_glases.length;
+	var min = 0,
+		max = prana_glases.length;
 	var rand = min + Math.random() * (max + 1 - min);
-	rand = rand^0;
+	rand = rand ^ 0;
 	return rand;
 };
 
 function offline_rand() {
-	var min = 0, max = offline_glases.length;
+	var min = 0,
+		max = offline_glases.length;
 	var rand = min + Math.random() * (max + 1 - min);
-	rand = rand^0;
+	rand = rand ^ 0;
 	return rand;
 };
 
 function surprise_rand() {
-	var min = 0, max = surprise_glases.length;
+	var min = 0,
+		max = surprise_glases.length;
 	var rand = min + Math.random() * (max + 1 - min);
-	rand = rand^0;
+	rand = rand ^ 0;
 	return rand;
 };
