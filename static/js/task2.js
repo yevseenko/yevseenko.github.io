@@ -1,5 +1,5 @@
 
-let isPlay = confirm(`Do you want to play a game?`);
+let continuePlaying = confirm(`Do you want to play a game?`);
 const game = {
   initPrize: 100,
   currentPrize: 0,
@@ -11,10 +11,10 @@ const game = {
   maxNum: 8,
   rangeInc: 4,
   rangeMaxInc: 1,
-  try: false
+  playerAttempt: false
 }
 
-while (isPlay) {
+while (continuePlaying) {
   const randomNum = Math.floor(Math.random() * (game.maxNum + game.rangeMaxInc));
   console.log(randomNum);
   game.currentPrize = game.initPrize;
@@ -27,35 +27,35 @@ while (isPlay) {
     `, '');
     if (userInput === randomNum) {
       game.totalPrize += game.currentPrize;
-      game.try = true;
+      game.playerAttempt = true;
       break;
     } else {
-      game.try = false;
+      game.playerAttempt = false;
       game.currentAttempts--;
       game.currentPrize /= game.prizeInc;
     }
   }
 
-  if (game.try) {
-    isPlay = confirm(`
+  if (game.playerAttempt) {
+    game.initPrize *= game.prizeInc;
+    game.maxNum += game.rangeInc;
+    continuePlaying = confirm(`
       Congratulation, you won! Your prize is: ${game.totalPrize}$.
       Do you want to continue?
     `);
-    game.initPrize *= game.prizeInc;
-    game.maxNum += game.rangeInc;
   } else {
-    isPlay = confirm(`
-      Thank you for your participation. Your prize is: ${game.totalPrize}$.
-      Do you want to start the game again?
-    `);
     game.totalPrize = 0;
     game.initPrize = 100;
     game.maxNum = 8;
+    continuePlaying = confirm(`
+      Thank you for your participation. Your prize is: ${game.totalPrize}$.
+      Do you want to start the game again?
+    `);
   }
 
   game.currentAttempts = game.attempts;
 }
 
-if (!isPlay) {
+if (!continuePlaying) {
   alert(`You did not become a billionaire, but can.`);
 }
