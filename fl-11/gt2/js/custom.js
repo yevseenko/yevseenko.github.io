@@ -43,6 +43,9 @@
     triangleAngleA = document.querySelector('#triangleAngleA'),
     triangleAngleB = document.querySelector('#triangleAngleB'),
     triangleAngleC = document.querySelector('#triangleAngleC'),
+    triangleArea = document.querySelector('#triangleArea'),
+    triangleHeight = document.querySelector('#triangleHeight'),
+    triangleSideC = document.querySelector('#triangleSideC'),
     triangleSideB = document.querySelector('#triangleSideB');
 
 
@@ -138,10 +141,16 @@
     const tgAlpha = sideA / sideB;
     obj.angleC = Math.atan(tgAlpha) * 180 / Math.PI;
     obj.angleA = 90 - obj.angleC;
+    obj.area = obj.sideA * obj.sideB / 2;
+    obj.height = obj.sideA * obj.sideB / Math.sqrt((Math.pow(obj.sideA, 2)) + (Math.pow(obj.sideB, 2)));
+    obj.sideC = Math.sqrt((Math.pow(obj.sideA, 2)) + (Math.pow(obj.sideB, 2)));
     calculatedResults['triangle'] = {
       angleA: obj.angleA,
       angleB: obj.angleB,
-      angleC: obj.angleC
+      angleC: obj.angleC,
+      area: obj.area,
+      height: obj.height,
+      sideC: obj.sideC
     };
     draw(obj.sideA, obj.sideB, triangle);
   }
@@ -173,6 +182,9 @@
     triangleAngleA.innerText = calculatedResults.triangle.angleA.toFixed(2);
     triangleAngleB.innerText = calculatedResults.triangle.angleB.toFixed(2);
     triangleAngleC.innerText = calculatedResults.triangle.angleC.toFixed(2);
+    triangleArea.innerText = calculatedResults.triangle.area.toFixed(2);
+    triangleHeight.innerText = calculatedResults.triangle.height.toFixed(2);
+    triangleSideC.innerText = calculatedResults.triangle.sideC.toFixed(2);
   }
 
   btn.onclick = function () {
