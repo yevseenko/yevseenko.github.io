@@ -126,7 +126,7 @@
       area: obj.area,
       diagonal: obj.diagonal
     };
-    draw(sideB, sideA, rectangle);
+    draw(sideA, sideB, rectangle);
   }
 
   function drawTriangle(sideA, sideB) {
@@ -155,7 +155,7 @@
     drawCircle(circleR.value || 10, circle);
     drawEllipse(horizontalR.value || 10, verticalR.value || 5);
     drawSquare(squareSide.value || 20);
-    drawRectangle(rectangleSideA.value || 20, rectangleSideB.value || 10);
+    drawRectangle(rectangleSideA.value || 10, rectangleSideB.value || 20);
     drawTriangle(triangleSideA.value || 10, triangleSideB.value || 20);
   }
 
