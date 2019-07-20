@@ -159,6 +159,40 @@
     el.style.transform = `skew(-${skew}deg)`;
   }
 
+  function renderParallelogramResults() {
+    parArea.innerText = calculatedResults.parallelogram.area.toFixed(2);
+    parHeight.innerText = calculatedResults.parallelogram.height.toFixed(2);
+  }
+
+  function renderCircleResults() {
+    circleArea.innerText = calculatedResults.circle.area.toFixed(2);
+    circleLength.innerText = calculatedResults.circle.circumference.toFixed(2);
+  }
+
+  function renderEllipseResults() {
+    ellipseArea.innerText = calculatedResults.ellipse.area.toFixed(2);
+    ellipseLength.innerText = calculatedResults.ellipse.circumference.toFixed(2);
+  }
+
+  function renderSquareResults() {
+    squareArea.innerText = calculatedResults.square.area.toFixed(2);
+    squareDiagonal.innerText = calculatedResults.square.diagonal.toFixed(2);
+  }
+
+  function renderRectangleResults() {
+    rectangleArea.innerText = calculatedResults.rectangle.area.toFixed(2);
+    rectangleDiagonal.innerText = calculatedResults.rectangle.diagonal.toFixed(2);
+  }
+
+  function renderTriangleResults() {
+    triangleAngleA.innerText = calculatedResults.triangle.angleA.toFixed(2);
+    triangleAngleB.innerText = calculatedResults.triangle.angleB.toFixed(2);
+    triangleAngleC.innerText = calculatedResults.triangle.angleC.toFixed(2);
+    triangleArea.innerText = calculatedResults.triangle.area.toFixed(2);
+    triangleHeight.innerText = calculatedResults.triangle.height.toFixed(2);
+    triangleSideC.innerText = calculatedResults.triangle.sideC.toFixed(2);
+  }
+
   function render() {
     drawParallelogram(parSideA.value || 10, parSideB.value || 20, parAngle.value || 20);
     drawCircle(circleR.value || 10, circle);
@@ -169,22 +203,12 @@
   }
 
   function calculate() {
-    parArea.innerText = calculatedResults.parallelogram.area.toFixed(2);
-    parHeight.innerText = calculatedResults.parallelogram.height.toFixed(2);
-    circleArea.innerText = calculatedResults.circle.area.toFixed(2);
-    circleLength.innerText = calculatedResults.circle.circumference.toFixed(2);
-    ellipseArea.innerText = calculatedResults.ellipse.area.toFixed(2);
-    ellipseLength.innerText = calculatedResults.ellipse.circumference.toFixed(2);
-    squareArea.innerText = calculatedResults.square.area.toFixed(2);
-    squareDiagonal.innerText = calculatedResults.square.diagonal.toFixed(2);
-    rectangleArea.innerText = calculatedResults.rectangle.area.toFixed(2);
-    rectangleDiagonal.innerText = calculatedResults.rectangle.diagonal.toFixed(2);
-    triangleAngleA.innerText = calculatedResults.triangle.angleA.toFixed(2);
-    triangleAngleB.innerText = calculatedResults.triangle.angleB.toFixed(2);
-    triangleAngleC.innerText = calculatedResults.triangle.angleC.toFixed(2);
-    triangleArea.innerText = calculatedResults.triangle.area.toFixed(2);
-    triangleHeight.innerText = calculatedResults.triangle.height.toFixed(2);
-    triangleSideC.innerText = calculatedResults.triangle.sideC.toFixed(2);
+    renderParallelogramResults();
+    renderCircleResults();
+    renderEllipseResults();
+    renderSquareResults();
+    renderRectangleResults();
+    renderTriangleResults();
   }
 
   btn.onclick = function () {
