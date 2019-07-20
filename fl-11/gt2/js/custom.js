@@ -50,7 +50,7 @@
 
   function draw(h, w, el) {
     if (w > 40 || h > 40 || w < 0 || h < 0) {
-      alert(`Invalid value for element => ${el.getAttribute('name')}`);
+      console.log(`Invalid value for element => ${el.getAttribute('name')}`);
       return;
     }
     el.style.height = `${h*10}px`;
