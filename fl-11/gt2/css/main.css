@@ -29,6 +29,10 @@
   margin-right: 30px;
 }
 
+.transition {
+  transition: width 1s, height 1s;
+}
+
 .par-container {
   border: 5px solid #000;
   transform: skew(-20deg);
@@ -67,8 +71,20 @@
 }
 
 .btn {
-  margin-left: 90%;
-  margin-bottom: 50px;
+  margin: 30px 50%;
+  border: 2px solid #000;
+  background: #fff;
+  font-size: 1.5em;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  padding: 10px 20px;
+}
+
+.btn:hover {
+  background: #ddd;
+  cursor: pointer;
 }
 
 input {
