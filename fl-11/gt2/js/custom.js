@@ -1,6 +1,7 @@
 (function () {
   const btn = document.querySelector('#calculate');
   const input = document.querySelectorAll('input');
+  const checkbox = document.querySelector('#checkbox');
 
   //par
   const parSideA = document.querySelector('#parSideA'),
@@ -151,11 +152,11 @@
 
   function render() {
     drawParallelogram(parSideA.value || 10, parSideB.value || 20, parAngle.value || 20);
-    drawCircle(circleR.value, circle);
-    drawEllipse(horizontalR.value, verticalR.value);
-    drawSquare(squareSide.value);
-    drawRectangle(rectangleSideA.value, rectangleSideB.value);
-    drawTriangle(triangleSideA.value, triangleSideB.value);
+    drawCircle(circleR.value || 10, circle);
+    drawEllipse(horizontalR.value || 10, verticalR.value || 5);
+    drawSquare(squareSide.value || 20);
+    drawRectangle(rectangleSideA.value || 20, rectangleSideB.value || 10);
+    drawTriangle(triangleSideA.value || 10, triangleSideB.value || 20);
   }
 
   function calculate() {
@@ -179,10 +180,12 @@
     calculate();
   };
 
-  input.forEach(function(elem) {
-    elem.addEventListener('input', function() {
-      render();
-      calculate();
+  input.forEach(function (elem) {
+    elem.addEventListener('input', function () {
+      if (checkbox.checked) {
+        render();
+        calculate();
+      }
     });
   });
 

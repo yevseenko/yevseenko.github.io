@@ -15,11 +15,11 @@
       <div class="par-container transition" id="par" name="parallelogram"></div>
       <div class="params">
         <label for="parSideA">A:</label>
-        <input type="text" id="parSideA" value="10"/>
+        <input type="text" id="parSideA" value="10" />
         <label for="parSideB">B:</label>
-        <input type="text" id="parSideB" value="20"/>
+        <input type="text" id="parSideB" value="20" />
         <label for="parAngle">Angle:</label>
-        <input type="text" id="parAngle" value="70"/>
+        <input type="text" id="parAngle" value="70" />
         <div>
           <label for="parArea">Area:</label>
           <span id="parArea">-</span>
@@ -30,10 +30,10 @@
     </div>
     <hr />
     <div class="grid-container">
-      <div class="circle-container transition" id="circle"></div>
+      <div class="circle-container transition" id="circle" name="circle"></div>
       <div class="params">
         <label for="circleR">Radius:</label>
-        <input type="text" id="circleR" value="10"/>
+        <input type="text" id="circleR" value="10" />
         <div>
           <label for="circleArea">Area:</label>
           <span id="circleArea">-</span>
@@ -44,12 +44,12 @@
     </div>
     <hr />
     <div class="grid-container">
-      <div class="ellipse-container transition" id="ellipse"></div>
+      <div class="ellipse-container transition" id="ellipse" name="ellipse"></div>
       <div class="params">
         <label for="ellipseHR">Horizontal R:</label>
-        <input type="text" id="ellipseHR" value="10"/>
+        <input type="text" id="ellipseHR" value="10" />
         <label for="ellipseVR">Vertical R:</label>
-        <input type="text" id="ellipseVR" value="5"/>
+        <input type="text" id="ellipseVR" value="5" />
         <div>
           <label for="ellipseArea">Area:</label>
           <span id="ellipseArea">-</span>
@@ -60,10 +60,10 @@
     </div>
     <hr />
     <div class="grid-container">
-      <div class="square-container transition" id="square"></div>
+      <div class="square-container transition" id="square" name="square"></div>
       <div class="params">
         <label for="squareSide">A:</label>
-        <input type="text" id="squareSide" value="20"/>
+        <input type="text" id="squareSide" value="20" />
         <div>
           <label for="squareArea">Area:</label>
           <span id="squareArea">-</span>
@@ -74,12 +74,12 @@
     </div>
     <hr />
     <div class="grid-container">
-      <div class="rectangle-container transition" id="rectangle"></div>
+      <div class="rectangle-container transition" id="rectangle" name="rectangle"></div>
       <div class="params">
         <label for="rectangleSideA">A:</label>
-        <input type="text" id="rectangleSideA" value="20"/>
+        <input type="text" id="rectangleSideA" value="20" />
         <label for="rectangleSideB">B:</label>
-        <input type="text" id="rectangleSideB" value="10"/>
+        <input type="text" id="rectangleSideB" value="10" />
         <div>
           <label for="rectangleArea">Area:</label>
           <span id="rectangleArea">-</span>
@@ -90,14 +90,14 @@
     </div>
     <hr />
     <div class="grid-container">
-      <div class="triangle-root transition" id="triangle">
+      <div class="triangle-root transition" id="triangle" name="triangle">
         <div class="triangle-container"></div>
       </div>
       <div class="params">
         <label for="triangleSideA">A:</label>
-        <input type="text" id="triangleSideA" value="10"/>
+        <input type="text" id="triangleSideA" value="10" />
         <label for="triangleSideB">B:</label>
-        <input type="text" id="triangleSideB" value="20"/>
+        <input type="text" id="triangleSideB" value="20" />
         <div>
           <label for="triangleAngleA">A:</label>
           <span id="triangleAngleA">-</span>
@@ -109,7 +109,11 @@
       </div>
     </div>
     <hr />
-    <button class="btn" id="calculate">Calculate!</button>
+    <div class="calc">
+      <button class="btn" id="calculate">Calculate!</button>
+      <label for="checkbox" class="checkbox-label">Instant Calculate: </label>
+      <input type="checkbox" name="instantCalculate" id="checkbox" />
+    </div>
   </div>
   <script src="js/custom.js"></script>
 </body>
