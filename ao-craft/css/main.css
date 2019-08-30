@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+h3 {
+  padding: 10px 0;
+}
+
+.reagent-prices input {
+  width: 50px;
+}
+
+.potion-prices input {
+  width: 60px;
+}
+
+.item {
+  margin: 5px 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
