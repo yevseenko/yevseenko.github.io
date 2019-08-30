@@ -1,0 +1,7 @@
+.snake-head {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #F00;
+  border: 1px solid black;
+}
