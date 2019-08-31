@@ -7,7 +7,7 @@
   >> Yes, of course. I am ready to work on the result.
 * 3 skipped lessons will lead you to dismisson. Are ypu ready to allocate 2.5 month for the lab with no vacations and having rest?
   > Я и сейчас не отдыхаю, не знаю, что изменится.
-  > I still do not rest, I do not know what will change.
+  >> I still do not rest, I do not know what will change.
 * Another company offers you a good salary after 2 weeks of offline lessons, you actions?
   > Я уже имею опыт собеседований и общения с разными компаниями, в ЕПАМ есть перспективы для меня, чего не могут предложить достаточно многие компании. 
   >> I already have experience in interviewing and communicating with different companies, in the EPAM there are prospects for me that quite a few companies cannot offer.
