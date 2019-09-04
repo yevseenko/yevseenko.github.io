@@ -11,6 +11,7 @@
     'T6_MILK',
     'T4_BURDOCK',
     'T8_POTION_COOLDOWN',
+    'T8_POTION_CLEANSE',
     'T6_POTION_COOLDOWN',
     'T4_POTION_COOLDOWN'
   ];
@@ -20,6 +21,13 @@
       'T8_YARROW': 72,
       'T7_MULLEIN': 24,
       'T5_TEASEL': 24,
+      'T8_MILK': 18,
+      'T8_ALCOHOL': 18
+    },
+    'invisibilityT8': {
+      'T8_YARROW': 72,
+      'T7_MULLEIN': 36,
+      'T5_TEASEL': 36,
       'T8_MILK': 18,
       'T8_ALCOHOL': 18
     },
@@ -66,9 +74,38 @@
     }
 
     rootNode.innerHTML = `
-    <div>Major poison potion [T8] || craft: ${craftPrices.poisonT8}, current: ${prices['T8_POTION_COOLDOWN']}</div>
-    <div>Poison potion [T6] || craft: ${craftPrices.poisonT6}, current: ${prices['T6_POTION_COOLDOWN']}</div>
-    <div>Minor poison potion [T4] || craft: ${craftPrices.poisonT4}, current: ${prices['T4_POTION_COOLDOWN']}</div>
+    <h2>Alchemy</h2>
+    <div class="grid-tmp">
+      <div class="item-header">Item name</div>
+      <div class="item-header">Tier</div>
+      <div class="item-header">Craft cost</div>
+      <div class="item-header">Current cost</div>
+      <div class="item-header">Profit</div>
+
+      <div>Major poison potion</div>
+      <div>[T8]</div>
+      <div>${craftPrices.poisonT8}</div>
+      <div>${prices['T8_POTION_COOLDOWN']}</div>
+      <div>${craftPrices.poisonT8 * 0.37 + prices['T8_POTION_COOLDOWN'] - craftPrices.poisonT8}</div>
+
+      <div>Invisibility potion </div>
+      <div>[T8]</div>
+      <div>${craftPrices.invisibilityT8}</div>
+      <div>${prices['T8_POTION_CLEANSE']}</div>
+      <div>${craftPrices.invisibilityT8 * 0.37 + prices['T8_POTION_CLEANSE'] - craftPrices.invisibilityT8}</div>
+    
+      <div>Poison potion </div>
+      <div>[T6]</div>
+      <div>Craft: ${craftPrices.poisonT6}</div>
+      <div>Current: ${prices['T6_POTION_COOLDOWN']}</div>
+      <div>${craftPrices.poisonT6 * 0.37 + prices['T6_POTION_COOLDOWN'] - craftPrices.poisonT6}</div>
+
+      <div>Minor poison potion </div>
+      <div>[T4]</div>
+      <div>Craft: ${craftPrices.poisonT4}</div>
+      <div>Current: ${prices['T4_POTION_COOLDOWN']}</div>
+      <div>${craftPrices.poisonT4 * 0.37 + prices['T4_POTION_COOLDOWN'] - craftPrices.poisonT4}</div>
+    </div>
     `
 
     console.log(craftPrices);
