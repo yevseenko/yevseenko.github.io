@@ -73,6 +73,12 @@
       return result;
     }
 
+    function calculateProfit(craft, current) {
+      const foo = 0.37;
+      let result = craft * foo + current - craft;
+      return result;
+    }
+
     rootNode.innerHTML = `
     <h2>Alchemy</h2>
     <div class="grid-tmp">
@@ -86,30 +92,27 @@
       <div>[T8]</div>
       <div>${craftPrices.poisonT8}</div>
       <div>${prices['T8_POTION_COOLDOWN']}</div>
-      <div>${craftPrices.poisonT8 * 0.37 + prices['T8_POTION_COOLDOWN'] - craftPrices.poisonT8}</div>
+      <div>${calculateProfit(craftPrices.poisonT8, prices['T8_POTION_COOLDOWN'])}</div>
 
       <div>Invisibility potion </div>
       <div>[T8]</div>
       <div>${craftPrices.invisibilityT8}</div>
       <div>${prices['T8_POTION_CLEANSE']}</div>
-      <div>${craftPrices.invisibilityT8 * 0.37 + prices['T8_POTION_CLEANSE'] - craftPrices.invisibilityT8}</div>
+      <div>${calculateProfit(craftPrices.invisibilityT8, prices['T8_POTION_CLEANSE'])}</div>
     
       <div>Poison potion </div>
       <div>[T6]</div>
       <div>${craftPrices.poisonT6}</div>
       <div>${prices['T6_POTION_COOLDOWN']}</div>
-      <div>${craftPrices.poisonT6 * 0.37 + prices['T6_POTION_COOLDOWN'] - craftPrices.poisonT6}</div>
+      <div>${calculateProfit(craftPrices.poisonT6, prices['T6_POTION_COOLDOWN'])}</div>
 
       <div>Minor poison potion </div>
       <div>[T4]</div>
       <div>${craftPrices.poisonT4}</div>
       <div>${prices['T4_POTION_COOLDOWN']}</div>
-      <div>${craftPrices.poisonT4 * 0.37 + prices['T4_POTION_COOLDOWN'] - craftPrices.poisonT4}</div>
+      <div>${calculateProfit(craftPrices.poisonT4, prices['T4_POTION_COOLDOWN'])}</div>
     </div>
-    `
-
-    console.log(craftPrices);
-    console.log(prices);
+    `;
   }
 
   calculatePrices();
