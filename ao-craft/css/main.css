@@ -20,10 +20,12 @@ h2 {
 }
 
 .grid-tmp {
-  text-align: center;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
 }
 
 .item-header {
