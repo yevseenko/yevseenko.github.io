@@ -96,14 +96,14 @@
     
       <div>Poison potion </div>
       <div>[T6]</div>
-      <div>Craft: ${craftPrices.poisonT6}</div>
-      <div>Current: ${prices['T6_POTION_COOLDOWN']}</div>
+      <div>${craftPrices.poisonT6}</div>
+      <div>${prices['T6_POTION_COOLDOWN']}</div>
       <div>${craftPrices.poisonT6 * 0.37 + prices['T6_POTION_COOLDOWN'] - craftPrices.poisonT6}</div>
 
       <div>Minor poison potion </div>
       <div>[T4]</div>
-      <div>Craft: ${craftPrices.poisonT4}</div>
-      <div>Current: ${prices['T4_POTION_COOLDOWN']}</div>
+      <div>${craftPrices.poisonT4}</div>
+      <div>${prices['T4_POTION_COOLDOWN']}</div>
       <div>${craftPrices.poisonT4 * 0.37 + prices['T4_POTION_COOLDOWN'] - craftPrices.poisonT4}</div>
     </div>
     `
