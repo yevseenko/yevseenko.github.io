@@ -13,7 +13,19 @@
     'T8_POTION_COOLDOWN',
     'T8_POTION_CLEANSE',
     'T6_POTION_COOLDOWN',
-    'T4_POTION_COOLDOWN'
+    'T4_POTION_COOLDOWN',
+    'T5_POTION_REVIVE',
+    'T5_EGG',
+    'T5_POTION_SLOWFIELD',
+    'T4_MILK',
+    'T5_POTION_STONESKIN',
+    'T6_POTION_ENERGY',
+    'T6_ALCOHOL',
+    'T7_ALCOHOL',
+    'T6_POTION_HEAL',
+    'T7_POTION_REVIVE',
+    'T7_POTION_SLOWFIELD',
+    'T7_POTION_STONESKIN'
   ];
 
   const recipes = {
@@ -40,6 +52,51 @@
     'poisonT4': {
       'T4_BURDOCK': 8,
       'T3_COMFREY': 4
+    },
+    'gigantifyT5': {
+      'T5_TEASEL': 24,
+      'T4_BURDOCK': 12,
+      'T5_EGG': 6
+    },
+    'stickyT5': {
+      'T5_TEASEL': 24,
+      'T4_BURDOCK': 12,
+      'T5_EGG': 6
+    },
+    'resistanceT5': {
+      'T5_TEASEL': 24,
+      'T4_BURDOCK': 12,
+      'T4_MILK': 6
+    },
+    'energyT6': {
+      'T6_FOXGLOVE': 72,
+      'T6_MILK': 18,
+      'T6_ALCOHOL': 18
+    },
+    'healingT6': {
+      'T6_FOXGLOVE': 72,
+      'T5_EGG': 18,
+      'T6_ALCOHOL': 18
+    },
+    'gigantifyT7': {
+      'T7_MULLEIN': 71,
+      'T6_FOXGLOVE': 36,
+      'T5_EGG': 18,
+      'T7_ALCOHOL': 18
+    },
+    'stickyT7': {
+      'T7_MULLEIN': 72,
+      'T6_FOXGLOVE': 36,
+      'T4_BURDOCK': 36,
+      'T5_EGG': 18,
+      'T7_ALCOHOL': 18
+    },
+    'resistanceT7': {
+      'T7_MULLEIN': 72,
+      'T6_FOXGLOVE': 36,
+      'T4_BURDOCK': 36,
+      'T6_MILK': 18,
+      'T7_ALCOHOL': 18
     }
   }
 
@@ -62,7 +119,7 @@
     const craftPrices = {};
 
     for (let prop in recipes) {
-      craftPrices[prop] = calculateRecipe(recipes[prop]) / CRAFT_COUNT;
+      craftPrices[prop] = Math.round(calculateRecipe(recipes[prop]) / CRAFT_COUNT);
     }
 
     function calculateRecipe(recipe) {
@@ -74,13 +131,49 @@
     }
 
     function calculateProfit(craft, current) {
-      const foo = 0.37;
+      const foo = 0.44;
       let result = craft * foo + current - craft;
-      return result;
+      return Math.round(result);
+    }
+
+    function drawItem(name, tier, craft, current) {
+      const profit = calculateProfit(craft, current);
+      let profitHtml = ``;
+      let tierHtml = ``;
+
+      if (profit > 0) {
+        profitHtml = `<div class="profit-green">${profit}</div>`;
+      } else {
+        profitHtml = `<div class="profit-red">${profit}</div>`;
+      }
+
+      switch (tier) {
+        case '[T7]':
+          tierHtml = `<div class="tier-7">[ VII ]</div>`;
+          break;
+        case '[T6]':
+          tierHtml = `<div class="tier-6">[ VI ]</div>`;
+          break;
+        case '[T5]':
+          tierHtml = `<div class="tier-5">[ V ]</div>`;
+          break;
+        case '[T4]':
+          tierHtml = `<div class="tier-4">[ IV ]</div>`;
+          break;
+        default:
+          tierHtml = `<div>[ VIII ]</div>`;
+      }
+      return `
+        <div>${name}</div>
+        ${tierHtml}
+        <div>${craft}</div>
+        <div>${current}</div>
+        ${profitHtml}
+        `;
     }
 
     rootNode.innerHTML = `
-    <h2>Alchemy</h2>
+    <h2>Alchemy (Caerleon) with 44% return rate</h2>
     <div class="grid-tmp">
       <div class="item-header">Item name</div>
       <div class="item-header">Tier</div>
@@ -88,29 +181,22 @@
       <div class="item-header">Current cost</div>
       <div class="item-header">Profit</div>
 
-      <div>Major poison potion</div>
-      <div>[T8]</div>
-      <div>${craftPrices.poisonT8}</div>
-      <div>${prices['T8_POTION_COOLDOWN']}</div>
-      <div>${calculateProfit(craftPrices.poisonT8, prices['T8_POTION_COOLDOWN'])}</div>
+      ${drawItem('Major Poison Potion', '[T8]', craftPrices.poisonT8, prices['T8_POTION_COOLDOWN'])}
+      ${drawItem('Invisibility Potion', '[T8]', craftPrices.invisibilityT8, prices['T8_POTION_CLEANSE'])}
 
-      <div>Invisibility potion </div>
-      <div>[T8]</div>
-      <div>${craftPrices.invisibilityT8}</div>
-      <div>${prices['T8_POTION_CLEANSE']}</div>
-      <div>${calculateProfit(craftPrices.invisibilityT8, prices['T8_POTION_CLEANSE'])}</div>
+      ${drawItem('Major Gigantify Potion', '[T7]', craftPrices.gigantifyT7, prices['T7_POTION_REVIVE'])}
+      ${drawItem('Major Sticky Potion', '[T7]', craftPrices.stickyT7, prices['T7_POTION_SLOWFIELD'])}
+      ${drawItem('Major Resistance Potion', '[T7]', craftPrices.resistanceT7, prices['T7_POTION_STONESKIN'])}
     
-      <div>Poison potion </div>
-      <div>[T6]</div>
-      <div>${craftPrices.poisonT6}</div>
-      <div>${prices['T6_POTION_COOLDOWN']}</div>
-      <div>${calculateProfit(craftPrices.poisonT6, prices['T6_POTION_COOLDOWN'])}</div>
+      ${drawItem('Poison Potion', '[T6]', craftPrices.poisonT6, prices['T6_POTION_COOLDOWN'])}
+      ${drawItem('Major Energy Potion', '[T6]', craftPrices.energyT6, prices['T6_POTION_ENERGY'])}
+      ${drawItem('Major Healing Potion', '[T6]', craftPrices.healingT6, prices['T6_POTION_HEAL'])}
 
-      <div>Minor poison potion </div>
-      <div>[T4]</div>
-      <div>${craftPrices.poisonT4}</div>
-      <div>${prices['T4_POTION_COOLDOWN']}</div>
-      <div>${calculateProfit(craftPrices.poisonT4, prices['T4_POTION_COOLDOWN'])}</div>
+      ${drawItem('Gigantify Potion', '[T5]', craftPrices.gigantifyT5, prices['T5_POTION_REVIVE'])}
+      ${drawItem('Sticky Potion', '[T5]', craftPrices.stickyT5, prices['T5_POTION_SLOWFIELD'])}
+      ${drawItem('Resistance Potion', '[T5]', craftPrices.resistanceT5, prices['T5_POTION_STONESKIN'])}
+
+      ${drawItem('Minor Poison Potion', '[T4]', craftPrices.poisonT4, prices['T4_POTION_COOLDOWN'])}
     </div>
     `;
   }
