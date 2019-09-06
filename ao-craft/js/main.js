@@ -131,7 +131,7 @@
     }
 
     function calculateProfit(craft, current) {
-      const foo = 0.44;
+      const foo = 0.37;
       let result = craft * foo + current - craft;
       return Math.round(result);
     }
@@ -173,7 +173,7 @@
     }
 
     rootNode.innerHTML = `
-    <h2>Alchemy (Caerleon) with 44% return rate</h2>
+    <h2>Alchemy (Caerleon) with 37% return rate</h2>
     <div class="grid-tmp">
       <div class="item-header">Item name</div>
       <div class="item-header">Tier</div>
