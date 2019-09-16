@@ -1,3 +1,4 @@
+'use strict';
 (function () {
   const rootNode = document.querySelector('#rootNode');
   const items = [
@@ -131,9 +132,8 @@
     }
 
     function calculateProfit(craft, current) {
-      const foo = 0.37;
-      let result = craft * foo + current - craft;
-      return Math.round(result);
+      const foo = [0.15, 0.44];
+      return foo.map(item => Math.round(craft * item + current - craft));
     }
 
     function drawItem(name, tier, craft, current) {
@@ -141,12 +141,14 @@
       let profitHtml = ``;
       let tierHtml = ``;
 
-      if (profit > 0) {
-        profitHtml = `<div class="profit-green">${profit}</div>`;
-      } else {
-        profitHtml = `<div class="profit-red">${profit}</div>`;
-      }
-
+      profitHtml = profit.map(item => {
+        if (item > 0) {
+          return `<div class="profit-green">${item}</div>`;
+        } else {
+          return `<div class="profit-red">${item}</div>`;
+        }  
+      }).join('');
+      
       switch (tier) {
         case '[T7]':
           tierHtml = `<div class="tier-7">[ VII ]</div>`;
@@ -173,13 +175,14 @@
     }
 
     rootNode.innerHTML = `
-    <h2>Alchemy (Caerleon) with 37% return rate</h2>
-    <div class="grid-tmp">
+    <h2>Alchemy (Caerleon)</h2>
+    <div class="grid-alchemy">
       <div class="item-header">Item name</div>
       <div class="item-header">Tier</div>
       <div class="item-header">Craft cost</div>
       <div class="item-header">Current cost</div>
-      <div class="item-header">Profit</div>
+      <div class="item-header">Wo/F RR15%</div>
+      <div class="item-header">W/F RR44%</div>
 
       ${drawItem('Major Poison Potion', '[T8]', craftPrices.poisonT8, prices['T8_POTION_COOLDOWN'])}
       ${drawItem('Invisibility Potion', '[T8]', craftPrices.invisibilityT8, prices['T8_POTION_CLEANSE'])}
@@ -197,6 +200,14 @@
       ${drawItem('Resistance Potion', '[T5]', craftPrices.resistanceT5, prices['T5_POTION_STONESKIN'])}
 
       ${drawItem('Minor Poison Potion', '[T4]', craftPrices.poisonT4, prices['T4_POTION_COOLDOWN'])}
+    </div>
+    <h2>Cost</h2>
+    <div class="grid-resource-prices">
+      <div class="item-header">ResName</div>
+      <div class="item-header">Leather</div>
+      <div class="item-header">Cloth</div>
+      <div class="item-header">Bar</div>
+      <div class="item-header">Planks</div>
     </div>
     `;
   }

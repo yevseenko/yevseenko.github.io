@@ -26,7 +26,18 @@ h2 {
   padding: 10px 0;
 }
 
-.grid-tmp {
+.grid-alchemy {
+  padding: 10px;
+  border: 1px solid #cccfd1;
+  border-radius: 5px;
+  background: #36404a;
+  display: grid;
+  grid-gap: 10px;
+  justify-items: center;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-resource-prices {
   padding: 10px;
   border: 1px solid #cccfd1;
   border-radius: 5px;
