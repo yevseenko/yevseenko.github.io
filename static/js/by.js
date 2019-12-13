@@ -58,6 +58,7 @@
     if (player.summ >= pl.cost) {
       player.summ -= pl.cost;
       player.command.push(pl);
+      player.msg = '';
     } else {
       player.msg = 'You do not have money';
     }
@@ -99,7 +100,9 @@
 
     playerCommand.innerHTML = `
       Player command:
-      ${player.command.map(item => item.name).join(' ')}
+      <ul>
+        ${player.command.map(item => `<li><span class="info">${item.name}(${item.cost})</span></li>`).join(' ')}
+      </ul>
     `;
   }
 
