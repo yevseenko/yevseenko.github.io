@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+(function () {
+  console.log('Hello world');
+=======
 'use strict';
 (function () {
   const rootNode = document.querySelector('#rootNode');
@@ -213,4 +217,5 @@
   }
 
   calculatePrices();
+>>>>>>> 18300d92dee2b1d94243108bdd6781ad12bd3a80
 }());
