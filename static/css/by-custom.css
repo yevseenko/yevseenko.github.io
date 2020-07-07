@@ -10,15 +10,12 @@ body {
   background-color: #eee;
 }
 
-#first {
-  height: 640px;
-  width: 640px;
+.container {
+  max-width: 640px;
   margin: 0 auto;
-  background: url('../img/nataly.jpg');
 }
 
-#second {
-  height: 100%;
-  opacity: 0;
-  background: url('../img/nataly_color.jpg');
+img {
+  width: 100%;
+  filter: grayscale(1);
 }

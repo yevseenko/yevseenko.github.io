@@ -1,11 +1,10 @@
 (function () {
   console.log('Hello world');
-  const first = document.querySelector('#first');
-  const second = document.querySelector('#second');
+  const img = document.querySelector('#image');
 
-  second.onclick = function () {
+  img.onclick = function () {
     let start = Date.now();
-    let opp = 0;
+    let grays = 1;
     let con = 1;
 
     let timer = setInterval(function () {
@@ -16,16 +15,15 @@
         return;
       }
 
-      opp += 0.1 / 3;
+      grays -= 0.1 / 3;
       con += 0.01;
 
-      draw(opp, con);
+      draw(grays, con);
 
     }, 100);
 
-    function draw(opp, con) {
-      second.style.opacity = opp;
-      second.style.webkitFilter = `contrast(${con})`;
+    function draw(grays, con) {
+      img.style.webkitFilter = `contrast(${con}) grayscale(${grays})`;
     }
   }
 })();
