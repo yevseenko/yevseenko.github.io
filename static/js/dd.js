@@ -5,9 +5,10 @@
 
   img.onclick = function () {
     let start = Date.now();
-    let grays = 1;
-    let con = 1;
-    let opp = 0;
+    let elementGrayscale = 1;
+    let elementContrast = 1;
+    let elementBrightness = 1;
+    let elementStartOpacity = 0;
 
     let timer = setInterval(function () {
       let timePassed = Date.now() - start;
@@ -17,17 +18,21 @@
         return;
       }
 
-      grays -= 0.1 / 3;
-      con += 0.01;
-      opp += 0.1 / 3;
+      elementGrayscale -= 0.1 / 3;
+      elementContrast += 0.012;
+      elementStartOpacity += 0.1 / 3;
+      elementBrightness += 0.01;
 
-      draw(grays, con, opp);
+      draw(elementGrayscale, elementContrast, elementStartOpacity, elementBrightness);
 
     }, 100);
 
-    function draw(grays, con, opp) {
-      img.style.webkitFilter = `contrast(${con}) grayscale(${grays})`;
-      words.style.opacity = opp;
+    function draw(a, b, c, d) {
+      img.style.webkitFilter = `
+        grayscale(${a})
+        contrast(${b})
+        brightness(${d})`;
+      words.style.opacity = c;
     }
   }
 })();
