@@ -10,23 +10,15 @@ body {
   background-color: #eee;
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
+#first {
+  height: 640px;
+  width: 640px;
+  margin: 0 auto;
+  background: url('../img/nataly.jpg');
 }
 
-.info {
-  color: seagreen;
-}
-
-.warning {
-  color: orangered;
-}
-
-#list {
-  margin-top: 50px;
-}
-
-#playerCommand {
-  margin-top: 20px;
+#second {
+  height: 100%;
+  opacity: 0;
+  background: url('../img/nataly_color.jpg');
 }
