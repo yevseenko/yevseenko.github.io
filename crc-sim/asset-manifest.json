@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.93b0ae6c.css",
+    "main.js": "/static/js/main.8a0b7272.js",
+    "static/media/bottomImage.jpg": "/static/media/bottomImage.62e0d0ccd312ad08d900.jpg",
+    "static/media/bestSim.jpg": "/static/media/bestSim.4cb2fcc663c0fa623530.jpg",
+    "static/media/car01.jpg": "/static/media/car01.c9620c6fee709d6aa963.jpg",
+    "static/media/simRaceTitle.jpg": "/static/media/simRaceTitle.cf810db3703000063e32.jpg",
+    "index.html": "/index.html",
+    "main.93b0ae6c.css.map": "/static/css/main.93b0ae6c.css.map",
+    "main.8a0b7272.js.map": "/static/js/main.8a0b7272.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93b0ae6c.css",
+    "static/js/main.8a0b7272.js"
+  ]
+}
