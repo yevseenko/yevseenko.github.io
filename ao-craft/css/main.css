@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Kalam', cursive;
+}
+
+body {
+  color: #cccfd1;
+  background: #343a40;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px 0;
+}
+
+h2 {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.grid-alchemy {
+  padding: 10px;
+  border: 1px solid #cccfd1;
+  border-radius: 5px;
+  background: #36404a;
+  display: grid;
+  grid-gap: 10px;
+  justify-items: center;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.grid-resource-prices {
+  padding: 10px;
+  border: 1px solid #cccfd1;
+  border-radius: 5px;
+  background: #36404a;
+  display: grid;
+  grid-gap: 10px;
+  justify-items: center;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+.item-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: lightskyblue;
+}
+
+.profit-green {
+  color: #01ba01;
+}
+
+.profit-red {
+  color: #ff3232;
+}
+
+.tier-7 {
+  color: #d5d55c;
+}
+
+.tier-6 {
+  color: #ff4500;
+}
+
+.tier-5 {
+  color: #ff3232;
+}
+
+.tier-4 {
+  color: #399cff;
+}

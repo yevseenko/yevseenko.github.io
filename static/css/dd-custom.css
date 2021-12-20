@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+body {
+  margin: 20px;
+  background-color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  filter: grayscale(1);
+}
+
+/* #words {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  padding: 10px 0;
+  bottom: 2%;
+  font-size: 3em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+} */
+
+.insetshadow {
+  color: #202020;
+  background-color: #2d2d2d;
+  letter-spacing: .1em;
+  text-shadow:
+    -1px -1px 1px #111,
+    2px 2px 1px #363636;
+}
+
+#words {
+  opacity: 0;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  display: inline-block;
+  position: absolute;
+  bottom: 3%;
+  right: 15%;
+  margin: 0 0 0 -20em;
+}
+
+#words span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.7em;
+  letter-spacing: 0;
+  padding: .25em 0 .325em;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+  /* Clip Background Image */
+  background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Animate Background Image */
+  -webkit-text-fill-color: transparent;
+  animation: aitf 80s linear infinite;
+  /* Activate hardware acceleration for smoother animations */
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+/* Animate Background Image */
+@keyframes aitf {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}

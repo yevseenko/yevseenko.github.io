@@ -1,0 +1,201 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #000;
+  overflow: hidden;
+  margin: 0;
+}
+body * {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.flowers {
+  animation: 10s mandala linear infinite reverse;
+}
+.flowers .leaf:nth-child(0) {
+  transform: translate(0px) rotate(0deg);
+}
+.flowers .leaf:nth-child(1) {
+  transform: translate(0px) rotate(24deg);
+}
+.flowers .leaf:nth-child(2) {
+  transform: translate(0px) rotate(48deg);
+}
+.flowers .leaf:nth-child(3) {
+  transform: translate(0px) rotate(72deg);
+}
+.flowers .leaf:nth-child(4) {
+  transform: translate(0px) rotate(96deg);
+}
+.flowers .leaf:nth-child(5) {
+  transform: translate(0px) rotate(120deg);
+}
+.flowers .leaf:nth-child(6) {
+  transform: translate(0px) rotate(144deg);
+}
+.flowers .leaf:nth-child(7) {
+  transform: translate(0px) rotate(168deg);
+}
+.flowers .leaf:nth-child(8) {
+  transform: translate(0px) rotate(192deg);
+}
+.flowers .leaf:nth-child(9) {
+  transform: translate(0px) rotate(216deg);
+}
+.flowers .leaf:nth-child(10) {
+  transform: translate(0px) rotate(240deg);
+}
+.flowers .leaf:nth-child(11) {
+  transform: translate(0px) rotate(264deg);
+}
+.flowers .leaf:nth-child(12) {
+  transform: translate(0px) rotate(288deg);
+}
+.flowers .leaf:nth-child(13) {
+  transform: translate(0px) rotate(312deg);
+}
+.flowers .leaf:nth-child(14) {
+  transform: translate(0px) rotate(336deg);
+}
+.flowers .leaf:nth-child(15) {
+  transform: translate(0px) rotate(360deg);
+}
+.flowers .leaf .line {
+  width: 100px;
+  height: 2px;
+  -webkit-animation: mandala 2s linear infinite;
+  animation: mandala 2s linear infinite;
+}
+.flowers .leaf .line:nth-child(1) {
+  top: 0px;
+  background-color: red;
+  box-shadow: red 100px 0px 3px 2px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.flowers .leaf .line:nth-child(2) {
+  top: 50px;
+  background-color: #ff1900;
+  box-shadow: #ff2100 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.0666666667s;
+  animation-delay: -0.0666666667s;
+}
+.flowers .leaf .line:nth-child(3) {
+  top: 100px;
+  background-color: #ff3200;
+  box-shadow: #ff4100 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.1333333333s;
+  animation-delay: -0.1333333333s;
+}
+.flowers .leaf .line:nth-child(4) {
+  top: 150px;
+  background-color: #ff4b00;
+  box-shadow: #ff6200 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.2s;
+  animation-delay: -0.2s;
+}
+.flowers .leaf .line:nth-child(5) {
+  top: 200px;
+  background-color: #ff6400;
+  box-shadow: #ff8200 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.2666666667s;
+  animation-delay: -0.2666666667s;
+}
+.flowers .leaf .line:nth-child(6) {
+  top: 250px;
+  background-color: #ff7d00;
+  box-shadow: #ffa300 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.3333333333s;
+  animation-delay: -0.3333333333s;
+}
+.flowers .leaf .line:nth-child(7) {
+  top: 300px;
+  background-color: #ff9600;
+  box-shadow: #ffc400 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.4s;
+  animation-delay: -0.4s;
+}
+.flowers .leaf .line:nth-child(8) {
+  top: 350px;
+  background-color: #ffaf00;
+  box-shadow: #ffe400 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.4666666667s;
+  animation-delay: -0.4666666667s;
+}
+.flowers .leaf .line:nth-child(9) {
+  top: 400px;
+  background-color: #ffc700;
+  box-shadow: #f9ff00 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.5333333333s;
+  animation-delay: -0.5333333333s;
+}
+.flowers .leaf .line:nth-child(10) {
+  top: 450px;
+  background-color: #ffe000;
+  box-shadow: #d9ff00 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.6s;
+  animation-delay: -0.6s;
+}
+.flowers .leaf .line:nth-child(11) {
+  top: 500px;
+  background-color: #fff900;
+  box-shadow: #b8ff00 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.6666666667s;
+  animation-delay: -0.6666666667s;
+}
+.flowers .leaf .line:nth-child(12) {
+  top: 550px;
+  background-color: #ecff00;
+  box-shadow: #98ff00 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.7333333333s;
+  animation-delay: -0.7333333333s;
+}
+.flowers .leaf .line:nth-child(13) {
+  top: 600px;
+  background-color: #d3ff00;
+  box-shadow: #77ff00 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+.flowers .leaf .line:nth-child(14) {
+  top: 650px;
+  background-color: #baff00;
+  box-shadow: #56ff00 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.8666666667s;
+  animation-delay: -0.8666666667s;
+}
+.flowers .leaf .line:nth-child(15) {
+  top: 700px;
+  background-color: #a1ff00;
+  box-shadow: #36ff00 100px 0px 3px 2px;
+  -webkit-animation-delay: -0.9333333333s;
+  animation-delay: -0.9333333333s;
+}
+.flowers .leaf .line:nth-child(16) {
+  top: 750px;
+  background-color: #88ff00;
+  box-shadow: #15ff00 100px 0px 3px 2px;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes mandala {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes mandala {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
