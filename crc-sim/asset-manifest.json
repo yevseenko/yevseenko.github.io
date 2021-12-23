@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/crc-sim/static/css/main.607b4a81.css",
-    "main.js": "/crc-sim/static/js/main.b3afd356.js",
+    "main.css": "/crc-sim/static/css/main.c4f3aceb.css",
+    "main.js": "/crc-sim/static/js/main.c00cdc2b.js",
     "static/media/top-bg.png": "/crc-sim/static/media/top-bg.995ef587996c5fff8165.png",
     "static/media/class_t.jpg": "/crc-sim/static/media/class_t.5ea2ac478f5ac8fdb469.jpg",
     "static/media/top-fg.png": "/crc-sim/static/media/top-fg.8e4f5611e8e3097ca011.png",
-    "static/media/bg.jpg": "/crc-sim/static/media/bg.952ef537648c9adadd51.jpg",
     "static/media/mid-screen.jpg": "/crc-sim/static/media/mid-screen.22d34852c1adee3adc26.jpg",
-    "static/media/bottom-l.jpg": "/crc-sim/static/media/bottom-l.61edf5908885bd71eac9.jpg",
-    "static/media/bottom-r.png": "/crc-sim/static/media/bottom-r.b8419cbc2d2f21f7a66a.png",
+    "static/media/bg.jpg": "/crc-sim/static/media/bg.95495b416e408be91c48.jpg",
+    "static/media/sim-bg.jpg": "/crc-sim/static/media/sim-bg.c72d21fc81156949e701.jpg",
     "static/media/qual.png": "/crc-sim/static/media/qual.3b9686256bbb42ed05ef.png",
     "index.html": "/crc-sim/index.html",
-    "main.607b4a81.css.map": "/crc-sim/static/css/main.607b4a81.css.map",
-    "main.b3afd356.js.map": "/crc-sim/static/js/main.b3afd356.js.map"
+    "main.c4f3aceb.css.map": "/crc-sim/static/css/main.c4f3aceb.css.map",
+    "main.c00cdc2b.js.map": "/crc-sim/static/js/main.c00cdc2b.js.map"
   },
   "entrypoints": [
-    "static/css/main.607b4a81.css",
-    "static/js/main.b3afd356.js"
+    "static/css/main.c4f3aceb.css",
+    "static/js/main.c00cdc2b.js"
   ]
 }
