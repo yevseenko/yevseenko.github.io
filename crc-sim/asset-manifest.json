@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/crc-sim/static/css/main.c4f3aceb.css",
-    "main.js": "/crc-sim/static/js/main.c00cdc2b.js",
+    "main.css": "/crc-sim/static/css/main.58ee1752.css",
+    "main.js": "/crc-sim/static/js/main.6e5c1109.js",
     "static/media/top-bg.png": "/crc-sim/static/media/top-bg.995ef587996c5fff8165.png",
     "static/media/class_t.jpg": "/crc-sim/static/media/class_t.5ea2ac478f5ac8fdb469.jpg",
     "static/media/top-fg.png": "/crc-sim/static/media/top-fg.8e4f5611e8e3097ca011.png",
@@ -10,11 +10,11 @@
     "static/media/sim-bg.jpg": "/crc-sim/static/media/sim-bg.c72d21fc81156949e701.jpg",
     "static/media/qual.png": "/crc-sim/static/media/qual.3b9686256bbb42ed05ef.png",
     "index.html": "/crc-sim/index.html",
-    "main.c4f3aceb.css.map": "/crc-sim/static/css/main.c4f3aceb.css.map",
-    "main.c00cdc2b.js.map": "/crc-sim/static/js/main.c00cdc2b.js.map"
+    "main.58ee1752.css.map": "/crc-sim/static/css/main.58ee1752.css.map",
+    "main.6e5c1109.js.map": "/crc-sim/static/js/main.6e5c1109.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4f3aceb.css",
-    "static/js/main.c00cdc2b.js"
+    "static/css/main.58ee1752.css",
+    "static/js/main.6e5c1109.js"
   ]
 }
