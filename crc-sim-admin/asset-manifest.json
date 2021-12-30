@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.18034d1d.css",
-    "main.js": "/static/js/main.17d45e84.js",
-    "index.html": "/index.html",
-    "main.18034d1d.css.map": "/static/css/main.18034d1d.css.map",
-    "main.17d45e84.js.map": "/static/js/main.17d45e84.js.map"
+    "main.css": "/crc-sim-admin/static/css/main.18034d1d.css",
+    "main.js": "/crc-sim-admin/static/js/main.17d45e84.js",
+    "index.html": "/crc-sim-admin/index.html",
+    "main.18034d1d.css.map": "/crc-sim-admin/static/css/main.18034d1d.css.map",
+    "main.17d45e84.js.map": "/crc-sim-admin/static/js/main.17d45e84.js.map"
   },
   "entrypoints": [
     "static/css/main.18034d1d.css",
