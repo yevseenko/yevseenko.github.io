@@ -1,20 +1,13 @@
 {
   "files": {
-    "main.css": "/crc-admin/static/css/main.6fa35fc1.chunk.css",
-    "main.js": "/crc-admin/static/js/main.093bdb9f.chunk.js",
-    "main.js.map": "/crc-admin/static/js/main.093bdb9f.chunk.js.map",
-    "runtime-main.js": "/crc-admin/static/js/runtime-main.5d4c99b7.js",
-    "runtime-main.js.map": "/crc-admin/static/js/runtime-main.5d4c99b7.js.map",
-    "static/js/2.cfcdcfc9.chunk.js": "/crc-admin/static/js/2.cfcdcfc9.chunk.js",
-    "static/js/2.cfcdcfc9.chunk.js.map": "/crc-admin/static/js/2.cfcdcfc9.chunk.js.map",
+    "main.css": "/crc-admin/static/css/main.18034d1d.css",
+    "main.js": "/crc-admin/static/js/main.413e3391.js",
     "index.html": "/crc-admin/index.html",
-    "static/css/main.6fa35fc1.chunk.css.map": "/crc-admin/static/css/main.6fa35fc1.chunk.css.map",
-    "static/js/2.cfcdcfc9.chunk.js.LICENSE.txt": "/crc-admin/static/js/2.cfcdcfc9.chunk.js.LICENSE.txt"
+    "main.18034d1d.css.map": "/crc-admin/static/css/main.18034d1d.css.map",
+    "main.413e3391.js.map": "/crc-admin/static/js/main.413e3391.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.5d4c99b7.js",
-    "static/js/2.cfcdcfc9.chunk.js",
-    "static/css/main.6fa35fc1.chunk.css",
-    "static/js/main.093bdb9f.chunk.js"
+    "static/css/main.18034d1d.css",
+    "static/js/main.413e3391.js"
   ]
 }
