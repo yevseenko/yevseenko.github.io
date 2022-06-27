@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/crc-admin/static/css/main.18034d1d.css",
-    "main.js": "/crc-admin/static/js/main.413e3391.js",
+    "main.js": "/crc-admin/static/js/main.c34a8b0f.js",
     "index.html": "/crc-admin/index.html",
     "main.18034d1d.css.map": "/crc-admin/static/css/main.18034d1d.css.map",
-    "main.413e3391.js.map": "/crc-admin/static/js/main.413e3391.js.map"
+    "main.c34a8b0f.js.map": "/crc-admin/static/js/main.c34a8b0f.js.map"
   },
   "entrypoints": [
     "static/css/main.18034d1d.css",
-    "static/js/main.413e3391.js"
+    "static/js/main.c34a8b0f.js"
   ]
 }
