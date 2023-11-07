@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root" class="main"></div>
+
+    <div class="content">
+      <div class="menu">
+        <button id="prev" class="btn" onclick="prevDate()"><< Prev</button>
+        <button id="prev" class="btn" onclick="reset()">Reset</button>
+        <button id="next" class="btn" onclick="nextDate()">Next >></button>
+      </div>
+
+      <div class="result">
+        <div id="info" class="result-info">sum</div>
+        <div class="result-container">
+          <div class="result-title">Сумма минут:</div>
+          <div id="sum" class="result-sum"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./src/js/main.js" />
+  </body>
+</html>
