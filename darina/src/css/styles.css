@@ -35,6 +35,10 @@ body {
   text-align: center;
 }
 
+.item::hover {
+  cursor: wait;
+}
+
 .item-title {
   color: yellowgreen;
   margin-top: 0.3em;
@@ -47,6 +51,11 @@ body {
 .selected {
   color: red;
   border: 1px solid red;
+}
+
+.item-dayoff {
+  border: 1px solid rgb(255, 238, 0);
+  background: #35472f62;
 }
 
 .menu {

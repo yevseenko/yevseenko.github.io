@@ -6,6 +6,7 @@ import handlers from './handlers.js';
   const nextBtn = document.querySelector('#next');
   const prevBtn = document.querySelector('#prev');
   const resetBtn = document.querySelector('#reset');
+  const dataArray = document.getElementsByClassName('item');
 
   const controller = new AbortController();
   const { signal } = controller;
@@ -20,4 +21,16 @@ import handlers from './handlers.js';
       <div class="item-content">${el.minutes}</div>
     </div>`;
   });
+
+  for (let i = 0; i < dataArray.length; i++) {
+    dataArray[i].addEventListener(
+      'click',
+      function (event) {
+        if (event.target.parentNode.classList.contains('item')) {
+          event.target.parentNode.classList.toggle('item-dayoff');
+        }
+      },
+      { signal }
+    );
+  }
 })();
